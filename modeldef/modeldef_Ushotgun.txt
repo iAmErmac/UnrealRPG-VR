@@ -1,0 +1,461 @@
+
+Model Weapon57
+{ 
+   Path "Models/Weapons/USHOTGUN"
+   Model 0 "Shotgun.md3"
+   Skin 0 "doomboomstick.png"
+   Model 1 "ShotgunHands.md3"
+   Skin 1 "Hands.png"
+   Scale -1.5 1.0 1.0
+   Offset 18.0 14.0 -6.0
+
+   FrameIndex SHTG A 0 0   FrameIndex SHTG A 1 0
+   FrameIndex SHTG B 0 1   FrameIndex SHTG B 1 1
+   FrameIndex SHTG C 0 3   FrameIndex SHTG C 1 3
+   FrameIndex SHTG D 0 4   FrameIndex SHTG D 1 4
+
+}
+
+
+Model Weapon57
+{ 
+  Path "Models/Weapons/USHOTGUN"
+   MODEL 0 "Shotgun_MF2.md3"
+
+    SKIN 0 "MF2.png"
+   Scale 6.0 2.0 2.0
+     Offset 22.0 18.0 -4.0
+   
+	INTERPOLATEDOUBLEDFRAMES
+
+   FrameIndex SHTF A 0 0 FrameIndex SHTF B 0 1
+}
+
+Model USHOTGUN_pickup
+{ 
+  Path "Models/Weapons/USHOTGUN"
+   MODEL 0 "ShotgunPick.md3"
+      Skin 0 "doomboomstick.png"
+ROTATING
+   Scale 1.5 2.5 2.5
+     Offset 0.0 0.0 0.0
+   FrameIndex SHOT A 0 0
+}
+
+
+
+Model Weapon57_dec
+{ 
+  Path "Models/Weapons/USHOTGUN"
+   MODEL 0 "ShotgunPick.md3"
+      Skin 0 "doomboomstick.png"
+ROTATING
+   Scale 1.5 2.5 2.5
+     Offset 0.0 0.0 0.0
+   FrameIndex SHOT A 0 0
+}
+
+
+
+
+
+Model UShotgun_pickupFlat
+{ 
+  Path "Models/Weapons/USHOTGUN"
+   MODEL 0 "ShotgunPickflat.md3"
+      Skin 0 "doomboomstick.png"
+
+   Scale 1.5 2.5 2.5
+     Offset 0.0 0.0 0.0
+   
+
+   FrameIndex SHOT A 0 0
+}
+
+Model UShotgun_pickup
+{ 
+  Path "Models/Weapons/USHOTGUN"
+   MODEL 0 "ShotgunPick.md3"
+      Skin 0 "doomboomstick.png"
+
+   Scale 1.5 2.5 2.5
+     Offset 0.0 0.0 0.0
+   ROTATING
+
+   FrameIndex SHOT A 0 0
+}
+
+
+
+
+
+
+Model ShotgunShellbox
+{ 
+  Path "Models/pickups/ammo/shotgunShell"
+   MODEL 0 "ShellsM.md3"
+   Scale 1.0 1.0 1.0
+     Offset 0 0 4
+   
+
+   FrameIndex SHLL A 0 0
+}
+
+
+
+
+Model ShotgunShellUsed
+{ 
+  Path "Models/weapons/supershotgun"
+   MODEL 0 "shotshellused.md3"
+   Scale 1.0 1.0 1.0
+     Offset 0 0 0
+   USEACTORPITCH
+USEACTORROLL
+
+   FrameIndex SHSL A 0 0
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Model Weapon92
+{ 
+   Path "Models/Weapons/USHOTGUN"
+   Model 0 "Shotgun.md3"
+   Skin 0 "doomboom2.png"
+   Model 1 "ShotgunHands.md3"
+   Skin 1 "Hands.png"
+   Scale -1.5 1.0 1.0
+   Offset 18.0 14.0 -6.0
+
+   FrameIndex SHTG A 0 0   FrameIndex SHTG A 1 0
+   FrameIndex SHTG B 0 1   FrameIndex SHTG B 1 1
+   FrameIndex SHTG C 0 3   FrameIndex SHTG C 1 3
+   FrameIndex SHTG D 0 4   FrameIndex SHTG D 1 4
+
+}
+
+
+Model Weapon92
+{ 
+  Path "Models/Weapons/USHOTGUN"
+   MODEL 0 "Shotgun_MF2.md3"
+
+    SKIN 0 "MF3.png"
+   Scale 6.0 2.0 2.0
+     Offset 22.0 18.0 -4.0
+   
+	INTERPOLATEDOUBLEDFRAMES
+
+   FrameIndex SHTF A 0 0 FrameIndex SHTF B 0 1
+}
+
+
+
+
+Model Weapon92_dec
+{ 
+  Path "Models/Weapons/USHOTGUN"
+   MODEL 0 "ShotgunPick.md3"
+      Skin 0 "doomboom2.png"
+ROTATING
+   Scale 1.5 2.5 2.5
+     Offset 0.0 0.0 0.0
+   FrameIndex SHOT A 0 0
+}
+
+
+
+
+
+
+
+
+Model Weapon93
+{ 
+   Path "Models/Weapons/USHOTGUN"
+   Model 0 "Shotgun.md3"
+   Skin 0 "boomboom.png"
+   Model 1 "ShotgunHands.md3"
+   Skin 1 "Hands.png"
+   Scale -1.5 1.0 1.0
+   Offset 18.0 14.0 -6.0
+
+   FrameIndex SHTG A 0 0   FrameIndex SHTG A 1 0
+   FrameIndex SHTG B 0 1   FrameIndex SHTG B 1 1
+   FrameIndex SHTG C 0 3   FrameIndex SHTG C 1 3
+   FrameIndex SHTG D 0 4   FrameIndex SHTG D 1 4
+
+}
+
+
+Model Weapon93
+{ 
+  Path "Models/Weapons/USHOTGUN"
+   MODEL 0 "Shotgun_MF2.md3"
+
+    SKIN 0 "MF4.png"
+   Scale 6.0 2.0 2.0
+     Offset 22.0 18.0 -4.0
+   
+	INTERPOLATEDOUBLEDFRAMES
+
+   FrameIndex SHTF A 0 0 FrameIndex SHTF B 0 1
+}
+
+
+
+
+Model Weapon93_dec
+{ 
+  Path "Models/Weapons/USHOTGUN"
+   MODEL 0 "ShotgunPick.md3"
+      Skin 0 "boomboom.png"
+ROTATING
+   Scale 1.5 2.5 2.5
+     Offset 0.0 0.0 0.0
+   FrameIndex SHOT A 0 0
+}
+
+
+Model Weapon94_dec
+{ 
+  Path "Models/Weapons/USHOTGUN"
+   MODEL 0 "ShotgunPick.md3"
+      Skin 0 "ploomploom.png"
+ROTATING
+   Scale 1.5 2.5 2.5
+     Offset 0.0 0.0 0.0
+   FrameIndex SHOT A 0 0
+}
+
+
+
+
+
+
+Model Weapon94
+{ 
+   Path "Models/Weapons/USHOTGUN"
+   Model 0 "Shotgun.md3"
+   Skin 0 "ploomploom.png"
+   Model 1 "ShotgunHands.md3"
+   Skin 1 "Hands.png"
+   Scale -1.5 1.0 1.0
+   Offset 18.0 14.0 -6.0
+
+   FrameIndex SHTG A 0 0   FrameIndex SHTG A 1 0
+   FrameIndex SHTG B 0 1   FrameIndex SHTG B 1 1
+   FrameIndex SHTG C 0 3   FrameIndex SHTG C 1 3
+   FrameIndex SHTG D 0 4   FrameIndex SHTG D 1 4
+
+}
+
+
+Model Weapon94
+{ 
+  Path "Models/Weapons/USHOTGUN"
+   MODEL 0 "Shotgun_MF2.md3"
+
+    SKIN 0 "MF5.png"
+   Scale 6.0 2.0 2.0
+     Offset 22.0 18.0 -4.0
+   
+	INTERPOLATEDOUBLEDFRAMES
+
+   FrameIndex SHTF A 0 0 FrameIndex SHTF B 0 1
+}
+
+
+
+
+
+Model Weapon95_dec
+{ 
+  Path "Models/Weapons/USHOTGUN"
+   MODEL 0 "ShotgunPick.md3"
+      Skin 0 "plomplom.png"
+ROTATING
+   Scale 1.5 2.5 2.5
+     Offset 0.0 0.0 0.0
+   FrameIndex SHOT A 0 0
+}
+
+
+
+
+
+
+Model Weapon95
+{ 
+   Path "Models/Weapons/USHOTGUN"
+   Model 0 "Shotgun.md3"
+   Skin 0 "plomplom.png"
+   Model 1 "ShotgunHands.md3"
+   Skin 1 "Hands.png"
+   Scale -1.5 1.0 1.0
+   Offset 18.0 14.0 -6.0
+
+   FrameIndex SHTG A 0 0   FrameIndex SHTG A 1 0
+   FrameIndex SHTG B 0 1   FrameIndex SHTG B 1 1
+   FrameIndex SHTG C 0 3   FrameIndex SHTG C 1 3
+   FrameIndex SHTG D 0 4   FrameIndex SHTG D 1 4
+
+}
+
+
+Model Weapon95
+{ 
+  Path "Models/Weapons/USHOTGUN"
+   MODEL 0 "Shotgun_MF2.md3"
+
+    SKIN 0 "MF6.png"
+   Scale 6.0 2.0 2.0
+     Offset 22.0 18.0 -4.0
+   
+	INTERPOLATEDOUBLEDFRAMES
+
+   FrameIndex SHTF A 0 0 FrameIndex SHTF B 0 1
+}
+
+
+
+
+Model Weapon99_dec
+{ 
+  Path "Models/Weapons/USHOTGUN"
+   MODEL 0 "ShotgunPick.md3"
+      Skin 0 "volatilplom.png"
+ROTATING
+   Scale 1.5 2.5 2.5
+     Offset 0.0 0.0 0.0
+   FrameIndex SHOT A 0 0
+}
+
+
+
+
+
+
+Model Weapon99
+{ 
+   Path "Models/Weapons/USHOTGUN"
+   Model 0 "Shotgun.md3"
+   Skin 0 "volatilplom.png"
+   Model 1 "ShotgunHands.md3"
+   Skin 1 "Hands.png"
+   Scale -1.5 1.0 1.0
+   Offset 18.0 14.0 -6.0
+
+   FrameIndex SHTG A 0 0   FrameIndex SHTG A 1 0
+   FrameIndex SHTG B 0 1   FrameIndex SHTG B 1 1
+   FrameIndex SHTG C 0 3   FrameIndex SHTG C 1 3
+   FrameIndex SHTG D 0 4   FrameIndex SHTG D 1 4
+
+}
+
+
+Model Weapon99
+{ 
+  Path "Models/Weapons/USHOTGUN"
+   MODEL 0 "Shotgun_MF2.md3"
+
+    SKIN 0 "MF7.png"
+   Scale 6.0 2.0 2.0
+     Offset 22.0 18.0 -4.0
+   
+	INTERPOLATEDOUBLEDFRAMES
+
+   FrameIndex SHTF A 0 0 FrameIndex SHTF B 0 1
+}
+
+
+
+
+
+
+Model Weapon100_dec
+{ 
+  Path "Models/Weapons/USHOTGUN"
+   MODEL 0 "ShotgunPick.md3"
+      Skin 0 "boomexp.png"
+ROTATING
+   Scale 1.5 2.5 2.5
+     Offset 0.0 0.0 0.0
+   FrameIndex SHOT A 0 0
+}
+
+
+
+
+
+
+Model Weapon100
+{ 
+   Path "Models/Weapons/USHOTGUN"
+   Model 0 "Shotgun.md3"
+   Skin 0 "boomexp.png"
+   Model 1 "ShotgunHands.md3"
+   Skin 1 "Hands.png"
+   Scale -1.5 1.0 1.0
+   Offset 18.0 14.0 -6.0
+
+   FrameIndex SHTG A 0 0   FrameIndex SHTG A 1 0
+   FrameIndex SHTG B 0 1   FrameIndex SHTG B 1 1
+   FrameIndex SHTG C 0 3   FrameIndex SHTG C 1 3
+   FrameIndex SHTG D 0 4   FrameIndex SHTG D 1 4
+
+}
+
+
+Model Weapon100
+{ 
+  Path "Models/Weapons/USHOTGUN"
+   MODEL 0 "Shotgun_MF2.md3"
+
+    SKIN 0 "MF8.png"
+   Scale 6.0 2.0 2.0
+     Offset 22.0 18.0 -4.0
+   
+	INTERPOLATEDOUBLEDFRAMES
+
+   FrameIndex SHTF A 0 0 FrameIndex SHTF B 0 1
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,553 @@
+
+//Dispersion pistol power 1 select 
+MODEL Weapon65
+{
+	Path "models/weapons/dispersionpistol"
+	AngleOffset 0
+	Model 0 "dpistol.md3"
+	Scale -0.7 0.7 0.7
+	Offset 0.0 -22.0 -8.0
+	
+	FrameIndex D1PS A 0 0
+	FrameIndex D1PS B 0 1
+	FrameIndex D1PS C 0 2
+	FrameIndex D1PS D 0 3
+	FrameIndex D1PS E 0 4
+	FrameIndex D1PS F 0 5
+	FrameIndex D1PS G 0 6
+	FrameIndex D1PS H 0 7
+	FrameIndex D1PS I 0 8
+	FrameIndex D1PS J 0 9
+	FrameIndex D1PS K 0 10
+
+	//Dispersion Pistol power 1 deselect
+	FrameIndex D1DS A 0 16
+	FrameIndex D1DS B 0 17
+	FrameIndex D1DS C 0 18
+	FrameIndex D1DS D 0 19
+	FrameIndex D1DS E 0 20
+
+	//Dispersion Pistol power 1 shoot
+	FrameIndex D1PF A 0 11
+	FrameIndex D1PF B 0 12
+	FrameIndex D1PF C 0 13
+}
+
+
+//Dispersion Blaster 
+MODEL Weapon91
+{
+	Path "models/weapons/dispersionpistol"
+	AngleOffset 0
+    Model 0 "dpistol.md3"
+    Scale -0.7 0.7 0.7
+	Offset 0.0 -22.0 -8.0
+	
+	FrameIndex D1PS A 0 29
+	FrameIndex D1PS B 0 30
+	FrameIndex D1PS C 0 31
+	FrameIndex D1PS D 0 32
+	FrameIndex D1PS E 0 33
+	FrameIndex D1PS F 0 34
+	FrameIndex D1PS G 0 35
+	FrameIndex D1PS H 0 36
+	FrameIndex D1PS I 0 37
+	FrameIndex D1PS J 0 38
+	FrameIndex D1PS K 0 39
+	
+	//Dispersion Pistol power 1 deselect
+	FrameIndex D1DS A 0 44
+	FrameIndex D1DS B 0 45
+	FrameIndex D1DS C 0 46
+	FrameIndex D1DS D 0 47
+	FrameIndex D1DS E 0 48
+
+	//Dispersion Pistol power 1 shoot
+  	FrameIndex D1PF A 0 40
+	FrameIndex D1PF B 0 41
+	FrameIndex D1PF C 0 42
+	
+	//Dispersion Pistol power 1 still
+	FrameIndex D1ST A 0 25
+}
+
+
+Model Dpistol_Cell
+{  
+	Path "models/pickups/ammo/cell"
+	Model 0 "Cell.md3"
+	Model 1 "Cell-Glow.md3"
+	Skin 0 "Cell.png"
+	Skin 1 "Cell-Glow.png"
+	Scale 1.0 1.15 1.25
+
+	FrameIndex CELL A 0 0
+}
+
+
+MODEL Weapon65
+{
+	Path "models/weapons/dispersionpistol"
+	AngleOffset 0
+	Model 0 "dpistol.md3"
+	Scale -0.7 0.7 0.7
+	Offset 0.0 -22.0 -8.0
+
+	FrameIndex D1ST A 0 15
+}
+
+
+//Dispersion Pistol pickup
+MODEL Dispersionpistol_pickup
+{
+	ROTATING
+	Path "models/weapons/dispersionpistol/pickups"
+	AngleOffset 0
+	Model 0 "Dpistolpickup.md3"
+	Path "models/weapons/dispersionpistol"
+	Skin 0 "DPistol1.png"
+
+	Scale 0.7 0.7 0.7
+	Offset 0 0 16
+	Rolloffset 0
+	FrameIndex DPPP A 0 0
+}
+
+//Dispersion Pistol decoration
+MODEL Weapon65_dec
+{
+	Path "models/weapons/dispersionpistol/pickups"
+	AngleOffset 0
+	Model 0 "Dpistolpickup.md3"
+	Path "models/weapons/dispersionpistol"
+	Skin 0 "DPistol1.png"
+
+	ROTATING
+
+	Scale 0.7 0.7 0.7
+	Offset 0 0 16
+	Rolloffset 0
+	FrameIndex DPPP A 0 0
+}
+
+
+//Dispersion Pistol pickup
+MODEL Dispersionpistol_flat
+{
+	Path "models/weapons/dispersionpistol"
+	AngleOffset 0
+	Model 0 "Dpistolpickupflt.md3"
+	Path "models/weapons/dispersionpistol"
+	Skin 0 "DPistol1.png"
+	Scale 0.7 0.7 0.7
+	Offset 0 0 1
+	Rolloffset 0
+
+	FrameIndex DPPP B 0 0
+}
+
+
+//Dispersion Blaster
+MODEL DispersionBlaster_flat
+{
+	Path "models/weapons/dispersionpistol"
+	AngleOffset 0
+	Model 0 "Dpistolpickupflt.md3"
+	Scale 0.7 0.7 0.7
+	Offset 0 0 1
+	Rolloffset 0
+
+	FrameIndex DPPP B 0 0
+}
+
+
+//CREDITED
+//Marisa Kirisame
+
+Model "dpistol_missile1"
+{
+	Path "models/weapons/dispersionpistol"
+	Model 0 "dpist_missile.md3"
+	Scale 1.0 1.0 1.0
+	Offset 8 0 0
+	AngleOffset 90
+
+	PITCHFROMMOMENTUM
+	DONTCULLBACKFACES
+
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETBA0.png"
+	SurfaceSkin 0 1 "arcs/ArcB1.png"
+	FrameIndex DISM A 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETBB0.png"
+	SurfaceSkin 0 1 "arcs/ArcB2.png"
+	FrameIndex DISM B 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETBC0.png"
+	SurfaceSkin 0 1 "arcs/ArcB3.png"
+	FrameIndex DISM C 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETBD0.png"
+	SurfaceSkin 0 1 "arcs/ArcB4.png"
+	FrameIndex DISM D 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETBE0.png"
+	SurfaceSkin 0 1 "arcs/ArcB5.png"
+	FrameIndex DISM E 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETBD0.png"
+	SurfaceSkin 0 1 "arcs/ArcB6.png"
+	FrameIndex DISM F 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETBC0.png"
+	SurfaceSkin 0 1 "arcs/ArcB7.png"
+	FrameIndex DISM G 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETBB0.png"
+	SurfaceSkin 0 1 "arcs/ArcB8.png"
+	FrameIndex DISM H 0 0
+}
+
+
+
+Model "dpistol_missile2"
+{
+	Path "models/weapons/dispersionpistol"
+	Model 0 "dpist_missile.md3"
+	Scale 1.4 1.3 1.1
+	Offset 8 0 0
+	AngleOffset 90
+
+	USEACTORROLL
+	PITCHFROMMOMENTUM
+	DONTCULLBACKFACES
+
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETYA0.png"
+	SurfaceSkin 0 1 "arcs/ArcY1.png"
+	FrameIndex DISM A 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETYB0.png"
+	SurfaceSkin 0 1 "arcs/ArcY2.png"
+	FrameIndex DISM B 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETYC0.png"
+	SurfaceSkin 0 1 "arcs/ArcY3.png"
+	FrameIndex DISM C 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETYD0.png"
+	SurfaceSkin 0 1 "arcs/ArcY4.png"
+	FrameIndex DISM D 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETYE0.png"
+	SurfaceSkin 0 1 "arcs/ArcY5.png"
+	FrameIndex DISM E 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETYD0.png"
+	SurfaceSkin 0 1 "arcs/ArcY6.png"
+	FrameIndex DISM F 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETYC0.png"
+	SurfaceSkin 0 1 "arcs/ArcY7.png"
+	FrameIndex DISM G 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETYB0.png"
+	SurfaceSkin 0 1 "arcs/ArcY8.png"
+	FrameIndex DISM H 0 0
+}
+
+
+Model "dpistol_missile3"
+{
+	Path "models/weapons/dispersionpistol"
+	Model 0 "dpist_missile.md3"
+	Scale 1.4 1.3 1.1
+	Offset 8 0 0
+	AngleOffset 90
+
+	PITCHFROMMOMENTUM
+	DONTCULLBACKFACES
+
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETGA0.png"
+	SurfaceSkin 0 1 "arcs/ArcG1.png"
+	FrameIndex DISM A 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETGB0.png"
+	SurfaceSkin 0 1 "arcs/ArcG2.png"
+	FrameIndex DISM B 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETGC0.png"
+	SurfaceSkin 0 1 "arcs/ArcG3.png"
+	FrameIndex DISM C 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETGD0.png"
+	SurfaceSkin 0 1 "arcs/ArcG4.png"
+	FrameIndex DISM D 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETGE0.png"
+	SurfaceSkin 0 1 "arcs/ArcG5.png"
+	FrameIndex DISM E 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETGD0.png"
+	SurfaceSkin 0 1 "arcs/ArcG6.png"
+	FrameIndex DISM F 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETGC0.png"
+	SurfaceSkin 0 1 "arcs/ArcG7.png"
+	FrameIndex DISM G 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETGB0.png"
+	SurfaceSkin 0 1 "arcs/ArcG8.png"
+	FrameIndex DISM H 0 0
+}
+
+
+
+
+Model "dpistol_missile4"
+{
+	Path "models/weapons/dispersionpistol"
+	Model 0 "dpist_missile.md3"
+	Scale 1.4 1.3 1.1
+	Offset 8 0 0
+	AngleOffset 90
+
+	PITCHFROMMOMENTUM
+	DONTCULLBACKFACES
+
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETOA0.png"
+	SurfaceSkin 0 1 "arcs/ArcO1.png"
+	FrameIndex DISM A 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETOB0.png"
+	SurfaceSkin 0 1 "arcs/ArcO2.png"
+	FrameIndex DISM B 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETOC0.png"
+	SurfaceSkin 0 1 "arcs/ArcO3.png"
+	FrameIndex DISM C 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETOD0.png"
+	SurfaceSkin 0 1 "arcs/ArcO4.png"
+	FrameIndex DISM D 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETOE0.png"
+	SurfaceSkin 0 1 "arcs/ArcO5.png"
+	FrameIndex DISM E 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETOD0.png"
+	SurfaceSkin 0 1 "arcs/ArcO6.png"
+	FrameIndex DISM F 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETOB0.png"
+	SurfaceSkin 0 1 "arcs/ArcO7.png"
+	FrameIndex DISM G 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETOA0.png"
+	SurfaceSkin 0 1 "arcs/ArcO8.png"
+	FrameIndex DISM H 0 0
+}
+
+
+Model "dpistol_missile5"
+{
+	Path "models/weapons/dispersionpistol"
+	Model 0 "dpist_missile.md3"
+	Scale 1.4 1.3 1.1
+	Offset 8 0 0
+	AngleOffset 90
+
+	PITCHFROMMOMENTUM
+	DONTCULLBACKFACES
+
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETRA0.png"
+	SurfaceSkin 0 1 "arcs/ArcR1.png"
+	FrameIndex DISM A 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETRB0.png"
+	SurfaceSkin 0 1 "arcs/ArcR2.png"
+	FrameIndex DISM B 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETRC0.png"
+	SurfaceSkin 0 1 "arcs/ArcR3.png"
+	FrameIndex DISM C 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETRD0.png"
+	SurfaceSkin 0 1 "arcs/ArcR4.png"
+	FrameIndex DISM D 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETRE0.png"
+	SurfaceSkin 0 1 "arcs/ArcR5.png"
+	FrameIndex DISM E 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETRD0.png"
+	SurfaceSkin 0 1 "arcs/ArcR6.png"
+	FrameIndex DISM F 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETRB0.png"
+	SurfaceSkin 0 1 "arcs/ArcR7.png"
+	FrameIndex DISM G 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETRA0.png"
+	SurfaceSkin 0 1 "arcs/ArcR8.png"
+	FrameIndex DISM H 0 0
+}
+
+
+
+//altfires
+
+Model "dpistol_altmissile1"
+{
+	Path "models/weapons/dispersionpistol"
+	Model 0 "dpist_missile.md3"
+	Scale 1.0 1.0 1.0
+	Offset 8 0 0
+	AngleOffset 90
+
+	PITCHFROMMOMENTUM
+	DONTCULLBACKFACES
+
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETBA0.png"
+	SurfaceSkin 0 1 "arcs/ArcB1.png"
+	FrameIndex DISM A 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETBB0.png"
+	SurfaceSkin 0 1 "arcs/ArcB2.png"
+	FrameIndex DISM B 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETBC0.png"
+	SurfaceSkin 0 1 "arcs/ArcB3.png"
+	FrameIndex DISM C 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETBD0.png"
+	SurfaceSkin 0 1 "arcs/ArcB4.png"
+	FrameIndex DISM D 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETBE0.png"
+	SurfaceSkin 0 1 "arcs/ArcB5.png"
+	FrameIndex DISM E 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETBD0.png"
+	SurfaceSkin 0 1 "arcs/ArcB6.png"
+	FrameIndex DISM F 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETBC0.png"
+	SurfaceSkin 0 1 "arcs/ArcB7.png"
+	FrameIndex DISM G 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETBB0.png"
+	SurfaceSkin 0 1 "arcs/ArcB8.png"
+	FrameIndex DISM H 0 0
+}
+
+
+Model "dpistol_altmissile2"
+{
+	Path "models/weapons/dispersionpistol"
+	Model 0 "dpist_missile.md3"
+	Scale 1.4 1.3 1.1
+	Offset 8 0 0
+	AngleOffset 90
+
+	PITCHFROMMOMENTUM
+	DONTCULLBACKFACES
+
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETYA0.png"
+	SurfaceSkin 0 1 "arcs/ArcY1.png"
+	FrameIndex DISM A 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETYB0.png"
+	SurfaceSkin 0 1 "arcs/ArcY2.png"
+	FrameIndex DISM B 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETYC0.png"
+	SurfaceSkin 0 1 "arcs/ArcY3.png"
+	FrameIndex DISM C 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETYD0.png"
+	SurfaceSkin 0 1 "arcs/ArcY4.png"
+	FrameIndex DISM D 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETYE0.png"
+	SurfaceSkin 0 1 "arcs/ArcY5.png"
+	FrameIndex DISM E 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETYD0.png"
+	SurfaceSkin 0 1 "arcs/ArcY6.png"
+	FrameIndex DISM F 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETYC0.png"
+	SurfaceSkin 0 1 "arcs/ArcY7.png"
+	FrameIndex DISM G 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETYB0.png"
+	SurfaceSkin 0 1 "arcs/ArcY8.png"
+	FrameIndex DISM H 0 0
+}
+
+
+Model "dpistol_altmissile3"
+{
+	Path "models/weapons/dispersionpistol"
+	Model 0 "dpist_missile.md3"
+	Scale 1.4 1.3 1.1
+	Offset 8 0 0
+	AngleOffset 90
+
+	PITCHFROMMOMENTUM
+	DONTCULLBACKFACES
+
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETGA0.png"
+	SurfaceSkin 0 1 "arcs/ArcG1.png"
+	FrameIndex DISM A 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETGB0.png"
+	SurfaceSkin 0 1 "arcs/ArcG2.png"
+	FrameIndex DISM B 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETGC0.png"
+	SurfaceSkin 0 1 "arcs/ArcG3.png"
+	FrameIndex DISM C 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETGD0.png"
+	SurfaceSkin 0 1 "arcs/ArcG4.png"
+	FrameIndex DISM D 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETGE0.png"
+	SurfaceSkin 0 1 "arcs/ArcG5.png"
+	FrameIndex DISM E 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETGD0.png"
+	SurfaceSkin 0 1 "arcs/ArcG6.png"
+	FrameIndex DISM F 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETGC0.png"
+	SurfaceSkin 0 1 "arcs/ArcG7.png"
+	FrameIndex DISM G 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETGB0.png"
+	SurfaceSkin 0 1 "arcs/ArcG8.png"
+	FrameIndex DISM H 0 0
+}
+
+
+
+
+Model "dpistol_altmissile4"
+{
+	Path "models/weapons/dispersionpistol"
+	Model 0 "dpist_missile.md3"
+	Scale 1.4 1.3 1.1
+	Offset 8 0 0
+	AngleOffset 90
+
+	PITCHFROMMOMENTUM
+	DONTCULLBACKFACES
+
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETOA0.png"
+	SurfaceSkin 0 1 "arcs/ArcO1.png"
+	FrameIndex DISM A 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETOB0.png"
+	SurfaceSkin 0 1 "arcs/ArcO2.png"
+	FrameIndex DISM B 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETOC0.png"
+	SurfaceSkin 0 1 "arcs/ArcO3.png"
+	FrameIndex DISM C 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETOD0.png"
+	SurfaceSkin 0 1 "arcs/ArcO4.png"
+	FrameIndex DISM D 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETOE0.png"
+	SurfaceSkin 0 1 "arcs/ArcO5.png"
+	FrameIndex DISM E 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETOD0.png"
+	SurfaceSkin 0 1 "arcs/ArcO6.png"
+	FrameIndex DISM F 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETOB0.png"
+	SurfaceSkin 0 1 "arcs/ArcO7.png"
+	FrameIndex DISM G 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETOA0.png"
+	SurfaceSkin 0 1 "arcs/ArcO8.png"
+	FrameIndex DISM H 0 0
+}
+
+
+Model "dpistol_altmissile5"
+{
+	Path "models/weapons/dispersionpistol"
+	Model 0 "dpist_missile.md3"
+	Scale 1.4 1.3 1.1
+	Offset 8 0 0
+	AngleOffset 90
+
+	PITCHFROMMOMENTUM
+	DONTCULLBACKFACES
+
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETRA0.png"
+	SurfaceSkin 0 1 "arcs/ArcR1.png"
+	FrameIndex DISM A 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETRB0.png"
+	SurfaceSkin 0 1 "arcs/ArcR2.png"
+	FrameIndex DISM B 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETRC0.png"
+	SurfaceSkin 0 1 "arcs/ArcR3.png"
+	FrameIndex DISM C 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETRD0.png"
+	SurfaceSkin 0 1 "arcs/ArcR4.png"
+	FrameIndex DISM D 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETRE0.png"
+	SurfaceSkin 0 1 "arcs/ArcR5.png"
+	FrameIndex DISM E 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETRD0.png"
+	SurfaceSkin 0 1 "arcs/ArcR6.png"
+	FrameIndex DISM F 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETRB0.png"
+	SurfaceSkin 0 1 "arcs/ArcR7.png"
+	FrameIndex DISM G 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETRA0.png"
+	SurfaceSkin 0 1 "arcs/ArcR8.png"
+	FrameIndex DISM H 0 0
+}

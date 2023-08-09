@@ -1,0 +1,775 @@
+
+
+//flak cannon
+ACTOR Weapon61_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+	States
+	{
+Spawn:
+	FLPK A -1
+	Stop
+
+}
+}
+
+//asmd
+ACTOR Weapon58_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+
+	States
+	{
+Spawn:
+	ASMP A -1
+	Stop
+}
+}
+
+
+
+
+//shotgun
+ACTOR Weapon57_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	SHOT A -1
+	Stop
+
+
+}
+}
+
+//supershotgun
+ACTOR Weapon56_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	SGN2 A -1
+	Stop
+
+
+}
+}
+
+//power supershotgun
+ACTOR Weapon79_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	SGN2 A -1
+	Stop
+
+
+}
+}
+
+
+//sovereign supershotgun
+ACTOR Weapon80_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	SGN2 A -1
+	Stop
+
+
+}
+}
+
+//plasmatic supershotgun
+ACTOR Weapon81_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	SGN2 A -1
+	Stop
+
+
+}
+}
+
+//razorjack
+ACTOR Weapon67_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	RZPK A -1
+	Stop
+
+
+}
+}
+
+//dpistol
+ACTOR Weapon65_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	DPPP A -1
+	Stop
+
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//stinger
+ACTOR Weapon59_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	STPF A -1
+	Stop
+
+
+}
+}
+
+//eightball
+ACTOR Weapon60_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	EGHH A -1
+	Stop
+
+
+}
+}
+
+
+//automag
+ACTOR Weapon55_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	AMGP A -1
+	Stop
+
+
+}
+}
+
+
+//power automag
+ACTOR Weapon69_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	AMGP B -1
+	Stop
+
+
+}
+}
+
+//swift automag
+ACTOR Weapon70_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	AMGP B -1
+	Stop
+
+
+}
+}
+
+//sovereign automag
+ACTOR Weapon71_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	AMGP B -1
+	Stop
+
+
+}
+}
+
+//plasmatic automag
+ACTOR Weapon72_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	AMGP B -1
+	Stop
+
+
+}
+}
+
+//autoflak
+ACTOR Weapon89_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	FLPK A -1
+	Stop 
+
+
+}
+}
+
+
+
+
+//asmd atomic
+ACTOR Weapon54_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	ASMP B -1
+	Stop 
+
+
+}
+}
+
+
+//atomic pistol
+ACTOR Weapon68_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	DPPP B -1
+	Stop 
+
+
+}
+}
+
+
+
+
+//GES biorifle
+ACTOR Weapon64_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	BIOR A -1
+	Stop 
+
+
+}
+}
+
+//minigun
+ACTOR Weapon66_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	MNPK A -1
+	Stop 
+
+
+}
+}
+
+
+//rifle
+ACTOR Weapon63_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	RPIC A -1
+	Stop 
+
+
+}
+}
+
+
+
+
+//power rifle
+ACTOR Weapon83_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	RPIC A -1
+	Stop 
+
+
+}
+}
+
+//sovereign rifle
+ACTOR Weapon84_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	RPIC A -1
+	Stop 
+
+
+}
+}
+
+//plasmatic rifle
+ACTOR Weapon85_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	RPIC A -1
+	Stop 
+
+
+}
+}
+
+
+//explosive rifle
+ACTOR Weapon86_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	RPIC A -1
+	Stop 
+
+
+}
+}
+
+
+//Carrifle
+ACTOR Weapon62_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	CAPK A -1
+	Stop
+
+
+}
+}
+
+
+
+//chainsaw
+ACTOR Weapon82_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	CSSW A -1
+	Stop
+
+
+}
+}
+
+
+ACTOR Weapon92_dec
+{
+//$Category "Inventory\Weapons"
+//$Color 19
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	SHOT A -1
+	Stop
+	}
+
+
+}
+
+
+ACTOR Weapon93_dec
+{
+//$Category "Inventory\Weapons"
+//$Color 19
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	SHOT A -1
+	Stop
+	}
+
+
+}
+
+
+ACTOR Weapon94_dec
+{
+//$Category "Inventory\Weapons"
+//$Color 19
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	SHOT A -1
+	Stop
+	}
+
+
+}
+
+ACTOR Weapon95_dec
+{
+//$Category "Inventory\Weapons"
+//$Color 19
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	SHOT A -1
+	Stop
+	}
+
+
+}
+
+
+
+//arcane supershotgun
+ACTOR Weapon96_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	SGN2 A -1
+	Stop
+
+
+}
+}
+
+//explosive supershotgun
+ACTOR Weapon97_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	SGN2 A -1
+	Stop
+
+
+}
+}
+
+
+//volatile supershotgun
+ACTOR Weapon98_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	SGN2 A -1
+	Stop
+
+
+}
+}
+
+
+//volatile shotgun
+ACTOR Weapon99_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	SHOT A -1
+	Stop
+
+
+}
+}
+
+//explosive shotgun
+ACTOR Weapon100_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	SHOT A -1
+	Stop
+
+
+}
+}
+
+
+//Grenade launcher
+ACTOR Weapon105_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	GLPK A -1
+	Stop
+
+
+}
+}
+
+
+//Napalm rifle
+ACTOR Weapon107_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	BIOR A -1
+	Stop
+
+
+}
+}
+
+//Shock rifle
+ACTOR Weapon109_dec
+{
+-SOLID
++NOGRAVITY
++NOBLOCKMAP
++BRIGHT
+Scale 0.2
+States
+{
+Spawn:
+	SHPK A -1
+	Stop
+
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+

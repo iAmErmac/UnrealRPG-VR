@@ -1,0 +1,978 @@
+//Automag
+MODEL Weapon55
+{
+	Path "models/weapons/automag"
+	AngleOffset 0
+	Model 0 "automag.md3"
+
+	Scale -1.0 1.0 1.0
+	Offset 0.0 -22.0 -8.0
+
+	FrameIndex AMGT A 0 1
+	FrameIndex AMGT B 0 2
+	FrameIndex AMGT C 0 3
+	FrameIndex AMGT D 0 4
+	FrameIndex AMGT E 0 5
+
+	//fire
+	//anim1
+	FrameIndex AMGF A 0 6
+	FrameIndex AMGF B 0 7
+	FrameIndex AMGF C 0 8
+	//anim2
+	FrameIndex AMGF D 0 9
+	FrameIndex AMGF E 0 10
+	FrameIndex AMGF F 0 11
+	//anim3
+	FrameIndex AMGF G 0 12
+	FrameIndex AMGF H 0 13
+	FrameIndex AMGF I 0 14
+	//animation end
+
+	FrameIndex AMGF J 0 15
+	FrameIndex AMGF K 0 16
+	FrameIndex AMGF L 0 17
+	FrameIndex AMGF M 0 18
+	FrameIndex AMGF N 0 19
+
+	//Automag Altfire trigger
+	FrameIndex AMGD A 0 21
+	FrameIndex AMGD B 0 22
+	FrameIndex AMGD C 0 23
+	FrameIndex AMGD D 0 24
+	FrameIndex AMGD E 0 25
+
+	//Automag Altfire
+	FrameIndex AMAF A 0 26
+	FrameIndex AMAF B 0 27
+	FrameIndex AMAF C 0 28
+
+	//Automag Twiddle
+	FrameIndex AMGI A 0 50
+	FrameIndex AMGI B 0 51
+	FrameIndex AMGI C 0 52
+	FrameIndex AMGI D 0 53
+	FrameIndex AMGI E 0 54
+	FrameIndex AMGI F 0 55
+	FrameIndex AMGI G 0 56
+	FrameIndex AMGI H 0 57
+	FrameIndex AMGI I 0 58
+	FrameIndex AMGI J 0 59
+	FrameIndex AMGI K 0 60
+	FrameIndex AMGI L 0 61
+	FrameIndex AMGI M 0 62
+	FrameIndex AMGI N 0 63
+	FrameIndex AMGI O 0 64
+	FrameIndex AMGI P 0 65
+	FrameIndex AMGI Q 0 66
+	FrameIndex AMGI R 0 67
+	FrameIndex AMGI S 0 68
+	FrameIndex AMGI T 0 69
+	FrameIndex AMGI U 0 70
+	FrameIndex AMGI V 0 71
+	FrameIndex AMGI W 0 72
+	FrameIndex AMGI X 0 73
+	FrameIndex AMGI Y 0 74
+	FrameIndex AMGI Z 0 75
+
+	//Automag Eject
+	FrameIndex AMEJ A 0 74
+	FrameIndex AMEJ B 0 75
+	FrameIndex AMEJ C 0 76
+	FrameIndex AMEJ D 0 77
+	FrameIndex AMEJ E 0 78
+	FrameIndex AMEJ F 0 79
+	FrameIndex AMEJ G 0 80
+	FrameIndex AMEJ H 0 81
+	FrameIndex AMEJ I 0 82
+	FrameIndex AMEJ J 0 83
+	FrameIndex AMEJ K 0 84
+	FrameIndex AMEJ L 0 85
+	FrameIndex AMEJ M 0 86
+	FrameIndex AMEJ N 0 87
+	FrameIndex AMEJ O 0 88
+	FrameIndex AMEJ P 0 89
+	FrameIndex AMEJ Q 0 90
+	FrameIndex AMEJ R 0 91
+	FrameIndex AMEJ S 0 92
+	FrameIndex AMEJ T 0 93
+	FrameIndex AMEJ U 0 94
+	FrameIndex AMEJ V 0 95
+	FrameIndex AMEJ W 0 96
+	FrameIndex AMEJ X 0 97
+	FrameIndex AMEJ Y 0 98
+	FrameIndex AMEJ Z 0 99
+
+	//Automag Deselect
+	FrameIndex AMDS A 0 99
+	FrameIndex AMDS B 0 100
+	FrameIndex AMDS C 0 101
+	FrameIndex AMDS D 0 102
+	FrameIndex AMDS E 0 103
+
+	//Automag Select
+	FrameIndex AMEE A 0 103
+	FrameIndex AMEE B 0 104
+	FrameIndex AMEE C 0 105
+	FrameIndex AMEE D 0 106
+	FrameIndex AMEE E 0 107
+	FrameIndex AMEE F 0 108
+	FrameIndex AMEE G 0 109
+	FrameIndex AMEE H 0 110
+	FrameIndex AMEE I 0 111
+	FrameIndex AMEE J 0 112
+	FrameIndex AMEE K 0 113
+	FrameIndex AMEE L 0 114
+	FrameIndex AMEE M 0 115
+	FrameIndex AMEE N 0 116
+	FrameIndex AMEE O 0 117
+	FrameIndex AMEE P 0 118
+	FrameIndex AMEE Q 0 119
+	FrameIndex AMEE R 0 120
+	FrameIndex AMEE S 0 121
+	FrameIndex AMEE T 0 122
+	FrameIndex AMEE U 0 123
+	FrameIndex AMEE V 0 124
+	FrameIndex AMEE W 0 125
+	FrameIndex AMEE X 0 126
+	FrameIndex AMEE Y 0 127
+	FrameIndex AMEE Z 0 128
+
+	FrameIndex AMEQ A 0 129
+	FrameIndex AMEQ B 0 130
+	FrameIndex AMEQ C 0 131
+	FrameIndex AMEQ D 0 132
+	FrameIndex AMEQ E 0 133
+	FrameIndex AMEQ F 0 134
+
+	//Automag Tilt
+	FrameIndex AMTT A 0 138
+	FrameIndex AMTT B 0 135
+	FrameIndex AMTT C 0 136
+	FrameIndex AMTT D 0 137
+}
+
+
+//Power Automag
+MODEL Weapon69
+{
+	Path "models/weapons/automag"
+	AngleOffset 0
+	Model 0 "automag.md3"
+	SurfaceSkin 0 0 "AutomaPwr.png"
+	SurfaceSkin 0 1 "FireEffect18c.png"
+
+	Scale -1.0 1.0 1.0
+	Offset 0.0 -22.0 -8.0
+
+	FrameIndex AMGT A 0 1
+	FrameIndex AMGT B 0 2
+	FrameIndex AMGT C 0 3
+	FrameIndex AMGT D 0 4
+	FrameIndex AMGT E 0 5
+
+	//fire
+	//anim1
+	FrameIndex AMGF A 0 6
+	FrameIndex AMGF B 0 7
+	FrameIndex AMGF C 0 8
+	//anim2
+	FrameIndex AMGF D 0 9
+	FrameIndex AMGF E 0 10
+	FrameIndex AMGF F 0 11
+	//anim3
+	FrameIndex AMGF G 0 12
+	FrameIndex AMGF H 0 13
+	FrameIndex AMGF I 0 14
+	//animation end
+
+	FrameIndex AMGF J 0 15
+	FrameIndex AMGF K 0 16
+	FrameIndex AMGF L 0 17
+	FrameIndex AMGF M 0 18
+	FrameIndex AMGF N 0 19
+
+	//Automag Altfire trigger
+	FrameIndex AMGD A 0 21
+	FrameIndex AMGD B 0 22
+	FrameIndex AMGD C 0 23
+	FrameIndex AMGD D 0 24
+	FrameIndex AMGD E 0 25
+
+	//Automag Altfire
+	FrameIndex AMAF A 0 26
+	FrameIndex AMAF B 0 27
+	FrameIndex AMAF C 0 28
+
+	//Automag Twiddle
+	FrameIndex AMGI A 0 50
+	FrameIndex AMGI B 0 51
+	FrameIndex AMGI C 0 52
+	FrameIndex AMGI D 0 53
+	FrameIndex AMGI E 0 54
+	FrameIndex AMGI F 0 55
+	FrameIndex AMGI G 0 56
+	FrameIndex AMGI H 0 57
+	FrameIndex AMGI I 0 58
+	FrameIndex AMGI J 0 59
+	FrameIndex AMGI K 0 60
+	FrameIndex AMGI L 0 61
+	FrameIndex AMGI M 0 62
+	FrameIndex AMGI N 0 63
+	FrameIndex AMGI O 0 64
+	FrameIndex AMGI P 0 65
+	FrameIndex AMGI Q 0 66
+	FrameIndex AMGI R 0 67
+	FrameIndex AMGI S 0 68
+	FrameIndex AMGI T 0 69
+	FrameIndex AMGI U 0 70
+	FrameIndex AMGI V 0 71
+	FrameIndex AMGI W 0 72
+	FrameIndex AMGI X 0 73
+	FrameIndex AMGI Y 0 74
+	FrameIndex AMGI Z 0 75
+
+	//Automag Eject
+	FrameIndex AMEJ A 0 74
+	FrameIndex AMEJ B 0 75
+	FrameIndex AMEJ C 0 76
+	FrameIndex AMEJ D 0 77
+	FrameIndex AMEJ E 0 78
+	FrameIndex AMEJ F 0 79
+	FrameIndex AMEJ G 0 80
+	FrameIndex AMEJ H 0 81
+	FrameIndex AMEJ I 0 82
+	FrameIndex AMEJ J 0 83
+	FrameIndex AMEJ K 0 84
+	FrameIndex AMEJ L 0 85
+	FrameIndex AMEJ M 0 86
+	FrameIndex AMEJ N 0 87
+	FrameIndex AMEJ O 0 88
+	FrameIndex AMEJ P 0 89
+	FrameIndex AMEJ Q 0 90
+	FrameIndex AMEJ R 0 91
+	FrameIndex AMEJ S 0 92
+	FrameIndex AMEJ T 0 93
+	FrameIndex AMEJ U 0 94
+	FrameIndex AMEJ V 0 95
+	FrameIndex AMEJ W 0 96
+	FrameIndex AMEJ X 0 97
+	FrameIndex AMEJ Y 0 98
+	FrameIndex AMEJ Z 0 99
+
+	//Automag Deselect
+	FrameIndex AMDS A 0 99
+	FrameIndex AMDS B 0 100
+	FrameIndex AMDS C 0 101
+	FrameIndex AMDS D 0 102
+	FrameIndex AMDS E 0 103
+
+	//Automag Select
+	FrameIndex AMEE A 0 103
+	FrameIndex AMEE B 0 104
+	FrameIndex AMEE C 0 105
+	FrameIndex AMEE D 0 106
+	FrameIndex AMEE E 0 107
+	FrameIndex AMEE F 0 108
+	FrameIndex AMEE G 0 109
+	FrameIndex AMEE H 0 110
+	FrameIndex AMEE I 0 111
+	FrameIndex AMEE J 0 112
+	FrameIndex AMEE K 0 113
+	FrameIndex AMEE L 0 114
+	FrameIndex AMEE M 0 115
+	FrameIndex AMEE N 0 116
+	FrameIndex AMEE O 0 117
+	FrameIndex AMEE P 0 118
+	FrameIndex AMEE Q 0 119
+	FrameIndex AMEE R 0 120
+	FrameIndex AMEE S 0 121
+	FrameIndex AMEE T 0 122
+	FrameIndex AMEE U 0 123
+	FrameIndex AMEE V 0 124
+	FrameIndex AMEE W 0 125
+	FrameIndex AMEE X 0 126
+	FrameIndex AMEE Y 0 127
+	FrameIndex AMEE Z 0 128
+
+	FrameIndex AMEQ A 0 129
+	FrameIndex AMEQ B 0 130
+	FrameIndex AMEQ C 0 131
+	FrameIndex AMEQ D 0 132
+	FrameIndex AMEQ E 0 133
+	FrameIndex AMEQ F 0 134
+
+	//Automag Tilt
+	FrameIndex AMTT A 0 138
+	FrameIndex AMTT B 0 135
+	FrameIndex AMTT C 0 136
+	FrameIndex AMTT D 0 137
+}
+
+
+//Swift Automag
+MODEL Weapon70
+{
+	Path "models/weapons/automag"
+	AngleOffset 0
+	Model 0 "automag.md3"
+	SurfaceSkin 0 0 "Automaswt.png"
+	SurfaceSkin 0 1 "FireEffect18.png"
+
+	Scale -1.0 1.0 1.0
+	Offset 0.0 -22.0 -8.0
+
+	FrameIndex AMGT A 0 1
+	FrameIndex AMGT B 0 2
+	FrameIndex AMGT C 0 3
+	FrameIndex AMGT D 0 4
+	FrameIndex AMGT E 0 5
+
+	//fire
+	//anim1
+	FrameIndex AMGF A 0 6
+	FrameIndex AMGF B 0 7
+	FrameIndex AMGF C 0 8
+	//anim2
+	FrameIndex AMGF D 0 9
+	FrameIndex AMGF E 0 10
+	FrameIndex AMGF F 0 11
+	//anim3
+	FrameIndex AMGF G 0 12
+	FrameIndex AMGF H 0 13
+	FrameIndex AMGF I 0 14
+	//animation end
+
+	FrameIndex AMGF J 0 15
+	FrameIndex AMGF K 0 16
+	FrameIndex AMGF L 0 17
+	FrameIndex AMGF M 0 18
+	FrameIndex AMGF N 0 19
+
+	//Automag Altfire trigger
+	FrameIndex AMGD A 0 21
+	FrameIndex AMGD B 0 22
+	FrameIndex AMGD C 0 23
+	FrameIndex AMGD D 0 24
+	FrameIndex AMGD E 0 25
+
+	//Automag Altfire
+	FrameIndex AMAF A 0 26
+	FrameIndex AMAF B 0 27
+	FrameIndex AMAF C 0 28
+
+	//Automag Twiddle
+	FrameIndex AMGI A 0 50
+	FrameIndex AMGI B 0 51
+	FrameIndex AMGI C 0 52
+	FrameIndex AMGI D 0 53
+	FrameIndex AMGI E 0 54
+	FrameIndex AMGI F 0 55
+	FrameIndex AMGI G 0 56
+	FrameIndex AMGI H 0 57
+	FrameIndex AMGI I 0 58
+	FrameIndex AMGI J 0 59
+	FrameIndex AMGI K 0 60
+	FrameIndex AMGI L 0 61
+	FrameIndex AMGI M 0 62
+	FrameIndex AMGI N 0 63
+	FrameIndex AMGI O 0 64
+	FrameIndex AMGI P 0 65
+	FrameIndex AMGI Q 0 66
+	FrameIndex AMGI R 0 67
+	FrameIndex AMGI S 0 68
+	FrameIndex AMGI T 0 69
+	FrameIndex AMGI U 0 70
+	FrameIndex AMGI V 0 71
+	FrameIndex AMGI W 0 72
+	FrameIndex AMGI X 0 73
+	FrameIndex AMGI Y 0 74
+	FrameIndex AMGI Z 0 75
+
+	//Automag Eject
+	FrameIndex AMEJ A 0 74
+	FrameIndex AMEJ B 0 75
+	FrameIndex AMEJ C 0 76
+	FrameIndex AMEJ D 0 77
+	FrameIndex AMEJ E 0 78
+	FrameIndex AMEJ F 0 79
+	FrameIndex AMEJ G 0 80
+	FrameIndex AMEJ H 0 81
+	FrameIndex AMEJ I 0 82
+	FrameIndex AMEJ J 0 83
+	FrameIndex AMEJ K 0 84
+	FrameIndex AMEJ L 0 85
+	FrameIndex AMEJ M 0 86
+	FrameIndex AMEJ N 0 87
+	FrameIndex AMEJ O 0 88
+	FrameIndex AMEJ P 0 89
+	FrameIndex AMEJ Q 0 90
+	FrameIndex AMEJ R 0 91
+	FrameIndex AMEJ S 0 92
+	FrameIndex AMEJ T 0 93
+	FrameIndex AMEJ U 0 94
+	FrameIndex AMEJ V 0 95
+	FrameIndex AMEJ W 0 96
+	FrameIndex AMEJ X 0 97
+	FrameIndex AMEJ Y 0 98
+	FrameIndex AMEJ Z 0 99
+
+	//Automag Deselect
+	FrameIndex AMDS A 0 99
+	FrameIndex AMDS B 0 100
+	FrameIndex AMDS C 0 101
+	FrameIndex AMDS D 0 102
+	FrameIndex AMDS E 0 103
+
+	//Automag Select
+	FrameIndex AMEE A 0 103
+	FrameIndex AMEE B 0 104
+	FrameIndex AMEE C 0 105
+	FrameIndex AMEE D 0 106
+	FrameIndex AMEE E 0 107
+	FrameIndex AMEE F 0 108
+	FrameIndex AMEE G 0 109
+	FrameIndex AMEE H 0 110
+	FrameIndex AMEE I 0 111
+	FrameIndex AMEE J 0 112
+	FrameIndex AMEE K 0 113
+	FrameIndex AMEE L 0 114
+	FrameIndex AMEE M 0 115
+	FrameIndex AMEE N 0 116
+	FrameIndex AMEE O 0 117
+	FrameIndex AMEE P 0 118
+	FrameIndex AMEE Q 0 119
+	FrameIndex AMEE R 0 120
+	FrameIndex AMEE S 0 121
+	FrameIndex AMEE T 0 122
+	FrameIndex AMEE U 0 123
+	FrameIndex AMEE V 0 124
+	FrameIndex AMEE W 0 125
+	FrameIndex AMEE X 0 126
+	FrameIndex AMEE Y 0 127
+	FrameIndex AMEE Z 0 128
+
+	FrameIndex AMEQ A 0 129
+	FrameIndex AMEQ B 0 130
+	FrameIndex AMEQ C 0 131
+	FrameIndex AMEQ D 0 132
+	FrameIndex AMEQ E 0 133
+	FrameIndex AMEQ F 0 134
+
+	//Automag Tilt
+	FrameIndex AMTT A 0 138
+	FrameIndex AMTT B 0 135
+	FrameIndex AMTT C 0 136
+	FrameIndex AMTT D 0 137
+}
+
+
+//Sovereign Automag
+MODEL Weapon71
+{
+	Path "models/weapons/automag"
+	AngleOffset 0
+	Model 0 "automag.md3"
+	SurfaceSkin 0 0 "AutomaSwr.png"
+	SurfaceSkin 0 1 "FireEffect18d.png"
+
+	Scale -1.0 1.0 1.0
+	Offset 0.0 -22.0 -8.0
+	
+	FrameIndex AMGT A 0 1
+	FrameIndex AMGT B 0 2
+	FrameIndex AMGT C 0 3
+	FrameIndex AMGT D 0 4
+	FrameIndex AMGT E 0 5
+
+	//fire
+	//anim1
+	FrameIndex AMGF A 0 6
+	FrameIndex AMGF B 0 7
+	FrameIndex AMGF C 0 8
+	//anim2
+	FrameIndex AMGF D 0 9
+	FrameIndex AMGF E 0 10
+	FrameIndex AMGF F 0 11
+	//anim3
+	FrameIndex AMGF G 0 12
+	FrameIndex AMGF H 0 13
+	FrameIndex AMGF I 0 14
+	//animation end
+
+	FrameIndex AMGF J 0 15
+	FrameIndex AMGF K 0 16
+	FrameIndex AMGF L 0 17
+	FrameIndex AMGF M 0 18
+	FrameIndex AMGF N 0 19
+
+	//Automag Altfire trigger
+	FrameIndex AMGD A 0 21
+	FrameIndex AMGD B 0 22
+	FrameIndex AMGD C 0 23
+	FrameIndex AMGD D 0 24
+	FrameIndex AMGD E 0 25
+	//Automag Altfire
+	FrameIndex AMAF A 0 26
+	FrameIndex AMAF B 0 27
+	FrameIndex AMAF C 0 28
+	//Automag Twiddle
+	FrameIndex AMGI A 0 50
+	FrameIndex AMGI B 0 51
+	FrameIndex AMGI C 0 52
+	FrameIndex AMGI D 0 53
+	FrameIndex AMGI E 0 54
+	FrameIndex AMGI F 0 55
+	FrameIndex AMGI G 0 56
+	FrameIndex AMGI H 0 57
+	FrameIndex AMGI I 0 58
+	FrameIndex AMGI J 0 59
+	FrameIndex AMGI K 0 60
+	FrameIndex AMGI L 0 61
+	FrameIndex AMGI M 0 62
+	FrameIndex AMGI N 0 63
+	FrameIndex AMGI O 0 64
+	FrameIndex AMGI P 0 65
+	FrameIndex AMGI Q 0 66
+	FrameIndex AMGI R 0 67
+	FrameIndex AMGI S 0 68
+	FrameIndex AMGI T 0 69
+	FrameIndex AMGI U 0 70
+	FrameIndex AMGI V 0 71
+	FrameIndex AMGI W 0 72
+	FrameIndex AMGI X 0 73
+	FrameIndex AMGI Y 0 74
+	FrameIndex AMGI Z 0 75
+
+	//Automag Eject
+	FrameIndex AMEJ A 0 74
+	FrameIndex AMEJ B 0 75
+	FrameIndex AMEJ C 0 76
+	FrameIndex AMEJ D 0 77
+	FrameIndex AMEJ E 0 78
+	FrameIndex AMEJ F 0 79
+	FrameIndex AMEJ G 0 80
+	FrameIndex AMEJ H 0 81
+	FrameIndex AMEJ I 0 82
+	FrameIndex AMEJ J 0 83
+	FrameIndex AMEJ K 0 84
+	FrameIndex AMEJ L 0 85
+	FrameIndex AMEJ M 0 86
+	FrameIndex AMEJ N 0 87
+	FrameIndex AMEJ O 0 88
+	FrameIndex AMEJ P 0 89
+	FrameIndex AMEJ Q 0 90
+	FrameIndex AMEJ R 0 91
+	FrameIndex AMEJ S 0 92
+	FrameIndex AMEJ T 0 93
+	FrameIndex AMEJ U 0 94
+	FrameIndex AMEJ V 0 95
+	FrameIndex AMEJ W 0 96
+	FrameIndex AMEJ X 0 97
+	FrameIndex AMEJ Y 0 98
+	FrameIndex AMEJ Z 0 99
+
+	//Automag Deselect
+	FrameIndex AMDS A 0 99
+	FrameIndex AMDS B 0 100
+	FrameIndex AMDS C 0 101
+	FrameIndex AMDS D 0 102
+	FrameIndex AMDS E 0 103
+
+	//Automag Select
+	FrameIndex AMEE A 0 103
+	FrameIndex AMEE B 0 104
+	FrameIndex AMEE C 0 105
+	FrameIndex AMEE D 0 106
+	FrameIndex AMEE E 0 107
+	FrameIndex AMEE F 0 108
+	FrameIndex AMEE G 0 109
+	FrameIndex AMEE H 0 110
+	FrameIndex AMEE I 0 111
+	FrameIndex AMEE J 0 112
+	FrameIndex AMEE K 0 113
+	FrameIndex AMEE L 0 114
+	FrameIndex AMEE M 0 115
+	FrameIndex AMEE N 0 116
+	FrameIndex AMEE O 0 117
+	FrameIndex AMEE P 0 118
+	FrameIndex AMEE Q 0 119
+	FrameIndex AMEE R 0 120
+	FrameIndex AMEE S 0 121
+	FrameIndex AMEE T 0 122
+	FrameIndex AMEE U 0 123
+	FrameIndex AMEE V 0 124
+	FrameIndex AMEE W 0 125
+	FrameIndex AMEE X 0 126
+	FrameIndex AMEE Y 0 127
+	FrameIndex AMEE Z 0 128
+
+	FrameIndex AMEQ A 0 129
+	FrameIndex AMEQ B 0 130
+	FrameIndex AMEQ C 0 131
+	FrameIndex AMEQ D 0 132
+	FrameIndex AMEQ E 0 133
+	FrameIndex AMEQ F 0 134
+
+	//Automag Tilt
+	FrameIndex AMTT A 0 138
+	FrameIndex AMTT B 0 135
+	FrameIndex AMTT C 0 136
+	FrameIndex AMTT D 0 137
+}
+
+
+//Plasmatic Automag
+MODEL Weapon72
+{
+	Path "models/weapons/automag"
+	AngleOffset 0
+	Model 0 "automag.md3"
+	SurfaceSkin 0 0 "Automapla.png"
+	SurfaceSkin 0 1 "FireEffect18b.png"
+
+	Scale -1.0 1.0 1.0
+	Offset 0.0 -22.0 -8.0
+	
+	FrameIndex AMGT A 0 1
+	FrameIndex AMGT B 0 2
+	FrameIndex AMGT C 0 3
+	FrameIndex AMGT D 0 4
+	FrameIndex AMGT E 0 5
+
+	//fire
+	//anim1
+	FrameIndex AMGF A 0 6
+	FrameIndex AMGF B 0 7
+	FrameIndex AMGF C 0 8
+	//anim2
+	FrameIndex AMGF D 0 9
+	FrameIndex AMGF E 0 10
+	FrameIndex AMGF F 0 11
+	//anim3
+	FrameIndex AMGF G 0 12
+	FrameIndex AMGF H 0 13
+	FrameIndex AMGF I 0 14
+	//animation end
+
+	FrameIndex AMGF J 0 15
+	FrameIndex AMGF K 0 16
+	FrameIndex AMGF L 0 17
+	FrameIndex AMGF M 0 18
+	FrameIndex AMGF N 0 19
+
+	//Automag Altfire trigger
+	FrameIndex AMGD A 0 21
+	FrameIndex AMGD B 0 22
+	FrameIndex AMGD C 0 23
+	FrameIndex AMGD D 0 24
+	FrameIndex AMGD E 0 25
+	//Automag Altfire
+	FrameIndex AMAF A 0 26
+	FrameIndex AMAF B 0 27
+	FrameIndex AMAF C 0 28
+	//Automag Twiddle
+	FrameIndex AMGI A 0 50
+	FrameIndex AMGI B 0 51
+	FrameIndex AMGI C 0 52
+	FrameIndex AMGI D 0 53
+	FrameIndex AMGI E 0 54
+	FrameIndex AMGI F 0 55
+	FrameIndex AMGI G 0 56
+	FrameIndex AMGI H 0 57
+	FrameIndex AMGI I 0 58
+	FrameIndex AMGI J 0 59
+	FrameIndex AMGI K 0 60
+	FrameIndex AMGI L 0 61
+	FrameIndex AMGI M 0 62
+	FrameIndex AMGI N 0 63
+	FrameIndex AMGI O 0 64
+	FrameIndex AMGI P 0 65
+	FrameIndex AMGI Q 0 66
+	FrameIndex AMGI R 0 67
+	FrameIndex AMGI S 0 68
+	FrameIndex AMGI T 0 69
+	FrameIndex AMGI U 0 70
+	FrameIndex AMGI V 0 71
+	FrameIndex AMGI W 0 72
+	FrameIndex AMGI X 0 73
+	FrameIndex AMGI Y 0 74
+	FrameIndex AMGI Z 0 75
+
+	//Automag Eject
+	FrameIndex AMEJ A 0 74
+	FrameIndex AMEJ B 0 75
+	FrameIndex AMEJ C 0 76
+	FrameIndex AMEJ D 0 77
+	FrameIndex AMEJ E 0 78
+	FrameIndex AMEJ F 0 79
+	FrameIndex AMEJ G 0 80
+	FrameIndex AMEJ H 0 81
+	FrameIndex AMEJ I 0 82
+	FrameIndex AMEJ J 0 83
+	FrameIndex AMEJ K 0 84
+	FrameIndex AMEJ L 0 85
+	FrameIndex AMEJ M 0 86
+	FrameIndex AMEJ N 0 87
+	FrameIndex AMEJ O 0 88
+	FrameIndex AMEJ P 0 89
+	FrameIndex AMEJ Q 0 90
+	FrameIndex AMEJ R 0 91
+	FrameIndex AMEJ S 0 92
+	FrameIndex AMEJ T 0 93
+	FrameIndex AMEJ U 0 94
+	FrameIndex AMEJ V 0 95
+	FrameIndex AMEJ W 0 96
+	FrameIndex AMEJ X 0 97
+	FrameIndex AMEJ Y 0 98
+	FrameIndex AMEJ Z 0 99
+
+	//Automag Deselect
+	FrameIndex AMDS A 0 99
+	FrameIndex AMDS B 0 100
+	FrameIndex AMDS C 0 101
+	FrameIndex AMDS D 0 102
+	FrameIndex AMDS E 0 103
+
+	//Automag Select
+	FrameIndex AMEE A 0 103
+	FrameIndex AMEE B 0 104
+	FrameIndex AMEE C 0 105
+	FrameIndex AMEE D 0 106
+	FrameIndex AMEE E 0 107
+	FrameIndex AMEE F 0 108
+	FrameIndex AMEE G 0 109
+	FrameIndex AMEE H 0 110
+	FrameIndex AMEE I 0 111
+	FrameIndex AMEE J 0 112
+	FrameIndex AMEE K 0 113
+	FrameIndex AMEE L 0 114
+	FrameIndex AMEE M 0 115
+	FrameIndex AMEE N 0 116
+	FrameIndex AMEE O 0 117
+	FrameIndex AMEE P 0 118
+	FrameIndex AMEE Q 0 119
+	FrameIndex AMEE R 0 120
+	FrameIndex AMEE S 0 121
+	FrameIndex AMEE T 0 122
+	FrameIndex AMEE U 0 123
+	FrameIndex AMEE V 0 124
+	FrameIndex AMEE W 0 125
+	FrameIndex AMEE X 0 126
+	FrameIndex AMEE Y 0 127
+	FrameIndex AMEE Z 0 128
+
+	FrameIndex AMEQ A 0 129
+	FrameIndex AMEQ B 0 130
+	FrameIndex AMEQ C 0 131
+	FrameIndex AMEQ D 0 132
+	FrameIndex AMEQ E 0 133
+	FrameIndex AMEQ F 0 134
+
+	//Automag Tilt
+	FrameIndex AMTT A 0 138
+	FrameIndex AMTT B 0 135
+	FrameIndex AMTT C 0 136
+	FrameIndex AMTT D 0 137
+}
+
+
+//Automag pickup flat
+MODEL Automag_flat
+{
+	Path "models/weapons/automag/pickups"
+	AngleOffset 0
+	Model 0 "amgflat.md3"
+	Path "models/weapons/automag"
+	Skin 0 "Automa2.png"
+	Scale 1.0 1.0 1.0
+	Offset 0 0 1
+
+	FrameIndex AMGP B 0 0
+}
+
+
+//Power Automag pickup flat
+MODEL PowerAutomag_flat
+{
+	Path "models/weapons/automag/pickups"
+	AngleOffset 0
+	Model 0 "amgflat.md3"
+	Path "models/weapons/automag"
+	SurfaceSkin 0 0 "AutomaPwr.png"
+	Scale 1.0 1.0 1.0
+	Offset 0 0 1
+
+	FrameIndex AMGP B 0 0
+}
+
+
+//Swift Automag pickup flat
+MODEL SwiftAutomag_flat
+{
+	Path "models/weapons/automag/pickups"
+	AngleOffset 0
+	Model 0 "amgflat.md3"
+	Path "models/weapons/automag"
+	SurfaceSkin 0 0 "Automaswt.png"
+	Scale 1.0 1.0 1.0
+	Offset 0 0 1
+
+	FrameIndex AMGP B 0 0
+}
+
+
+//Sovereign Automag pickup flat
+MODEL SovereignAutomag_flat
+{
+	Path "models/weapons/automag/pickups"
+	AngleOffset 0
+	Model 0 "amgflat.md3"
+	Path "models/weapons/automag"
+	SurfaceSkin 0 0 "AutomaSwr.png"
+	Scale 1.0 1.0 1.0
+	Offset 0 0 1
+
+	FrameIndex AMGP B 0 0
+}
+
+
+//Plasmatic Automag pickup flat
+MODEL PlasmaticAutomag_flat
+{
+	Path "models/weapons/automag/pickups"
+	AngleOffset 0
+	Model 0 "amgflat.md3"
+	Path "models/weapons/automag"
+	SurfaceSkin 0 0 "Automapla.png"
+	Scale 1.0 1.0 1.0
+	Offset 0 0 1
+
+	FrameIndex AMGP B 0 0
+}
+
+
+//Automag clip pickup
+MODEL automagAmmoClip
+{
+	Path "models/pickups/ammo/clip"
+	Model 0 "clipm.md3"
+	Scale 0.7 0.7 0.7
+	Offset 0 0 4
+
+	FrameIndex AGAM A 0 0
+}
+
+
+//Automag clip pickup
+MODEL automagAmmoClipbox
+{
+	Path "models/pickups/ammo/clipbox"
+	Model 0 "ShellBoxMesh.md3"
+	Scale 0.7 0.7 0.7
+	Offset 0 0 6
+
+	FrameIndex AGCB A 0 0
+}
+
+
+//Automag pickup 
+MODEL Automag_pickup
+{
+	Path "models/weapons/automag/pickups"
+	AngleOffset 0
+	Model 0 "amgpickup.md3"
+	Path "models/weapons/automag"
+	Skin 0 "Automa2.png"
+	Scale 1.0 1.0 1.0
+	Offset 0 0 8
+
+	ROTATING
+
+	FrameIndex AMGP A 0 0
+}
+
+
+//Automag decoration
+MODEL Weapon55_dec
+{
+	Path "models/weapons/automag/pickups"
+	AngleOffset 0
+	Model 0 "amgpickup.md3"
+	Path "models/weapons/automag"
+	Skin 0 "Automa1.png"
+	Scale 1.0 1.0 1.0
+	Offset 0 0 8
+
+	ROTATING
+
+	FrameIndex AMGP A 0 0
+}
+
+
+//Power Automag  decoration
+MODEL Weapon69_dec
+{
+	Path "models/weapons/automag/pickups"
+	AngleOffset 0
+	Model 0 "amgpickup.md3"
+	Path "models/weapons/automag"
+	Skin 0 "AutomaPwr.png"
+	Scale 1.0 1.0 1.0
+	Offset 0 0 1
+
+	ROTATING
+
+	FrameIndex AMGP B 0 0
+}
+
+
+//Swift Automag decoration
+MODEL Weapon70_dec
+{
+	Path "models/weapons/automag/pickups"
+	AngleOffset 0
+	Model 0 "amgpickup.md3"
+	Path "models/weapons/automag"
+	Skin 0 "Automaswt.png"
+	Scale 1.0 1.0 1.0
+	Offset 0 0 1
+
+	ROTATING
+
+	FrameIndex AMGP B 0 0
+}
+
+
+//Sovereign Automag decoration
+MODEL Weapon71_dec
+{
+	Path "models/weapons/automag/pickups"
+	AngleOffset 0
+	Model 0 "amgpickup.md3"
+	Path "models/weapons/automag"
+	Skin 0 "AutomaSwr.png"
+	Scale 1.0 1.0 1.0
+	Offset 0 0 1
+
+	ROTATING
+
+	FrameIndex AMGP B 0 0
+}
+
+
+//Plasmatic Automag decoration
+MODEL Weapon72_dec
+{
+	Path "models/weapons/automag/pickups"
+	AngleOffset 0
+	Model 0 "amgpickup.md3"
+	Path "models/weapons/automag"
+	Skin 0 "Automapla.png"
+	Scale 1.0 1.0 1.0
+	Offset 0 0 1
+
+	ROTATING
+
+	FrameIndex AMGP B 0 0
+}

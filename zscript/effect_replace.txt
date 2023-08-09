@@ -1,0 +1,226 @@
+
+Class EffectReplacer : EventHandler
+{
+	override void CheckReplacement(ReplaceEvent e)
+	{
+		if(e.Replacee is "MistVeryTiny") 			e.Replacement = 'MistFadeFastVeryTiny';
+		if(e.Replacee is "MistTiny") 				e.Replacement = 'MistFadeFastTiny';
+	}
+}
+
+
+Class MistFadeFastVeryTiny : Actor
+{
+	Default
+	{
+	+NOGRAVITY;
+	+NOINTERACTION;
+	+NOBLOCKMAP;
+	+NOTELEPORT;
+	+ForceXYBillboard;
+	+CLIENTSIDEONLY;
+	Scale 0.12;
+	Renderstyle "Translucent";
+	Alpha 0.1;
+	}
+	
+	States
+	{
+	Spawn:
+		PDBA ACEGIKM 1;
+		PDBA OQSUWY 1 A_FadeOut(0.01);
+		Stop;
+	}
+}
+
+Class MistFadeFastTiny : Actor
+{
+	Default
+	{
+	+NOGRAVITY;
+	+NOINTERACTION;
+	+NOBLOCKMAP;
+	+NOTELEPORT;
+	+ForceXYBillboard;
+	+CLIENTSIDEONLY;
+	Scale 0.22;
+	Renderstyle "translucent";
+	Alpha 0.1;
+	}
+	
+	States
+	{
+	Spawn:
+		PDBA ACEGIKM 1;
+		PDBA OQSUWY 1 A_FadeOut(0.01);
+		Stop;
+	}
+}
+
+Class BSmokeTrailSpawner : Actor
+{
+	Default
+	{
+	Projectile;
+	+FORCEXYBILLBOARD;
+	radius 2;
+	height 2;
+	speed 5;
+	renderstyle "Add";
+	Alpha 0;
+	+NOCLIP;
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0;
+		TNT1 A 1;
+		TNT1 A 0 A_SpawnItemEx ("8BRandomSmokeTrail",0,0,0,cos(pitch)*frandom(0.01,0.02),0,-sin(pitch)*frandom(0.02,0.05),0,SXF_TRANSFERPITCH);
+		Stop;
+	}
+}
+
+Class BRedSmokeTrailSpawner : Actor
+{
+	Default
+	{
+	Projectile;
+	+FORCEXYBILLBOARD;
+	radius 2;
+	height 2;
+	speed 4;
+	renderstyle "Add";
+	Alpha 0;
+	+NOCLIP;
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0;
+		TNT1 A 1;
+		TNT1 A 0 A_SpawnItemEx ("8BRandomSmokeTrailRed",0,0,0,frandom(0.01,0.02),0,frandom(0.02,0.05),0,SXF_TRANSFERPITCH);
+		Stop;
+	}
+}
+
+Class BBlueSmokeTrailSpawner : Actor
+{
+	Default
+	{
+	Projectile;
+	+FORCEXYBILLBOARD;
+	radius 2;
+	height 2;
+	speed 4;
+	renderstyle "Add";
+	Alpha 0;
+	+NOCLIP;
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0;
+		TNT1 A 1;
+		TNT1 A 0 A_SpawnItemEx ("8BRandomSmokeTrailBlue",0,0,0,frandom(0.01,0.02),0,frandom(0.02,0.05),0,SXF_TRANSFERPITCH);
+		Stop;
+	}
+}
+
+Class PowermagSparkSpawner : Actor
+{
+	Default
+	{
+	Projectile;
+	+FORCEXYBILLBOARD;
+	radius 2;
+	height 2;
+	speed 4;
+	renderstyle "Add";
+	Alpha 0;
+	+NOCLIP;
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0;
+		TNT1 A 1;
+		TNT1 A 0 A_SpawnItemEx ("PoweramgSpark1",0,0,0,frandom(0.01,0.02),0,frandom(0.02,0.05),0,SXF_TRANSFERPITCH);
+		Stop;
+	}
+}
+
+Class PowermagAltSparkSpawner : Actor
+{
+	Default
+	{
+	Projectile;
+	+FORCEXYBILLBOARD;
+	radius 2;
+	height 2;
+	speed 4;
+	renderstyle "Add";
+	Alpha 0;
+	+NOCLIP;
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0;
+		TNT1 A 1;
+		TNT1 A 0 A_SpawnItemEx ("PoweramgSpark1",0,-3,0,frandom(0.01,0.02),0,frandom(0.02,0.05),0,SXF_TRANSFERPITCH);
+		Stop;
+	}
+}
+
+Class PowermagSpark2Spawner : Actor
+{
+	Default
+	{
+	Projectile;
+	+FORCEXYBILLBOARD;
+	radius 2;
+	height 2;
+	speed 4;
+	renderstyle "Add";
+	Alpha 0;
+	+NOCLIP;
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0;
+		TNT1 A 1;
+		TNT1 A 0 A_SpawnItemEx ("PoweramgSpark2",0,0,0,frandom(0.01,0.02),0,frandom(0.02,0.05),0,SXF_TRANSFERPITCH);
+		Stop;
+	}
+}
+
+Class PowermagAltSpark2Spawner : Actor
+{
+	Default
+	{
+	Projectile;
+	+FORCEXYBILLBOARD;
+	radius 2;
+	height 2;
+	speed 4;
+	renderstyle "Add";
+	Alpha 0;
+	+NOCLIP;
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0;
+		TNT1 A 1;
+		TNT1 A 0 A_SpawnItemEx ("PoweramgSpark2",0,-3,0,frandom(0.01,0.02),0,frandom(0.02,0.05),0,SXF_TRANSFERPITCH);
+		Stop;
+	}
+}

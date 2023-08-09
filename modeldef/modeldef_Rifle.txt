@@ -1,0 +1,440 @@
+//Rifle
+MODEL Weapon63
+{
+	Path "models/weapons/rifle"
+	AngleOffset 90
+        Model 0 "riflem.md3"
+        Scale -1.0 1.0 1.0
+	Offset 23 5 -4
+	//Rolloffset 5
+	//Select
+   	FrameIndex SNIS A 0 1
+   	FrameIndex SNIS B 0 2
+	FrameIndex SNIS C 0 3
+	FrameIndex SNIS D 0 4
+	FrameIndex SNIS E 0 5
+	FrameIndex SNIS F 0 6
+	FrameIndex SNIS G 0 7
+	FrameIndex SNIS H 0 8
+	FrameIndex SNIS I 0 9
+	FrameIndex SNIS J 0 10
+	FrameIndex SNIS K 0 11
+	FrameIndex SNIS L 0 12
+	FrameIndex SNIS M 0 13
+	FrameIndex SNIS N 0 14
+	FrameIndex SNIS O 0 15
+	FrameIndex SNIS P 0 16
+	FrameIndex SNIS Q 0 17
+	FrameIndex SNIS R 0 18
+	FrameIndex SNIS S 0 19
+	FrameIndex SNIS T 0 20
+	//Rifle Fire
+   	FrameIndex SNIF A 0 21
+   	FrameIndex SNIF B 0 22
+	FrameIndex SNIF C 0 23
+	FrameIndex SNIF D 0 24
+	FrameIndex SNIF E 0 25
+	FrameIndex SNIF F 0 26
+	FrameIndex SNIF G 0 27
+	FrameIndex SNIF H 0 28
+	FrameIndex SNIF I 0 29
+	FrameIndex SNIF J 0 30
+	//Rifle deselect
+   	FrameIndex SNDS A 0 58
+   	FrameIndex SNDS B 0 59
+	FrameIndex SNDS C 0 60
+	FrameIndex SNDS D 0 61
+	FrameIndex SNDS E 0 62
+	FrameIndex SNDS F 0 63
+	FrameIndex SNDS G 0 64
+	FrameIndex SNDS H 0 65
+	FrameIndex SNDS I 0 66
+	FrameIndex SNDS J 0 67
+	FrameIndex SNDS K 0 68
+
+}
+
+
+//Power Rifle
+MODEL Weapon83
+{
+	Path "models/weapons/rifle"
+	AngleOffset 90
+        Model 0 "riflem.md3"
+	SurfaceSkin 0 0 "JRifle2.png"
+	Path "models/weapons/flakcannon/autoflak"
+	SurfaceSkin 0 1 "fijer2.png"
+        Scale -1.0 1.0 1.0
+	Offset 23 5 -4
+	//Rolloffset 5
+	//Select
+   	FrameIndex SNIS A 0 1
+   	FrameIndex SNIS B 0 2
+	FrameIndex SNIS C 0 3
+	FrameIndex SNIS D 0 4
+	FrameIndex SNIS E 0 5
+	FrameIndex SNIS F 0 6
+	FrameIndex SNIS G 0 7
+	FrameIndex SNIS H 0 8
+	FrameIndex SNIS I 0 9
+	FrameIndex SNIS J 0 10
+	FrameIndex SNIS K 0 11
+	FrameIndex SNIS L 0 12
+	FrameIndex SNIS M 0 13
+	FrameIndex SNIS N 0 14
+	FrameIndex SNIS O 0 15
+	FrameIndex SNIS P 0 16
+	FrameIndex SNIS Q 0 17
+	FrameIndex SNIS R 0 18
+	FrameIndex SNIS S 0 19
+	FrameIndex SNIS T 0 20
+	//Rifle Fire
+   	FrameIndex SNIF A 0 21
+   	FrameIndex SNIF B 0 22
+	FrameIndex SNIF C 0 23
+	FrameIndex SNIF D 0 24
+	FrameIndex SNIF E 0 25
+	FrameIndex SNIF F 0 26
+	FrameIndex SNIF G 0 27
+	FrameIndex SNIF H 0 28
+	FrameIndex SNIF I 0 29
+	FrameIndex SNIF J 0 30
+	//Rifle deselect
+   	FrameIndex SNDS A 0 58
+   	FrameIndex SNDS B 0 59
+	FrameIndex SNDS C 0 60
+	FrameIndex SNDS D 0 61
+	FrameIndex SNDS E 0 62
+	FrameIndex SNDS F 0 63
+	FrameIndex SNDS G 0 64
+	FrameIndex SNDS H 0 65
+	FrameIndex SNDS I 0 66
+	FrameIndex SNDS J 0 67
+	FrameIndex SNDS K 0 68
+
+}
+
+
+
+//Sovereign Rifle
+MODEL Weapon84
+{
+	Path "models/weapons/rifle"
+	AngleOffset 90
+        Model 0 "riflem.md3"
+	SurfaceSkin 0 0 "JRifle3.png"
+	SurfaceSkin 0 1 "fijer3.png"
+        Scale -1.0 1.0 1.0
+	Offset 23 5 -4
+	//Rolloffset 5
+	//Select
+   	FrameIndex SNIS A 0 1
+   	FrameIndex SNIS B 0 2
+	FrameIndex SNIS C 0 3
+	FrameIndex SNIS D 0 4
+	FrameIndex SNIS E 0 5
+	FrameIndex SNIS F 0 6
+	FrameIndex SNIS G 0 7
+	FrameIndex SNIS H 0 8
+	FrameIndex SNIS I 0 9
+	FrameIndex SNIS J 0 10
+	FrameIndex SNIS K 0 11
+	FrameIndex SNIS L 0 12
+	FrameIndex SNIS M 0 13
+	FrameIndex SNIS N 0 14
+	FrameIndex SNIS O 0 15
+	FrameIndex SNIS P 0 16
+	FrameIndex SNIS Q 0 17
+	FrameIndex SNIS R 0 18
+	FrameIndex SNIS S 0 19
+	FrameIndex SNIS T 0 20
+	//Rifle Fire
+   	FrameIndex SNIF A 0 21
+   	FrameIndex SNIF B 0 22
+	FrameIndex SNIF C 0 23
+	FrameIndex SNIF D 0 24
+	FrameIndex SNIF E 0 25
+	FrameIndex SNIF F 0 26
+	FrameIndex SNIF G 0 27
+	FrameIndex SNIF H 0 28
+	FrameIndex SNIF I 0 29
+	FrameIndex SNIF J 0 30
+	//Rifle deselect
+   	FrameIndex SNDS A 0 58
+   	FrameIndex SNDS B 0 59
+	FrameIndex SNDS C 0 60
+	FrameIndex SNDS D 0 61
+	FrameIndex SNDS E 0 62
+	FrameIndex SNDS F 0 63
+	FrameIndex SNDS G 0 64
+	FrameIndex SNDS H 0 65
+	FrameIndex SNDS I 0 66
+	FrameIndex SNDS J 0 67
+	FrameIndex SNDS K 0 68
+
+}
+
+
+
+
+//Plasmatic Rifle
+MODEL Weapon85
+{
+	Path "models/weapons/rifle"
+	AngleOffset 90
+        Model 0 "riflem.md3"
+	SurfaceSkin 0 0 "JRifle4.png"
+	SurfaceSkin 0 1 "fijer4.png"
+        Scale -1.0 1.0 1.0
+	Offset 23 5 -4
+	//Rolloffset 5
+	//Select
+   	FrameIndex SNIS A 0 1
+   	FrameIndex SNIS B 0 2
+	FrameIndex SNIS C 0 3
+	FrameIndex SNIS D 0 4
+	FrameIndex SNIS E 0 5
+	FrameIndex SNIS F 0 6
+	FrameIndex SNIS G 0 7
+	FrameIndex SNIS H 0 8
+	FrameIndex SNIS I 0 9
+	FrameIndex SNIS J 0 10
+	FrameIndex SNIS K 0 11
+	FrameIndex SNIS L 0 12
+	FrameIndex SNIS M 0 13
+	FrameIndex SNIS N 0 14
+	FrameIndex SNIS O 0 15
+	FrameIndex SNIS P 0 16
+	FrameIndex SNIS Q 0 17
+	FrameIndex SNIS R 0 18
+	FrameIndex SNIS S 0 19
+	FrameIndex SNIS T 0 20
+	//Rifle Fire
+   	FrameIndex SNIF A 0 21
+   	FrameIndex SNIF B 0 22
+	FrameIndex SNIF C 0 23
+	FrameIndex SNIF D 0 24
+	FrameIndex SNIF E 0 25
+	FrameIndex SNIF F 0 26
+	FrameIndex SNIF G 0 27
+	FrameIndex SNIF H 0 28
+	FrameIndex SNIF I 0 29
+	FrameIndex SNIF J 0 30
+	//Rifle deselect
+   	FrameIndex SNDS A 0 58
+   	FrameIndex SNDS B 0 59
+	FrameIndex SNDS C 0 60
+	FrameIndex SNDS D 0 61
+	FrameIndex SNDS E 0 62
+	FrameIndex SNDS F 0 63
+	FrameIndex SNDS G 0 64
+	FrameIndex SNDS H 0 65
+	FrameIndex SNDS I 0 66
+	FrameIndex SNDS J 0 67
+	FrameIndex SNDS K 0 68
+
+}
+
+
+
+//Explosive Rifle
+MODEL Weapon86
+{
+	Path "models/weapons/rifle"
+	AngleOffset 90
+        Model 0 "riflem.md3"
+	SurfaceSkin 0 0 "JRifle5.png"
+	Path "models/weapons/flakcannon"
+	SurfaceSkin 0 1 "fijer5.png"
+        Scale -1.0 1.0 1.0
+	Offset 23 5 -4
+	//Rolloffset 5
+	//Select
+   	FrameIndex SNIS A 0 1
+   	FrameIndex SNIS B 0 2
+	FrameIndex SNIS C 0 3
+	FrameIndex SNIS D 0 4
+	FrameIndex SNIS E 0 5
+	FrameIndex SNIS F 0 6
+	FrameIndex SNIS G 0 7
+	FrameIndex SNIS H 0 8
+	FrameIndex SNIS I 0 9
+	FrameIndex SNIS J 0 10
+	FrameIndex SNIS K 0 11
+	FrameIndex SNIS L 0 12
+	FrameIndex SNIS M 0 13
+	FrameIndex SNIS N 0 14
+	FrameIndex SNIS O 0 15
+	FrameIndex SNIS P 0 16
+	FrameIndex SNIS Q 0 17
+	FrameIndex SNIS R 0 18
+	FrameIndex SNIS S 0 19
+	FrameIndex SNIS T 0 20
+	//Rifle Fire
+   	FrameIndex SNIF A 0 21
+   	FrameIndex SNIF B 0 22
+	FrameIndex SNIF C 0 23
+	FrameIndex SNIF D 0 24
+	FrameIndex SNIF E 0 25
+	FrameIndex SNIF F 0 26
+	FrameIndex SNIF G 0 27
+	FrameIndex SNIF H 0 28
+	FrameIndex SNIF I 0 29
+	FrameIndex SNIF J 0 30
+	//Rifle deselect
+   	FrameIndex SNDS A 0 58
+   	FrameIndex SNDS B 0 59
+	FrameIndex SNDS C 0 60
+	FrameIndex SNDS D 0 61
+	FrameIndex SNDS E 0 62
+	FrameIndex SNDS F 0 63
+	FrameIndex SNDS G 0 64
+	FrameIndex SNDS H 0 65
+	FrameIndex SNDS I 0 66
+	FrameIndex SNDS J 0 67
+	FrameIndex SNDS K 0 68
+
+}
+
+
+
+
+
+
+
+
+
+
+
+// Rifle pickup flat
+MODEL Rifle_pickupflat
+{
+	Path "models/weapons/Rifle"
+	//AngleOffset -180
+    Model 0 "RiPick.md3"
+    Scale 0.7 0.7 0.7
+	Offset 0 0 0
+	Rolloffset 0
+   	FrameIndex RPIC B 0 0
+
+}
+
+
+
+
+
+
+
+
+
+
+
+// Rifle pickup
+MODEL Rifle_pickup
+{
+	ROTATING
+	Path "models/weapons/Rifle"
+	//AngleOffset -180
+    Model 0 "RiPick.md3"
+    Scale 0.7 0.7 0.7
+	Offset 0 0 0
+	Rolloffset 0
+   	FrameIndex RPIC A 0 0
+}
+
+
+// Rifle ammo box
+MODEL Rifle_bulletbox
+{
+	Path "models/pickups/ammo/riflebullets"
+	//AngleOffset -180
+    Model 0 "riflebullets.md3"
+    Scale 0.7 0.7 0.7
+	Offset 0 0 1
+	Rolloffset 0
+   	FrameIndex RFBL A 0 0
+
+}
+
+// Rifle round
+MODEL Rifle_bulletround
+{
+	Path "models/pickups/ammo/rifleround"
+	//AngleOffset -180
+    Model 0 "rifleround.md3"
+    Scale 0.7 0.7 0.7
+	Offset 0 0 0
+	Rolloffset 0
+   	FrameIndex RFRR A 0 0
+
+}
+
+
+// Rifle decoration
+MODEL Weapon63_dec
+{
+	ROTATING
+	Path "models/weapons/Rifle"
+	//AngleOffset -180
+    Model 0 "RiPick.md3"
+    Scale 0.7 0.7 0.7
+	Offset 0 0 8
+	
+   	FrameIndex RPIC A 0 0
+}
+
+
+//power  Rifle decoration
+MODEL Weapon83_dec
+{
+	ROTATING
+	Path "models/weapons/Rifle"
+	//AngleOffset -180
+    Model 0 "RiPick.md3"
+    Skin 0 "JRifle2.png"
+    Scale 0.7 0.7 0.7
+	Offset 0 0 8
+	
+   	FrameIndex RPIC A 0 0
+}
+
+//sovereign  Rifle decoration
+MODEL Weapon84_dec
+{
+	ROTATING
+	Path "models/weapons/Rifle"
+	//AngleOffset -180
+    Model 0 "RiPick.md3"
+    Skin 0 "JRifle3.png"
+    Scale 0.7 0.7 0.7
+	Offset 0 0 8
+	
+   	FrameIndex RPIC A 0 0
+}
+
+//plasmatic Rifle decoration
+MODEL Weapon85_dec
+{
+	ROTATING
+	Path "models/weapons/Rifle"
+	//AngleOffset -180
+    Model 0 "RiPick.md3"
+    Skin 0 "JRifle4.png"
+    Scale 0.7 0.7 0.7
+	Offset 0 0 8
+	
+   	FrameIndex RPIC A 0 0
+}
+//explosive Rifle decoration
+MODEL Weapon86_dec
+{
+	ROTATING
+	Path "models/weapons/Rifle"
+	//AngleOffset -180
+    Model 0 "RiPick.md3"
+    Skin 0 "JRifle5.png"
+    Scale 0.7 0.7 0.7
+	Offset 0 0 8
+	
+   	FrameIndex RPIC A 0 0
+}

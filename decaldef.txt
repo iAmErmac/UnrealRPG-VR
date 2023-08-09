@@ -1,0 +1,6 @@
+
+generator AutomagNewGuntracer 			Bullethole2
+generator PowerAutomagGuntracer 		Bullethole2
+generator PowerAutomagGuntracer2 		Bullethole2
+generator AutomagGuntracerPlasmatic 	Bullethole2
+generator AutomagPlasmaticExTracer 		Bullethole2

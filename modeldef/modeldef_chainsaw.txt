@@ -1,0 +1,153 @@
+
+Model "Weapon82"
+{
+	Path "models/weapons/chainsaw"
+	Model 0 "chainsaw.md3"
+	Scale -1.0 1.0 1.0
+	Offset 30 6 8
+	
+	angleoffset 2
+	rolloffset 10
+
+	//select 
+	FrameIndex CSSL A 0 2
+	FrameIndex CSSL B 0 3
+	FrameIndex CSSL C 0 4
+	FrameIndex CSSL D 0 5
+	FrameIndex CSSL E 0 6
+	FrameIndex CSSL F 0 7
+	FrameIndex CSSL G 0 8
+	FrameIndex CSSL H 0 9
+	FrameIndex CSSL I 0 10
+	FrameIndex CSSL J 0 11
+	FrameIndex CSSL K 0 12
+	FrameIndex CSSL L 0 13
+	FrameIndex CSSL M 0 14
+	FrameIndex CSSL N 0 15
+	FrameIndex CSSL O 0 16
+	// idle
+	FrameIndex CSID A 0 17
+	FrameIndex CSID B 0 18
+	FrameIndex CSID C 0 19
+	FrameIndex CSID D 0 20
+	FrameIndex CSID E 0 21
+	FrameIndex CSID F 0 22
+	FrameIndex CSID G 0 23
+	FrameIndex CSID H 0 24
+	FrameIndex CSID I 0 25
+	FrameIndex CSID J 0 26
+	// swipe
+	FrameIndex CSSW A 0 27
+	FrameIndex CSSW B 0 28
+	FrameIndex CSSW C 0 29
+	FrameIndex CSSW D 0 30
+	FrameIndex CSSW E 0 31
+	FrameIndex CSSW F 0 32
+	FrameIndex CSSW G 0 33
+	FrameIndex CSSW H 0 34
+	FrameIndex CSSW I 0 35
+	FrameIndex CSSW J 0 36
+	FrameIndex CSSW K 0 37
+
+	
+}
+//deselect
+Model "Weapon82"
+{
+	Path "models/weapons/chainsaw"
+	Model 0 "chainsaw.md3"
+	Scale -1.0 1.0 1.0
+	Offset 30 6 8
+	
+	angleoffset 2
+	rolloffset 10
+
+
+	FrameIndex CSDN A 0 62
+	FrameIndex CSDN B 0 63
+	FrameIndex CSDN C 0 64
+	FrameIndex CSDN D 0 65
+	FrameIndex CSDN E 0 66
+	FrameIndex CSDN F 0 67
+
+}
+Model "Weapon82"
+{
+	Path "models/weapons/chainsaw"
+	Model 0 "chainsaw.md3"
+	Scale -1.0 1.0 1.0
+	Offset 30 6 8
+	
+	angleoffset 2
+	rolloffset 10
+
+	
+	angleoffset 2
+	rolloffset 10
+//cut--//
+	FrameIndex CSCT A 0 42
+	FrameIndex CSCT B 0 43
+	FrameIndex CSCT C 0 44
+	FrameIndex CSCT D 0 45
+	FrameIndex CSCT E 0 46
+	FrameIndex CSCT F 0 47
+	FrameIndex CSCT G 0 48
+	FrameIndex CSCT H 0 49
+	FrameIndex CSCT I 0 50
+	FrameIndex CSCT J 0 51
+	FrameIndex CSCT K 0 52
+	FrameIndex CSCT L 0 53
+	FrameIndex CSCT M 0 54
+	FrameIndex CSCT N 0 55
+	FrameIndex CSCT O 0 56
+	FrameIndex CSCT P 0 57
+	FrameIndex CSCT Q 0 58
+	FrameIndex CSCT R 0 59
+	FrameIndex CSCT S 0 60
+
+}
+
+
+
+
+Model "UChainsaw_pickupflat"
+{
+	Path "models/weapons/chainsaw"
+	Model 0 "chnswpick.md3"
+	Scale 0.3 0.4 0.4
+	Offset 0 0 0
+	USEACTORROLL
+	USEACTORPITCH
+	//select 
+	FrameIndex CSSW A 0 0
+
+}
+
+Model "UChainsaw_pickup"
+{
+	Path "models/weapons/chainsaw"
+	Model 0 "chnswpick.md3"
+	Scale 0.3 0.4 0.4
+	Offset 0 0 2
+
+	ROTATING
+	//select 
+	FrameIndex CSSW A 0 0
+
+}
+Model "Weapon82_dec"
+{
+	Path "models/weapons/chainsaw"
+	Model 0 "chnswpick.md3"
+	Scale 0.3 0.4 0.4
+	Offset 0 0 2
+
+	ROTATING
+	//select 
+	FrameIndex CSSW A 0 0
+
+}
+
+
+
+

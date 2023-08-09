@@ -1,0 +1,888 @@
+//dispersion pistol
+ACTOR Weapon65 : DoomweaponZ
+{
+	//$Category "Inventory\Weapons"
+	//$Color 19
+	/*Weapon.BobStyle InverseSmooth
+	Weapon.BobSpeed 1.8
+	Weapon.BobRangeY 1.2
+	Weapon.BobRangeX 0.9*/
+	+WEAPON.NOAUTOAIM
+	+INVENTORY.UNTOSSABLE
+	Weapon.AmmoType "DispersionEnergy"
+	Weapon.AmmoType2 "DispersionEnergy"
+	Weapon.Ammouse 1
+	Weapon.AmmoUse2 6 
+
+	inventory.pickupsound "wpickup"
+
+	States
+	{
+	Ready:
+		TNT1 A 0 A_playsound("wchng",6)
+		D1PS ABCDEFGHIJK 1
+		Goto Realready
+	Realready:
+		D1ST A 1 A_weaponready
+		Loop
+	Fire:
+		TNT1 A 0 ACS_NamedExecute("add_statXP",0,1,1)
+		TNT1 A 0 A_Takeinventory("DispersionEnergy",1)
+		//TNT1 A 0 A_SpawnItemEx ("dpistol_missile1",cos(pitch)*3,8,45-(sin(pitch)*4),cos(pitch)*30,0,-sin(pitch)*30,0,SXF_TRANSFERPITCH,0,5000+tid)
+		TNT1 A 0 A_FireProjectile ("dpistol_missile1",0,0,0,0,FPF_NOAUTOAIM)
+		TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,1)
+		TNT1 A 0 A_playsound("dispshot")
+		TNT1 A 0 A_HapticBuzz(-1)
+		D1PF ABC 4
+		Goto Realready
+	Deselect:
+		D1ST A 1 A_Lower(60)
+		wait
+	Select:
+		D1ST A 0 ACS_NamedExecute("UpdateWid",0,65)
+		D1ST A 0 A_playsound("dispsele")
+		D1ST A 1 A_Raise(60)
+		wait
+	Altfire:
+		//start shaking
+		TNT1 A 0 A_playsound("PowerUp3",CHAN_WEAPON)
+		D1ST AAAAAAAAAAAAAAAAAA 1 A_WeaponOffset(frandom(-3,3),32+frandom(-3,3),WOF_INTERPOLATE )
+		D1ST AAAAAAAAAAAAAAAAAA 1 A_WeaponOffset(frandom(-6,6),32+frandom(-6,6),WOF_INTERPOLATE )
+		D1PF A 1 A_WeaponOffset(0,32,WOF_INTERPOLATE )
+		TNT1 A 0 ACS_NamedExecute("add_statXP",0,1,1)
+		TNT1 A 0 A_stopSound(CHAN_WEAPON)
+		TNT1 A 0 A_Takeinventory("DispersionEnergy",2)
+		//TNT1 A 0 A_SpawnItemEx ("dpistol_altmissile1",cos(pitch)*3,random(2,8),random(39,47)-(sin(pitch)*4),cos(pitch)*30,0,-sin(pitch)*30,frandom(-4,4),SXF_TRANSFERPITCH,0,5000+tid)
+		//TNT1 A 0 A_SpawnItemEx ("dpistol_altmissile1",cos(pitch)*3,random(2,8),random(39,47)-(sin(pitch)*4),cos(pitch)*30,0,-sin(pitch)*30,frandom(-4,4),SXF_TRANSFERPITCH,0,5000+tid)
+		TNT1 A 0 A_FireProjectile ("dpistol_altmissile1",0,0,0,0,FPF_NOAUTOAIM)
+		TNT1 A 0 A_FireProjectile ("dpistol_altmissile1",0,0,0,0,FPF_NOAUTOAIM)
+		TNT1 A 0 A_playsound("shtfir2",CHAN_WEAPON)
+		TNT1 A 0 A_HapticBuzz(-1)
+		D1PF A 2
+		TNT1 A 0 A_Takeinventory("DispersionEnergy",2)
+		//TNT1 A 0 A_SpawnItemEx ("dpistol_altmissile1",cos(pitch)*3,random(2,8),random(39,47)-(sin(pitch)*4),cos(pitch)*30,0,-sin(pitch)*30,frandom(-4,4),SXF_TRANSFERPITCH,0,5000+tid)
+		//TNT1 A 0 A_SpawnItemEx ("dpistol_altmissile1",cos(pitch)*3,random(2,8),random(39,47)-(sin(pitch)*4),cos(pitch)*30,0,-sin(pitch)*30,frandom(-4,4),SXF_TRANSFERPITCH,0,5000+tid)
+		TNT1 A 0 A_FireProjectile ("dpistol_altmissile1",0,0,0,0,FPF_NOAUTOAIM)
+		TNT1 A 0 A_FireProjectile ("dpistol_altmissile1",0,0,0,0,FPF_NOAUTOAIM)
+		TNT1 A 0 A_playsound("dispshot",CHAN_VOICE)
+		TNT1 A 0 A_HapticBuzz(-1)
+		D1PF A 2
+		TNT1 A 0 A_Takeinventory("DispersionEnergy",2)
+		//TNT1 A 0 A_SpawnItemEx ("dpistol_altmissile1",cos(pitch)*3,random(2,8),random(39,47)-(sin(pitch)*4),cos(pitch)*30,0,-sin(pitch)*30,frandom(-4,4),SXF_TRANSFERPITCH,0,5000+tid)
+		//TNT1 A 0 A_SpawnItemEx ("dpistol_altmissile1",cos(pitch)*3,random(2,8),random(39,47)-(sin(pitch)*4),cos(pitch)*30,0,-sin(pitch)*30,frandom(-4,4),SXF_TRANSFERPITCH,0,5000+tid)
+		TNT1 A 0 A_FireProjectile ("dpistol_altmissile1",0,0,0,0,FPF_NOAUTOAIM)
+		TNT1 A 0 A_FireProjectile ("dpistol_altmissile1",0,0,0,0,FPF_NOAUTOAIM)
+		TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,1)
+		D1PF ABC 4
+		Goto Realready
+	}
+}
+
+ACTOR Item65 : CustomInventory
+{
+	Inventory.Amount 1
+	Inventory.MaxAmount 5
+	Inventory.Icon "item65i"
+	+INVENTORY.ALWAYSPICKUP
+
+	States
+	{
+		Use:
+		TNT1 A 3 ACS_NamedExecuteWithResult("Equip_weapon",65)
+		TNT1 A 0 //do not sync inv here cause we need result from the first script
+		Stop
+	}
+}
+
+//stores how many dispersion pistol powerups you got
+actor Dpistolpowerup : Inventory
+{
+	inventory.maxamount 5
+}
+
+//stores if you picked up a pickup
+actor Dpistolupgrading : Inventory
+{
+	inventory.maxamount 1
+}
+
+
+actor DispersionEnergy : Ammo
+{
+	Inventory.Icon "amm1"
+	inventory.amount 1
+	inventory.maxamount 500
+}
+
+actor "Dpistol_Cell" : CustomInventory 15213
+{
+	//$Category "Inventory\Ammo"
+	//$Color 17
+	Inventory.PickupMessage " "
+	Inventory.pickupsound "ammosnd"
+	
+	States
+	{
+	Spawn:
+		CELL A -1
+		Stop
+	Pickup:
+		TNT1 A 0 A_jumpif(A_giveInventory("DispersionEnergy",40)==0,"Spawn")
+		TNT1 A 0 ACS_execute(700,0,37)
+		TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,1)
+	}
+}
+
+actor DispersionPistol_flat: CustomInventory 15005
+{
+	//$Category "Inventory\Weapons"
+	//$Color 19
+	Radius 8
+	height 8
+	inventory.pickupsound "wpickup"
+	
+    States
+	{
+	Spawn:
+		DPPP B -1
+		Stop
+	Pickup:
+		TNT1 A 0 A_giveinventory("Item65")
+		TNT1 A 0 A_giveInventory("DispersionEnergy",40)
+		TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,1)
+		TNT1 A 0 ACS_execute(700,0,67)
+		TNT1 A 0 ACS_NamedExecuteAlways("inv_sync")
+	PickupandEquip:
+		TNT1 A 0 
+		{
+			if(ACS_NamedExecuteWithResult("Equip_weapon",65)==1)
+			{
+				A_takeInventory("Item65",1);
+			}
+		}
+		Stop
+	}
+}
+
+actor DispersionPistol_pickup: CustomInventory 15004
+{
+	//$Category "Inventory\Weapons"
+	//$Color 19
+	Radius 8
+	height 8
+	inventory.pickupsound "wpickup"
+	
+    States
+	{
+	Spawn:
+		DPPP A -1
+		Stop
+	Pickup:
+		TNT1 A 0 A_giveinventory("Item65")
+		TNT1 A 0 A_giveInventory("DispersionEnergy",40)
+		TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,1)
+		TNT1 A 0 ACS_execute(700,0,67)
+		TNT1 A 0 ACS_NamedExecuteAlways("inv_sync")
+	PickupandEquip:
+		TNT1 A 0 
+		{
+			if(ACS_NamedExecuteWithResult("Equip_weapon",65)==1)
+			{
+				A_takeInventory("Item65",1);
+			}
+		}
+		Stop
+	}
+}
+
+//dispersion Blaster
+ACTOR Weapon91 : DoomweaponZ
+{
+	//$Category "Inventory\Weapons"
+	//$Color 19
+	Weapon.BobStyle InverseSmooth
+	Weapon.BobSpeed 1.8
+	Weapon.BobRangeY 1.2
+	Weapon.BobRangeX 0.9
+	+WEAPON.NOAUTOAIM
+	+INVENTORY.UNTOSSABLE
+	Weapon.AmmoType "DispersionEnergy"
+	Weapon.AmmoType2 "DispersionEnergy"
+	Weapon.Ammouse 1
+	Weapon.AmmoUse2 6 
+	inventory.pickupsound "wpickup"
+
+	States
+	{
+	Ready:
+		TNT1 A 0 A_playsound("wchng",6)
+		D1PS ABCDEFGHIJK 1
+		Goto Realready
+		Realready:
+		D1ST A 1 A_weaponready
+		Loop
+	Fire:
+		TNT1 A 0 ACS_NamedExecute("add_statXP",0,1,1)
+		TNT1 A 0 A_Takeinventory("DispersionEnergy",1)
+		//TNT1 A 0 A_SpawnItemEx ("dpistol_missile2",cos(pitch)*3,8,45-(sin(pitch)*4),cos(pitch)*30,0,-sin(pitch)*30,0,SXF_TRANSFERPITCH,0,5000+tid)
+		TNT1 A 0 A_FireProjectile ("dpistol_missile2",0,0,0,0,FPF_NOAUTOAIM)
+		TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,1)
+		TNT1 A 0 A_playsound("dispshot")
+		TNT1 A 0 A_HapticBuzz(-1)
+		D1PF ABC 4
+		Goto Realready
+	Deselect:
+		D1DS ABCD 1
+		TNT1 AAAAAAAAAAAAAAAAAAAAA 0 A_lower
+		Select:
+		D1DS A 0 ACS_NamedExecute("UpdateWid",0,91)
+		D1DS A 0 A_playsound("dispsele")
+		D1DS AAAAAAAAAAAAAAAAAAAAA 0 A_raise
+		Loop
+	Altfire:
+		//start shaking		
+		TNT1 A 0 A_playsound("PowerUp3",CHAN_WEAPON)
+		D1ST AAAAAAAAAAAAAAAAAA 1 A_WeaponOffset(frandom(-3,3),32+frandom(-3,3),WOF_INTERPOLATE )
+		D1ST AAAAAAAAAAAAAAAAAA 1 A_WeaponOffset(frandom(-6,6),32+frandom(-6,6),WOF_INTERPOLATE )
+		D1PF A 1 A_WeaponOffset(0,32,WOF_INTERPOLATE )
+		TNT1 A 0 ACS_NamedExecute("add_statXP",0,1,1)
+		TNT1 A 0 A_stopSound(CHAN_WEAPON)
+		TNT1 A 0 A_Takeinventory("DispersionEnergy",2)
+		//TNT1 A 0 A_SpawnItemEx ("dpistol_altmissile2",cos(pitch)*3,random(2,8),random(39,47)-(sin(pitch)*4),cos(pitch)*30,0,-sin(pitch)*30,frandom(-4,4),SXF_TRANSFERPITCH,0,5000+tid)
+		//TNT1 A 0 A_SpawnItemEx ("dpistol_altmissile2",cos(pitch)*3,random(2,8),random(39,47)-(sin(pitch)*4),cos(pitch)*30,0,-sin(pitch)*30,frandom(-4,4),SXF_TRANSFERPITCH,0,5000+tid)
+		TNT1 A 0 A_FireProjectile ("dpistol_altmissile2",0,0,0,0,FPF_NOAUTOAIM)
+		TNT1 A 0 A_FireProjectile ("dpistol_altmissile2",0,0,0,0,FPF_NOAUTOAIM)
+		TNT1 A 0 A_playsound("shtfir2",CHAN_WEAPON)
+		TNT1 A 0 A_HapticBuzz(-1)
+		D1PF A 2
+		TNT1 A 0 A_Takeinventory("DispersionEnergy",2)
+		//TNT1 A 0 A_SpawnItemEx ("dpistol_altmissile2",cos(pitch)*3,random(2,8),random(39,47)-(sin(pitch)*4),cos(pitch)*30,0,-sin(pitch)*30,frandom(-4,4),SXF_TRANSFERPITCH,0,5000+tid)
+		//TNT1 A 0 A_SpawnItemEx ("dpistol_altmissile2",cos(pitch)*3,random(2,8),random(39,47)-(sin(pitch)*4),cos(pitch)*30,0,-sin(pitch)*30,frandom(-4,4),SXF_TRANSFERPITCH,0,5000+tid)
+		TNT1 A 0 A_FireProjectile ("dpistol_altmissile2",0,0,0,0,FPF_NOAUTOAIM)
+		TNT1 A 0 A_FireProjectile ("dpistol_altmissile2",0,0,0,0,FPF_NOAUTOAIM)
+		TNT1 A 0 A_playsound("dispshot",CHAN_VOICE)
+		TNT1 A 0 A_HapticBuzz(-1)
+		D1PF A 2
+		TNT1 A 0 A_Takeinventory("DispersionEnergy",2)
+		//TNT1 A 0 A_SpawnItemEx ("dpistol_altmissile2",cos(pitch)*3,random(2,8),random(39,47)-(sin(pitch)*4),cos(pitch)*30,0,-sin(pitch)*30,frandom(-4,4),SXF_TRANSFERPITCH,0,5000+tid)
+		//TNT1 A 0 A_SpawnItemEx ("dpistol_altmissile2",cos(pitch)*3,random(2,8),random(39,47)-(sin(pitch)*4),cos(pitch)*30,0,-sin(pitch)*30,frandom(-4,4),SXF_TRANSFERPITCH,0,5000+tid)
+		TNT1 A 0 A_FireProjectile ("dpistol_altmissile2",0,0,0,0,FPF_NOAUTOAIM)
+		TNT1 A 0 A_FireProjectile ("dpistol_altmissile2",0,0,0,0,FPF_NOAUTOAIM)
+		TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,1)
+		D1PF ABC 4
+		Goto Realready
+	}
+}
+
+actor DispersionBlaster_flat: CustomInventory 15044
+{
+	//$Category "Inventory\Weapons"
+	//$Color 19
+	Radius 8
+	height 8
+	inventory.pickupsound "wpickup"
+	
+    States
+	{
+	Spawn:
+		DPPP B -1
+		Stop
+	Pickup:
+		TNT1 A 0 A_giveinventory("Item91")
+		TNT1 A 0 A_giveInventory("DispersionEnergy",40)
+		TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,1)
+		TNT1 A 0 ACS_execute(700,0,85)
+		TNT1 A 0 ACS_NamedExecuteAlways("inv_sync")
+	PickupandEquip:
+		TNT1 A 0 
+		{
+			if(ACS_NamedExecuteWithResult("Equip_weapon",91)==1)
+			{
+				A_takeInventory("Item91",1);
+			}
+		}
+		Stop
+	}
+}
+
+ACTOR Item91 : CustomInventory
+{
+	Inventory.Amount 1
+	Inventory.MaxAmount 5
+	Inventory.Icon "item91i"
+	+INVENTORY.ALWAYSPICKUP
+	
+	States
+	{
+		Use:
+		TNT1 A 3 ACS_NamedExecuteWithResult("Equip_weapon",91)
+		TNT1 A 0 //do not sync inv here cause we need result from the first script
+		Stop
+	}
+}
+
+ACTOR dpistol_missile1
+{
+	Damage (random(10,25))
+	Speed 30
+	Radius 2
+	Height 2
+	Health 50
+	renderstyle add
+	PROJECTILE
+	+NOBLOOD
+	-NOBLOCKMAP
+	+BRIGHT
+	+ROLLSPRITE
+	Scale 0.75
+	Decal "plasmascorchlower"
+	activesound "dispfly"
+	alpha 1.0
+	
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay
+     	    TNT1 A 0 
+		{
+			if(CallACS("DpistoldmgMod")>0)
+			{
+				A_SetScale(0.75*CallACS("DpistoldmgMod"));
+			}
+		}
+	     DISM ABCD 1 A_SetSize (radius+2, height+2)
+		TNT1 A 0 A_LoopActiveSound
+	Spawnloop:
+		DISM ABCDEFGH 1
+		{
+			A_SpawnItemEx ("Bluespark2",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+			A_SpawnItemEx ("Bluespark2",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+			A_SetRoll(roll+10);
+		} 
+		Loop
+	Death:
+	XDeath:
+	Crash:
+		TNT1 AAAAAAAAA 0 A_SpawnItemEx ("Bluespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("BlueSmoke2")
+		TNT1 A 0 A_playsound("projexp",6)
+		D1PJ ABCDEFGHIJ 2
+		Stop
+	}
+}
+
+ACTOR dpistol_altmissile1
+{
+	Damage (random(10,25))
+	Speed 30
+	Radius 2
+	Height 2
+	Health 50
+	renderstyle add
+	PROJECTILE
+	+NOBLOOD
+	-NOBLOCKMAP
+	+BRIGHT
+	Scale 0.75
+	Decal "plasmascorchlower"
+	activesound "dispfly"
+	alpha 1.0
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay
+   	    TNT1 A 0 
+		{
+			if(CallACS("DpistoldmgMod")>0)
+			{
+				A_SetScale(0.75*CallACS("DpistoldmgMod"));
+			}
+		}
+	     DISM ABCD 1 A_SetSize (radius+2, height+2)
+		TNT1 A 0 A_LoopActiveSound
+	Spawnloop:
+		DISM ABCDEFGH 1
+		{
+			A_Weave (3,3,1.0,0.9);
+			A_SpawnItemEx ("Bluespark2",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+			A_SpawnItemEx ("Bluespark2",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+		} 
+		Loop
+	Death:
+	XDeath:
+	Crash:
+		TNT1 A 0 A_SpawnItemEx ("Bluespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Bluespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Bluespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Bluespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Bluespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Bluespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Bluespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Bluespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Bluespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Bluespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("BlueSmoke2")
+		TNT1 A 0 A_playsound("projexp",6)
+		D1PJ ABCDEFGHIJ 2
+		Stop
+	}
+}
+
+//============================================== DPISTOL MISSILE POWER 2 ===================
+ACTOR dpistol_missile2
+{
+	Damage (random(16,32) )
+	Speed 30
+	Radius 2
+	Height 2
+	Health 50
+	renderstyle add
+	PROJECTILE
+	+NOBLOOD
+	-NOBLOCKMAP
+	+BRIGHT
+	Scale 0.75
+	Decal "plasmascorchlower"
+	activesound "dispfly"
+	alpha 1.0
+	
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay
+	     DISM ABCD 1 A_SetSize (radius+2, height+2)
+		TNT1 A 0 A_LoopActiveSound
+	Spawnloop:
+		DISM ABCDEFGH 1
+		{
+			A_setRoll(roll+5,SPF_INTERPOLATE);
+			A_SpawnItemEx ("Greenishspark2",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+			A_SpawnItemEx ("Greenishspark2",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+		} 
+		Loop
+	Death:
+	XDeath:
+	Crash:
+		TNT1 A 0 A_SpawnItemEx ("Greenishspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenishspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenishspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenishspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenishspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenishspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenishspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenishspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenishspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenishspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("GreenishSmoke2")
+		TNT1 A 0 A_playsound("projexp",6)
+		D2PJ ABCDEFGHIJ 2
+		Stop
+	}
+}
+
+ACTOR dpistol_altmissile2
+{
+	Damage (random(16,32))
+	Speed 30
+	Radius 2
+	Height 2
+	Health 50
+	renderstyle add
+	PROJECTILE
+	+NOBLOOD
+	-NOBLOCKMAP
+	+BRIGHT
+	Scale 0.75
+	Decal "plasmascorchlower"
+	activesound "dispfly"
+	alpha 1.0
+	
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay
+  
+	     DISM ABCD 1 A_SetSize (radius+2, height+2)
+		TNT1 A 0 A_LoopActiveSound
+	Spawnloop:
+		DISM ABCDEFGH 1
+		{
+			A_Weave (3,3,1.0,0.9);
+			A_SpawnItemEx ("Greenishspark2",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+			A_SpawnItemEx ("Greenishspark2",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+		} 
+		Loop
+	Death:
+	XDeath:
+	Crash:
+		TNT1 A 0 A_SpawnItemEx ("Greenishspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenishspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenishspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenishspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenishspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenishspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenishspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenishspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenishspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenishspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("GreenishSmoke2")
+		TNT1 A 0 A_playsound("projexp",6)
+		D2PJ ABCDEFGHIJ 2
+		Stop
+	}
+}
+
+//=======================================DPISTOL MISSILE POWER 3=========================================
+ACTOR dpistol_missile3
+{
+	Damage (random(20,35) +(random(20,35)* CallACS("DpistoldmgMod")))
+	Speed 30
+	Radius 2
+	Height 2
+	Health 50
+	renderstyle add
+	PROJECTILE
+	+NOBLOOD
+	-NOBLOCKMAP
+	+BRIGHT
+	Scale 0.75
+	Decal "plasmascorchlower"
+	activesound "dispfly"
+	alpha 1.0
+	
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay
+   	    TNT1 A 0 
+		 TNT1 A 0 
+		{
+			if(CallACS("DpistoldmgMod")>0)
+			{
+				A_SetScale(0.75*CallACS("DpistoldmgMod"));
+			}
+		}
+	     DISM ABCD 1 A_SetSize (radius+2, height+2)
+		TNT1 A 0 A_LoopActiveSound
+	Spawnloop:
+		DISM ABCDEFGH 1
+		{
+			A_SpawnItemEx ("Greenspark2",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+			A_SpawnItemEx ("Greenspark2",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+		} 
+		Loop
+	Death:
+	XDeath:
+	Crash:
+		TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("GreenSmoke2")
+		TNT1 A 0 A_playsound("projexp",6)
+		D3PJ ABCDEFGHIJ 2
+		Stop
+	}
+}
+
+ACTOR dpistol_altmissile3
+{
+	Damage (random(20,35) +(random(20,35)* CallACS("DpistoldmgMod")))
+	Speed 30
+	Radius 2
+	Height 2
+	Health 50
+	renderstyle add
+	PROJECTILE
+	+NOBLOOD
+	-NOBLOCKMAP
+	+BRIGHT
+	Scale 0.75
+	Decal "plasmascorchlower"
+	activesound "dispfly"
+	alpha 1.0
+	
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay
+   	    TNT1 A 0 
+		{
+			if(CallACS("DpistoldmgMod")>0)
+			{
+				A_SetScale(0.75*CallACS("DpistoldmgMod"));
+			}
+		}
+	     DISM ABCD 1 A_SetSize (radius+2, height+2)
+		TNT1 A 0 A_LoopActiveSound
+	Spawnloop:
+		DISM ABCDEFGH 1
+		{
+			A_Weave (3,3,1.0,0.9);
+			A_SpawnItemEx ("Greenspark2",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+			A_SpawnItemEx ("Greenspark2",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+		} 
+		Loop
+	Death:
+	XDeath:
+	Crash:
+		TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("GreenSmoke2")
+		TNT1 A 0 A_playsound("projexp",6)
+		D3PJ ABCDEFGHIJ 2
+		Stop
+	}
+}
+
+//=========================DPISTOL MISSILE POWER 4 ==================================//
+
+ACTOR dpistol_missile4
+{
+	Damage (random(25,40) +(random(25,40)* CallACS("DpistoldmgMod")))
+	Speed 30
+	Radius 2
+	Height 2
+	Health 50
+	renderstyle add
+	PROJECTILE
+	+BLOODSPLATTER
+	+NOBLOOD
+	-NOBLOCKMAP
+	+BRIGHT
+	Scale 0.75
+	Decal "plasmascorchlower"
+	activesound "dispfly"
+	alpha 1.0
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay
+		TNT1 A 0 
+		{
+			if(CallACS("DpistoldmgMod")>0)
+			{
+				A_SetScale(0.75*CallACS("DpistoldmgMod"));
+			}
+		}
+	     DISM ABCD 1 A_SetSize (radius+2, height+2)
+		TNT1 A 0 A_LoopActiveSound
+	Spawnloop:
+		DISM ABCDEFGH 1
+		{
+			
+			A_SpawnItemEx ("Orangespark2",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+			A_SpawnItemEx ("Orangespark2",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+		} 
+		Loop
+	Death:
+	XDeath:
+	Crash:
+		TNT1 A 0 A_SpawnItemEx ("Orangespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Orangespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Orangespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Orangespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Orangespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Orangespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Orangespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Orangespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Orangespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Orangespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("OrangeSmoke2")
+		TNT1 A 0 A_playsound("projexp",6)
+		D4PJ ABCDEFGHIJ 2
+		Stop
+	}
+}
+
+ACTOR dpistol_altmissile4
+{
+	Damage (random(25,40) +(random(25,40)* CallACS("DpistoldmgMod")))
+	Speed 30
+	Radius 2
+	Height 2
+	Health 50
+	renderstyle add
+	PROJECTILE
+	+BLOODSPLATTER
+	+NOBLOOD
+	-NOBLOCKMAP
+	+BRIGHT
+	Scale 0.75
+	Decal "plasmascorchlower"
+	activesound "dispfly"
+	alpha 1.0
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay
+		TNT1 A 0 
+		{
+			if(CallACS("DpistoldmgMod")>0)
+			{
+				A_SetScale(0.75*CallACS("DpistoldmgMod"));
+			}
+		}
+	     DISM ABCD 1 A_SetSize (radius+2, height+2)
+		TNT1 A 0 A_LoopActiveSound
+	Spawnloop:
+		DISM ABCDEFGH 1
+		{
+			A_Weave (3,3,1.0,0.9);
+			A_SpawnItemEx ("Orangespark2",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+			A_SpawnItemEx ("Orangespark2",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+		} 
+		Loop
+	Death:
+	XDeath:
+	Crash:
+		TNT1 A 0 A_SpawnItemEx ("Orangespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Orangespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Orangespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Orangespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Orangespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Orangespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Orangespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Orangespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Orangespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Orangespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("OrangeSmoke2")
+		TNT1 A 0 A_playsound("projexp",6)
+		D4PJ ABCDEFGHIJ 2
+		Stop
+	}
+}
+
+//=========================================DPISTOL power 5 missile=====================//
+ACTOR dpistol_missile5
+{
+	Damage (random(30,45) +(random(30,45)* CallACS("DpistoldmgMod")))
+	Speed 30
+	Radius 2
+	Height 2
+	Health 50
+	renderstyle add
+	PROJECTILE
+	+BLOODSPLATTER
+	+NOBLOOD
+	-NOBLOCKMAP
+	+BRIGHT
+	Scale 0.75
+	Decal "plasmascorchlower"
+	activesound "dispfly"
+	alpha 1.0
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay
+		TNT1 A 0 
+		{
+			if(CallACS("DpistoldmgMod")>0)
+			{
+				A_SetScale(0.75*CallACS("DpistoldmgMod"));
+			}
+		}
+	     DISM ABCD 1 A_SetSize (radius+2, height+2)
+		TNT1 A 0 A_LoopActiveSound
+	Spawnloop:
+		DISM ABCDEFGH 1
+		{
+			A_SpawnItemEx ("Redspark2",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+			A_SpawnItemEx ("Redspark2",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+		} 
+		Loop
+	Death:
+	XDeath:
+	Crash:
+		TNT1 A 0 A_SpawnItemEx ("Redspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Redspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Redspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Redspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Redspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Redspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Redspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Redspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Redspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Redspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("RedSmoke2")
+		TNT1 A 0 A_playsound("projexp",6)
+		D5PJ ABCDEFGHIJ 2
+		Stop
+	}
+}
+
+ACTOR dpistol_altmissile5
+{
+	Damage (random(30,45) +(random(30,45)* CallACS("DpistoldmgMod")))
+	Speed 30
+	Radius 2
+	Height 2
+	Health 50
+	renderstyle add
+	PROJECTILE
+	+BLOODSPLATTER
+	+NOBLOOD
+	-NOBLOCKMAP
+	+BRIGHT
+	Scale 0.75
+	Decal "plasmascorchlower"
+	activesound "dispfly"
+	alpha 1.0
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay
+		TNT1 A 0 
+		{
+			if(CallACS("DpistoldmgMod")>0)
+			{
+				A_SetScale(0.75*CallACS("DpistoldmgMod"));
+			}
+		}
+	     DISM ABCD 1 A_SetSize (radius+2, height+2)
+		TNT1 A 0 A_LoopActiveSound
+	Spawnloop:
+		DISM ABCDEFGH 1
+		{
+			A_Weave (3,3,1.0,0.9);
+			A_SpawnItemEx ("Redspark2",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+			A_SpawnItemEx ("Redspark2",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+		} 
+		Loop
+	Death:
+	XDeath:
+	Crash:
+		TNT1 A 0 A_SpawnItemEx ("Redspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Redspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Redspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Redspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Redspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Redspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Redspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Redspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Redspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Redspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("RedSmoke2")
+		TNT1 A 0 A_playsound("projexp",6)
+		D5PJ ABCDEFGHIJ 2
+		Stop
+	}
+}

@@ -1,0 +1,18 @@
+//Fist
+MODEL UnrealFist
+{
+	Path "models/weapons/fist"
+	AngleOffset 0
+	Model 0 "fist.md3"
+	Skin 0 "Automa1.png"
+
+	Scale -1.2 1.2 1.2
+	Offset 0.0 -17.0 -10.0
+
+	FrameIndex FIST A 0 0
+	FrameIndex FIST B 0 1
+	FrameIndex FIST C 0 2
+	FrameIndex FIST D 0 3
+	FrameIndex FIST E 0 4
+	FrameIndex FIST F 0 5
+}

@@ -1,0 +1,278 @@
+//asmd select
+MODEL Weapon58
+{
+	Path "models/weapons/asmd"
+	AngleOffset 0
+	Model 0 "asmd.md3"
+	Scale -1.2 1.0 1.0
+	Offset 0 0 0
+	
+	FrameIndex ASME A 0 0
+	FrameIndex ASME B 0 1
+	FrameIndex ASME C 0 2
+	FrameIndex ASME D 0 3
+	FrameIndex ASME E 0 4
+	FrameIndex ASME F 0 5
+	FrameIndex ASME G 0 6
+	FrameIndex ASME H 0 7
+	FrameIndex ASME I 0 8
+	FrameIndex ASME J 0 9
+	FrameIndex ASME K 0 10
+	FrameIndex ASME L 0 11
+	FrameIndex ASME M 0 12
+	FrameIndex ASME N 0 13
+	
+	//deselect
+	FrameIndex ASDS A 0 16
+	FrameIndex ASDS B 0 17
+	FrameIndex ASDS C 0 18
+	FrameIndex ASDS D 0 19
+	FrameIndex ASDS E 0 20
+	FrameIndex ASDS F 0 21
+	FrameIndex ASDS G 0 22
+	FrameIndex ASDS H 0 23
+	FrameIndex ASDS I 0 24
+	FrameIndex ASDS J 0 25
+
+	//asmd fire
+	FrameIndex ASMF A 0 25
+	FrameIndex ASMF B 0 26
+	FrameIndex ASMF C 0 27
+	FrameIndex ASMF D 0 28
+	FrameIndex ASMF E 0 29
+	FrameIndex ASMF F 0 30
+	FrameIndex ASMF G 0 31
+	FrameIndex ASMF H 0 32
+	FrameIndex ASMF I 0 33
+}
+
+//asmd still
+MODEL Weapon58
+{
+	Path "models/weapons/asmd"
+	AngleOffset 0
+	Model 0 "asmd.md3"
+	Scale -1.2 1.0 1.0
+	Offset 0 0 0
+	
+	FrameIndex ASMS A 0 14
+}
+
+//asmd altfire
+MODEL Weapon58
+{
+	Path "models/weapons/asmd"
+	AngleOffset 0
+	Model 0 "asmd.md3"
+	Scale -1.2 1.0 1.0
+	Offset 0 0 0
+	
+	FrameIndex ASAF A 0 34
+	FrameIndex ASAF B 0 35
+	FrameIndex ASAF C 0 36
+	FrameIndex ASAF D 0 37
+	FrameIndex ASAF E 0 38
+	FrameIndex ASAF F 0 39
+	FrameIndex ASAF G 0 40
+	FrameIndex ASAF H 0 41
+	FrameIndex ASAF I 0 42
+	FrameIndex ASAF J 0 43
+}
+
+//asmd sway
+MODEL Weapon58
+{
+	Path "models/weapons/asmd"
+	AngleOffset 0
+	Model 0 "asmd.md3"
+	Scale -1.2 1.0 1.0
+	Offset 0 0 0
+	
+	FrameIndex ASSW A 0 74
+	FrameIndex ASSW B 0 75
+	FrameIndex ASSW C 0 76
+	FrameIndex ASSW D 0 77
+}
+
+//asmd pickup rotating
+Model asmd_pickup
+{
+	Path "models/weapons/asmd/pickups"
+	AngleOffset 90
+	Model 0 "ASMDPick.md3"
+	Scale 0.9 0.9 0.9
+	Offset 0 0 12
+	
+	ROTATING
+	
+	FrameIndex ASMP A 0 0
+}
+
+
+
+//asmd decoration
+Model Weapon58_dec
+{
+	Path "models/weapons/asmd/pickups"
+	AngleOffset 90
+	Model 0 "ASMDPick.md3"
+	Scale 0.9 0.9 0.9
+	Offset 0 0 12
+	
+	ROTATING
+
+	FrameIndex ASMP A 0 0
+}
+
+//asmd pickup flat
+Model asmd_flat
+{
+	Path "models/weapons/asmd/pickups"
+	AngleOffset 0.0
+	Model 0 "asmdpickstill.md3"
+	Scale 0.9 0.9 0.9
+	Offset 0 0 4
+	
+	FrameIndex ASMP B 0 0
+}
+
+//asmd ring
+Model ASMDRing
+{
+	Path "models/weapons/asmd"
+	Model 0 "ringex.md3"
+	Skin 0 "AsmdBeam.png"
+	Scale 0.3 0.3 0.3
+	Offset 0 0 0
+	
+	PITCHFROMMOMENTUM
+	
+	FrameIndex ASRT A 0 0
+	FrameIndex ASRT B 0 1
+	FrameIndex ASRT C 0 2
+	FrameIndex ASRT D 0 3
+	FrameIndex ASRT E 0 4
+	FrameIndex ASRT F 0 5
+}
+
+//asmd ring
+Model ASMDRing2
+{
+	PITCHFROMMOMENTUM
+	Path "models/weapons/asmd"
+	Model 0 "ringex.md3"
+	Skin 0 "AsmdBeam2.png"
+	Scale 0.3 0.3 0.3
+	Offset 0 0 0
+	
+	FrameIndex ASR2 A 0 0
+	FrameIndex ASR2 B 0 1
+	FrameIndex ASR2 C 0 2
+	FrameIndex ASR2 D 0 3
+	FrameIndex ASR2 E 0 4
+	FrameIndex ASR2 F 0 5
+}
+
+
+//asmd ring
+Model ASMDRing3
+{
+	Path "models/weapons/asmd"
+	Model 0 "ringex.md3"
+	Skin 0 "AsmdBeam3.png"
+	Scale 0.3 0.3 0.3
+	Offset 0 0 0
+	
+	PITCHFROMMOMENTUM
+	
+	FrameIndex ASR3 A 0 0
+	FrameIndex ASR3 B 0 1
+	FrameIndex ASR3 C 0 2
+	FrameIndex ASR3 D 0 3
+	FrameIndex ASR3 E 0 4
+	FrameIndex ASR3 F 0 5
+}
+
+//asmd ring explosion
+Model ASMDpuff
+{
+	Path "models/weapons/asmd"
+	Model 0 "ringex.md3"
+	Skin 0 "AsmdBeam.png"
+	Angleoffset 180
+	Scale 1.5 1.5 1.5
+	Offset 0 0 0
+	
+	CORRECTPIXELSTRETCH 
+	PITCHFROMMOMENTUM
+	INTERPOLATEDOUBLEDFRAMES
+	USEACTORPITCH
+	USEACTORROLL
+	
+	FrameIndex ASRT A 0 0
+	FrameIndex ASRT B 0 1
+	FrameIndex ASRT C 0 2
+	FrameIndex ASRT D 0 3
+	FrameIndex ASRT E 0 4
+	FrameIndex ASRT F 0 5
+	
+	Skin 0 "AsmdBeam2.png"
+	FrameIndex ASR2 A 0 0
+	FrameIndex ASR2 B 0 1
+	FrameIndex ASR2 C 0 2
+	FrameIndex ASR2 D 0 3
+	FrameIndex ASR2 E 0 4
+	FrameIndex ASR2 F 0 5
+	
+	Skin 0 "AsmdBeam3.png"
+	FrameIndex ASR3 A 0 0
+	FrameIndex ASR3 B 0 1
+	FrameIndex ASR3 C 0 2
+	FrameIndex ASR3 D 0 3
+	FrameIndex ASR3 E 0 4
+	FrameIndex ASR3 F 0 5
+}
+
+Model ASMDorb
+{
+	Path "models/weapons/asmd"
+	Model 0 "ringex.md3"
+	Skin 0 "AsmdBeam2.png"
+	//Angleoffset 180
+	Scale 4.2 4.2 4.2
+	Offset 0 0 0
+	
+	CORRECTPIXELSTRETCH
+	PITCHFROMMOMENTUM
+	INTERPOLATEDOUBLEDFRAMES
+	USEACTORPITCH
+	USEACTORROLL
+	
+	FrameIndex ASR2 A 0 0
+	FrameIndex ASR2 B 0 1
+	FrameIndex ASR2 C 0 2
+	FrameIndex ASR2 D 0 3
+	FrameIndex ASR2 E 0 4
+	FrameIndex ASR2 F 0 5
+	
+	Scale 3.5 3.5 3.5
+	Skin 0 "AsmdBeam.png"
+	Offset 0 0 0
+	FrameIndex ASRT A 0 0
+	FrameIndex ASRT B 0 1
+	FrameIndex ASRT C 0 2
+	FrameIndex ASRT D 0 3
+	FrameIndex ASRT E 0 4
+	FrameIndex ASRT F 0 5
+}
+
+//asmd Ammo
+Model ASMDAmmocore
+{
+	Path "models/pickups/ammo/asmdcore"
+	Model 0 "AsmdAmmo.md3"
+	Scale 0.7 0.7 0.7
+	Offset 0 0 0
+	
+	FrameIndex ASMA A 0 0
+}

@@ -1,0 +1,1117 @@
+//Select
+MODEL Weapon64
+{
+	Path "models/weapons/Gesbiorifle"
+	AngleOffset -270
+        Model 0 "gesbiorifle.md3"
+        Scale -1.0 1.0 1.0
+	Offset 12 -22 -14
+	Rolloffset 0
+   	FrameIndex GBRS A 0 0
+   	FrameIndex GBRS B 0 1
+	FrameIndex GBRS C 0 2
+	FrameIndex GBRS D 0 3
+	FrameIndex GBRS E 0 4
+	FrameIndex GBRS F 0 5
+	FrameIndex GBRS G 0 6
+	FrameIndex GBRS H 0 7
+	FrameIndex GBRS I 0 8
+	FrameIndex GBRS J 0 9
+	FrameIndex GBRS K 0 10
+	FrameIndex GBRS L 0 11
+	FrameIndex GBRS M 0 12
+	FrameIndex GBRS N 0 13
+	FrameIndex GBRS O 0 14
+	FrameIndex GBRS P 0 15
+   	FrameIndex GBRS Q 0 16
+	FrameIndex GBRS R 0 17
+	FrameIndex GBRS S 0 18
+	FrameIndex GBRS T 0 19
+//walk
+   	FrameIndex GBRW A 0 20
+   	FrameIndex GBRW B 0 21
+	FrameIndex GBRW C 0 22
+	FrameIndex GBRW D 0 23
+	FrameIndex GBRW E 0 24
+	FrameIndex GBRW F 0 25
+	FrameIndex GBRW G 0 26
+	FrameIndex GBRW H 0 27
+	FrameIndex GBRW I 0 28
+	FrameIndex GBRW J 0 29
+	FrameIndex GBRW K 0 30
+	FrameIndex GBRW L 0 31
+	FrameIndex GBRW M 0 32
+	FrameIndex GBRW N 0 33
+	FrameIndex GBRW O 0 34
+	FrameIndex GBRW P 0 35
+   	FrameIndex GBRW Q 0 36
+	FrameIndex GBRW R 0 37
+	FrameIndex GBRW S 0 38
+	FrameIndex GBRW T 0 39
+
+//Fire
+
+   	FrameIndex GBRF A 0 73
+   	FrameIndex GBRF B 0 74
+	FrameIndex GBRF C 0 75
+	FrameIndex GBRF D 0 76
+	FrameIndex GBRF E 0 77
+	FrameIndex GBRF F 0 78
+	FrameIndex GBRF G 0 79
+	FrameIndex GBRF H 0 80
+	FrameIndex GBRF I 0 81
+	FrameIndex GBRF J 0 82
+	FrameIndex GBRF K 0 83
+
+//Deselect
+
+   	FrameIndex GBDS A 0 92
+   	FrameIndex GBDS B 0 93
+	FrameIndex GBDS C 0 94
+	FrameIndex GBDS D 0 95
+	FrameIndex GBDS E 0 96
+	FrameIndex GBDS F 0 97
+	FrameIndex GBDS G 0 98
+	FrameIndex GBDS H 0 99
+	FrameIndex GBDS I 0 100
+
+//Altfire
+
+   	FrameIndex GBAF A 0 40
+   	FrameIndex GBAF B 0 41
+	FrameIndex GBAF C 0 42
+	FrameIndex GBAF D 0 43
+	FrameIndex GBAF E 0 44
+	FrameIndex GBAF F 0 45
+	FrameIndex GBAF G 0 46
+	FrameIndex GBAF H 0 47
+	FrameIndex GBAF I 0 48
+	FrameIndex GBAF J 0 49
+	FrameIndex GBAF K 0 50
+	FrameIndex GBAF L 0 51
+	FrameIndex GBAF M 0 52
+	FrameIndex GBAF N 0 53
+	FrameIndex GBAF O 0 54
+	FrameIndex GBAF P 0 55
+   	FrameIndex GBAF Q 0 56
+	FrameIndex GBAF R 0 57
+	FrameIndex GBAF S 0 58
+	FrameIndex GBAF T 0 59
+
+	FrameIndex GBAF U 0 60
+	FrameIndex GBAF V 0 61
+	FrameIndex GBAF W 0 62
+	FrameIndex GBAF X 0 63
+	FrameIndex GBAF Y 0 64
+   	FrameIndex GBAF Z 0 65
+
+
+}
+
+
+
+
+//GesBiorifle pickup flat
+MODEL Gesbiorifle_pickupflat
+{
+	Path "models/weapons/GesBiorifle/pickups"
+	//AngleOffset -180
+        Model 0 "bioriflepickup.md3"
+        Scale 0.7 0.7 0.7
+	Offset 0 0 0
+	Rolloffset 0
+   	FrameIndex BIOR B 0 0
+
+
+
+
+}
+
+//Napalmrifl pickup flat
+MODEL Napalmrifle_pickup
+{
+	Path "models/weapons/GesBiorifle/pickups"
+	//AngleOffset -180
+        Model 0 "bioriflepickup.md3"
+	Skin 0 "JBRifle2.png"
+        Scale 0.7 0.7 0.7
+	Offset 0 0 0
+	Rolloffset 0
+   	FrameIndex BIOR B 0 0
+
+
+
+
+}
+
+//GesBiorifle pickup
+MODEL Gesbiorifle_pickup
+{
+	ROTATING
+	Path "models/weapons/GesBiorifle/pickups"
+	//AngleOffset -180
+        Model 0 "bioriflepickup.md3"
+        Scale 0.7 0.7 0.7
+	Offset 0 0 0
+	Rolloffset 0
+   	FrameIndex BIOR A 0 0
+	
+
+}
+
+//GesBiorifle decoration
+MODEL Weapon64_dec
+{
+	ROTATING
+	Path "models/weapons/GesBiorifle/pickups"
+	//AngleOffset -180
+        Model 0 "bioriflepickup.md3"
+        Scale 0.7 0.7 0.7
+	Offset 0 0 8
+
+   	FrameIndex BIOR A 0 0
+	
+
+}
+
+
+//Napalm rifle decoration
+MODEL Weapon107_dec
+{
+	ROTATING
+	Path "models/weapons/GesBiorifle/pickups"
+	//AngleOffset -180
+        Model 0 "bioriflepickup.md3"
+	SKIN 0 "JBRifle2.png"
+        Scale 0.7 0.7 0.7
+	Offset 0 0 8
+
+   	FrameIndex BIOR A 0 0
+	
+
+}
+
+
+//Gesbiorifle biogel FLY
+MODEL Biogel1
+{
+	Path "models/weapons/Gesbiorifle/projectile"
+	//AngleOffset -180
+        Model 0 "ngel_a.3d"
+	Skin 0 "Jflare.pcx"
+        Scale 0.1 0.1 0.1	
+	Offset 0 0 0
+	Rolloffset 0
+USEACTORPITCH
+	USEACTORROLL
+   	FrameIndex BIOG A 0 1
+	FrameIndex BIOG B 0 2
+	FrameIndex BIOG C 0 3
+	FrameIndex BIOG D 0 4
+	FrameIndex BIOG E 0 5
+	FrameIndex BIOG F 0 6
+	FrameIndex BIOG G 0 7
+	FrameIndex BIOG H 0 8
+	FrameIndex BIOG I 0 9
+	FrameIndex BIOG J 0 10
+	FrameIndex BIOG K 0 11
+	FrameIndex BIOG L 0 12
+	FrameIndex BIOG M 0 13
+
+//Gesbiorifle biogel slide
+
+   	FrameIndex BIOS A 0 37
+	FrameIndex BIOS B 0 38
+	FrameIndex BIOS C 0 39
+	FrameIndex BIOS D 0 40
+	FrameIndex BIOS E 0 41
+	FrameIndex BIOS F 0 42
+	FrameIndex BIOS G 0 43
+
+//Gesbiorifle biogel drip
+
+   	FrameIndex BIOC A 0 24
+	FrameIndex BIOC B 0 25
+	FrameIndex BIOC C 0 26
+	FrameIndex BIOC D 0 27
+	FrameIndex BIOC E 0 28
+	FrameIndex BIOC F 0 29
+	FrameIndex BIOC G 0 30
+
+
+}
+
+
+
+///////////////////////////
+
+//Gesbiorifle biogel FLY
+MODEL Biogel2
+{
+	Path "models/weapons/Gesbiorifle/projectile"
+	//AngleOffset -180
+        Model 0 "ngel_a.3d"
+	Skin 0 "Jflare.pcx"
+        Scale 0.1 0.1 0.1
+	
+	Offset 0 0 0
+	Rolloffset 0
+   	FrameIndex BIOG A 0 1
+	FrameIndex BIOG B 0 2
+	FrameIndex BIOG C 0 3
+	FrameIndex BIOG D 0 4
+	FrameIndex BIOG E 0 5
+	FrameIndex BIOG F 0 6
+	FrameIndex BIOG G 0 7
+	FrameIndex BIOG H 0 8
+	FrameIndex BIOG I 0 9
+	FrameIndex BIOG J 0 10
+	FrameIndex BIOG K 0 11
+	FrameIndex BIOG L 0 12
+	FrameIndex BIOG M 0 13
+
+
+}
+
+//Gesbiorifle biogel slide
+MODEL Biogel2
+{
+	Path "models/weapons/Gesbiorifle/projectile"
+	//AngleOffset -180
+        Model 0 "ngel_a.3d"
+	Skin 0 "Jflare.pcx"
+        Scale 0.1 0.1 0.1
+	Offset 0 0 0
+	USEACTORPITCH
+	USEACTORROLL
+	Rolloffset 0
+   	FrameIndex BIOS A 0 37
+	FrameIndex BIOS B 0 38
+	FrameIndex BIOS C 0 39
+	FrameIndex BIOS D 0 40
+	FrameIndex BIOS E 0 41
+	FrameIndex BIOS F 0 42
+	FrameIndex BIOS G 0 43
+
+
+
+}
+
+
+//Gesbiorifle biogel drip
+MODEL Biogel2
+{
+	Path "models/weapons/Gesbiorifle/projectile"
+	//AngleOffset -180
+        Model 0 "ngel_a.3d"
+	Skin 0 "Jflare.pcx"
+        Scale 0.1 0.1 0.1
+	Offset 0 0 0
+	USEACTORPITCH
+	USEACTORROLL
+	Rolloffset 0
+   	FrameIndex BIOC A 0 24
+	FrameIndex BIOC B 0 25
+	FrameIndex BIOC C 0 26
+	FrameIndex BIOC D 0 27
+	FrameIndex BIOC E 0 28
+	FrameIndex BIOC F 0 29
+	FrameIndex BIOC G 0 30
+
+
+}
+////////////////////////////
+
+//Gesbiorifle biogel FLY
+MODEL Biogel3
+{
+	Path "models/weapons/Gesbiorifle/projectile"
+	//AngleOffset -180
+        Model 0 "ngel_a.3d"
+	Skin 0 "Jflare.pcx"
+        Scale 0.1 0.1 0.1
+	
+	Offset 0 0 0
+	Rolloffset 0
+   	FrameIndex BIOG A 0 1
+	FrameIndex BIOG B 0 2
+	FrameIndex BIOG C 0 3
+	FrameIndex BIOG D 0 4
+	FrameIndex BIOG E 0 5
+	FrameIndex BIOG F 0 6
+	FrameIndex BIOG G 0 7
+	FrameIndex BIOG H 0 8
+	FrameIndex BIOG I 0 9
+	FrameIndex BIOG J 0 10
+	FrameIndex BIOG K 0 11
+	FrameIndex BIOG L 0 12
+	FrameIndex BIOG M 0 13
+
+
+}
+
+//Gesbiorifle biogel slide
+MODEL Biogel3
+{
+	Path "models/weapons/Gesbiorifle/projectile"
+	//AngleOffset -180
+        Model 0 "ngel_a.3d"
+	Skin 0 "Jflare.pcx"
+        Scale 0.1 0.1 0.1
+	Offset 0 0 0
+	USEACTORPITCH
+	USEACTORROLL
+	Rolloffset 0
+   	FrameIndex BIOS A 0 37
+	FrameIndex BIOS B 0 38
+	FrameIndex BIOS C 0 39
+	FrameIndex BIOS D 0 40
+	FrameIndex BIOS E 0 41
+	FrameIndex BIOS F 0 42
+	FrameIndex BIOS G 0 43
+
+
+
+}
+
+
+//Gesbiorifle biogel drip
+MODEL Biogel3
+{
+	Path "models/weapons/Gesbiorifle/projectile"
+	//AngleOffset -180
+        Model 0 "ngel_a.3d"
+	Skin 0 "Jflare.pcx"
+        Scale 0.1 0.1 0.1
+	Offset 0 0 0
+	USEACTORPITCH
+	USEACTORROLL
+	Rolloffset 0
+   	FrameIndex BIOC A 0 24
+	FrameIndex BIOC B 0 25
+	FrameIndex BIOC C 0 26
+	FrameIndex BIOC D 0 27
+	FrameIndex BIOC E 0 28
+	FrameIndex BIOC F 0 29
+	FrameIndex BIOC G 0 30
+
+
+}
+//////////////////////////////
+
+//Gesbiorifle biogel FLY
+MODEL Biogel4
+{
+	Path "models/weapons/Gesbiorifle/projectile"
+	//AngleOffset -180
+        Model 0 "ngel_a.3d"
+	Skin 0 "Jflare.pcx"
+        Scale 0.1 0.1 0.1
+	
+	Offset 0 0 0
+	Rolloffset 0
+   	FrameIndex BIOG A 0 1
+	FrameIndex BIOG B 0 2
+	FrameIndex BIOG C 0 3
+	FrameIndex BIOG D 0 4
+	FrameIndex BIOG E 0 5
+	FrameIndex BIOG F 0 6
+	FrameIndex BIOG G 0 7
+	FrameIndex BIOG H 0 8
+	FrameIndex BIOG I 0 9
+	FrameIndex BIOG J 0 10
+	FrameIndex BIOG K 0 11
+	FrameIndex BIOG L 0 12
+	FrameIndex BIOG M 0 13
+
+
+}
+
+//Gesbiorifle biogel slide
+MODEL Biogel4
+{
+	Path "models/weapons/Gesbiorifle/projectile"
+	//AngleOffset -180
+        Model 0 "ngel_a.3d"
+	Skin 0 "Jflare.pcx"
+        Scale 0.1 0.1 0.1
+	Offset 0 0 0
+	USEACTORPITCH
+	USEACTORROLL
+	Rolloffset 0
+   	FrameIndex BIOS A 0 37
+	FrameIndex BIOS B 0 38
+	FrameIndex BIOS C 0 39
+	FrameIndex BIOS D 0 40
+	FrameIndex BIOS E 0 41
+	FrameIndex BIOS F 0 42
+	FrameIndex BIOS G 0 43
+
+
+
+}
+
+
+//Gesbiorifle biogel drip
+MODEL Biogel4
+{
+	Path "models/weapons/Gesbiorifle/projectile"
+	//AngleOffset -180
+        Model 0 "ngel_a.3d"
+	Skin 0 "Jflare.pcx"
+        Scale 0.1 0.1 0.1
+	Offset 0 0 0
+	USEACTORPITCH
+	USEACTORROLL
+	Rolloffset 0
+   	FrameIndex BIOC A 0 24
+	FrameIndex BIOC B 0 25
+	FrameIndex BIOC C 0 26
+	FrameIndex BIOC D 0 27
+	FrameIndex BIOC E 0 28
+	FrameIndex BIOC F 0 29
+	FrameIndex BIOC G 0 30
+
+
+}
+
+////////////////////////
+
+//Gesbiorifle biogel FLY
+MODEL Biogel5
+{
+	Path "models/weapons/Gesbiorifle/projectile"
+	//AngleOffset -180
+        Model 0 "ngel_a.3d"
+	Skin 0 "Jflare.pcx"
+        Scale 0.1 0.1 0.1
+	
+	Offset 0 0 0
+	Rolloffset 0
+   	FrameIndex BIOG A 0 1
+	FrameIndex BIOG B 0 2
+	FrameIndex BIOG C 0 3
+	FrameIndex BIOG D 0 4
+	FrameIndex BIOG E 0 5
+	FrameIndex BIOG F 0 6
+	FrameIndex BIOG G 0 7
+	FrameIndex BIOG H 0 8
+	FrameIndex BIOG I 0 9
+	FrameIndex BIOG J 0 10
+	FrameIndex BIOG K 0 11
+	FrameIndex BIOG L 0 12
+	FrameIndex BIOG M 0 13
+
+
+}
+
+//Gesbiorifle biogel slide
+MODEL Biogel5
+{
+	Path "models/weapons/Gesbiorifle/projectile"
+	//AngleOffset -180
+        Model 0 "ngel_a.3d"
+	Skin 0 "Jflare.pcx"
+        Scale 0.1 0.1 0.1
+	Offset 0 0 0
+	USEACTORPITCH
+	USEACTORROLL
+	Rolloffset 0
+   	FrameIndex BIOS A 0 37
+	FrameIndex BIOS B 0 38
+	FrameIndex BIOS C 0 39
+	FrameIndex BIOS D 0 40
+	FrameIndex BIOS E 0 41
+	FrameIndex BIOS F 0 42
+	FrameIndex BIOS G 0 43
+
+
+
+}
+
+
+//Gesbiorifle biogel drip
+MODEL Biogel5
+{
+	Path "models/weapons/Gesbiorifle/projectile"
+	//AngleOffset -180
+        Model 0 "ngel_a.3d"
+	Skin 0 "Jflare.pcx"
+        Scale 0.1 0.1 0.1
+	Offset 0 0 0
+	USEACTORPITCH
+	USEACTORROLL
+	Rolloffset 0
+   	FrameIndex BIOC A 0 24
+	FrameIndex BIOC B 0 25
+	FrameIndex BIOC C 0 26
+	FrameIndex BIOC D 0 27
+	FrameIndex BIOC E 0 28
+	FrameIndex BIOC F 0 29
+	FrameIndex BIOC G 0 30
+
+
+}
+////////////////////////////////////
+
+//Gesbiorifle biogel FLY
+MODEL Biogel6
+{
+	Path "models/weapons/Gesbiorifle/projectile"
+	//AngleOffset -180
+        Model 0 "ngel_a.3d"
+	Skin 0 "Jflare.pcx"
+        Scale 0.1 0.1 0.1
+	
+	Offset 0 0 0
+	Rolloffset 0
+   	FrameIndex BIOG A 0 1
+	FrameIndex BIOG B 0 2
+	FrameIndex BIOG C 0 3
+	FrameIndex BIOG D 0 4
+	FrameIndex BIOG E 0 5
+	FrameIndex BIOG F 0 6
+	FrameIndex BIOG G 0 7
+	FrameIndex BIOG H 0 8
+	FrameIndex BIOG I 0 9
+	FrameIndex BIOG J 0 10
+	FrameIndex BIOG K 0 11
+	FrameIndex BIOG L 0 12
+	FrameIndex BIOG M 0 13
+
+
+}
+
+//Gesbiorifle biogel slide
+MODEL Biogel6
+{
+	Path "models/weapons/Gesbiorifle/projectile"
+	//AngleOffset -180
+        Model 0 "ngel_a.3d"
+	Skin 0 "Jflare.pcx"
+        Scale 0.1 0.1 0.1
+	Offset 0 0 0
+	USEACTORPITCH
+	USEACTORROLL
+	Rolloffset 0
+   	FrameIndex BIOS A 0 37
+	FrameIndex BIOS B 0 38
+	FrameIndex BIOS C 0 39
+	FrameIndex BIOS D 0 40
+	FrameIndex BIOS E 0 41
+	FrameIndex BIOS F 0 42
+	FrameIndex BIOS G 0 43
+
+
+
+}
+
+
+//Gesbiorifle biogel drip
+MODEL Biogel6
+{
+	Path "models/weapons/Gesbiorifle/projectile"
+	//AngleOffset -180
+        Model 0 "ngel_a.3d"
+	Skin 0 "Jflare.pcx"
+        Scale 0.1 0.1 0.1
+	Offset 0 0 0
+	USEACTORPITCH
+	USEACTORROLL
+	Rolloffset 0
+   	FrameIndex BIOC A 0 24
+	FrameIndex BIOC B 0 25
+	FrameIndex BIOC C 0 26
+	FrameIndex BIOC D 0 27
+	FrameIndex BIOC E 0 28
+	FrameIndex BIOC F 0 29
+	FrameIndex BIOC G 0 30
+
+
+}
+////////////////////////////
+
+//Gesbiorifle biogel FLY
+MODEL Biogel7
+{
+	Path "models/weapons/Gesbiorifle/projectile"
+	//AngleOffset -180
+        Model 0 "ngel_a.3d"
+	Skin 0 "Jflare.pcx"
+        Scale 0.1 0.1 0.1
+	
+	Offset 0 0 0
+	Rolloffset 0
+   	FrameIndex BIOG A 0 1
+	FrameIndex BIOG B 0 2
+	FrameIndex BIOG C 0 3
+	FrameIndex BIOG D 0 4
+	FrameIndex BIOG E 0 5
+	FrameIndex BIOG F 0 6
+	FrameIndex BIOG G 0 7
+	FrameIndex BIOG H 0 8
+	FrameIndex BIOG I 0 9
+	FrameIndex BIOG J 0 10
+	FrameIndex BIOG K 0 11
+	FrameIndex BIOG L 0 12
+	FrameIndex BIOG M 0 13
+
+
+}
+
+//Gesbiorifle biogel slide
+MODEL Biogel7
+{
+	Path "models/weapons/Gesbiorifle/projectile"
+	//AngleOffset -180
+        Model 0 "ngel_a.3d"
+	Skin 0 "Jflare.pcx"
+        Scale 0.1 0.1 0.1
+	Offset 0 0 0
+	USEACTORPITCH
+	USEACTORROLL
+	Rolloffset 0
+   	FrameIndex BIOS A 0 37
+	FrameIndex BIOS B 0 38
+	FrameIndex BIOS C 0 39
+	FrameIndex BIOS D 0 40
+	FrameIndex BIOS E 0 41
+	FrameIndex BIOS F 0 42
+	FrameIndex BIOS G 0 43
+
+
+
+}
+
+
+//Gesbiorifle biogel drip
+MODEL Biogel7
+{
+	Path "models/weapons/Gesbiorifle/projectile"
+	//AngleOffset -180
+        Model 0 "ngel_a.3d"
+	Skin 0 "Jflare.pcx"
+        Scale 0.1 0.1 0.1
+	Offset 0 0 0
+	USEACTORPITCH
+	USEACTORROLL
+	Rolloffset 0
+   	FrameIndex BIOC A 0 24
+	FrameIndex BIOC B 0 25
+	FrameIndex BIOC C 0 26
+	FrameIndex BIOC D 0 27
+	FrameIndex BIOC E 0 28
+	FrameIndex BIOC F 0 29
+	FrameIndex BIOC G 0 30
+
+
+}
+
+/////////////////////////
+
+//Gesbiorifle biogel FLY
+MODEL Biogel8
+{
+	Path "models/weapons/Gesbiorifle/projectile"
+	//AngleOffset -180
+        Model 0 "ngel_a.3d"
+	Skin 0 "Jflare.pcx"
+        Scale 0.1 0.1 0.1
+	
+	Offset 0 0 0
+	Rolloffset 0
+   	FrameIndex BIOG A 0 1
+	FrameIndex BIOG B 0 2
+	FrameIndex BIOG C 0 3
+	FrameIndex BIOG D 0 4
+	FrameIndex BIOG E 0 5
+	FrameIndex BIOG F 0 6
+	FrameIndex BIOG G 0 7
+	FrameIndex BIOG H 0 8
+	FrameIndex BIOG I 0 9
+	FrameIndex BIOG J 0 10
+	FrameIndex BIOG K 0 11
+	FrameIndex BIOG L 0 12
+	FrameIndex BIOG M 0 13
+
+
+}
+
+//Gesbiorifle biogel slide
+MODEL Biogel8
+{
+	Path "models/weapons/Gesbiorifle/projectile"
+	//AngleOffset -180
+        Model 0 "ngel_a.3d"
+	Skin 0 "Jflare.pcx"
+        Scale 0.1 0.1 0.1
+	Offset 0 0 0
+	USEACTORPITCH
+	USEACTORROLL
+	Rolloffset 0
+   	FrameIndex BIOS A 0 37
+	FrameIndex BIOS B 0 38
+	FrameIndex BIOS C 0 39
+	FrameIndex BIOS D 0 40
+	FrameIndex BIOS E 0 41
+	FrameIndex BIOS F 0 42
+	FrameIndex BIOS G 0 43
+
+
+
+}
+
+
+//Gesbiorifle biogel drip
+MODEL Biogel8
+{
+	Path "models/weapons/Gesbiorifle/projectile"
+	//AngleOffset -180
+        Model 0 "ngel_a.3d"
+	Skin 0 "Jflare.pcx"
+        Scale 0.1 0.1 0.1
+	Offset 0 0 0
+	USEACTORPITCH
+	USEACTORROLL
+	Rolloffset 0
+   	FrameIndex BIOC A 0 24
+	FrameIndex BIOC B 0 25
+	FrameIndex BIOC C 0 26
+	FrameIndex BIOC D 0 27
+	FrameIndex BIOC E 0 28
+	FrameIndex BIOC F 0 29
+	FrameIndex BIOC G 0 30
+	FrameIndex BIOC H 0 31
+	FrameIndex BIOC I 0 32
+	FrameIndex BIOC J 0 33
+	FrameIndex BIOC K 0 34
+	FrameIndex BIOC L 0 35
+	
+	
+	
+
+
+}
+
+///////////////////////////////
+
+
+//Gesbiorifle biogel FLY
+MODEL Biogel_particle
+{
+	Path "models/weapons/Gesbiorifle/projectile"
+	//AngleOffset -180
+        Model 0 "ngel_a.3d"
+	Skin 0 "Jflare.pcx"
+        Scale 0.1 0.1 0.1
+	
+	Offset 0 0 0
+	Rolloffset 0
+   	FrameIndex BIOG A 0 1
+	FrameIndex BIOG B 0 2
+	FrameIndex BIOG C 0 3
+	FrameIndex BIOG D 0 4
+	FrameIndex BIOG E 0 5
+	FrameIndex BIOG F 0 6
+	FrameIndex BIOG G 0 7
+	FrameIndex BIOG H 0 8
+	FrameIndex BIOG I 0 9
+	FrameIndex BIOG J 0 10
+	FrameIndex BIOG K 0 11
+	FrameIndex BIOG L 0 12
+	FrameIndex BIOG M 0 13
+
+
+}
+
+//Gesbiorifle biogel slide
+MODEL Biogel_particle
+{
+	Path "models/weapons/Gesbiorifle/projectile"
+	//AngleOffset -180
+        Model 0 "ngel_a.3d"
+	Skin 0 "Jflare.pcx"
+        Scale 0.1 0.1 0.1
+	Offset 0 0 0
+	USEACTORPITCH
+	USEACTORROLL
+	Rolloffset 0
+   	FrameIndex BIOS A 0 37
+	FrameIndex BIOS B 0 38
+	FrameIndex BIOS C 0 39
+	FrameIndex BIOS D 0 40
+	FrameIndex BIOS E 0 41
+	FrameIndex BIOS F 0 42
+	FrameIndex BIOS G 0 43
+
+
+
+}
+
+
+//Gesbiorifle biogel drip
+MODEL Biogel_particle
+{
+	Path "models/weapons/Gesbiorifle/projectile"
+	//AngleOffset -180
+        Model 0 "ngel_a.3d"
+	Skin 0 "Jflare.pcx"
+        Scale 0.1 0.1 0.1
+	Offset 0 0 0
+	USEACTORPITCH
+	USEACTORROLL
+	Rolloffset 0
+   	FrameIndex BIOC A 0 24
+	FrameIndex BIOC B 0 25
+	FrameIndex BIOC C 0 26
+	FrameIndex BIOC D 0 27
+	FrameIndex BIOC E 0 28
+	FrameIndex BIOC F 0 29
+	FrameIndex BIOC G 0 30
+
+
+}
+
+
+
+
+//GesBiorifle ammo pickup
+MODEL SludgeAmmoPickup
+{
+	Path "models/pickups/ammo/sludge"
+	//AngleOffset -180
+        Model 0 "sludgebox.md3"
+        Scale 0.9 0.9 0.9
+	Offset 0 0 7
+   	FrameIndex SLGX A 0 1
+	FrameIndex SLGX B 0 2
+	FrameIndex SLGX C 0 3
+	FrameIndex SLGX D 0 4
+	FrameIndex SLGX E 0 5
+	FrameIndex SLGX F 0 6
+	FrameIndex SLGX G 0 7
+	FrameIndex SLGX H 0 8
+	FrameIndex SLGX I 0 9
+	FrameIndex SLGX J 0 10
+	FrameIndex SLGX K 0 11
+	FrameIndex SLGX L 0 12	
+	FrameIndex SLGX M 0 13
+	FrameIndex SLGX N 0 14
+	FrameIndex SLGX O 0 15
+	FrameIndex SLGX P 0 16
+	FrameIndex SLGX Q 0 17
+	FrameIndex SLGX R 0 18
+	FrameIndex SLGX S 0 19
+	FrameIndex SLGX T 0 20
+	FrameIndex SLGX U 0 21
+	FrameIndex SLGX V 0 22
+	FrameIndex SLGX W 0 23
+	FrameIndex SLGX X 0 24
+	FrameIndex SLGX Y 0 25
+	FrameIndex SLGX Z 0 26
+
+	FrameIndex SLXX A 0 27
+	FrameIndex SLXX B 0 28
+	FrameIndex SLXX C 0 29
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Select
+MODEL Weapon107
+{
+	Path "models/weapons/Gesbiorifle"
+	AngleOffset -270
+        Model 0 "gesbiorifle.md3"
+	Skin 0 "JBRifle2.png"
+        Scale -1.0 1.0 1.0
+	Offset 12 -22 -14
+	Rolloffset 0
+   	FrameIndex GBRS A 0 0
+   	FrameIndex GBRS B 0 1
+	FrameIndex GBRS C 0 2
+	FrameIndex GBRS D 0 3
+	FrameIndex GBRS E 0 4
+	FrameIndex GBRS F 0 5
+	FrameIndex GBRS G 0 6
+	FrameIndex GBRS H 0 7
+	FrameIndex GBRS I 0 8
+	FrameIndex GBRS J 0 9
+	FrameIndex GBRS K 0 10
+	FrameIndex GBRS L 0 11
+	FrameIndex GBRS M 0 12
+	FrameIndex GBRS N 0 13
+	FrameIndex GBRS O 0 14
+	FrameIndex GBRS P 0 15
+   	FrameIndex GBRS Q 0 16
+	FrameIndex GBRS R 0 17
+	FrameIndex GBRS S 0 18
+	FrameIndex GBRS T 0 19
+//walk
+   	FrameIndex GBRW A 0 20
+   	FrameIndex GBRW B 0 21
+	FrameIndex GBRW C 0 22
+	FrameIndex GBRW D 0 23
+	FrameIndex GBRW E 0 24
+	FrameIndex GBRW F 0 25
+	FrameIndex GBRW G 0 26
+	FrameIndex GBRW H 0 27
+	FrameIndex GBRW I 0 28
+	FrameIndex GBRW J 0 29
+	FrameIndex GBRW K 0 30
+	FrameIndex GBRW L 0 31
+	FrameIndex GBRW M 0 32
+	FrameIndex GBRW N 0 33
+	FrameIndex GBRW O 0 34
+	FrameIndex GBRW P 0 35
+   	FrameIndex GBRW Q 0 36
+	FrameIndex GBRW R 0 37
+	FrameIndex GBRW S 0 38
+	FrameIndex GBRW T 0 39
+
+//Fire
+
+   	FrameIndex GBRF A 0 73
+   	FrameIndex GBRF B 0 74
+	FrameIndex GBRF C 0 75
+	FrameIndex GBRF D 0 76
+	FrameIndex GBRF E 0 77
+	FrameIndex GBRF F 0 78
+	FrameIndex GBRF G 0 79
+	FrameIndex GBRF H 0 80
+	FrameIndex GBRF I 0 81
+	FrameIndex GBRF J 0 82
+	FrameIndex GBRF K 0 83
+
+//Deselect
+
+   	FrameIndex GBDS A 0 92
+   	FrameIndex GBDS B 0 93
+	FrameIndex GBDS C 0 94
+	FrameIndex GBDS D 0 95
+	FrameIndex GBDS E 0 96
+	FrameIndex GBDS F 0 97
+	FrameIndex GBDS G 0 98
+	FrameIndex GBDS H 0 99
+	FrameIndex GBDS I 0 100
+
+//Altfire
+
+   	FrameIndex GBAF A 0 40
+   	FrameIndex GBAF B 0 41
+	FrameIndex GBAF C 0 42
+	FrameIndex GBAF D 0 43
+	FrameIndex GBAF E 0 44
+	FrameIndex GBAF F 0 45
+	FrameIndex GBAF G 0 46
+	FrameIndex GBAF H 0 47
+	FrameIndex GBAF I 0 48
+	FrameIndex GBAF J 0 49
+	FrameIndex GBAF K 0 50
+	FrameIndex GBAF L 0 51
+	FrameIndex GBAF M 0 52
+	FrameIndex GBAF N 0 53
+	FrameIndex GBAF O 0 54
+	FrameIndex GBAF P 0 55
+   	FrameIndex GBAF Q 0 56
+	FrameIndex GBAF R 0 57
+	FrameIndex GBAF S 0 58
+	FrameIndex GBAF T 0 59
+
+	FrameIndex GBAF U 0 60
+	FrameIndex GBAF V 0 61
+	FrameIndex GBAF W 0 62
+	FrameIndex GBAF X 0 63
+	FrameIndex GBAF Y 0 64
+   	FrameIndex GBAF Z 0 65
+
+
+}
+
+
+
+
+
+//Gesbiorifle biogel FLY
+MODEL Biogel1f
+{
+	Path "models/weapons/Gesbiorifle/projectile"
+	//AngleOffset -180
+        Model 0 "ngel_a.3d"
+	Skin 0 "Rflare.png"
+        Scale 0.1 0.1 0.1	
+	Offset 0 0 0
+	Rolloffset 0
+USEACTORPITCH
+	USEACTORROLL
+   	FrameIndex BIOG A 0 1
+	FrameIndex BIOG B 0 2
+	FrameIndex BIOG C 0 3
+	FrameIndex BIOG D 0 4
+	FrameIndex BIOG E 0 5
+	FrameIndex BIOG F 0 6
+	FrameIndex BIOG G 0 7
+	FrameIndex BIOG H 0 8
+	FrameIndex BIOG I 0 9
+	FrameIndex BIOG J 0 10
+	FrameIndex BIOG K 0 11
+	FrameIndex BIOG L 0 12
+	FrameIndex BIOG M 0 13
+
+//Gesbiorifle biogel slide
+
+   	FrameIndex BIOS A 0 37
+	FrameIndex BIOS B 0 38
+	FrameIndex BIOS C 0 39
+	FrameIndex BIOS D 0 40
+	FrameIndex BIOS E 0 41
+	FrameIndex BIOS F 0 42
+	FrameIndex BIOS G 0 43
+
+//Gesbiorifle biogel drip
+
+   	FrameIndex BIOC A 0 24
+	FrameIndex BIOC B 0 25
+	FrameIndex BIOC C 0 26
+	FrameIndex BIOC D 0 27
+	FrameIndex BIOC E 0 28
+	FrameIndex BIOC F 0 29
+	FrameIndex BIOC G 0 30
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

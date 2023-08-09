@@ -1,0 +1,817 @@
+
+Model Weapon56
+{ 
+   Path "Models/Weapons/supershotgun"
+   Model 0 "SSG.md3"
+   Skin 0 "Hud_SSG.png"
+  Model 2 "SSGHand.md3"
+Path "Models/Weapons/ushotgun"
+   Skin 2 "Hands.png"
+   Scale 1.1 1.0 1.0
+INTERPOLATEDOUBLEDFRAMES
+
+Offset 10 3.5 -2.5
+
+   FrameIndex SHT2 A 0 0   FrameIndex SHT2 A 2 0
+   FrameIndex SHT2 B 0 1   FrameIndex SHT2 B 2 1
+   FrameIndex SHT2 C 0 2   FrameIndex SHT2 C 2 2
+   FrameIndex SHT2 D 0 3   FrameIndex SHT2 D 2 3
+}
+
+
+
+
+
+Model Weapon56
+{ 
+   Path "Models/Weapons/supershotgun"
+   Model 0 "SSG.md3"
+   Skin 0 "Hud_SSG.png"
+   Model 1 "SSGPutShell.md3"
+   Skin 1 "Hud_SSG.png"
+   Model 2 "SSGHand.md3"
+ 
+   Model 3 "SSGPutHand.md3"
+   
+
+Path "Models/Weapons/ushotgun"
+  Skin 2 "Hands.png"
+Skin 3 "Hands.png"
+
+   Scale 1.1 1.0 1.0
+//INTERPOLATEDOUBLEDFRAMES
+Offset 10 3.5 -2.5
+
+   FrameIndex SHT2 E 0 6	   FrameIndex SHT2 E 1 0	   FrameIndex SHT2 E 2 6	   FrameIndex SHT2 E 3 0
+   FrameIndex SHT2 F 0 7	   FrameIndex SHT2 F 1 2	   FrameIndex SHT2 F 2 7	   FrameIndex SHT2 F 3 2
+
+   FrameIndex SHT2 H 0 9	   FrameIndex SHT2 H 1 999	   FrameIndex SHT2 H 2 9	   FrameIndex SHT2 H 3 999
+}
+
+Model Weapon56
+{ 
+  Path "Models/Weapons/supershotgun"
+   Model 0 "SSG.md3"
+   Skin 0 "Hud_SSG.png"
+   Model 1 "SSGPutShell.md3"
+  Model 2 "SSGHand.md3"
+   Model 3 "SSGPutHand.md3"
+
+
+ Path "Models/Weapons/Ushotgun"
+Skin 2 "Hands.png"
+ Skin 3 "Hands.png"
+   Scale 1.1 1.0 1.0
+//INTERPOLATEDOUBLEDFRAMES
+Offset 10 3.5 -4
+
+   FrameIndex SHT2 G 0 8	   FrameIndex SHT2 G 1 999	   FrameIndex SHT2 G 2 8	   FrameIndex SHT2 G 3 4
+
+}
+
+
+
+
+Model SuperShotgun2_pickup
+{ 
+  Path "Models/Weapons/supershotgun"
+   Model 0 "SuperShotgunpick.md3"
+   Skin 0 "doomssg.png"
+      Scale 1.5 2.5 2.5
+ROTATING
+Offset 0 0 4
+
+   FrameIndex SGN2 A 0 0
+}
+
+
+
+Model Weapon56_dec
+{ 
+  Path "Models/Weapons/supershotgun"
+   Model 0 "SuperShotgunpick.md3"
+   Skin 0 "doomssg.png"
+      Scale 1.5 2.5 2.5
+ROTATING
+Offset 0 0 4
+
+   FrameIndex SGN2 A 0 0
+}
+
+Model Weapon79_dec
+{ 
+  Path "Models/Weapons/supershotgun"
+   Model 0 "SuperShotgunpick.md3"
+   Skin 0 "doomssgp1.png"
+      Scale 1.5 2.5 2.5
+ROTATING
+Offset 0 0 4
+
+   FrameIndex SGN2 A 0 0
+}
+
+Model Weapon80_dec
+{ 
+  Path "Models/Weapons/supershotgun"
+   Model 0 "SuperShotgunpick.md3"
+   Skin 0 "doomssgp1.png"
+      Scale 1.5 2.5 2.5
+ROTATING
+Offset 0 0 4
+
+
+   FrameIndex SGN2 A 0 0
+}
+
+Model Weapon81_dec
+{ 
+  Path "Models/Weapons/supershotgun"
+   Model 0 "SuperShotgunpick.md3"
+   Skin 0 "doomssgp1.png"
+      Scale 1.5 2.5 2.5
+ROTATING
+Offset 0 0 4
+
+   FrameIndex SGN2 A 0 0
+}
+
+
+
+
+
+
+Model SuperShotgun2_pickupFlat
+{ 
+  Path "Models/Weapons/supershotgun"
+   Model 0 "SuperShotgunpickflat.md3"
+   Skin 0 "doomssg.png"
+      Scale 1.5 2.5 2.5
+USEACTORROLL
+USEACTORPITCH
+Offset 0 0 0
+
+   FrameIndex SGN2 B 0 0
+}
+
+
+
+//muzzle
+Model Weapon56
+{ 
+   Path "Models/Weapons/supershotgun"
+
+  Model 0 "hud_ssg_mf2.md3"
+  SKIN 0 "mf1.png"	
+
+   Scale 4.4 4.0 4.0
+
+   Offset 50 0 0
+   FrameIndex SHT2 I 0 0 
+   FrameIndex SHT2 J 0 1
+   FrameIndex SHT2 K 0 2
+}
+
+
+//============================ Weapon79 Power Double-Barreled Shotgun
+
+
+
+Model Weapon79
+{ 
+   Path "Models/Weapons/supershotgun"
+   Model 0 "SSG.md3"
+   Skin 0 "HUD_SSGP1.png"
+  Model 2 "SSGHand.md3"
+   Path "Models/Weapons/ushotgun"
+   Skin 2 "Hands.png"
+   Scale 1.1 1.0 1.0
+INTERPOLATEDOUBLEDFRAMES
+
+Offset 10 3.5 -2.5
+
+   FrameIndex SHT2 A 0 0   FrameIndex SHT2 A 2 0
+   FrameIndex SHT2 B 0 1   FrameIndex SHT2 B 2 1
+   FrameIndex SHT2 C 0 2   FrameIndex SHT2 C 2 2
+   FrameIndex SHT2 D 0 3   FrameIndex SHT2 D 2 3
+}
+
+
+
+
+
+Model Weapon79
+{ 
+   Path "Models/Weapons/supershotgun"
+   Model 0 "SSG.md3"
+   Skin 0 "HUD_SSGP1.png"
+   Model 1 "SSGPutShell.md3"
+   Skin 1 "HUD_SSGP1.png"
+   Model 2 "SSGHand.md3"
+  
+   Model 3 "SSGPutHand.md3"
+  
+
+  Path "Models/Weapons/ushotgun"
+ Skin 2 "Hands.png"
+ Skin 3 "Hands.png"
+   Scale 1.1 1.0 1.0
+//INTERPOLATEDOUBLEDFRAMES
+Offset 10 3.5 -2.5
+
+   FrameIndex SHT2 E 0 6	   FrameIndex SHT2 E 1 0	   FrameIndex SHT2 E 2 6	   FrameIndex SHT2 E 3 0
+   FrameIndex SHT2 F 0 7	   FrameIndex SHT2 F 1 2	   FrameIndex SHT2 F 2 7	   FrameIndex SHT2 F 3 2
+
+   FrameIndex SHT2 H 0 9	   FrameIndex SHT2 H 1 999	   FrameIndex SHT2 H 2 9	   FrameIndex SHT2 H 3 999
+}
+
+Model Weapon79
+{ 
+  Path "Models/Weapons/supershotgun"
+   Model 0 "SSG.md3"
+   Skin 0 "HUD_SSGP1.png"
+   Model 1 "SSGPutShell.md3"
+  Model 2 "SSGHand.md3"
+
+   Model 3 "SSGPutHand.md3"
+
+
+Path "Models/Weapons/ushotgun"
+   Skin 2 "Hands.png"
+   Skin 3 "Hands.png"
+   Scale 1.1 1.0 1.0
+//INTERPOLATEDOUBLEDFRAMES
+Offset 10 3.5 -4
+
+   FrameIndex SHT2 G 0 8	   FrameIndex SHT2 G 1 999	   FrameIndex SHT2 G 2 8	   FrameIndex SHT2 G 3 4
+
+}
+
+
+
+
+Model PowerShotgun_pickupFlat
+{ 
+  Path "Models/Weapons/supershotgun"
+   Model 0 "SuperShotgunpickflat.md3"
+   Skin 0 "doomssg.png"
+      Scale 1.5 2.5 2.5
+USEACTORROLL
+USEACTORPITCH
+Offset 0 0 0
+
+   FrameIndex SGN2 B 0 0
+}
+
+
+
+//muzzle
+Model Weapon79
+{ 
+   Path "Models/Weapons/supershotgun"
+
+  Model 0 "hud_ssg_mf2.md3"
+  SKIN 0 "mf3.png"	
+
+   Scale 1.0 1.0 1.0
+
+   Offset 10 10 3
+   FrameIndex SHT2 I 0 0 
+   FrameIndex SHT2 J 0 1
+   FrameIndex SHT2 K 0 2
+}
+
+
+
+//============================ Weapon80 Sovereign Double-Barreled Shotgun
+
+
+
+Model Weapon80
+{ 
+   Path "Models/Weapons/supershotgun"
+   Model 0 "SSG.md3"
+   Skin 0 "HUD_SSGP2.png"
+  Model 2 "SSGHand.md3"
+
+Path "Models/Weapons/ushotgun"
+
+   Skin 2 "Hands.png"
+   Scale 1.1 1.0 1.0
+INTERPOLATEDOUBLEDFRAMES
+
+Offset 10 3.5 -2.5
+
+   FrameIndex SHT2 A 0 0   FrameIndex SHT2 A 2 0
+   FrameIndex SHT2 B 0 1   FrameIndex SHT2 B 2 1
+   FrameIndex SHT2 C 0 2   FrameIndex SHT2 C 2 2
+   FrameIndex SHT2 D 0 3   FrameIndex SHT2 D 2 3
+}
+
+
+
+
+
+Model Weapon80
+{ 
+   Path "Models/Weapons/supershotgun"
+   Model 0 "SSG.md3"
+   Skin 0 "HUD_SSGP2.png"
+   Model 1 "SSGPutShell.md3"
+   Skin 1 "HUD_SSGP2.png"
+   Model 2 "SSGHand.md3"
+   
+   Model 3 "SSGPutHand.md3"
+   
+Path "Models/Weapons/ushotgun"
+Skin 2 "Hands.png"
+Skin 3 "Hands.png"
+   Scale 1.1 1.0 1.0
+//INTERPOLATEDOUBLEDFRAMES
+Offset 10 3.5 -2.5
+
+   FrameIndex SHT2 E 0 6	   FrameIndex SHT2 E 1 0	   FrameIndex SHT2 E 2 6	   FrameIndex SHT2 E 3 0
+   FrameIndex SHT2 F 0 7	   FrameIndex SHT2 F 1 2	   FrameIndex SHT2 F 2 7	   FrameIndex SHT2 F 3 2
+
+   FrameIndex SHT2 H 0 9	   FrameIndex SHT2 H 1 999	   FrameIndex SHT2 H 2 9	   FrameIndex SHT2 H 3 999
+}
+
+Model Weapon80
+{ 
+  Path "Models/Weapons/supershotgun"
+   Model 0 "SSG.md3"
+   Skin 0 "HUD_SSGP2.png"
+   Model 1 "SSGPutShell.md3"
+  Model 2 "SSGHand.md3"
+   
+   Model 3 "SSGPutHand.md3"
+  
+Path "Models/Weapons/ushotgun"
+Skin 2 "Hands.png"
+ Skin 3 "Hands.png"
+   Scale 1.1 1.0 1.0
+//INTERPOLATEDOUBLEDFRAMES
+Offset 10 3.5 -4
+
+   FrameIndex SHT2 G 0 8	   FrameIndex SHT2 G 1 999	   FrameIndex SHT2 G 2 8	   FrameIndex SHT2 G 3 4
+
+}
+
+
+
+
+Model SovereignShotgun_pickupFlat
+{ 
+  Path "Models/Weapons/supershotgun"
+   Model 0 "SuperShotgunpickflat.md3"
+   Skin 0 "doomssg.png"
+      Scale 1.5 2.5 2.5
+USEACTORROLL
+USEACTORPITCH
+Offset 0 0 0
+
+   FrameIndex SGN2 B 0 0
+}
+
+
+
+//muzzle
+Model Weapon80
+{ 
+   Path "Models/Weapons/supershotgun"
+
+  Model 0 "hud_ssg_mf2.md3"
+  SKIN 0 "mf4.png"	
+
+   Scale 1.0 1.0 1.0
+
+   Offset 10 10 3
+   FrameIndex SHT2 I 0 0 
+   FrameIndex SHT2 J 0 1
+   FrameIndex SHT2 K 0 2
+}
+
+
+
+
+//============================ Weapon81 Plasmatic Double-Barreled Shotgun
+
+
+
+Model Weapon81
+{ 
+   Path "Models/Weapons/supershotgun"
+   Model 0 "SSG.md3"
+   Skin 0 "HUD_SSGpls.png"
+  Model 2 "SSGHand.md3"
+Path "Models/Weapons/ushotgun"
+   Skin 2 "Hands.png"
+   Scale 1.1 1.0 1.0
+INTERPOLATEDOUBLEDFRAMES
+
+Offset 10 3.5 -2.5
+
+   FrameIndex SHT2 A 0 0   FrameIndex SHT2 A 2 0
+   FrameIndex SHT2 B 0 1   FrameIndex SHT2 B 2 1
+   FrameIndex SHT2 C 0 2   FrameIndex SHT2 C 2 2
+   FrameIndex SHT2 D 0 3   FrameIndex SHT2 D 2 3
+}
+
+
+
+
+
+Model Weapon81
+{ 
+   Path "Models/Weapons/supershotgun"
+   Model 0 "SSG.md3"
+   Skin 0 "HUD_SSGpls.png"
+   Model 1 "SSGPutShell.md3"
+   Skin 1 "HUD_SSGP2.png"
+   Model 2 "SSGHand.md3"
+   
+   Model 3 "SSGPutHand.md3"
+  
+Path "Models/Weapons/ushotgun"
+Skin 2 "Hands.png"
+ Skin 3 "Hands.png"
+   Scale 1.1 1.0 1.0
+//INTERPOLATEDOUBLEDFRAMES
+Offset 10 3.5 -2.5
+
+   FrameIndex SHT2 E 0 6	   FrameIndex SHT2 E 1 0	   FrameIndex SHT2 E 2 6	   FrameIndex SHT2 E 3 0
+   FrameIndex SHT2 F 0 7	   FrameIndex SHT2 F 1 2	   FrameIndex SHT2 F 2 7	   FrameIndex SHT2 F 3 2
+
+   FrameIndex SHT2 H 0 9	   FrameIndex SHT2 H 1 999	   FrameIndex SHT2 H 2 9	   FrameIndex SHT2 H 3 999
+}
+
+Model Weapon81
+{ 
+  Path "Models/Weapons/supershotgun"
+   Model 0 "SSG.md3"
+   Skin 0 "HUD_SSGpls.png"
+   Model 1 "SSGPutShell.md3"
+  Model 2 "SSGHand.md3"
+   
+   Model 3 "SSGPutHand.md3"
+   
+ Path "Models/Weapons/ushotgun"
+Skin 2 "Hands.png"
+Skin 3 "Hands.png"
+   Scale 1.1 1.0 1.0
+//INTERPOLATEDOUBLEDFRAMES
+Offset 10 3.5 -4
+
+   FrameIndex SHT2 G 0 8	   FrameIndex SHT2 G 1 999	   FrameIndex SHT2 G 2 8	   FrameIndex SHT2 G 3 4
+
+}
+
+
+
+
+Model SovereignShotgun_pickupFlat
+{ 
+  Path "Models/Weapons/supershotgun"
+   Model 0 "SuperShotgunpickflat.md3"
+   Skin 0 "doomssg.png"
+      Scale 1.5 2.5 2.5
+USEACTORROLL
+USEACTORPITCH
+Offset 0 0 0
+
+   FrameIndex SGN2 B 0 0
+}
+
+
+
+//muzzle
+Model Weapon81
+{ 
+   Path "Models/Weapons/supershotgun"
+
+  Model 0 "hud_ssg_mf2.md3"
+  SKIN 0 "mf5.png"	
+
+   Scale 1.0 1.0 1.0
+
+   Offset 10 10 3
+   FrameIndex SHT2 I 0 0 
+   FrameIndex SHT2 J 0 1
+   FrameIndex SHT2 K 0 2
+}
+
+
+
+
+Model Weapon96
+{ 
+   Path "Models/Weapons/supershotgun"
+   Model 0 "SSG.md3"
+   Skin 0 "HUD_SSGarc.png"
+  Model 2 "SSGHand.md3"
+Path "Models/Weapons/ushotgun"
+   Skin 2 "Hands.png"
+   Scale 1.1 1.0 1.0
+INTERPOLATEDOUBLEDFRAMES
+
+Offset 10 3.5 -2.5
+
+   FrameIndex SHT2 A 0 0   FrameIndex SHT2 A 2 0
+   FrameIndex SHT2 B 0 1   FrameIndex SHT2 B 2 1
+   FrameIndex SHT2 C 0 2   FrameIndex SHT2 C 2 2
+   FrameIndex SHT2 D 0 3   FrameIndex SHT2 D 2 3
+}
+
+
+Model Weapon96
+{ 
+   Path "Models/Weapons/supershotgun"
+   Model 0 "SSG.md3"
+   Skin 0 "HUD_SSGarc.png"
+   Model 1 "SSGPutShell.md3"
+   Skin 1 "HUD_SSGarc.png"
+   Model 2 "SSGHand.md3"
+ 
+   Model 3 "SSGPutHand.md3"
+   
+
+Path "Models/Weapons/ushotgun"
+  Skin 2 "Hands.png"
+Skin 3 "Hands.png"
+
+   Scale 1.1 1.0 1.0
+//INTERPOLATEDOUBLEDFRAMES
+Offset 10 3.5 -2.5
+
+   FrameIndex SHT2 E 0 6	   FrameIndex SHT2 E 1 0	   FrameIndex SHT2 E 2 6	   FrameIndex SHT2 E 3 0
+   FrameIndex SHT2 F 0 7	   FrameIndex SHT2 F 1 2	   FrameIndex SHT2 F 2 7	   FrameIndex SHT2 F 3 2
+
+   FrameIndex SHT2 H 0 9	   FrameIndex SHT2 H 1 999	   FrameIndex SHT2 H 2 9	   FrameIndex SHT2 H 3 999
+}
+
+Model Weapon96
+{ 
+  Path "Models/Weapons/supershotgun"
+   Model 0 "SSG.md3"
+   Skin 0 "HUD_SSGarc.png"
+   Model 1 "SSGPutShell.md3"
+  Model 2 "SSGHand.md3"
+   Model 3 "SSGPutHand.md3"
+
+
+ Path "Models/Weapons/Ushotgun"
+Skin 2 "Hands.png"
+ Skin 3 "Hands.png"
+   Scale 1.1 1.0 1.0
+//INTERPOLATEDOUBLEDFRAMES
+Offset 10 3.5 -4
+
+   FrameIndex SHT2 G 0 8	   FrameIndex SHT2 G 1 999	   FrameIndex SHT2 G 2 8	   FrameIndex SHT2 G 3 4
+
+}
+
+
+
+//muzzle
+Model Weapon96
+{ 
+   Path "Models/Weapons/supershotgun"
+
+  Model 0 "hud_ssg_mf2.md3"
+  SKIN 0 "mf6.png"	
+
+   Scale 4.4 4.0 4.0
+
+   Offset 50 0 0
+   FrameIndex SHT2 I 0 0 
+   FrameIndex SHT2 J 0 1
+   FrameIndex SHT2 K 0 2
+}
+
+
+Model Weapon96_dec
+{ 
+  Path "Models/Weapons/supershotgun"
+   Model 0 "SuperShotgunpick.md3"
+   Skin 0 "doomssg.png"
+      Scale 1.5 2.5 2.5
+ROTATING
+Offset 0 0 4
+
+   FrameIndex SGN2 A 0 0
+}
+
+
+
+
+
+
+Model Weapon97
+{ 
+   Path "Models/Weapons/supershotgun"
+   Model 0 "SSG.md3"
+   Skin 0 "HUD_SSGexp.png"
+  Model 2 "SSGHand.md3"
+Path "Models/Weapons/ushotgun"
+   Skin 2 "Hands.png"
+   Scale 1.1 1.0 1.0
+INTERPOLATEDOUBLEDFRAMES
+
+Offset 10 3.5 -2.5
+
+   FrameIndex SHT2 A 0 0   FrameIndex SHT2 A 2 0
+   FrameIndex SHT2 B 0 1   FrameIndex SHT2 B 2 1
+   FrameIndex SHT2 C 0 2   FrameIndex SHT2 C 2 2
+   FrameIndex SHT2 D 0 3   FrameIndex SHT2 D 2 3
+}
+
+
+Model Weapon97
+{ 
+   Path "Models/Weapons/supershotgun"
+   Model 0 "SSG.md3"
+   Skin 0 "HUD_SSGexp.png"
+   Model 1 "SSGPutShell.md3"
+   Skin 1 "HUD_SSGarc.png"
+   Model 2 "SSGHand.md3"
+ 
+   Model 3 "SSGPutHand.md3"
+   
+
+Path "Models/Weapons/ushotgun"
+  Skin 2 "Hands.png"
+Skin 3 "Hands.png"
+
+   Scale 1.1 1.0 1.0
+//INTERPOLATEDOUBLEDFRAMES
+Offset 10 3.5 -2.5
+
+   FrameIndex SHT2 E 0 6	   FrameIndex SHT2 E 1 0	   FrameIndex SHT2 E 2 6	   FrameIndex SHT2 E 3 0
+   FrameIndex SHT2 F 0 7	   FrameIndex SHT2 F 1 2	   FrameIndex SHT2 F 2 7	   FrameIndex SHT2 F 3 2
+
+   FrameIndex SHT2 H 0 9	   FrameIndex SHT2 H 1 999	   FrameIndex SHT2 H 2 9	   FrameIndex SHT2 H 3 999
+}
+
+Model Weapon97
+{ 
+  Path "Models/Weapons/supershotgun"
+   Model 0 "SSG.md3"
+   Skin 0 "HUD_SSGexp.png"
+   Model 1 "SSGPutShell.md3"
+  Model 2 "SSGHand.md3"
+   Model 3 "SSGPutHand.md3"
+
+
+ Path "Models/Weapons/Ushotgun"
+Skin 2 "Hands.png"
+ Skin 3 "Hands.png"
+   Scale 1.1 1.0 1.0
+//INTERPOLATEDOUBLEDFRAMES
+Offset 10 3.5 -4
+
+   FrameIndex SHT2 G 0 8	   FrameIndex SHT2 G 1 999	   FrameIndex SHT2 G 2 8	   FrameIndex SHT2 G 3 4
+
+}
+
+
+
+//muzzle
+Model Weapon97
+{ 
+   Path "Models/Weapons/supershotgun"
+
+  Model 0 "hud_ssg_mf2.md3"
+  SKIN 0 "mf7.png"	
+
+   Scale 4.4 4.0 4.0
+
+   Offset 50 0 0
+   FrameIndex SHT2 I 0 0 
+   FrameIndex SHT2 J 0 1
+   FrameIndex SHT2 K 0 2
+}
+
+
+Model Weapon97_dec
+{ 
+  Path "Models/Weapons/supershotgun"
+   Model 0 "SuperShotgunpick.md3"
+   Skin 0 "doomssg.png"
+      Scale 1.5 2.5 2.5
+ROTATING
+Offset 0 0 4
+
+   FrameIndex SGN2 A 0 0
+}
+
+
+
+
+Model Weapon98
+{ 
+   Path "Models/Weapons/supershotgun"
+   Model 0 "SSG.md3"
+   Skin 0 "HUD_SSGvol.png"
+  Model 2 "SSGHand.md3"
+Path "Models/Weapons/ushotgun"
+   Skin 2 "Hands.png"
+   Scale 1.1 1.0 1.0
+INTERPOLATEDOUBLEDFRAMES
+
+Offset 10 3.5 -2.5
+
+   FrameIndex SHT2 A 0 0   FrameIndex SHT2 A 2 0
+   FrameIndex SHT2 B 0 1   FrameIndex SHT2 B 2 1
+   FrameIndex SHT2 C 0 2   FrameIndex SHT2 C 2 2
+   FrameIndex SHT2 D 0 3   FrameIndex SHT2 D 2 3
+}
+
+
+Model Weapon98
+{ 
+   Path "Models/Weapons/supershotgun"
+   Model 0 "SSG.md3"
+   Skin 0 "HUD_SSGvol.png"
+   Model 1 "SSGPutShell.md3"
+   Skin 1 "HUD_SSGarc.png"
+   Model 2 "SSGHand.md3"
+ 
+   Model 3 "SSGPutHand.md3"
+   
+
+Path "Models/Weapons/ushotgun"
+  Skin 2 "Hands.png"
+Skin 3 "Hands.png"
+
+   Scale 1.1 1.0 1.0
+//INTERPOLATEDOUBLEDFRAMES
+Offset 10 3.5 -2.5
+
+   FrameIndex SHT2 E 0 6	   FrameIndex SHT2 E 1 0	   FrameIndex SHT2 E 2 6	   FrameIndex SHT2 E 3 0
+   FrameIndex SHT2 F 0 7	   FrameIndex SHT2 F 1 2	   FrameIndex SHT2 F 2 7	   FrameIndex SHT2 F 3 2
+
+   FrameIndex SHT2 H 0 9	   FrameIndex SHT2 H 1 999	   FrameIndex SHT2 H 2 9	   FrameIndex SHT2 H 3 999
+}
+
+Model Weapon98
+{ 
+  Path "Models/Weapons/supershotgun"
+   Model 0 "SSG.md3"
+   Skin 0 "HUD_SSGvol.png"
+   Model 1 "SSGPutShell.md3"
+  Model 2 "SSGHand.md3"
+   Model 3 "SSGPutHand.md3"
+
+
+ Path "Models/Weapons/Ushotgun"
+Skin 2 "Hands.png"
+ Skin 3 "Hands.png"
+   Scale 1.1 1.0 1.0
+//INTERPOLATEDOUBLEDFRAMES
+Offset 10 3.5 -4
+
+   FrameIndex SHT2 G 0 8	   FrameIndex SHT2 G 1 999	   FrameIndex SHT2 G 2 8	   FrameIndex SHT2 G 3 4
+
+}
+
+
+
+//muzzle
+Model Weapon98
+{ 
+   Path "Models/Weapons/supershotgun"
+
+  Model 0 "hud_ssg_mf2.md3"
+  SKIN 0 "mf8.png"	
+
+   Scale 4.4 4.0 4.0
+
+   Offset 50 0 0
+   FrameIndex SHT2 I 0 0 
+   FrameIndex SHT2 J 0 1
+   FrameIndex SHT2 K 0 2
+}
+
+
+Model Weapon98_dec
+{ 
+  Path "Models/Weapons/supershotgun"
+   Model 0 "SuperShotgunpick.md3"
+   Skin 0 "doomssg.png"
+      Scale 1.5 2.5 2.5
+ROTATING
+Offset 0 0 4
+
+   FrameIndex SGN2 A 0 0
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,198 @@
+
+MODEL Weapon59
+{
+	Path "models/weapons/stinger"
+	AngleOffset -180
+        Model 0 "stinger.md3"
+        Scale -1.0 1.0 1.0
+	Offset 16 34 -4
+	Rolloffset 0
+   	FrameIndex STNG A 0 1
+   	FrameIndex STNG B 0 2
+	FrameIndex STNG C 0 3
+	FrameIndex STNG D 0 4
+	FrameIndex STNG E 0 5
+	FrameIndex STNG F 0 6
+	FrameIndex STNG G 0 7
+	FrameIndex STNG H 0 8
+	FrameIndex STNG I 0 9
+	FrameIndex STNG J 0 10
+	FrameIndex STNG K 0 11
+	FrameIndex STNG L 0 12
+	FrameIndex STNG M 0 13
+	FrameIndex STNG N 0 14
+	FrameIndex STNG O 0 15
+	FrameIndex STNG P 0 16
+   	FrameIndex STNG Q 0 17
+	FrameIndex STNG R 0 18
+	FrameIndex STNG S 0 19
+	FrameIndex STNG T 0 20
+	FrameIndex STNG U 0 21
+	FrameIndex STNG V 0 22
+
+
+}
+
+MODEL Weapon59
+{
+	Path "models/weapons/stinger"
+	AngleOffset -180
+        Model 0 "stinger.md3"
+        Scale -1.0 1.0 1.0
+	Offset 16 34 -4
+	Rolloffset 0
+   	FrameIndex STDS A 0 23
+   	FrameIndex STDS B 0 24
+	FrameIndex STDS C 0 25
+	FrameIndex STDS D 0 26
+	FrameIndex STDS E 0 27
+	FrameIndex STDS F 0 28
+	FrameIndex STDS G 0 29
+	FrameIndex STDS H 0 30
+	FrameIndex STDS I 0 31
+	
+  	FrameIndex STFR A 0 32
+   	FrameIndex STFR B 0 33
+	FrameIndex STFR C 0 34
+	FrameIndex STFR D 0 35
+
+	FrameIndex STAF A 0 36
+   	FrameIndex STAF B 0 37
+	FrameIndex STAF C 0 38
+	FrameIndex STAF D 0 39
+	FrameIndex STAF E 0 40
+	FrameIndex STAF F 0 41
+	FrameIndex STAF G 0 42
+
+
+}
+
+
+
+
+
+
+
+
+
+MODEL TarProjectile
+{
+
+	Path "models/weapons/stinger"
+	//AngleOffset -180
+        Model 0 "tarProjectile.md3"
+	//Skin 0 "JTaryPick1.pcx"
+	PITCHFROMMOMENTUM
+        Scale 0.7 0.7 0.7
+	Offset 0 0 0
+	Rolloffset 0
+   	FrameIndex TARP A 0 0
+
+
+
+
+}
+
+
+
+
+//tarydium shard piece
+MODEL LBluespark
+{
+	Path "models/weapons/stinger"
+	//AngleOffset -180
+        Model 0 "tarydshard.md3"
+	//Skin 0 "JTaryPick1.pcx"
+        Scale 5.0 5.0 5.0
+	Offset 0 0 4
+	Rolloffset 0
+   	FrameIndex TASH A 0 0
+
+
+
+
+}
+
+
+//Stinger pickup flat
+MODEL Stinger_pickupflat
+{
+	Path "models/weapons/stinger/pickups"
+	//AngleOffset -180
+        Model 0 "stingerpick.md3"
+        Scale 0.7 0.7 0.7
+	Offset 0 0 4
+	Rolloffset 0
+   	FrameIndex STPF A 0 0
+
+
+
+
+}
+
+
+//Stinger pickup
+MODEL Stinger_pickup
+{
+	ROTATING
+	Path "models/weapons/stinger/pickups"
+	//AngleOffset -180
+        Model 0 "stingerpick.md3"
+        Scale 0.7 0.7 0.7
+	Offset 0 0 4
+	Rolloffset 0
+   	FrameIndex STPF A 0 0
+
+}
+
+//Stinger pickup
+MODEL Weapon59_dec
+{
+	ROTATING
+	Path "models/weapons/stinger/pickups"
+	//AngleOffset -180
+        Model 0 "stingerpick.md3"
+        Scale 0.7 0.7 0.7
+	Offset 0 0 4
+
+   	FrameIndex STPF A 0 0
+
+}
+
+
+
+
+
+
+
+
+//Tarydium ammo
+MODEL TarydiumShardPickup
+{
+	Path "models/pickups/ammo/Tarydium"
+	//AngleOffset -180
+        Model 0 "TarydiumPickup.md3"
+        Scale 0.7 0.7 0.7
+	Offset 0 0 0
+	Rolloffset 0
+   	FrameIndex TSHP A 0 0
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,144 @@
+//shockrifle
+MODEL Weapon109
+{
+	Path "models/weapons/shockrifle"
+	AngleOffset 0
+        Model 0 "shockrif.md3"
+        Scale -1.2 1.0 1.0
+	Offset 6 0 0
+	Rolloffset 0
+	
+	
+	//idle
+    FrameIndex SHRI A 0 159
+	FrameIndex SHRI B 0 161
+	FrameIndex SHRI C 0 163
+    FrameIndex SHRI D 0 165
+	FrameIndex SHRI E 0 167
+	FrameIndex SHRI F 0 169
+    FrameIndex SHRI G 0 171
+	FrameIndex SHRI H 0 173
+	FrameIndex SHRI I 0 175
+    FrameIndex SHRI J 0 177
+	FrameIndex SHRI K 0 179
+	FrameIndex SHRI L 0 181
+    FrameIndex SHRI M 0 183
+	FrameIndex SHRI N 0 185
+	FrameIndex SHRI O 0 187
+	FrameIndex SHRI P 0 189
+	FrameIndex SHRI Q 0 191
+	FrameIndex SHRI R 0 193
+	FrameIndex SHRI S 0 195
+	//fire
+	FrameIndex SHFR A 0 124
+	FrameIndex SHFR B 0 126
+	FrameIndex SHFR C 0 129
+    FrameIndex SHFR D 0 132
+	FrameIndex SHFR E 0 135
+	FrameIndex SHFR F 0 138
+    FrameIndex SHFR G 0 142
+	FrameIndex SHFR H 0 145
+	FrameIndex SHFR I 0 148
+    FrameIndex SHFR J 0 151
+	FrameIndex SHFR K 0 154
+
+
+	//select
+	FrameIndex SHSL A 0 226
+	FrameIndex SHSL B 0 227
+	FrameIndex SHSL C 0 228
+    FrameIndex SHSL D 0 229
+	FrameIndex SHSL E 0 230
+	FrameIndex SHSL F 0 231
+    FrameIndex SHSL G 0 232
+	FrameIndex SHSL H 0 233
+	FrameIndex SHSL I 0 234
+
+	
+	
+	
+
+}
+
+
+
+
+//shock rifle decoration
+Model Weapon109_dec
+{
+	ROTATING
+	Path "models/weapons/shockrifle"
+	AngleOffset 90
+        Model 0 "shockripi2.md3"
+        Scale 0.9 0.9 0.9
+	Offset 0 0 0
+
+        FrameIndex SHPK A 0 0
+	
+}
+
+
+
+
+
+//shockrifle pickup flat
+Model Shockrifle_pickupflat
+{
+	Path "models/weapons/shockrifle"
+	AngleOffset 0.0
+        Model 0 "shockripi.md3"
+        Scale 0.9 0.9 0.9
+	Offset 0 0 -4
+	Rolloffset 0
+        FrameIndex SHPK B 0 0
+}
+
+
+
+//CREDITED
+//Marisa Kirisame
+
+Model "shockrifle_missile1"
+{
+	Path "models/weapons/dispersionpistol"
+	Model 0 "dpist_missile.md3"
+	Scale 1.0 1.0 1.0
+	Offset 8 0 0
+	AngleOffset 90
+
+	PITCHFROMMOMENTUM
+	DONTCULLBACKFACES
+
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETYA0.png"
+	SurfaceSkin 0 1 "arcs/ArcY1.png"
+	FrameIndex DISM A 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETYB0.png"
+	SurfaceSkin 0 1 "arcs/ArcY2.png"
+	FrameIndex DISM B 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETYC0.png"
+	SurfaceSkin 0 1 "arcs/ArcY3.png"
+	FrameIndex DISM C 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETYD0.png"
+	SurfaceSkin 0 1 "arcs/ArcY4.png"
+	FrameIndex DISM D 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETYE0.png"
+	SurfaceSkin 0 1 "arcs/ArcY5.png"
+	FrameIndex DISM E 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETYD0.png"
+	SurfaceSkin 0 1 "arcs/ArcY6.png"
+	FrameIndex DISM F 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETYC0.png"
+	SurfaceSkin 0 1 "arcs/ArcY7.png"
+	FrameIndex DISM G 0 0
+	SurfaceSkin 0 0 "sprites/effects/dpistolmissiles/balls/DETYB0.png"
+	SurfaceSkin 0 1 "arcs/ArcY8.png"
+	FrameIndex DISM H 0 0
+}
+
+
+
+
+
+
+
+

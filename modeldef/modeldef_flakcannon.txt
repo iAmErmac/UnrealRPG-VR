@@ -1,0 +1,476 @@
+//flak cannon select
+MODEL Weapon61
+{
+	Path "models/weapons/flakcannon"
+	AngleOffset -90
+        Model 0 "flakcannon.md3"
+        Scale -1.0 1.0 1.0
+	Offset 18 9 3
+	Rolloffset 0
+    FrameIndex FLKE A 0 0
+	FrameIndex FLKE B 0 1
+	FrameIndex FLKE C 0 2
+    FrameIndex FLKE D 0 3
+	FrameIndex FLKE E 0 4
+	FrameIndex FLKE F 0 5
+    FrameIndex FLKE G 0 6
+	FrameIndex FLKE H 0 7
+	FrameIndex FLKE I 0 8
+    FrameIndex FLKE J 0 9
+	FrameIndex FLKE K 0 10
+	FrameIndex FLKE L 0 11
+    FrameIndex FLKE M 0 12
+	FrameIndex FLKE N 0 13
+	FrameIndex FLKE O 0 14
+    FrameIndex FLKE P 0 15
+	FrameIndex FLKE Q 0 16
+	FrameIndex FLKE R 0 17
+    FrameIndex FLKE S 0 18
+	FrameIndex FLKE T 0 19
+	FrameIndex FLKE U 0 20
+    FrameIndex FLKE V 0 21
+	FrameIndex FLKE W 0 22
+	FrameIndex FLKE X 0 23
+	FrameIndex FLKE Y 0 24
+	FrameIndex FLKE Z 0 25
+	
+	FrameIndex FLEE A 0 26
+	FrameIndex FLEE B 0 27
+	FrameIndex FLEE C 0 28
+   	 FrameIndex FLEE D 0 29
+
+	//load
+	   FrameIndex FLLL A 0 30
+	FrameIndex FLLL B 0 31
+	FrameIndex FLLL C 0 32
+    FrameIndex FLLL D 0 33
+	FrameIndex FLLL E 0 34
+	FrameIndex FLLL F 0 35
+    FrameIndex FLLL G 0 36
+	FrameIndex FLLL H 0 37
+	FrameIndex FLLL I 0 38
+    FrameIndex FLLL J 0 39
+	FrameIndex FLLL K 0 40
+	FrameIndex FLLL L 0 41
+    FrameIndex FLLL M 0 42
+	FrameIndex FLLL N 0 43
+	FrameIndex FLLL O 0 44
+
+
+//fire    
+ FrameIndex FLKR A 0 46
+	FrameIndex FLKR B 0 47
+	FrameIndex FLKR C 0 48
+    FrameIndex FLKR D 0 49
+	FrameIndex FLKR E 0 50
+	FrameIndex FLKR F 0 51
+    FrameIndex FLKR G 0 52
+	FrameIndex FLKR H 0 53
+	FrameIndex FLKR I 0 54
+    FrameIndex FLKR J 0 55
+
+//deselect
+    FrameIndex FLDS A 0 86
+	FrameIndex FLDS B 0 87
+	FrameIndex FLDS C 0 88
+    FrameIndex FLDS D 0 89
+	FrameIndex FLDS E 0 90
+	FrameIndex FLDS F 0 91
+    FrameIndex FLDS G 0 92
+	FrameIndex FLDS H 0 93
+	FrameIndex FLDS I 0 94
+    FrameIndex FLDS J 0 95
+	FrameIndex FLDS K 0 96
+	FrameIndex FLDS L 0 97
+    FrameIndex FLDS M 0 98
+	FrameIndex FLDS N 0 99
+	FrameIndex FLDS O 0 100
+
+//eject 
+    FrameIndex FLEJ A 0 67
+	FrameIndex FLEJ B 0 68
+	FrameIndex FLEJ C 0 69
+    FrameIndex FLEJ D 0 70
+	FrameIndex FLEJ E 0 71
+	FrameIndex FLEJ F 0 72
+    FrameIndex FLEJ G 0 73
+	FrameIndex FLEJ H 0 74
+	FrameIndex FLEJ I 0 75
+    FrameIndex FLEJ J 0 76
+	FrameIndex FLEJ K 0 77
+	FrameIndex FLEJ L 0 78
+    FrameIndex FLEJ M 0 79
+	FrameIndex FLEJ N 0 80
+	FrameIndex FLEJ O 0 81
+    FrameIndex FLEJ P 0 82
+	FrameIndex FLEJ Q 0 83
+	FrameIndex FLEJ R 0 84
+    FrameIndex FLEJ S 0 85
+//flak cannon altfire
+
+    FrameIndex FLAF A 0 55
+	FrameIndex FLAF B 0 56
+	FrameIndex FLAF C 0 57
+    FrameIndex FLAF D 0 58
+	FrameIndex FLAF E 0 59
+	FrameIndex FLAF F 0 60
+    FrameIndex FLAF G 0 61
+	FrameIndex FLAF H 0 62
+	FrameIndex FLAF I 0 63
+    FrameIndex FLAF J 0 64
+	FrameIndex FLAF K 0 65
+	FrameIndex FLAF L 0 66
+	//flak cannon still
+	FrameIndex FLAK A 0 45
+}
+
+
+
+
+//auto flak cannon
+MODEL Weapon89
+{
+	Path "models/weapons/flakcannon"
+	AngleOffset -90
+        Model 0 "flakcannon.md3"
+        Scale -1.0 1.0 1.0
+	Offset 18 9 3
+	Rolloffset 0
+    FrameIndex FLKE A 0 0
+	FrameIndex FLKE B 0 1
+	FrameIndex FLKE C 0 2
+    FrameIndex FLKE D 0 3
+	FrameIndex FLKE E 0 4
+	FrameIndex FLKE F 0 5
+    FrameIndex FLKE G 0 6
+	FrameIndex FLKE H 0 7
+	FrameIndex FLKE I 0 8
+    FrameIndex FLKE J 0 9
+	FrameIndex FLKE K 0 10
+	FrameIndex FLKE L 0 11
+    FrameIndex FLKE M 0 12
+	FrameIndex FLKE N 0 13
+	FrameIndex FLKE O 0 14
+    FrameIndex FLKE P 0 15
+	FrameIndex FLKE Q 0 16
+	FrameIndex FLKE R 0 17
+    FrameIndex FLKE S 0 18
+	FrameIndex FLKE T 0 19
+	FrameIndex FLKE U 0 20
+    FrameIndex FLKE V 0 21
+	FrameIndex FLKE W 0 22
+	FrameIndex FLKE X 0 23
+	FrameIndex FLKE Y 0 24
+	FrameIndex FLKE Z 0 25
+	
+	FrameIndex FLEE A 0 26
+	FrameIndex FLEE B 0 27
+	FrameIndex FLEE C 0 28
+   	 FrameIndex FLEE D 0 29
+
+	//load
+	   FrameIndex FLLL A 0 30
+	FrameIndex FLLL B 0 31
+	FrameIndex FLLL C 0 32
+    FrameIndex FLLL D 0 33
+	FrameIndex FLLL E 0 34
+	FrameIndex FLLL F 0 35
+    FrameIndex FLLL G 0 36
+	FrameIndex FLLL H 0 37
+	FrameIndex FLLL I 0 38
+    FrameIndex FLLL J 0 39
+	FrameIndex FLLL K 0 40
+	FrameIndex FLLL L 0 41
+    FrameIndex FLLL M 0 42
+	FrameIndex FLLL N 0 43
+	FrameIndex FLLL O 0 44
+
+
+//fire    
+ FrameIndex FLKR A 0 46
+	FrameIndex FLKR B 0 47
+	FrameIndex FLKR C 0 48
+    FrameIndex FLKR D 0 49
+	FrameIndex FLKR E 0 50
+	FrameIndex FLKR F 0 51
+    FrameIndex FLKR G 0 52
+	FrameIndex FLKR H 0 53
+	FrameIndex FLKR I 0 54
+    FrameIndex FLKR J 0 55
+
+//deselect
+    FrameIndex FLDS A 0 86
+	FrameIndex FLDS B 0 87
+	FrameIndex FLDS C 0 88
+    FrameIndex FLDS D 0 89
+	FrameIndex FLDS E 0 90
+	FrameIndex FLDS F 0 91
+    FrameIndex FLDS G 0 92
+	FrameIndex FLDS H 0 93
+	FrameIndex FLDS I 0 94
+    FrameIndex FLDS J 0 95
+	FrameIndex FLDS K 0 96
+	FrameIndex FLDS L 0 97
+    FrameIndex FLDS M 0 98
+	FrameIndex FLDS N 0 99
+	FrameIndex FLDS O 0 100
+
+//eject 
+    FrameIndex FLEJ A 0 67
+	FrameIndex FLEJ B 0 68
+	FrameIndex FLEJ C 0 69
+    FrameIndex FLEJ D 0 70
+	FrameIndex FLEJ E 0 71
+	FrameIndex FLEJ F 0 72
+    FrameIndex FLEJ G 0 73
+	FrameIndex FLEJ H 0 74
+	FrameIndex FLEJ I 0 75
+    FrameIndex FLEJ J 0 76
+	FrameIndex FLEJ K 0 77
+	FrameIndex FLEJ L 0 78
+    FrameIndex FLEJ M 0 79
+	FrameIndex FLEJ N 0 80
+	FrameIndex FLEJ O 0 81
+    FrameIndex FLEJ P 0 82
+	FrameIndex FLEJ Q 0 83
+	FrameIndex FLEJ R 0 84
+    FrameIndex FLEJ S 0 85
+//flak cannon altfire
+
+    FrameIndex FLAF A 0 55
+	FrameIndex FLAF B 0 56
+	FrameIndex FLAF C 0 57
+    FrameIndex FLAF D 0 58
+	FrameIndex FLAF E 0 59
+	FrameIndex FLAF F 0 60
+    FrameIndex FLAF G 0 61
+	FrameIndex FLAF H 0 62
+	FrameIndex FLAF I 0 63
+    FrameIndex FLAF J 0 64
+	FrameIndex FLAF K 0 65
+	FrameIndex FLAF L 0 66
+	//flak cannon still
+	FrameIndex FLAK A 0 45
+}
+
+
+
+
+
+
+
+
+
+
+//flak shell
+Model FlakShell
+{
+	Path "models/weapons/flakcannon"
+        Model 0 "flshell.md3"
+        Scale 0.7 0.7 0.7
+	Offset 0 0 0
+	Rolloffset 0
+        FrameIndex FLSH A 0 0
+}
+
+
+
+
+
+
+
+
+
+//Flak cannon pickup
+Model Flakcannon_pickup
+{
+	ROTATING
+	Path "models/weapons/flakcannon/pickups"
+	AngleOffset 90
+        Model 0 "flakpick.md3"
+        Scale 0.7 0.7 0.7
+	Offset 0 0 12
+	Rolloffset 0
+        FrameIndex FLPK A 0 0
+}
+
+
+
+//Flak cannon decoration UI
+Model Weapon61_dec
+{
+	ROTATING
+	Path "models/weapons/flakcannon/pickups"
+	AngleOffset 90
+        Model 0 "flakpick.md3"
+        Scale 0.7 0.7 0.7
+	Offset 0 0 12
+
+        FrameIndex FLPK A 0 0
+}
+
+
+//auto Flak cannon decoration UI
+Model Weapon89_dec
+{
+	ROTATING
+	Path "models/weapons/flakcannon/pickups"
+	AngleOffset 90
+        Model 0 "flakpick.md3"
+	Path "models/weapons/flakcannon/autoflak"
+	Skin 0 "Group1.png"
+        Scale 0.7 0.7 0.7
+	Offset 0 0 12
+
+        FrameIndex FLPK A 0 0
+}
+
+
+
+
+//Flak cannon pickup
+Model Flakcannon_flat
+{
+	Path "models/weapons/flakcannon/pickups"
+	AngleOffset 180.0
+        Model 0 "flakpick2.md3"
+        Scale 0.7 0.7 0.7
+	Offset 0 0 4
+	Rolloffset 0
+        FrameIndex FLPK A 0 0
+}
+
+
+
+//flak box ammo
+Model Flakbox_ammopickup
+{
+	Path "models/pickups/ammo/flakbox"
+        Model 0 "flakbox.md3"
+        Scale 0.7 0.7 0.7
+	Offset 0 0 0
+	Rolloffset 0
+        FrameIndex FLBX A 0 0
+}
+
+
+//flak shell ammo pickup
+Model Flakshell_ammopickup
+{
+	Path "models/pickups/ammo/flakshell"
+        Model 0 "flakshell.md3"
+        Scale 0.7 0.7 0.7
+	Offset 0 0 0
+	Rolloffset 0
+        FrameIndex FLSH A 0 0
+}
+
+
+
+
+
+
+//flak fragment
+Model FlakFragmentGlow1
+{
+	Path "models/weapons/flakcannon/chunks"
+        Model 0 "flchunk1.md3"
+        Scale 0.7 0.7 0.7
+	USEACTORPITCH
+	Offset 0 0 0
+	Rolloffset 0
+        FrameIndex FLFG A 0 0
+}
+
+
+
+//flak fragment
+Model FlakFragmentGlow2
+{
+	Path "models/weapons/flakcannon/chunks"
+        Model 0 "flchunk2.md3"
+        Scale 0.7 0.7 0.7
+	USEACTORPITCH
+	Offset 0 0 0
+	Rolloffset 0
+        FrameIndex FLFG B 0 0
+}
+
+
+//flak fragment
+Model FlakFragmentGlow3
+{
+	Path "models/weapons/flakcannon/chunks"
+        Model 0 "flchunk3.md3"
+        Scale 0.7 0.7 0.7
+	USEACTORPITCH
+	Offset 0 0 0
+	Rolloffset 0
+        FrameIndex FLFG C 0 0
+}
+
+
+
+
+//flak fragment
+Model FlakFragment
+{
+	Path "models/weapons/flakcannon/chunks"
+        Model 0 "flchunk1.md3"
+        Scale 0.7 0.7 0.7
+	USEACTORPITCH
+	Offset 0 0 0
+	Rolloffset 0
+        FrameIndex FLFG A 0 0
+}
+
+
+
+//flak fragment
+Model FlakFragment
+{
+	Path "models/weapons/flakcannon/chunks"
+        Model 0 "flchunk2.md3"
+        Scale 0.7 0.7 0.7
+	USEACTORPITCH
+	Offset 0 0 0
+	Rolloffset 0
+        FrameIndex FLFG B 0 0
+}
+
+
+//flak fragment
+Model FlakFragment
+{
+	Path "models/weapons/flakcannon/chunks"
+        Model 0 "flchunk3.md3"
+        Scale 0.7 0.7 0.7
+	USEACTORPITCH
+	Offset 0 0 0
+	Rolloffset 0
+        FrameIndex FLFG C 0 0
+}
+
+
+
+//Flak cannon pickup
+Model AutoFlak_flat
+{
+	Path "models/weapons/flakcannon/pickups"
+	AngleOffset 90
+        Model 0 "flakpick.md3"
+	Skin 0 "Group2.png"
+        Scale 0.7 0.7 0.7
+	Offset 0 0 4
+	Pitchoffset 90
+        FrameIndex FLPK A 0 0
+}
+
+
+
+
+
+
+
+
+

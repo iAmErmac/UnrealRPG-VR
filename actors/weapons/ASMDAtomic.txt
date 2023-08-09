@@ -1,0 +1,379 @@
+
+
+
+
+
+
+//ASMD Atomic
+ACTOR Weapon54 : Doomweapon
+{
+
+
+Weapon.BobStyle InverseSmooth
+Weapon.BobSpeed 1.8
+Weapon.BobRangeY 0.9
+Weapon.BobRangeX 0.9
++WEAPON.NOAUTOAIM
++INVENTORY.UNTOSSABLE
+
+Weapon.AmmoType "AtomicASMDEnergy"
+Weapon.AmmoType2 "AtomicASMDEnergy"
+Weapon.Ammouse 3
+Weapon.AmmoUse2 10
+
+	States
+	{
+	Ready:
+	TNT1 A 0 A_playsound("wchng",6)
+	TNT1 A 0 A_playsound("Asmdatslt",CHAN_6)
+	TNT1 A 0 A_SpawnItemEx("AtomicWGlow",0,0,32,0,0,0,0,SXF_SETMASTER)
+	ASME ABCDEFGHIJKLMN 1
+	ASME N 1 A_PlaySound("apistid",CHAN_WEAPON,1.0,True)
+	Realready:
+	ASMS A 1 A_weaponready
+	TNT1 A 0 A_jump(4,"Sway")
+	Loop
+	Select:
+	TNT1 A 0 ACS_NamedExecute("UpdateWid",0,54)
+	TNT1 AAAAAAAAAAAAAAAAAAAAA 0 A_raise
+	Loop
+	Deselect:
+	ASDS A 0 A_stopSound(CHAN_WEAPON)
+	ASDS ABCDEFGH 1
+	TNT1 A 0 A_RemoveChildren(True,RMVF_EVERYTHING)
+	TNT1 AAAAAAAAAAAAAAAAAAAAA 0 A_lower
+	Loop
+	Noammo:
+	TNT1 A 0 A_FireBullets (0,0,0, 0)
+	Goto Realready
+	Fire:
+	TNT1 A 0 A_JumpIfNoAmmo ("Noammo")
+	TNT1 A 0 ACS_NamedExecute("add_statXP",0,1,2)
+	TNT1 A 0 A_playsound("Asmdatsht",CHAN_7)
+	TNT1 A 0 A_takeinventory("AtomicASMDEnergy",3)
+	//TNT1 A 0 A_SpawnItemEx ("ASMDAtomicpuff",cos(pitch)*4,8,40-(sin(pitch)*3),cos(pitch)*150,0,-sin(pitch)*150,0,SXF_TRANSFERPITCH,0,5100+tid)
+	TNT1 A 0 A_FireBullets (0, 0, 1,random(6,22), "ASMDAtomicpuff",FBF_NORANDOMPUFFZ, 2048, none, 32, 8)
+	TNT1 A 0 A_SpawnItemEx ("ASMDAtomicTracer",cos(pitch)*4,8,40-(sin(pitch)*3),cos(pitch)*100,0,-sin(pitch)*100,0,SXF_TRANSFERPITCH,0,5100+tid)
+	TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,4)
+	ASMF ABCDEFGHI 2
+	ASMF I 7
+	Goto Realready
+/*
+	Altfire:
+	TNT1 A 0 A_JumpIfNoAmmo ("Noammo")
+	TNT1 A 0 ACS_NamedExecute("add_statXP",0,1,2)
+	TNT1 A 0 A_playsound("asmdaltf")
+	TNT1 A 0 A_SpawnItemEx ("ASMDorb",cos(pitch)*3,8,45-(sin(pitch)*4),cos(pitch)*30,0,-sin(pitch)*30,0,SXF_TRANSFERPITCH,0,5100+tid)
+	TNT1 A 0 A_takeinventory("AtomicASMDEnergy",1)
+	TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,13)
+	ASAF ABCDEFGHIJ 1
+	ASAF J 7
+	Goto RealReady
+*/
+	Sway:
+	ASSW ABCDCBA 7 A_weaponready
+	Goto Realready
+	Spawn:
+	ASMP A -1
+	Stop
+	}
+}
+
+
+
+ACTOR Item54 : CustomInventory
+{
+Inventory.Amount 1
+Inventory.MaxAmount 5
+Inventory.Icon "item54i"
+
++INVENTORY.ALWAYSPICKUP
+States
+{
+	Use:
+
+	TNT1 A 3 ACS_NamedExecuteWithResult("Equip_weapon",54)
+	TNT1 A 0 //do not sync inv here cause we need result from the first script
+	Stop
+
+
+}
+}
+
+
+
+
+
+
+
+
+actor AtomicASMDEnergy : Ammo
+{
+    Inventory.Icon "amm12i"
+    inventory.amount 1
+    inventory.maxamount 150
+
+}
+
+
+
+ACTOR asmdAtomic_flat : Custominventory 15041
+{
+//$Category "Inventory\Weapons"
+//$Color 19
+Inventory.PickupMessage " "
+inventory.pickupsound "wpickup"
+radius 9
+height 12
+
+	States
+	{
+	Spawn: 
+	ASMP B -1
+	Stop
+	Pickup:
+	TNT1 A 0 A_giveinventory("Item54")
+	TNT1 A 0 A_giveinventory("AtomicASMDEnergy",50)
+	TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,13)
+	TNT1 A 0 ACS_execute(700,0,63)
+	TNT1 A 0 ACS_NamedExecuteAlways("inv_sync")
+	PickupandEquip:
+	TNT1 A 0 
+	{
+		if(ACS_NamedExecuteWithResult("Equip_weapon",54)==1)
+		{
+			A_takeInventory("Item54",1);
+		}
+	}
+	Stop
+	}
+}
+
+
+ACTOR asmdAtomic_pickup : Custominventory 15040
+{
+//$Category "Inventory\Weapons"
+//$Color 19
+Inventory.PickupMessage " "
+inventory.pickupsound "wpickup"
+radius 9
+height 12
+
+	States
+	{
+	Spawn: 
+	ASMP A -1
+	Stop
+	Pickup:
+	TNT1 A 0 A_giveinventory("Item54")
+	TNT1 A 0 A_giveinventory("AtomicASMDEnergy",50)
+	TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,13)
+	TNT1 A 0 ACS_execute(700,0,63)
+	TNT1 A 0 ACS_NamedExecuteAlways("inv_sync")
+	PickupandEquip:
+	TNT1 A 0 
+	{
+		if(ACS_NamedExecuteWithResult("Equip_weapon",54)==1)
+		{
+			A_takeInventory("Item54",1);
+		}
+	}
+	Stop
+	}
+}
+
+
+
+
+ACTOR ASMDAtomictracer
+{
+	Damage (0)
+	Speed 70
+	Radius 2
+	Height 2
+	PROJECTILE
+	+BRIGHT
+	-BLOODSPLATTER
+	States
+	{
+	Spawn:
+		TNT1 A 1
+	Spawnloop:
+		TNT1 A 1
+		{
+				A_SpawnItemEx ("ASMDAtomicTracerEffect",cos(pitch)*0,0,0-(sin(pitch)*0),cos(pitch)*0.1,0,-sin(pitch)*0.1);
+				A_SpawnItemEx ("AtomicTrail",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+				A_SpawnItemEx ("AtomicTrail2",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+				A_ScaleVelocity (1.05);
+
+		}
+
+		Loop
+	Death:
+	Crash:
+		TNT1 A 0
+		Stop
+	XDeath:
+		TNT1 A 0
+		stop
+	}
+}
+
+//spark trail spawner 
+ACTOR ASMDAtomicTracerEffect
+{
+	Damage (0)
+	Speed 1
+	Radius 2
+	Height 2
+	Renderstyle add
+	Alpha 1.0
+	Projectile
+	+BRIGHT
+	-BLOODSPLATTER
+	States
+	{
+	Spawn:
+		TNT1 A 1
+	Goto Spawnloop
+	Spawnloop:
+		ASRT A 1 A_fadeout(0.05)
+		//ASRT A 0 A_ScaleVelocity (1.01)
+		Loop
+	Death:
+		ASRT A 1
+	Stop
+
+	}
+}
+
+
+
+
+
+
+Actor ASMDAtomicpuff
+{
++Missile
+ +NOBLOCKMAP
+ +NOGRAVITY
++BRIGHT
++PUFFONACTORS
+renderstyle add
+scale 1.0
+Damagetype "asmdatomic"
+	states
+	{
+	Spawn:
+	TNT1 A 0
+	//jump to appropriate state based on weapon damage upgrade level
+	TNT1 A 0 A_Playsound("asmdfexp",6,2,0,ATTN_NONE)
+	TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+	TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+	TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+	TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+	TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+	TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+	TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+	TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+	TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+	TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+	TNT1 A 0 A_SpawnItemEx ("GreenSmoke2")
+	TNT1 A 0 A_SpawnItemEx ("GreenSmoke2",-12,0,0,frandom(-0.7,0.7),frandom(-0.7,0.7),frandom(-0.7,0.7))
+	TNT1 A 0 A_SpawnItemEx ("GreenSmoke2",-12,0,0,frandom(-0.7,0.7),frandom(-0.7,0.7),frandom(-0.7,0.7))
+	TNT1 A 0 A_SpawnItemEx ("GreenSmoke2",-12,0,0,frandom(-0.7,0.7),frandom(-0.7,0.7),frandom(-0.7,0.7))
+	TNT1 A 0 A_playsound("fFieldh2",6)
+	TNT1 A 0 A_RadiusGive ("Aura2_trigger", 80.0, RGF_PLAYERS|RGF_MONSTERS,1,"none", "none",0, 1)
+	TNT1 A random(1,4) A_SpawnItemEx ("GreenSmoke2",-12,0,0,frandom(-0.7,0.7),frandom(-0.7,0.7),frandom(-0.7,0.7))
+	
+
+	ASRT AABBCCDDEEFF 2
+	{
+		if(z<16)
+		{
+			//A_SetAngle(180);
+		A_SetPitch (-90.0);
+		}
+	}
+	ASRT FFFFFFFFFFF 1 A_fadeout(0.07)
+
+	Stop
+
+}
+}
+
+
+ACTOR ASMDAtomicorb
+{
+	Damage (random(8,20))
+	Speed 15
+	Radius 16
+	Height 16
+	Health 50
+	renderstyle add
+	PROJECTILE
+	+BLOODSPLATTER
+	+NOBLOOD
+	-NOBLOCKMAP
+	+BRIGHT
+	Scale 0.5
+	Decal "plasmascorchlower"
+	alpha 0.6
+	States
+	{
+	Spawn:
+	    TNT1 A 2
+	    //jump to appropriate damage mod state
+	Spawnloop:
+		ASBL ABCDEFGHIJKLMNOPQRSTU 1 bright
+		{
+			A_SpawnItemEx ("Bluespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3));
+		}
+		Loop
+	Spawnloop1:
+		ASBL ABCDEFGHIJKLMNOPQRSTU 1 bright
+		{
+			A_SpawnItemEx ("Bluespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3));
+			A_SpawnItemEx ("Bluespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3));
+		}
+		Loop
+	Spawnloop2:
+		ASOL ABCDEFGHIJKLMNOPQRSTU 1 
+		{
+			A_SpawnItemEx ("Orangespark2",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3));
+			A_SpawnItemEx ("Bluespark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3));
+		}
+		Loop
+	Spawnloop3:
+		ASOL ABCDEFGHIJKLMNOPQRSTU 1
+		{
+			A_SpawnItemEx ("Orangespark2",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3));
+			A_SpawnItemEx ("Orangespark2",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3));
+			A_SpawnItemEx ("FirepNosmok",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3));
+		}
+		Loop
+	Death:
+	XDeath:
+	Crash:
+		TNT1 A 0
+		TNT1 A 0 A_Explode(80+(random(20,45)* CallACS("AsmddmgModTracer")),128)
+		TNT1 A 0 A_SpawnItemEx ("ASMDpuff",cos(pitch)*3,8,1-(sin(pitch)*4),cos(pitch)*50,0,-sin(pitch)*50,0,SXF_TRANSFERPITCH,0,tid-100)
+		TNT1 A 0 A_SpawnItemEx("ASMDpuff",-5)
+		Stop
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

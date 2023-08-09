@@ -1,0 +1,883 @@
+ 
+
+
+//Atomic dispersion pistol
+ACTOR Weapon68 : Doomweapon
+{
+//$Category "Inventory\Weapons"
+//$Color 19
+Weapon.BobStyle InverseSmooth
+Weapon.BobSpeed 1.8
+Weapon.BobRangeY 1.2
+Weapon.BobRangeX 0.9
++WEAPON.NOAUTOAIM
++INVENTORY.UNTOSSABLE
+Weapon.AmmoType "AtomicPistolEnergy"
+Weapon.AmmoType2 "AtomicPistolEnergy"
+Weapon.Ammouse 1
+Weapon.AmmoUse2 1 //script
+inventory.pickupsound "wpickup"
+
+	States
+	{
+	Ready:
+	TNT1 A 0 A_playsound("wchng",6)
+	TNT1 A 0
+	TNT1 A 0 A_SpawnItemEx("AtomicWGlow",0,0,32,0,0,0,0,SXF_SETMASTER)
+	Goto Select1
+	Select1:
+	D1PS ABCDEFGH 2
+	D1PS IJK 1
+	TNT1 A 0 A_JumpIfInventory ("Apistolupgrading", 1, "UpgradeSelect")
+	TNT1 A 0 A_playsound("apistid",CHAN_7,0.8,True)
+	Goto Realready1
+	Realready1:
+	D1ST A 1 A_weaponready
+	TNT1 A 0 A_JumpIfInventory ("Apistolupgrading", 1, "UpgradeSelect")
+	Loop
+	Fire:
+	TNT1 A 0 ACS_NamedExecute("add_statXP",0,1,1)
+	TNT1 A 0 A_FireProjectile ("Apistol_missile1",0.5, TRUE, 12, 3,FPF_NOAUTOAIM ,-1)
+	TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,12)
+	TNT1 A 0 A_playsound("apistsht")
+	D1PF ABC 4
+	Goto Realready1
+
+	//=========DESELECTS =======
+	Deselect1:
+	D1DS ABCD 1
+	TNT1 AAAAAAAAAAAAAAAAAAAAA 0 A_lower
+
+
+	Select:
+	TNT1 A 0
+	TNT1 A 0 ACS_NamedExecute("UpdateWid",0,68)
+	TNT1 A 0 A_playsound("apistsel")
+	TNT1 AAAAAAAAAAAAAAAAAAAAA 0 A_raise
+	Loop
+	Deselect:
+	TNT1 A 0 A_stopSound(CHAN_WEAPON)
+	TNT1 A 0 A_stopsound(7)
+	TNT1 A 0 A_stopsound(6)
+	TNT1 A 0 A_RemoveChildren(True,RMVF_EVERYTHING)
+	Goto Deselect1
+	Altfire:
+	//check if you have enough ammo
+	TNT1 A 0 A_JumpIfInventory ("DispersionEnergy", 3, "Realready")
+	//do alt fire otherwise
+	//start shaking		
+	TNT1 A 0 A_playsound("PowerUp3",CHAN_WEAPON)
+	D1ST AAAAAAAAAAAAAAAAAA 1 A_WeaponOffset(frandom(-3,3),32+frandom(-3,3),WOF_INTERPOLATE )
+	D1ST AAAAAAAAAAAAAAAAAA 1 A_WeaponOffset(frandom(-6,6),32+frandom(-6,6),WOF_INTERPOLATE )
+	D1PF A 1 A_WeaponOffset(0,32,WOF_INTERPOLATE )
+	TNT1 A 0 A_stopSound(CHAN_WEAPON)
+	TNT1 A 0 A_playsound("PulseBlt",6,1.0,True)
+	Goto Althold1
+	Althold1:
+	D1PF CCCCC 1
+	{
+		if(CountInv("ApistolAmmoCounter") ==0)
+		{
+			A_FireProjectile ("apistol_altmissile1",0.5, True, random(8,14), random(4,12),FPF_NOAUTOAIM ,-1);
+			A_GiveInventory("ApistolAmmoCounter",1);
+		}
+		else
+		{
+			A_FireProjectile ("apistol_altmissile1",0.5, False, random(8,14), random(4,12),FPF_NOAUTOAIM ,-1);
+			A_TakeInventory("ApistolAmmoCounter",1);
+		}
+		
+		A_WeaponOffset(frandom(-3,3),32+frandom(-3,3),WOF_INTERPOLATE );
+	}
+
+	D1PF C 4 A_refire("Althold1")
+	TNT1 A 0 A_stopsound(6)
+	D1PF ABC 3
+	
+	Goto Realready1
+	
+	Spawn:
+	DPPP A -1
+	Stop
+	}
+}
+
+
+
+
+
+
+
+
+//Atomic blaster
+ACTOR Weapon90 : Doomweapon
+{
+//$Category "Inventory\Weapons"
+//$Color 19
+Weapon.BobStyle InverseSmooth
+Weapon.BobSpeed 1.8
+Weapon.BobRangeY 1.2
+Weapon.BobRangeX 0.9
++WEAPON.NOAUTOAIM
++INVENTORY.UNTOSSABLE
+Weapon.AmmoType "AtomicPistolEnergy"
+Weapon.AmmoType2 "AtomicPistolEnergy"
+Weapon.Ammouse 1
+Weapon.AmmoUse2 1 //script
+inventory.pickupsound "wpickup"
+
+	States
+	{
+	Ready:
+	TNT1 A 0 A_playsound("wchng",6)
+	TNT1 A 0
+	TNT1 A 0 A_SpawnItemEx("AtomicWGlow",0,0,32,0,0,0,0,SXF_SETMASTER)
+	Goto Select1
+	Select1:
+	D1PS ABCDEFGH 2
+	D1PS IJK 1
+	TNT1 A 0 A_JumpIfInventory ("Apistolupgrading", 1, "UpgradeSelect")
+	TNT1 A 0 A_playsound("apistid",CHAN_7,0.8,True)
+	Goto Realready1
+	Realready1:
+	D1ST A 1 A_weaponready
+	TNT1 A 0 A_JumpIfInventory ("Apistolupgrading", 1, "UpgradeSelect")
+	Loop
+	Fire:
+	TNT1 A 0 ACS_NamedExecute("add_statXP",0,1,1)
+	TNT1 A 0 A_FireProjectile ("Apistol_missile2",0.5, TRUE, 12, 2,FPF_NOAUTOAIM ,-1)
+	TNT1 A 0 A_FireProjectile ("Apistol_missile3",0.5, False, 12, 2,FPF_NOAUTOAIM ,-1)
+	TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,12)
+	TNT1 A 0 A_playsound("apistsht")
+	D1PF ABC 4
+	Goto Realready1
+
+	//=========DESELECTS =======
+	Deselect1:
+	D1DS ABCD 1
+	TNT1 AAAAAAAAAAAAAAAAAAAAA 0 A_lower
+
+
+	Select:
+	TNT1 A 0
+	TNT1 A 0 ACS_NamedExecute("UpdateWid",0,90)
+	TNT1 A 0 A_playsound("apistsel")
+	TNT1 AAAAAAAAAAAAAAAAAAAAA 0 A_raise
+	Loop
+	Deselect:
+	TNT1 A 0 A_stopSound(CHAN_WEAPON)
+	TNT1 A 0 A_stopsound(7)
+	TNT1 A 0 A_stopsound(6)
+	TNT1 A 0 A_RemoveChildren(True,RMVF_EVERYTHING)
+	//pick and jump to state
+	Goto Deselect1
+	Altfire:
+	//check if you have enough ammo
+	TNT1 A 0 A_JumpIfInventory ("DispersionEnergy", 3, "Realready")
+	//do alt fire otherwise
+	//start shaking		
+	TNT1 A 0 A_playsound("PowerUp3",CHAN_WEAPON)
+	D1ST AAAAAAAAAAAAAAAAAA 1 A_WeaponOffset(frandom(-3,3),32+frandom(-3,3),WOF_INTERPOLATE )
+	D1ST AAAAAAAAAAAAAAAAAA 1 A_WeaponOffset(frandom(-6,6),32+frandom(-6,6),WOF_INTERPOLATE )
+	D1PF A 1 A_WeaponOffset(0,32,WOF_INTERPOLATE )
+	TNT1 A 0 A_stopSound(CHAN_WEAPON)
+	TNT1 A 0 A_playsound("PulseBlt",6,1.0,True)
+	Goto Althold1
+	Althold1:
+	D1PF CCCCC 1
+	{
+		if(CountInv("ApistolAmmoCounter") ==0)
+		{
+			A_FireProjectile ("apistol_altmissile1",0.5, True, random(8,14), random(4,12),FPF_NOAUTOAIM ,-1);
+			A_GiveInventory("ApistolAmmoCounter",1);
+		}
+		else
+		{
+			A_FireProjectile ("apistol_altmissile1",0.5, False, random(8,14), random(4,12),FPF_NOAUTOAIM ,-1);
+			A_TakeInventory("ApistolAmmoCounter",1);
+		}
+		
+		A_WeaponOffset(frandom(-3,3),32+frandom(-3,3),WOF_INTERPOLATE );
+	}
+
+	D1PF C 4 A_refire("Althold1")
+	TNT1 A 0 A_stopsound(6)
+	D1PF ABC 3
+	
+	Goto Realready1
+	
+	Spawn:
+	DPPP A -1
+	Stop
+	}
+}
+
+
+
+
+
+
+actor ApistolAmmoCounter : Inventory
+{
+	inventory.maxamount 1
+}
+
+
+
+
+//stores if you picked up a pickup
+actor Apistolupgrading : Inventory
+{
+	inventory.maxamount 1
+}
+
+
+actor AtomicPistolEnergy : Ammo
+{
+	Inventory.Icon "amm12"
+	inventory.amount 1
+	inventory.maxamount 120
+}
+
+
+
+
+ACTOR Item68 : CustomInventory
+{
+Inventory.Amount 1
+Inventory.MaxAmount 5
+Inventory.Icon "item68i"
+
++INVENTORY.ALWAYSPICKUP
+States
+{
+	Use:
+
+	TNT1 A 3 ACS_NamedExecuteWithResult("Equip_weapon",68)
+	TNT1 A 0 //do not sync inv here cause we need result from the first script
+	Stop
+
+
+}
+}
+
+
+
+
+ACTOR Item90 : CustomInventory
+{
+Inventory.Amount 1
+Inventory.MaxAmount 5
+Inventory.Icon "item90i"
+
++INVENTORY.ALWAYSPICKUP
+States
+{
+	Use:
+
+	TNT1 A 3 ACS_NamedExecuteWithResult("Equip_weapon",90)
+	TNT1 A 0 //do not sync inv here cause we need result from the first script
+	Stop
+
+
+}
+}
+
+
+
+
+
+actor AtomicBlaster_flat: CustomInventory 15043
+{
+
+//$Category "Inventory\Weapons"
+//$Color 19
+Radius 8
+height 8
+    inventory.pickupsound "wpickup"
+    States
+	{
+
+
+Spawn:
+	DPPP B -1
+	Stop
+Pickup:
+	TNT1 A 0 A_giveinventory("Item90")
+	TNT1 A 0 A_giveinventory("AtomicPistolEnergy",25)
+	TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,12)
+	TNT1 A 0 ACS_execute(700,0,84)
+	TNT1 A 0 ACS_NamedExecuteAlways("inv_sync")
+PickupandEquip:
+	TNT1 A 0 
+	{
+		if(ACS_NamedExecuteWithResult("Equip_weapon",90)==1)
+		{
+			A_takeInventory("Item90",1);
+		}
+	}
+	Stop
+	}
+}
+
+
+
+
+
+
+
+
+
+actor AtomicPistol_flat: CustomInventory 15032
+{
+
+//$Category "Inventory\Weapons"
+//$Color 19
+Radius 8
+height 8
+    inventory.pickupsound "wpickup"
+    States
+	{
+
+
+Spawn:
+	DPPP B -1
+	Stop
+Pickup:
+	TNT1 A 0 A_giveinventory("Item68")
+	TNT1 A 0 A_giveinventory("AtomicPistolEnergy",25)
+	TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,12)
+	TNT1 A 0 ACS_execute(700,0,68)
+	TNT1 A 0 ACS_NamedExecuteAlways("inv_sync")
+PickupandEquip:
+	TNT1 A 0 
+	{
+		if(ACS_NamedExecuteWithResult("Equip_weapon",68)==1)
+		{
+			A_takeInventory("Item68",1);
+		}
+	}
+	Stop
+	}
+}
+
+actor AtomicPistol_pickup: CustomInventory 15031
+{
+
+//$Category "Inventory\Weapons"
+//$Color 19
+Radius 8
+height 8
+    inventory.pickupsound "wpickup"
+    States
+	{
+	
+Spawn:
+	DPPP A -1
+	Stop
+Pickup:
+	TNT1 A 0 A_giveinventory("Item68")
+	TNT1 A 0 A_giveinventory("AtomicPistolEnergy",25)
+	TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,12)
+	TNT1 A 0 ACS_execute(700,0,68)
+	TNT1 A 0 ACS_NamedExecuteAlways("inv_sync")
+PickupandEquip:
+	TNT1 A 0 
+	{
+		if(ACS_NamedExecuteWithResult("Equip_weapon",68)==1)
+		{
+			A_takeInventory("Item68",1);
+		}
+	}
+	Stop
+	}
+}
+
+
+
+ACTOR Apistol_missile1
+{
+	Damage (random(6,13))
+	Speed 30
+	Radius 2
+	Height 2
+	Health 50
+	renderstyle add
+	PROJECTILE
+	+NOBLOOD
+	-NOBLOCKMAP
+	+BRIGHT
+	Scale 0.25
+	Decal "plasmascorchlower"
+	activesound "elec3b"
+	alpha 1.0
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay
+	     PBAL BCDE 1 A_SetSize (radius+2, height+2)
+		TNT1 A 0 A_LoopActiveSound
+	Spawnloop:
+		 PBAL BCDE 1
+		{
+				A_SpawnItemEx ("AtomicTrail",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+
+		} 
+		Loop
+	Death:
+	XDeath:
+	Crash:
+			TNT1 A 0 A_RadiusGive ("Aura2_trigger", 80.0, RGF_PLAYERS|RGF_MONSTERS,1,"none", "none",0, 1)
+			TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+			TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+			TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+			TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+			TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+			TNT1 A 0 A_SpawnItemEx ("GreenSmoke2")
+			TNT1 A 0 A_playsound("fFieldh2",6)
+		D3PJ ABCDEFGHIJ 2
+		Stop
+	}
+}
+
+
+ACTOR Apistol_missile2
+{
+	Damage (random(4,8))
+	Speed 30
+	Radius 2
+	Height 2
+	Health 50
+	renderstyle add
+	PROJECTILE
+	+NOBLOOD
+	-NOBLOCKMAP
+	+BRIGHT
+	Scale 0.25
+	Decal "plasmascorchlower"
+	activesound "elec3b"
+	alpha 1.0
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay
+	     PBAL BCDE 1 A_SetSize (radius+2, height+2)
+		TNT1 A 0 A_LoopActiveSound
+	Spawnloop:
+		 PBAL BCDE 1
+		{
+				A_SpawnItemEx ("AtomicTrail",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+				A_Weave (3, 0, 3.0, 0);
+		} 
+		Loop
+	Death:
+	XDeath:
+	Crash:
+			TNT1 A 0 A_RadiusGive ("Aura2_trigger", 80.0, RGF_PLAYERS|RGF_MONSTERS,1,"none", "none",0, 1)
+			TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+			TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+			TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+			TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+			TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+			TNT1 A 0 A_SpawnItemEx ("GreenSmoke2")
+			TNT1 A 0 A_playsound("fFieldh2",6)
+		D3PJ ABCDEFGHIJ 2
+		Stop
+	}
+}
+
+
+ACTOR Apistol_missile3
+{
+	Damage (random(4,8))
+	WeaveIndexXY 32
+	Speed 30
+	Radius 2
+	Height 2
+	Health 50
+	renderstyle add
+	PROJECTILE
+	+NOBLOOD
+	-NOBLOCKMAP
+	+BRIGHT
+	Scale 0.25
+	Decal "plasmascorchlower"
+	activesound "elec3b"
+	alpha 1.0
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay
+	     PBAL BCDE 1 A_SetSize (radius+2, height+2)
+		TNT1 A 0 A_LoopActiveSound
+	Spawnloop:
+		 PBAL BCDE 1
+		{
+				A_SpawnItemEx ("AtomicTrail",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+				A_Weave (3, 0, 3.0, 0);
+		} 
+		Loop
+	Death:
+	XDeath:
+	Crash:
+			TNT1 A 0 A_RadiusGive ("Aura2_trigger", 80.0, RGF_PLAYERS|RGF_MONSTERS,1,"none", "none",0, 1)
+			TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+			TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+			TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+			TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+			TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+
+			TNT1 A 0 A_SpawnItemEx ("GreenSmoke2")
+			TNT1 A 0 A_playsound("fFieldh2",6)
+		D3PJ ABCDEFGHIJ 2
+		Stop
+	}
+}
+
+ACTOR AtomicTrail
+{
+	renderstyle add
+	PROJECTILE
+	-NOBLOCKMAP
+	+BRIGHT
+	+NOGRAVITY
+	Scale 0.14
+	alpha 0.7
+	Vspeed 4
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay
+	     PCAP ABCD 1 A_SetSize (radius+2, height+2)
+		TNT1 A 0 A_LoopActiveSound
+	Spawnloop:
+		PCAP ABCD 1
+		{
+			A_Weave (2,2,1.5,1.5);
+			A_fadeout(0.03);
+		} 
+		Loop
+	}
+}
+
+ACTOR AtomicTrail3
+{
+	renderstyle add
+	PROJECTILE
+	+NOBLOCKMAP
+	+BRIGHT
+	+NOGRAVITY
+	Scale 0.14
+	alpha 0.7
+	States
+	{
+	Spawn:
+		PCAP ABCD 1 A_fadeout(0.05)
+		Loop
+	}
+}
+
+
+
+ACTOR Apistol_altmissile1
+{
+	Damage (random(1,6))
+	Speed 14
+	Radius 2
+	Height 2
+	Health 50
+	renderstyle add
+	PROJECTILE
+	+BLOODSPLATTER
+	+NOBLOOD
+	-NOBLOCKMAP
+	+BRIGHT
+	-NOGRAVITY
+	Vspeed 3
+	Gravity 0.1
+	Scale 0.1
+	+FORCEXYBILLBOARD
+	Decal "plasmascorchlower"
+	activesound "elec3b"
+	alpha 1.0
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay
+	    TNT1 AA 1 A_setscale(frandom(0.07,0.1))
+	     GRSS A 0 A_SetSize (radius+2, height+2)
+		GRSS AB 1 A_setspeed(speed-3)
+		TNT1 A 0 A_LoopActiveSound
+	Spawnloop:
+		GRSS ABCDEFGHIJKLMNOPRSTTTTTTTTTTTTTTT 1 
+		{
+				A_FadeOut(0.02) ;
+				A_SetSize (radius+2, height+2);
+				A_SetScale(scalex+0.04);
+
+		} 
+		Loop
+	Death:
+	XDeath:
+	Crash:
+		TNT1 A 0 A_RadiusGive ("Aura2_trigger", 30.0, RGF_PLAYERS|RGF_MONSTERS,1,"none", "none",0, 1)
+		TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		D3PJ ABCDEFGHIJ 2
+		Stop
+	}
+}
+
+
+
+
+ACTOR Apistol_altmissile2
+{
+	Damage (random(4,12))
+	Speed 14
+	Radius 2
+	Height 2
+	Health 50
+	renderstyle add
+	PROJECTILE
+	+BLOODSPLATTER
+	+NOBLOOD
+	-NOBLOCKMAP
+	+BRIGHT
+	-NOGRAVITY
+	Vspeed 3
+	Gravity 0.1
+	Scale 0.15
+	Decal "plasmascorchlower"
+	activesound "elec3b"
+	alpha 1.0
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay
+	    TNT1 AA 1 A_setscale(frandom(0.1,0.15))
+	     GRSS A 0 A_SetSize (radius+2, height+2)
+		GRSS AB 1 A_setspeed(speed-3)
+		TNT1 A 0 A_LoopActiveSound
+	Spawnloop:
+		GRSS ABCDEFGHIJKLMNOPRSTTTTTTTTTTTTTTT 1 
+		{
+				A_FadeOut(0.02) ;
+				A_SetSize (radius+2, height+2);
+				A_SetScale(scalex+0.04);
+
+		} 
+		Loop
+	Death:
+	XDeath:
+	Crash:
+		TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		D3PJ ABCDEFGHIJ 2
+		Stop
+	}
+}
+
+
+
+ACTOR Apistol_altmissile3
+{
+	Damage (random(5,14))
+	Speed 14
+	Radius 2
+	Height 2
+	Health 50
+	renderstyle add
+	PROJECTILE
+	+BLOODSPLATTER
+	+NOBLOOD
+	-NOBLOCKMAP
+	+BRIGHT
+	-NOGRAVITY
+	Vspeed 3
+	Gravity 0.1
+	Scale 0.2
+	Decal "plasmascorchlower"
+	activesound "elec3b"
+	alpha 1.0
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay
+	    TNT1 AA 1 A_setscale(frandom(0.15,0.25))
+	     GRSS A 0 A_SetSize (radius+2, height+2)
+		GRSS AB 1 A_setspeed(speed-3)
+		TNT1 A 0 A_LoopActiveSound
+	Spawnloop:
+		GRSS ABCDEFGHIJKLMNOPRSTTTTTTTTTTTTTTT 1 
+		{
+				A_FadeOut(0.02) ;
+				A_SetSize (radius+2, height+2);
+				A_SetScale(scalex+0.04);
+
+		} 
+		Loop
+	Death:
+	XDeath:
+	Crash:
+		TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		D3PJ ABCDEFGHIJ 2
+		Stop
+	}
+}
+
+
+
+ACTOR Apistol_altmissile4
+{
+	Damage (random(6,15))
+	Speed 14
+	Radius 2
+	Height 2
+	Health 50
+	renderstyle add
+	PROJECTILE
+	+BLOODSPLATTER
+	+NOBLOOD
+	-NOBLOCKMAP
+	+BRIGHT
+	-NOGRAVITY
+	Vspeed 3
+	Gravity 0.1
+	Scale 0.25
+	Decal "plasmascorchlower"
+	activesound "elec3b"
+	alpha 1.0
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay
+	    TNT1 AA 1 A_setscale(frandom(0.2,0.3))
+	     GRSS A 0 A_SetSize (radius+2, height+2)
+		GRSS AB 1 A_setspeed(speed-3)
+		TNT1 A 0 A_LoopActiveSound
+	Spawnloop:
+		GRSS ABCDEFGHIJKLMNOPRSTTTTTTTTTTTTTTT 1 
+		{
+				A_FadeOut(0.02) ;
+				A_SetSize (radius+2, height+2);
+				A_SetScale(scalex+0.04);
+
+		} 
+		Loop
+	Death:
+	XDeath:
+	Crash:
+		TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		D3PJ ABCDEFGHIJ 2
+		Stop
+	}
+}
+
+
+
+
+
+
+
+ACTOR Apistol_altmissile5
+{
+	Damage (random(7,17))
+	Speed 14
+	Radius 2
+	Height 2
+	Health 50
+	renderstyle add
+	PROJECTILE
+	+BLOODSPLATTER
+	+NOBLOOD
+	-NOBLOCKMAP
+	+BRIGHT
+	-NOGRAVITY
+	Vspeed 3
+	Gravity 0.1
+	Scale 0.3
+	Decal "plasmascorchlower"
+	activesound "elec3b"
+	alpha 1.0
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay
+	    TNT1 AA 1 A_setscale(frandom(0.25,0.35))
+	     GRSS A 0 A_SetSize (radius+2, height+2)
+		GRSS AB 1 A_setspeed(speed-3)
+		TNT1 A 0 A_LoopActiveSound
+	Spawnloop:
+		GRSS ABCDEFGHIJKLMNOPRSTTTTTTTTTTTTTTT 1 
+		{
+				A_FadeOut(0.02) ;
+				A_SetSize (radius+2, height+2);
+				A_SetScale(scalex+0.04);
+
+		} 
+		Loop
+	Death:
+	XDeath:
+	Crash:
+		TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		D3PJ ABCDEFGHIJ 2
+		Stop
+	}
+}
+
+
+
+
+ACTOR Apistol_altmissile6
+{
+	Damage (random(2,7))
+	Speed 14
+	Radius 2
+	Height 2
+	Health 50
+	renderstyle add
+	PROJECTILE
+	+BLOODSPLATTER
+	+NOBLOOD
+	-NOBLOCKMAP
+	+BRIGHT
+	-NOGRAVITY
+	Vspeed 3
+	Gravity 0.1
+	Scale 0.1
+	+FORCEXYBILLBOARD
+	Decal "plasmascorchlower"
+	activesound "elec3b"
+	alpha 1.0
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay
+	    TNT1 AA 1 A_setscale(frandom(0.07,0.1))
+	     GRSS A 0 A_SetSize (radius+2, height+2)
+		GRSS AB 1 A_setspeed(speed-3)
+		TNT1 A 0 A_LoopActiveSound
+	Spawnloop:
+		GRSS ABCDEFGHIJKLMNOPRSTTTTTTTTTTTTTTT 1 
+		{
+				A_FadeOut(0.02) ;
+				A_SetSize (radius+2, height+2);
+				A_SetScale(scalex+0.04);
+
+		} 
+		Loop
+	Death:
+	XDeath:
+	Crash:
+		TNT1 A 0 A_RadiusGive ("Aura2_trigger", 30.0, RGF_PLAYERS|RGF_MONSTERS,1,"none", "none",0, 1)
+		TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		TNT1 A 0 A_SpawnItemEx ("Greenspark",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-3,3),frandom(-3,3),frandom(-3,3))
+		D3PJ ABCDEFGHIJ 2
+		Stop
+	}
+}
+

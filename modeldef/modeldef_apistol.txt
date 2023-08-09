@@ -1,0 +1,205 @@
+//Atomic pistol power 1 select 
+MODEL Weapon68
+{
+	Path "models/weapons/Atomicpistol"
+	AngleOffset 0
+    Model 0 "apistol.md3"
+    Scale -1.0 1.0 1.0
+	Offset 20 -2 -2
+	Rolloffset 0
+   	 FrameIndex D1PS A 0 0
+	FrameIndex D1PS B 0 1
+	FrameIndex D1PS C 0 2
+    	FrameIndex D1PS D 0 3
+	FrameIndex D1PS E 0 4
+	FrameIndex D1PS F 0 5
+   	FrameIndex D1PS G 0 6
+	FrameIndex D1PS H 0 7
+	FrameIndex D1PS I 0 8
+    	FrameIndex D1PS J 0 9
+	FrameIndex D1PS K 0 10
+	//Atomic Pistol power 1 deselect
+    	FrameIndex D1DS A 0 16
+	FrameIndex D1DS B 0 17
+	FrameIndex D1DS C 0 18
+    	FrameIndex D1DS D 0 19
+	FrameIndex D1DS E 0 20
+
+	//Atomic Pistol power 1 shoot
+	FrameIndex D1PF A 0 11
+	FrameIndex D1PF B 0 12
+	FrameIndex D1PF C 0 13
+	//Atomic Pistol power 1 still
+	FrameIndex D1ST A 0 15
+
+
+}
+
+
+//Atomic blaster
+MODEL Weapon90
+{
+	Path "models/weapons/Atomicpistol"
+	AngleOffset 0
+    Model 0 "apistol.md3"
+    Scale -1.0 1.0 1.0
+	Offset 20 -2 -2
+	Rolloffset 0
+	//select
+   	FrameIndex D1PS A 0 29
+	FrameIndex D1PS B 0 30
+	FrameIndex D1PS C 0 31
+    	FrameIndex D1PS D 0 32
+	FrameIndex D1PS E 0 33
+	FrameIndex D1PS F 0 34
+   	FrameIndex D1PS G 0 35
+	FrameIndex D1PS H 0 36
+	FrameIndex D1PS I 0 37
+    	FrameIndex D1PS J 0 38
+	FrameIndex D1PS K 0 39
+
+	//Atomic Pistol power 1 deselect
+    	FrameIndex D1DS A 0 44
+	FrameIndex D1DS B 0 45
+	FrameIndex D1DS C 0 46
+    	FrameIndex D1DS D 0 47
+	FrameIndex D1DS E 0 48
+
+	//Shoot
+	FrameIndex D1PF A 0 40
+	FrameIndex D1PF B 0 41
+	FrameIndex D1PF C 0 42
+	//Atomic Pistol power 1 still
+	FrameIndex D1ST A 0 25
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Atomic Pistol powerup
+MODEL Apistolpowerup_pickup
+{
+    Path "models/weapons/Atomicpistol"
+    AngleOffset 0
+    Model 0 "Apistpowerup.md3"
+    Scale 0.4 0.4 0.4
+    Offset 0 0 16
+    Rolloffset 0
+    FrameIndex DPPU A 0 0
+
+
+}
+
+
+
+
+//Atomic Pistol pickup
+MODEL Atomicpistol_pickup
+{
+    ROTATING
+    Path "models/weapons/Atomicpistol"
+    AngleOffset 0
+    Model 0 "Apistolpickup.md3"
+    Scale 0.7 0.7 0.7
+    Offset 0 0 16
+    Rolloffset 0
+    FrameIndex DPPP A 0 0
+
+
+}
+
+
+
+
+
+
+//Atomic Pistol pickup
+MODEL Atomicpistol_flat
+{
+    Path "models/weapons/Atomicpistol"
+    AngleOffset 0
+    Model 0 "Apistolpickupflt.md3"
+    Scale 0.7 0.7 0.7
+    Offset 0 0 1
+    Rolloffset 0
+    FrameIndex DPPP B 0 0
+
+
+}
+
+
+//Atomic Blaster pickup
+MODEL AtomicBlaster_flat
+{
+    Path "models/weapons/Atomicpistol"
+    AngleOffset 0
+    Model 0 "Apistolpickupflt.md3"
+    Scale 0.7 0.7 0.7
+    Offset 0 0 1
+    Rolloffset 0
+    FrameIndex DPPP B 0 0
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Atomic Pistol decoration
+MODEL Weapon68_dec
+{
+	ROTATING
+    Path "models/weapons/Atomicpistol"
+    AngleOffset 0
+    Model 0 "apistolpickup.md3"
+    Scale 0.7 0.7 0.7
+    Offset 0 0 2
+
+    FrameIndex DPPP B 0 0
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

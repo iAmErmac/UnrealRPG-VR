@@ -1,0 +1,142 @@
+
+//Carrifle
+MODEL Weapon62
+{
+	Path "models/weapons/carrifle"
+	AngleOffset -3
+        Model 0 "carrifle.md3"
+        Scale -1.0 1.0 1.0
+	Offset 14 -2 0 
+	Rolloffset 0
+    	FrameIndex CRRS A 0 33
+	FrameIndex CRRS B 0 34
+	FrameIndex CRRS C 0 35
+    	FrameIndex CRRS D 0 36
+	FrameIndex CRRS E 0 37
+	FrameIndex CRRS F 0 38
+    	FrameIndex CRRS G 0 39
+	FrameIndex CRRS H 0 40
+	FrameIndex CRRS I 0 41
+    	FrameIndex CRRS J 0 42
+	FrameIndex CRRS K 0 43
+	FrameIndex CRRS L 0 44
+    	FrameIndex CRRS M 0 45
+	FrameIndex CRRS N 0 46
+	FrameIndex CRRS O 0 47
+    	FrameIndex CRRS P 0 48
+	FrameIndex CRRS Q 0 49
+
+	//fire
+	FrameIndex CRRF A 0 28
+	FrameIndex CRRF B 0 29
+	FrameIndex CRRF C 0 30
+	FrameIndex CRRF D 0 31
+	FrameIndex CRRF E 0 32
+
+	//Altfire
+	FrameIndex CRAF A 0 0
+	FrameIndex CRAF B 0 1
+	FrameIndex CRAF C 0 2
+    	FrameIndex CRAF D 0 3
+	FrameIndex CRAF E 0 4
+	FrameIndex CRAF F 0 5
+    	FrameIndex CRAF G 0 6
+	FrameIndex CRAF H 0 7
+	FrameIndex CRAF I 0 8
+    	FrameIndex CRAF J 0 9
+	FrameIndex CRAF K 0 10
+	FrameIndex CRAF L 0 11
+    	FrameIndex CRAF M 0 12
+	//altfire lod
+	FrameIndex CRAL A 0 13
+	FrameIndex CRAL B 0 14
+	FrameIndex CRAL C 0 15
+    FrameIndex CRAL D 0 16
+	FrameIndex CRAL E 0 17
+	FrameIndex CRAL F 0 18
+
+
+
+}
+
+
+
+//CAR ammo clip
+MODEL carAmmoClip
+{
+	Path "models/pickups/ammo/carammo"
+
+        Model 0 "CARammo.md3"
+        Scale 0.7 0.7 0.7
+	Offset 0 0 6
+	Rolloffset 0
+    FrameIndex CACL A 0 0
+
+
+
+}
+
+
+//CAR pickup
+MODEL Carrifle_pickup
+{
+	Path "models/weapons/carrifle"
+	ROTATING
+        Model 0 "CARpickup.md3"
+        Scale 1.6 1.6 1.6
+	Offset 0 0 6
+	Rolloffset 0
+    FrameIndex CAPK A 0 0
+
+
+
+}
+//CAR pickup flat
+MODEL Carrifle_pickupflat
+{
+	Path "models/weapons/carrifle"
+        Model 0 "carpickupflat.md3"
+        Scale 1.6 1.6 1.6
+	Offset 0 0 1
+	Rolloffset 0
+    FrameIndex CAPK B 0 0
+
+
+
+}
+
+
+//CAR decoration
+MODEL Weapon62_dec
+{
+	Path "models/weapons/carrifle"
+	ROTATING
+        Model 0 "CARpickup.md3"
+        Scale 1.6 1.6 1.6
+	Offset 0 0 6
+
+    FrameIndex CAPK A 0 0
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,254 @@
+
+
+//Minigun
+ACTOR Weapon66 : Weapon
+{
+
+Weapon.BobStyle InverseSmooth
+	Weapon.BobSpeed 1.8
+	Weapon.BobRangeY 0.9
+	Weapon.BobRangeX 0.9
+Weapon.AmmoType "automagAmmo"
+Weapon.AmmoType2 "automagAmmo"
+Weapon.AmmoGive 0
+Weapon.Ammouse 1
+Weapon.AmmoUse2 1
++WEAPON.NOAUTOAIM
++INVENTORY.UNTOSSABLE
+  States
+  {
+
+  Deselect:
+    AKSL QPONMLKJ 1
+   {
+ 	A_StopSound(CHAN_ITEM);
+	A_Lower;
+ } 
+    TNT1 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_Lower
+    Loop
+  Select:
+    TNT1 A 0 ACS_NamedExecute("UpdateWid",0,66)
+    MNSL A 0 A_Raise
+    Loop
+
+  Ready:
+TNT1 A 0
+TNT1 A 0 A_playsound("wchng",6)
+TNT1 A 0 A_playsound("MiniSel")
+    MNSL ABCDEFGHIJKLMNOPQRSTU 1
+   Goto Realready
+  Realready:
+    MNSL U 1 A_Weaponready
+Loop
+  Fire:
+  MNSS A 1
+  Goto Firehold
+Firehold:
+TNT1 A 0 ACS_NamedExecute("add_statXP",0,1,1)
+TNT1 A 0 A_Jump(256,"Fire1")
+TNT1 A 0 A_ReFire("FireHold")
+//PLAY STOP ANIM
+MNSS U 0 A_playsound("M2WDown",CHAN_WEAPON,0.6)
+MNSS UVWXYZ 1
+MNST ABCDEFGHIJKLMNOPQRSTUVWXYZ 1
+Goto Realready
+Fire1:
+MNSS CDEFGHIJKLMNOPQRST 1
+{
+//now make it fire every 4 tics
+takeinventory("minclip",1);
+if(CountInv("minclip")==0)
+{
+	A_SpawnItemEx ("Gunflash", 0,0,0, 0,0,0, 0,SXF_NOCHECKPOSITION);
+	giveinventory("minclip",4);
+	A_spawnitemEX("BulletCasing",18-pitch/5,2,40-pitch/2,0,-2,frandom(-1,1),0,SXF_TRANSFERPITCH);
+	A_FireProjectile ("MinigunGuntracer", 0, True, frandom(-4.0,4.0),random(12,18), FPF_NOAUTOAIM);
+	ACS_NamedExecute("update_wAmmo",0,2);
+	A_GunFlash;
+ 	A_playsound("M2RegF",CHAN_WEAPON,0.6);
+return A_jumpif(!(GetPlayerInput (INPUT_BUTTONS,0) & BT_ATTACK),"Firehold+3");
+
+}
+
+return A_jumpif(!(GetPlayerInput (INPUT_BUTTONS,0) & BT_ATTACK),"Firehold+3");
+
+}
+Goto FireHold+2
+ Flash:
+    SHTF A 2 Bright A_Light1
+    SHTF B 1 Bright A_Light2
+    Goto LightDone
+  Spawn:
+    SHOT A -1
+    Stop
+Altfire:
+
+//spin up
+MNAS Z 1 A_Playsound("minwindup",CHAN_ITEM,0.7)
+MNAS ZYXWVUTSRQPONMLKJIHGFEDCBA 1
+MNAS Z 1 A_Playsound("minwinlop",CHAN_ITEM,0.7,True)
+
+goto Altfirehold
+Altfirehold:
+TNT1 A 0 ACS_NamedExecute("add_statXP",0,1,1)
+TNT1 A 0 A_Jump(256,"Altfire1")
+TNT1 A 0 A_ReFire("Altfire1")
+//PLAY STOP ANIM
+MNSS U 0 A_StopSound(CHAN_ITEM)
+MNSS U 0 A_playsound("minwinstop",CHAN_WEAPON,0.6)
+MNSS UVWXYZ 1
+MNST ABCDEFGHIJKLMNOPQRSTUVWXYZ 1
+Goto Realready
+Altfire1:
+MNSS CDEFGHIJKLMNOPQRST 1
+{
+//now make it fire every 3 tics
+takeinventory("minclip",1);
+if(CountInv("minclip")==0)
+{
+	A_SpawnItemEx ("Gunflash", 0,0,0, 0,0,0, 0,SXF_NOCHECKPOSITION);
+	giveinventory("minclip",3);
+	A_spawnitemEX("BulletCasing",18-pitch/5,2,40-pitch/2,0,-2,frandom(-1,1),0,SXF_TRANSFERPITCH);
+	A_FireProjectile ("MinigunGuntracer", random(-4,4), True, frandom(-2.0,9.0),random(-8,20), FPF_NOAUTOAIM);
+	ACS_NamedExecute("update_wAmmo",0,2);
+	A_GunFlash;
+ 	A_playsound("M2AltF",CHAN_WEAPON,0.6);
+	return A_jumpif(!(GetPlayerInput (INPUT_BUTTONS,0) & BT_ATTACK),"Altfire+2");
+}
+	return A_jumpif(!(GetPlayerInput (INPUT_BUTTONS,0) & BT_ATTACK),"Altfire+2");
+}
+Goto Altfirehold+2
+
+}
+
+}
+
+
+
+
+
+
+ACTOR Item66 : CustomInventory
+{
+Inventory.Amount 1
+Inventory.MaxAmount 5
+Inventory.Icon "item66i"
+
++INVENTORY.ALWAYSPICKUP
+States
+{
+	Use:
+
+	TNT1 A 3 ACS_NamedExecuteWithResult("Equip_weapon",66)
+	TNT1 A 0 //do not sync inv here cause we need result from the first script
+	Stop
+
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+actor minclip : Ammo
+{
+    inventory.maxamount 4
+}
+
+
+
+ACTOR Minigun_pickupflat : CustomInventory 15027
+{
+//$Category "Inventory\Weapons"
+//$Color 19
++NOGRAVITY
+Radius 14
+Height 8
+Inventory.PickupMessage " "
+inventory.pickupsound "wpickup"
+States
+{
+
+Spawn:
+	MNPK A -1
+	Stop
+Pickup:
+	TNT1 A 0 A_giveinventory("Item66")
+	TNT1 A 0 A_giveinventory("automagAmmo",30)
+	TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,2)
+	TNT1 A 0 ACS_execute(700,0,36)
+	TNT1 A 0 ACS_NamedExecuteAlways("inv_sync")
+PickupandEquip:
+	TNT1 A 0 
+	{
+		if(ACS_NamedExecuteWithResult("Equip_weapon",66)==1)
+		{
+			A_takeInventory("Item66",1);
+		}
+	}
+	Stop
+	}
+
+
+}
+
+
+
+
+ACTOR Minigun_pickup : CustomInventory 15028
+{
+//$Category "Inventory\Weapons"
+//$Color 19
++NOGRAVITY
+Radius 14
+Height 8
+Inventory.PickupMessage " "
+inventory.pickupsound "wpickup"
+States
+{
+
+Spawn:
+	MNPK A -1
+	Stop
+Pickup:
+	TNT1 A 0 A_giveinventory("Item66")
+	TNT1 A 0 A_giveinventory("automagAmmo",30)
+	TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,2)
+	TNT1 A 0 ACS_execute(700,0,36)
+	TNT1 A 0 ACS_NamedExecuteAlways("inv_sync")
+PickupandEquip:
+	TNT1 A 0 
+	{
+		if(ACS_NamedExecuteWithResult("Equip_weapon",66)==1)
+		{
+			A_takeInventory("Item66",1);
+		}
+	}
+	Stop
+	}
+
+}
+
+
+
+
+
+
+
+
+
+

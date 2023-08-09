@@ -1,0 +1,1158 @@
+#include "modeldef/modeldef_fist.txt"
+
+//-----SONYA------------///
+MODEL UPlayer
+{
+	Path "models/experimental"
+
+  
+    Scale 0.85 0.85 0.85 
+	Offset 0 0 0
+	Angleoffset -90
+	//Rolloffset -10
+	INTERPOLATEDOUBLEDFRAMES
+	Model 0 "woman.md3"
+	Skin 0 "Sonya.png"
+
+	//Death1
+	Frameindex WD01 A 0 48
+	Frameindex WD01 B 0 49
+	Frameindex WD01 C 0 50
+	Frameindex WD01 D 0 51
+	Frameindex WD01 E 0 52
+	Frameindex WD01 F 0 53
+	Frameindex WD01 G 0 54
+	Frameindex WD01 H 0 55
+	Frameindex WD01 I 0 56 
+	Frameindex WD01 J 0 57
+	Frameindex WD01 K 0 58
+	Frameindex WD01 L 0 59
+	Frameindex WD01 M 0 60
+	Frameindex WD01 N 0 61
+	Frameindex WD01 O 0 62
+	Frameindex WD01 P 0 63
+	Frameindex WD01 Q 0 64
+	Frameindex WD01 R 0 65
+	//Death2
+	Frameindex WD02 A 0 66
+	Frameindex WD02 B 0 67
+	Frameindex WD02 C 0 68
+	Frameindex WD02 D 0 69
+	Frameindex WD02 E 0 70
+	Frameindex WD02 F 0 71
+	Frameindex WD02 G 0 72
+	Frameindex WD02 H 0 73
+	Frameindex WD02 I 0 74 
+	Frameindex WD02 J 0 75
+	Frameindex WD02 K 0 76
+	Frameindex WD02 L 0 77
+	Frameindex WD02 M 0 78
+	Frameindex WD02 N 0 79
+	Frameindex WD02 O 0 80
+	Frameindex WD02 P 0 81
+	//Death3
+	Frameindex WD03 A 0 82
+	Frameindex WD03 B 0 83
+	Frameindex WD03 C 0 84
+	Frameindex WD03 D 0 85
+	Frameindex WD03 E 0 86
+	Frameindex WD03 F 0 87
+	Frameindex WD03 G 0 88
+	Frameindex WD03 H 0 89
+	Frameindex WD03 I 0 90 
+	Frameindex WD03 J 0 91
+	Frameindex WD03 K 0 92
+	Frameindex WD03 L 0 93
+	Frameindex WD03 M 0 94
+	//Death4
+	Frameindex WD04 A 0 95
+	Frameindex WD04 B 0 96
+	Frameindex WD04 C 0 97
+	Frameindex WD04 D 0 98
+	Frameindex WD04 E 0 99
+	Frameindex WD04 F 0 100
+	Frameindex WD04 G 0 101
+	Frameindex WD04 H 0 102
+	Frameindex WD04 I 0 103
+	Frameindex WD04 J 0 104
+	Frameindex WD04 K 0 105
+	Frameindex WD04 L 0 106
+	Frameindex WD04 M 0 107
+	Frameindex WD04 N 0 108
+	Frameindex WD04 O 0 109
+	Frameindex WD04 P 0 110
+	//Death5
+	Frameindex WD05 A 0 439
+	Frameindex WD05 B 0 440
+	Frameindex WD05 C 0 441
+	Frameindex WD05 D 0 442
+	Frameindex WD05 E 0 443
+	Frameindex WD05 F 0 444
+	Frameindex WD05 G 0 445
+	Frameindex WD05 H 0 446
+	Frameindex WD05 I 0 447
+	Frameindex WD05 J 0 448
+	Frameindex WD05 K 0 449
+	Frameindex WD05 L 0 450
+	Frameindex WD05 M 0 451
+	Frameindex WD05 N 0 452
+	Frameindex WD05 O 0 453
+	Frameindex WD05 P 0 454
+	Frameindex WD05 Q 0 455
+	Frameindex WD05 R 0 456
+	Frameindex WD05 S 0 457
+	Frameindex WD05 T 0 458
+	Frameindex WD05 U 0 459
+	Frameindex WD05 V 0 460
+	Frameindex WD05 W 0 461
+	Frameindex WD05 X 0 462
+	Frameindex WD05 Y 0 463
+	Frameindex WD05 Z 0 464
+
+	Frameindex WD06 A 0 465
+	Frameindex WD06 B 0 466
+	Frameindex WD06 C 0 467
+	Frameindex WD06 D 0 468
+	Frameindex WD06 E 0 469
+	Frameindex WD06 F 0 470
+	Frameindex WD06 G 0 471
+	Frameindex WD06 H 0 472
+	Frameindex WD06 I 0 473
+	Frameindex WD06 J 0 474
+	Frameindex WD06 K 0 475
+	Frameindex WD06 L 0 476
+	Frameindex WD06 M 0 477
+	Frameindex WD06 N 0 478
+	Frameindex WD06 O 0 479
+	Frameindex WD06 P 0 480
+	Frameindex WD06 Q 0 481
+
+
+	//walk
+	Frameindex WL01 A 0 207 
+	Frameindex WL01 B 0 209 
+	Frameindex WL01 C 0 209 
+	Frameindex WL01 D 0 210 
+	Frameindex WL01 E 0 211
+	Frameindex WL01 F 0 212 
+	Frameindex WL01 G 0 213
+	Frameindex WL01 H 0 214
+	Frameindex WL01 I 0 215
+	Frameindex WL01 J 0 216 
+	//swim 
+	Frameindex WS01 A 0 281 
+	Frameindex WS01 B 0 282
+	Frameindex WS01 C 0 283 
+	Frameindex WS01 D 0 284
+	Frameindex WS01 E 0 285 
+	Frameindex WS01 F 0 286 
+	Frameindex WS01 G 0 287 
+	Frameindex WS01 H 0 288 
+	Frameindex WS01 I 0 289 
+	Frameindex WS01 J 0 291 
+	Frameindex WS01 K 0 292 
+	Frameindex WS01 L 0 293 
+	Frameindex WS01 M 0 294
+	Frameindex WS01 N 0 295
+	Frameindex WS01 O 0 296 
+	Frameindex WS01 P 0 297 
+	Frameindex WS01 Q 0 298 
+	//idle 1
+	Frameindex WW03 A 0 20
+	Frameindex WW03 B 0 21 
+	Frameindex WW03 C 0 22
+	Frameindex WW03 D 0 23
+	Frameindex WW03 E 0 24
+	Frameindex WW03 F 0 25
+	Frameindex WW03 G 0 26
+	//twidle 1
+	Frameindex WI01 A 0 6 
+	Frameindex WI01 B 0 7
+	Frameindex WI01 C 0 8
+	Frameindex WI01 D 0 9
+	Frameindex WI01 E 0 10
+	Frameindex WI01 F 0 11
+	Frameindex WI01 G 0 12
+	Frameindex WI01 H 0 13
+	Frameindex WI01 I 0 14
+	Frameindex WI01 J 0 15
+	Frameindex WI01 K 0 16
+	Frameindex WI01 L 0 17
+	Frameindex WI01 M 0 18
+	Frameindex WI01 N 0 19
+	Frameindex WI01 O 0 20
+
+	//twidle 2, looking
+	Frameindex WI02 A 0 541
+	Frameindex WI02 B 0 542
+	Frameindex WI02 C 0 543
+	Frameindex WI02 D 0 544 
+	Frameindex WI02 E 0 545
+	Frameindex WI02 F 0 546
+	Frameindex WI02 G 0 547
+	Frameindex WI02 H 0 548
+	Frameindex WI02 I 0 549
+	Frameindex WI02 J 0 550
+	Frameindex WI02 K 0 551
+	Frameindex WI02 L 0 552
+	Frameindex WI02 M 0 553
+	Frameindex WI02 N 0 554
+	Frameindex WI02 O 0 555
+	Frameindex WI02 P 0 556 
+	Frameindex WI02 Q 0 557
+	Frameindex WI02 R 0 558
+	Frameindex WI02 S 0 559
+	Frameindex WI02 T 0 560
+	Frameindex WI02 U 0 561
+	Frameindex WI02 V 0 562
+	Frameindex WI02 W 0 563
+	Frameindex WI02 X 0 564
+	Frameindex WI02 Y 0 565
+
+}
+
+
+
+
+
+
+//-----Katryn------------///
+MODEL UPlayer
+{
+	Path "models/experimental"
+
+  
+    Scale 0.85 0.85 0.85 
+	Offset 0 0 0
+	Angleoffset -90
+	//Rolloffset -10
+	INTERPOLATEDOUBLEDFRAMES
+
+	
+	Model 0 "woman.md3"
+	Skin 0 "Katryn.png"
+
+	//Death1
+	Frameindex YD01 A 0 48
+	Frameindex YD01 B 0 49
+	Frameindex YD01 C 0 50
+	Frameindex YD01 D 0 51
+	Frameindex YD01 E 0 52
+	Frameindex YD01 F 0 53
+	Frameindex YD01 G 0 54
+	Frameindex YD01 H 0 55
+	Frameindex YD01 I 0 56 
+	Frameindex YD01 J 0 57
+	Frameindex YD01 K 0 58
+	Frameindex YD01 L 0 59
+	Frameindex YD01 M 0 60
+	Frameindex YD01 N 0 61
+	Frameindex YD01 O 0 62
+	Frameindex YD01 P 0 63
+	Frameindex YD01 Q 0 64
+	Frameindex YD01 R 0 65
+	//Death2
+	Frameindex YD02 A 0 66
+	Frameindex YD02 B 0 67
+	Frameindex YD02 C 0 68
+	Frameindex YD02 D 0 69
+	Frameindex YD02 E 0 70
+	Frameindex YD02 F 0 71
+	Frameindex YD02 G 0 72
+	Frameindex YD02 H 0 73
+	Frameindex YD02 I 0 74 
+	Frameindex YD02 J 0 75
+	Frameindex YD02 K 0 76
+	Frameindex YD02 L 0 77
+	Frameindex YD02 M 0 78
+	Frameindex YD02 N 0 79
+	Frameindex YD02 O 0 80
+	Frameindex YD02 P 0 81
+	//Death3
+	Frameindex YD03 A 0 82
+	Frameindex YD03 B 0 83
+	Frameindex YD03 C 0 84
+	Frameindex YD03 D 0 85
+	Frameindex YD03 E 0 86
+	Frameindex YD03 F 0 87
+	Frameindex YD03 G 0 88
+	Frameindex YD03 H 0 89
+	Frameindex YD03 I 0 90 
+	Frameindex YD03 J 0 91
+	Frameindex YD03 K 0 92
+	Frameindex YD03 L 0 93
+	Frameindex YD03 M 0 94
+	//Death4
+	Frameindex YD04 A 0 95
+	Frameindex YD04 B 0 96
+	Frameindex YD04 C 0 97
+	Frameindex YD04 D 0 98
+	Frameindex YD04 E 0 99
+	Frameindex YD04 F 0 100
+	Frameindex YD04 G 0 101
+	Frameindex YD04 H 0 102
+	Frameindex YD04 I 0 103
+	Frameindex YD04 J 0 104
+	Frameindex YD04 K 0 105
+	Frameindex YD04 L 0 106
+	Frameindex YD04 M 0 107
+	Frameindex YD04 N 0 108
+	Frameindex YD04 O 0 109
+	Frameindex YD04 P 0 110
+	//Death5
+	Frameindex YD05 A 0 439
+	Frameindex YD05 B 0 440
+	Frameindex YD05 C 0 441
+	Frameindex YD05 D 0 442
+	Frameindex YD05 E 0 443
+	Frameindex YD05 F 0 444
+	Frameindex YD05 G 0 445
+	Frameindex YD05 H 0 446
+	Frameindex YD05 I 0 447
+	Frameindex YD05 J 0 448
+	Frameindex YD05 K 0 449
+	Frameindex YD05 L 0 450
+	Frameindex YD05 M 0 451
+	Frameindex YD05 N 0 452
+	Frameindex YD05 O 0 453
+	Frameindex YD05 P 0 454
+	Frameindex YD05 Q 0 455
+	Frameindex YD05 R 0 456
+	Frameindex YD05 S 0 457
+	Frameindex YD05 T 0 458
+	Frameindex YD05 U 0 459
+	Frameindex YD05 V 0 460
+	Frameindex YD05 W 0 461
+	Frameindex YD05 X 0 462
+	Frameindex YD05 Y 0 463
+	Frameindex YD05 Z 0 464
+
+	Frameindex YD06 A 0 465
+	Frameindex YD06 B 0 466
+	Frameindex YD06 C 0 467
+	Frameindex YD06 D 0 468
+	Frameindex YD06 E 0 469
+	Frameindex YD06 F 0 470
+	Frameindex YD06 G 0 471
+	Frameindex YD06 H 0 472
+	Frameindex YD06 I 0 473
+	Frameindex YD06 J 0 474
+	Frameindex YD06 K 0 475
+	Frameindex YD06 L 0 476
+	Frameindex YD06 M 0 477
+	Frameindex YD06 N 0 478
+	Frameindex YD06 O 0 479
+	Frameindex YD06 P 0 480
+	Frameindex YD06 Q 0 481
+
+
+	//walk
+	Frameindex YL01 A 0 207 
+	Frameindex YL01 B 0 209 
+	Frameindex YL01 C 0 209 
+	Frameindex YL01 D 0 210 
+	Frameindex YL01 E 0 211
+	Frameindex YL01 F 0 212 
+	Frameindex YL01 G 0 213
+	Frameindex YL01 H 0 214
+	Frameindex YL01 I 0 215
+	Frameindex YL01 J 0 216 
+	//swim 
+	Frameindex YS01 A 0 281 
+	Frameindex YS01 B 0 282
+	Frameindex YS01 C 0 283 
+	Frameindex YS01 D 0 284
+	Frameindex YS01 E 0 285 
+	Frameindex YS01 F 0 286 
+	Frameindex YS01 G 0 287 
+	Frameindex YS01 H 0 288 
+	Frameindex YS01 I 0 289 
+	Frameindex YS01 J 0 291 
+	Frameindex YS01 K 0 292 
+	Frameindex YS01 L 0 293 
+	Frameindex YS01 M 0 294
+	Frameindex YS01 N 0 295
+	Frameindex YS01 O 0 296 
+	Frameindex YS01 P 0 297 
+	Frameindex YS01 Q 0 298 
+	//idle 1
+	Frameindex YW03 A 0 20
+	Frameindex YW03 B 0 21 
+	Frameindex YW03 C 0 22
+	Frameindex YW03 D 0 23
+	Frameindex YW03 E 0 24
+	Frameindex YW03 F 0 25
+	Frameindex YW03 G 0 26
+	//twidle 1
+	Frameindex YI01 A 0 6 
+	Frameindex YI01 B 0 7
+	Frameindex YI01 C 0 8
+	Frameindex YI01 D 0 9
+	Frameindex YI01 E 0 10
+	Frameindex YI01 F 0 11
+	Frameindex YI01 G 0 12
+	Frameindex YI01 H 0 13
+	Frameindex YI01 I 0 14
+	Frameindex YI01 J 0 15
+	Frameindex YI01 K 0 16
+	Frameindex YI01 L 0 17
+	Frameindex YI01 M 0 18
+	Frameindex YI01 N 0 19
+	Frameindex YI01 O 0 20
+
+	//twidle 2, looking
+	Frameindex YI02 A 0 541
+	Frameindex YI02 B 0 542
+	Frameindex YI02 C 0 543
+	Frameindex YI02 D 0 544 
+	Frameindex YI02 E 0 545
+	Frameindex YI02 F 0 546
+	Frameindex YI02 G 0 547
+	Frameindex YI02 H 0 548
+	Frameindex YI02 I 0 549
+	Frameindex YI02 J 0 550
+	Frameindex YI02 K 0 551
+	Frameindex YI02 L 0 552
+	Frameindex YI02 M 0 553
+	Frameindex YI02 N 0 554
+	Frameindex YI02 O 0 555
+	Frameindex YI02 P 0 556 
+	Frameindex YI02 Q 0 557
+	Frameindex YI02 R 0 558
+	Frameindex YI02 S 0 559
+	Frameindex YI02 T 0 560
+	Frameindex YI02 U 0 561
+	Frameindex YI02 V 0 562
+	Frameindex YI02 W 0 563
+	Frameindex YI02 X 0 564
+	Frameindex YI02 Y 0 565
+
+}
+
+
+
+
+//-----Gina------------///
+MODEL UPlayer
+{
+	Path "models/experimental"
+
+  
+    Scale 0.85 0.85 0.85 
+	Offset 0 0 0
+	Angleoffset -90
+	//Rolloffset -10
+	INTERPOLATEDOUBLEDFRAMES
+
+	Model 0 "woman2.md3"
+	Skin 0 "gina.png"
+
+	//Death1
+	Frameindex XD01 A 0 48
+	Frameindex XD01 B 0 49
+	Frameindex XD01 C 0 50
+	Frameindex XD01 D 0 51
+	Frameindex XD01 E 0 52
+	Frameindex XD01 F 0 53
+	Frameindex XD01 G 0 54
+	Frameindex XD01 H 0 55
+	Frameindex XD01 I 0 56 
+	Frameindex XD01 J 0 57
+	Frameindex XD01 K 0 58
+	Frameindex XD01 L 0 59
+	Frameindex XD01 M 0 60
+	Frameindex XD01 N 0 61
+	Frameindex XD01 O 0 62
+	Frameindex XD01 P 0 63
+	Frameindex XD01 Q 0 64
+	Frameindex XD01 R 0 65
+	//Death2
+	Frameindex XD02 A 0 66
+	Frameindex XD02 B 0 67
+	Frameindex XD02 C 0 68
+	Frameindex XD02 D 0 69
+	Frameindex XD02 E 0 70
+	Frameindex XD02 F 0 71
+	Frameindex XD02 G 0 72
+	Frameindex XD02 H 0 73
+	Frameindex XD02 I 0 74 
+	Frameindex XD02 J 0 75
+	Frameindex XD02 K 0 76
+	Frameindex XD02 L 0 77
+	Frameindex XD02 M 0 78
+	Frameindex XD02 N 0 79
+	Frameindex XD02 O 0 80
+	Frameindex XD02 P 0 81
+	//Death3
+	Frameindex XD03 A 0 82
+	Frameindex XD03 B 0 83
+	Frameindex XD03 C 0 84
+	Frameindex XD03 D 0 85
+	Frameindex XD03 E 0 86
+	Frameindex XD03 F 0 87
+	Frameindex XD03 G 0 88
+	Frameindex XD03 H 0 89
+	Frameindex XD03 I 0 90 
+	Frameindex XD03 J 0 91
+	Frameindex XD03 K 0 92
+	Frameindex XD03 L 0 93
+	Frameindex XD03 M 0 94
+	//Death4
+	Frameindex XD04 A 0 95
+	Frameindex XD04 B 0 96
+	Frameindex XD04 C 0 97
+	Frameindex XD04 D 0 98
+	Frameindex XD04 E 0 99
+	Frameindex XD04 F 0 100
+	Frameindex XD04 G 0 101
+	Frameindex XD04 H 0 102
+	Frameindex XD04 I 0 103
+	Frameindex XD04 J 0 104
+	Frameindex XD04 K 0 105
+	Frameindex XD04 L 0 106
+	Frameindex XD04 M 0 107
+	Frameindex XD04 N 0 108
+	Frameindex XD04 O 0 109
+	Frameindex XD04 P 0 110
+	//Death5
+	Frameindex XD05 A 0 439
+	Frameindex XD05 B 0 440
+	Frameindex XD05 C 0 441
+	Frameindex XD05 D 0 442
+	Frameindex XD05 E 0 443
+	Frameindex XD05 F 0 444
+	Frameindex XD05 G 0 445
+	Frameindex XD05 H 0 446
+	Frameindex XD05 I 0 447
+	Frameindex XD05 J 0 448
+	Frameindex XD05 K 0 449
+	Frameindex XD05 L 0 450
+	Frameindex XD05 M 0 451
+	Frameindex XD05 N 0 452
+	Frameindex XD05 O 0 453
+	Frameindex XD05 P 0 454
+	Frameindex XD05 Q 0 455
+	Frameindex XD05 R 0 456
+	Frameindex XD05 S 0 457
+	Frameindex XD05 T 0 458
+	Frameindex XD05 U 0 459
+	Frameindex XD05 V 0 460
+	Frameindex XD05 W 0 461
+	Frameindex XD05 X 0 462
+	Frameindex XD05 Y 0 463
+	Frameindex XD05 Z 0 464
+
+	Frameindex XD06 A 0 465
+	Frameindex XD06 B 0 466
+	Frameindex XD06 C 0 467
+	Frameindex XD06 D 0 468
+	Frameindex XD06 E 0 469
+	Frameindex XD06 F 0 470
+	Frameindex XD06 G 0 471
+	Frameindex XD06 H 0 472
+	Frameindex XD06 I 0 473
+	Frameindex XD06 J 0 474
+	Frameindex XD06 K 0 475
+	Frameindex XD06 L 0 476
+	Frameindex XD06 M 0 477
+	Frameindex XD06 N 0 478
+	Frameindex XD06 O 0 479
+	Frameindex XD06 P 0 480
+	Frameindex XD06 Q 0 481
+
+	//walk
+	Frameindex XL01 A 0 207
+	Frameindex XL01 B 0 209
+	Frameindex XL01 C 0 209
+	Frameindex XL01 D 0 210
+	Frameindex XL01 E 0 211
+	Frameindex XL01 F 0 212
+	Frameindex XL01 G 0 213
+	Frameindex XL01 H 0 214
+	Frameindex XL01 I 0 215 
+	Frameindex XL01 J 0 216
+	//swim
+	Frameindex XS01 A 0 281
+	Frameindex XS01 B 0 282
+	Frameindex XS01 C 0 283
+	Frameindex XS01 D 0 284
+	Frameindex XS01 E 0 285
+	Frameindex XS01 F 0 286 
+	Frameindex XS01 G 0 287
+	Frameindex XS01 H 0 288
+	Frameindex XS01 I 0 289
+	Frameindex XS01 J 0 291
+	Frameindex XS01 K 0 292
+	Frameindex XS01 L 0 293 
+	Frameindex XS01 M 0 294
+	Frameindex XS01 N 0 295
+	Frameindex XS01 O 0 296
+	Frameindex XS01 P 0 297 
+	Frameindex XS01 Q 0 298 
+	//idle 1 
+	Frameindex XW03 A 0 20
+	Frameindex XW03 B 0 21
+	Frameindex XW03 C 0 22
+	Frameindex XW03 D 0 23
+	Frameindex XW03 E 0 24
+	Frameindex XW03 F 0 25
+	Frameindex XW03 G 0 26
+	//twidle 1
+	Frameindex XI01 A 0 6
+	Frameindex XI01 B 0 7
+	Frameindex XI01 C 0 8
+	Frameindex XI01 D 0 9
+	Frameindex XI01 E 0 10
+	Frameindex XI01 F 0 11
+	Frameindex XI01 G 0 12
+	Frameindex XI01 H 0 13
+	Frameindex XI01 I 0 14
+	Frameindex XI01 J 0 15
+	Frameindex XI01 K 0 16
+	Frameindex XI01 L 0 17
+	Frameindex XI01 M 0 18
+	Frameindex XI01 N 0 19
+	Frameindex XI01 O 0 20
+	//twidle 2, looking 
+	Frameindex XI02 A 0 541
+	Frameindex XI02 B 0 542
+	Frameindex XI02 C 0 543
+	Frameindex XI02 D 0 544 
+	Frameindex XI02 E 0 545
+	Frameindex XI02 F 0 546
+	Frameindex XI02 G 0 547
+	Frameindex XI02 H 0 548
+	Frameindex XI02 I 0 549
+	Frameindex XI02 J 0 550
+	Frameindex XI02 K 0 551
+	Frameindex XI02 L 0 552
+	Frameindex XI02 M 0 553
+	Frameindex XI02 N 0 554
+	Frameindex XI02 O 0 555
+	Frameindex XI02 P 0 556
+	Frameindex XI02 Q 0 557 
+	Frameindex XI02 R 0 558
+	Frameindex XI02 S 0 559
+	Frameindex XI02 T 0 560
+	Frameindex XI02 U 0 561
+	Frameindex XI02 V 0 562
+	Frameindex XI02 W 0 563
+	Frameindex XI02 X 0 564
+	Frameindex XI02 Y 0 565
+	
+
+}
+
+
+
+
+
+
+//-----Ash------------///
+MODEL UPlayer
+{
+	Path "models/experimental"
+
+  
+    Scale 0.85 0.85 0.85 
+	Offset 0 0 0
+	Angleoffset -90
+	//Rolloffset -10
+	INTERPOLATEDOUBLEDFRAMES
+
+	
+	Model 0 "male1.md3"
+	Skin 0 "Ash.png"
+
+	//Death1
+	Frameindex VD01 A 0 33
+	Frameindex VD01 B 0 34
+	Frameindex VD01 C 0 35
+	Frameindex VD01 D 0 36
+	Frameindex VD01 E 0 37
+	Frameindex VD01 F 0 38
+	Frameindex VD01 G 0 39
+	Frameindex VD01 H 0 40
+	Frameindex VD01 I 0 41 
+	Frameindex VD01 J 0 42
+	Frameindex VD01 K 0 43
+	Frameindex VD01 L 0 44
+	Frameindex VD01 M 0 45
+	Frameindex VD01 N 0 46
+	Frameindex VD01 O 0 47
+	Frameindex VD01 P 0 48
+
+	//Death2
+	Frameindex VD02 A 0 49
+	Frameindex VD02 B 0 50
+	Frameindex VD02 C 0 51
+	Frameindex VD02 D 0 52
+	Frameindex VD02 E 0 53
+	Frameindex VD02 F 0 54
+	Frameindex VD02 G 0 55
+	Frameindex VD02 H 0 56
+	Frameindex VD02 I 0 57 
+	Frameindex VD02 J 0 58
+	Frameindex VD02 K 0 59
+	Frameindex VD02 L 0 60
+	Frameindex VD02 M 0 61
+	//Death3
+	Frameindex VD03 A 0 101
+	Frameindex VD03 B 0 102
+	Frameindex VD03 C 0 103
+	Frameindex VD03 D 0 104
+	Frameindex VD03 E 0 105
+	Frameindex VD03 F 0 106
+	Frameindex VD03 G 0 107
+	Frameindex VD03 H 0 108
+	Frameindex VD03 I 0 109 
+	Frameindex VD03 J 0 110
+	Frameindex VD03 K 0 111
+	Frameindex VD03 L 0 112
+	Frameindex VD03 M 0 113
+	Frameindex VD03 N 0 114
+	Frameindex VD03 O 0 115
+	Frameindex VD03 P 0 116
+	Frameindex VD03 Q 0 117
+	Frameindex VD03 R 0 118
+	Frameindex VD03 S 0 119
+	Frameindex VD03 T 0 120
+	Frameindex VD03 U 0 121
+	Frameindex VD03 V 0 122
+	Frameindex VD03 W 0 123
+	Frameindex VD03 X 0 124
+	Frameindex VD03 Y 0 125
+	Frameindex VD03 Z 0 126
+
+	Frameindex VD33 A 0 127
+	Frameindex VD33 B 0 128
+
+
+	//Death4
+	Frameindex VD04 A 0 129
+	Frameindex VD04 B 0 130
+	Frameindex VD04 C 0 131
+	Frameindex VD04 D 0 132
+	Frameindex VD04 E 0 133
+	Frameindex VD04 F 0 134
+	Frameindex VD04 G 0 135
+	Frameindex VD04 H 0 136
+	Frameindex VD04 I 0 137
+	Frameindex VD04 J 0 138
+	Frameindex VD04 K 0 139
+	Frameindex VD04 L 0 140
+	Frameindex VD04 M 0 141
+	Frameindex VD04 N 0 141
+	Frameindex VD04 O 0 142
+	Frameindex VD04 P 0 143
+	Frameindex VD04 Q 0 144
+	Frameindex VD04 R 0 145
+	Frameindex VD04 S 0 146
+	Frameindex VD04 T 0 147
+	Frameindex VD04 U 0 148
+	Frameindex VD04 V 0 149
+
+	//walk
+	Frameindex VL01 A 0 212 
+	Frameindex VL01 B 0 213 
+	Frameindex VL01 C 0 214 
+	Frameindex VL01 D 0 215 
+	Frameindex VL01 E 0 216 
+	Frameindex VL01 F 0 217 
+	Frameindex VL01 G 0 218 
+	Frameindex VL01 H 0 219 
+	Frameindex VL01 I 0 220 
+	Frameindex VL01 J 0 221 
+	
+	//swim
+	Frameindex VL02 A 0 300 
+	Frameindex VL02 B 0 301 
+	Frameindex VL02 C 0 302 
+	Frameindex VL02 D 0 303 
+	Frameindex VL02 E 0 304 
+	Frameindex VL02 F 0 305 
+	Frameindex VL02 G 0 306 
+	Frameindex VL02 H 0 307 
+	Frameindex VL02 I 0 308 
+	Frameindex VL02 J 0 309 
+	Frameindex VL02 K 0 310
+	Frameindex VL02 L 0 311 
+	Frameindex VL02 M 0 312 
+	Frameindex VL02 N 0 313 
+	Frameindex VL02 O 0 314
+
+
+	//idle
+	Frameindex VI01 A 0 12
+	Frameindex VI01 B 0 13
+	Frameindex VI01 C 0 14
+	Frameindex VI01 D 0 15
+	Frameindex VI01 E 0 16
+	Frameindex VI01 F 0 17
+	Frameindex VI01 G 0 18
+
+
+}
+
+
+
+
+//-----Kurgan------------///
+MODEL UPlayer
+{
+	Path "models/experimental"
+
+  
+    Scale 0.85 0.85 0.85 
+	Offset 0 0 0
+	Angleoffset -90
+	//Rolloffset -10
+	INTERPOLATEDOUBLEDFRAMES
+
+	
+	Model 0 "male2.md3"
+	Skin 0 "Kurgan.png"
+
+	//Death1
+	Frameindex FD01 A 0 33
+	Frameindex FD01 B 0 34
+	Frameindex FD01 C 0 35
+	Frameindex FD01 D 0 36
+	Frameindex FD01 E 0 37
+	Frameindex FD01 F 0 38
+	Frameindex FD01 G 0 39
+	Frameindex FD01 H 0 40
+	Frameindex FD01 I 0 41 
+	Frameindex FD01 J 0 42
+	Frameindex FD01 K 0 43
+	Frameindex FD01 L 0 44
+	Frameindex FD01 M 0 45
+	Frameindex FD01 N 0 46
+	Frameindex FD01 O 0 47
+	Frameindex FD01 P 0 48
+
+	//Death2
+	Frameindex FD02 A 0 49
+	Frameindex FD02 B 0 50
+	Frameindex FD02 C 0 51
+	Frameindex FD02 D 0 52
+	Frameindex FD02 E 0 53
+	Frameindex FD02 F 0 54
+	Frameindex FD02 G 0 55
+	Frameindex FD02 H 0 56
+	Frameindex FD02 I 0 57 
+	Frameindex FD02 J 0 58
+	Frameindex FD02 K 0 59
+	Frameindex FD02 L 0 60
+	Frameindex FD02 M 0 61
+	//Death3
+	Frameindex FD03 A 0 101
+	Frameindex FD03 B 0 102
+	Frameindex FD03 C 0 103
+	Frameindex FD03 D 0 104
+	Frameindex FD03 E 0 105
+	Frameindex FD03 F 0 106
+	Frameindex FD03 G 0 107
+	Frameindex FD03 H 0 108
+	Frameindex FD03 I 0 109 
+	Frameindex FD03 J 0 110
+	Frameindex FD03 K 0 111
+	Frameindex FD03 L 0 112
+	Frameindex FD03 M 0 113
+	Frameindex FD03 N 0 114
+	Frameindex FD03 O 0 115
+	Frameindex FD03 P 0 116
+	Frameindex FD03 Q 0 117
+	Frameindex FD03 R 0 118
+	Frameindex FD03 S 0 119
+	Frameindex FD03 T 0 120
+	Frameindex FD03 U 0 121
+	Frameindex FD03 V 0 122
+	Frameindex FD03 W 0 123
+	Frameindex FD03 X 0 124
+	Frameindex FD03 Y 0 125
+	Frameindex FD03 Z 0 126
+
+	Frameindex FD33 A 0 127
+	Frameindex FD33 B 0 128
+
+
+	//Death4
+	Frameindex FD04 A 0 129
+	Frameindex FD04 B 0 130
+	Frameindex FD04 C 0 131
+	Frameindex FD04 D 0 132
+	Frameindex FD04 E 0 133
+	Frameindex FD04 F 0 134
+	Frameindex FD04 G 0 135
+	Frameindex FD04 H 0 136
+	Frameindex FD04 I 0 137
+	Frameindex FD04 J 0 138
+	Frameindex FD04 K 0 139
+	Frameindex FD04 L 0 140
+	Frameindex FD04 M 0 141
+	Frameindex FD04 N 0 141
+	Frameindex FD04 O 0 142
+	Frameindex FD04 P 0 143
+	Frameindex FD04 Q 0 144
+	Frameindex FD04 R 0 145
+	Frameindex FD04 S 0 146
+	Frameindex FD04 T 0 147
+	Frameindex FD04 U 0 148
+	Frameindex FD04 V 0 149
+
+	//walk
+	Frameindex FL01 A 0 212 
+	Frameindex FL01 B 0 213 
+	Frameindex FL01 C 0 214 
+	Frameindex FL01 D 0 215 
+	Frameindex FL01 E 0 216 
+	Frameindex FL01 F 0 217 
+	Frameindex FL01 G 0 218 
+	Frameindex FL01 H 0 219 
+	Frameindex FL01 I 0 220 
+	Frameindex FL01 J 0 221 
+	
+	//swim
+	Frameindex FL02 A 0 300 
+	Frameindex FL02 B 0 301 
+	Frameindex FL02 C 0 302 
+	Frameindex FL02 D 0 303 
+	Frameindex FL02 E 0 304 
+	Frameindex FL02 F 0 305 
+	Frameindex FL02 G 0 306 
+	Frameindex FL02 H 0 307 
+	Frameindex FL02 I 0 308 
+	Frameindex FL02 J 0 309 
+	Frameindex FL02 K 0 310
+	Frameindex FL02 L 0 311 
+	Frameindex FL02 M 0 312 
+	Frameindex FL02 N 0 313 
+	Frameindex FL02 O 0 314
+
+
+	//idle
+	Frameindex FI01 A 0 12
+	Frameindex FI01 B 0 13
+	Frameindex FI01 C 0 14
+	Frameindex FI01 D 0 15
+	Frameindex FI01 E 0 16
+	Frameindex FI01 F 0 17
+	Frameindex FI01 G 0 18
+
+
+}
+
+
+
+
+
+
+//////////////////Dummies////////////////////
+
+//-----SONYA Dummy------------///
+MODEL Sonyadummy
+{
+	Path "models/experimental"
+    	Scale 0.85 0.85 0.85 
+	Angleoffset -90
+	INTERPOLATEDOUBLEDFRAMES
+	Model 0 "woman.md3"
+	Skin 0 "Sonya.png"
+	//idle
+	Frameindex WW03 A 0 20
+	Frameindex WW03 B 0 21
+	Frameindex WW03 C 0 22
+	Frameindex WW03 D 0 23
+	Frameindex WW03 E 0 24 
+	Frameindex WW03 F 0 25
+	Frameindex WW03 G 0 26
+
+}
+
+
+//-----Katryn Dummy------------///
+MODEL Katryndummy
+{
+	Path "models/experimental"
+    	Scale 0.85 0.85 0.85 
+	Angleoffset -90
+	INTERPOLATEDOUBLEDFRAMES
+	Model 0 "woman.md3"
+	Skin 0 "Katryn.png"
+	//idle
+	Frameindex WW03 A 0 20
+	Frameindex WW03 B 0 21
+	Frameindex WW03 C 0 22
+	Frameindex WW03 D 0 23
+	Frameindex WW03 E 0 24 
+	Frameindex WW03 F 0 25
+	Frameindex WW03 G 0 26
+}
+
+
+//-----Gina Dummy------------///
+MODEL Ginadummy
+{
+	Path "models/experimental"
+   	Scale 0.85 0.85 0.85 
+	Angleoffset -90
+	INTERPOLATEDOUBLEDFRAMES
+	Model 0 "woman2.md3"
+	Skin 0 "Gina.png"
+	//idle
+	Frameindex WW03 A 0 20
+	Frameindex WW03 B 0 21
+	Frameindex WW03 C 0 22
+	Frameindex WW03 D 0 23
+	Frameindex WW03 E 0 24 
+	Frameindex WW03 F 0 25
+	Frameindex WW03 G 0 26
+}
+
+//-----Ash Dummy------------///
+MODEL Ashdummy
+{
+	Path "models/experimental"
+  	Scale 0.85 0.85 0.85 
+	Angleoffset -90
+	INTERPOLATEDOUBLEDFRAMES
+	Model 0 "male1.md3"
+	Skin 0 "Ash.png"
+	//idle
+	Frameindex WW03 A 0 12
+	Frameindex WW03 B 0 13
+	Frameindex WW03 C 0 14
+	Frameindex WW03 D 0 15
+	Frameindex WW03 E 0 16
+	Frameindex WW03 F 0 17
+	Frameindex WW03 G 0 18
+}
+
+//-----Kurgan Dummy------------///
+MODEL Kurgandummy
+{
+	Path "models/experimental"
+   	Scale 0.85 0.85 0.85 
+	Angleoffset -90
+	INTERPOLATEDOUBLEDFRAMES
+	Model 0 "male2.md3"
+	Skin 0 "Kurgan.png"
+	//idle
+	Frameindex WW03 A 0 12
+	Frameindex WW03 B 0 13
+	Frameindex WW03 C 0 14
+	Frameindex WW03 D 0 15
+	Frameindex WW03 E 0 16
+	Frameindex WW03 F 0 17
+	Frameindex WW03 G 0 18
+}
+
+
+
+
+
+
+
+//////////////////Dummies, Micro////////////////////
+
+MODEL Sonyadummymicro
+{
+	Path "models/experimental"
+    	Scale 0.1 0.1 0.1
+	Angleoffset -90
+	INTERPOLATEDOUBLEDFRAMES
+	Model 0 "woman.md3"
+	Skin 0 "Sonya.png"
+	Frameindex WW03 A 0 20
+	Frameindex WW03 B 0 21
+	Frameindex WW03 C 0 22
+	Frameindex WW03 D 0 23
+	Frameindex WW03 E 0 24 
+	Frameindex WW03 F 0 25
+	Frameindex WW03 G 0 26
+}
+
+MODEL Katryndummymicro
+{
+	Path "models/experimental"
+    	Scale 0.1 0.1 0.1  
+	Angleoffset -90
+	INTERPOLATEDOUBLEDFRAMES
+	Model 0 "woman.md3"
+	Skin 0 "Katryn.png"
+	Frameindex WW03 A 0 20
+	Frameindex WW03 B 0 21
+	Frameindex WW03 C 0 22
+	Frameindex WW03 D 0 23
+	Frameindex WW03 E 0 24 
+	Frameindex WW03 F 0 25
+	Frameindex WW03 G 0 26
+}
+
+
+MODEL Ginadummymicro
+{
+	Path "models/experimental"
+   	Scale 0.1 0.1 0.1 
+	Angleoffset -90
+	INTERPOLATEDOUBLEDFRAMES
+	Model 0 "woman2.md3"
+	Skin 0 "Gina.png"
+	Frameindex WW03 A 0 20
+	Frameindex WW03 B 0 21
+	Frameindex WW03 C 0 22
+	Frameindex WW03 D 0 23
+	Frameindex WW03 E 0 24 
+	Frameindex WW03 F 0 25
+	Frameindex WW03 G 0 26
+}
+
+MODEL Ashdummymicro
+{
+	Path "models/experimental"
+  	Scale 0.1 0.1 0.1 
+	Angleoffset -90
+	INTERPOLATEDOUBLEDFRAMES
+	Model 0 "male1.md3"
+	Skin 0 "Ash.png"
+	Frameindex WW03 A 0 12
+	Frameindex WW03 B 0 13
+	Frameindex WW03 C 0 14
+	Frameindex WW03 D 0 15
+	Frameindex WW03 E 0 16
+	Frameindex WW03 F 0 17
+	Frameindex WW03 G 0 18
+}
+
+MODEL Kurgandummymicro
+{
+	Path "models/experimental"
+   	Scale 0.1 0.1 0.1 
+	Angleoffset -90
+	INTERPOLATEDOUBLEDFRAMES
+	Model 0 "male2.md3"
+	Skin 0 "Kurgan.png"
+	Frameindex WW03 A 0 12
+	Frameindex WW03 B 0 13
+	Frameindex WW03 C 0 14
+	Frameindex WW03 D 0 15
+	Frameindex WW03 E 0 16
+	Frameindex WW03 F 0 17
+	Frameindex WW03 G 0 18
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

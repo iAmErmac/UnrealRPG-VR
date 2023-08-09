@@ -1,0 +1,6 @@
+version "3.0"
+
+#include "zscript/effect_replace.txt"
+#include "zscript/decoration_replace.txt"
+#include "zscript/projectile_replace.txt"
+#include "zscript/weapon_replace.txt"

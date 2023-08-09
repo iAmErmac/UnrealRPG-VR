@@ -1,0 +1,44 @@
+
+//Bullet casing
+MODEL BulletCasingFastFade
+{
+	Path "models/misc/bulletcasing"
+	Model 0 "Shell.md3"
+	SurfaceSkin 0 0 "Autom10.png"
+	Scale 1.0 1.0 1.0
+	Offset 0 0 1
+	
+	USEACTORPITCH
+	USEACTORROLL
+
+	FrameIndex BLCS A 0 0
+}
+
+//Bullet casing red hot 
+MODEL BulletCasingRedFastFade
+{
+	Path "models/misc/bulletcasing"
+	Model 0 "Shell.md3"
+	SurfaceSkin 0 0 "Autom1.png"
+	Scale 1.0 1.0 1.0
+	Offset 0 0 1
+	
+	USEACTORPITCH
+	USEACTORROLL
+	
+   	FrameIndex BLCS A 0 0
+	SurfaceSkin 0 0 "Autom2.png"
+ 	FrameIndex BLCS B 0 0
+	SurfaceSkin 0 0 "Autom3.png"
+	FrameIndex BLCS C 0 0
+	SurfaceSkin 0 0 "Autom4.png"
+	FrameIndex BLCS D 0 0
+	SurfaceSkin 0 0 "Autom5.png"
+	FrameIndex BLCS E 0 0
+	SurfaceSkin 0 0 "Autom6.png"
+	FrameIndex BLCS F 0 0
+	SurfaceSkin 0 0 "Autom7.png"
+	FrameIndex BLCS G 0 0
+	SurfaceSkin 0 0 "Autom8.png"
+	FrameIndex BLCS H 0 0
+}

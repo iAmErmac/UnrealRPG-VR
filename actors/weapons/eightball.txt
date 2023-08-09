@@ -1,0 +1,642 @@
+
+//Eightball
+ACTOR Weapon60 : Doomweapon 
+{
+
+Weapon.BobStyle InverseSmooth
+Weapon.BobSpeed 1.8
+Weapon.BobRangeY 0.9
+Weapon.BobRangeX 0.9
++WEAPON.NOAUTOAIM
++INVENTORY.UNTOSSABLE
+Weapon.AmmoType "EightballAmmo"
+Weapon.AmmoUse1 1
+Weapon.AmmoUse2 1
+
+
+
+inventory.pickupsound "wpickup"
+
+	States
+	{
+	Ready:
+		TNT1 A 0
+		TNT1 A 0 A_playsound("wchng",5)
+		
+		EGHB BCD 1
+		TNT1 A 0 A_playsound("eightsel")
+		EGHB EFGHIJKLMNO 1
+	Realready:
+    		EGHB O 1 A_WeaponReady
+		Loop
+	Deselect:
+		EGHD ABCDEFGHIJK 1
+  		FLAK AAAAAAAAAAAAAAAAAAAA 0 A_Lower
+		Loop
+	Select:
+		TNT1 A 0 ACS_NamedExecute("UpdateWid",0,60)
+		FLAK A 0 A_Raise
+		Loop
+	Altfire:
+		EGHB O 5
+		//if fire is not held , fire straight 1 grenade
+		TNT1 A 0 A_refire("ContinueLoadAF")
+		Goto Altfire1
+	Fire:
+		EGHB O 5
+		//if fire is not held , fire straight 1 rocket
+		TNT1 A 0 A_refire("ContinueLoad")
+		Goto Fire1
+	ContinueLoad:
+		TNT1 A 0 A_jumpif(CountInv("EightballAmmo") ==CountInv("Eightball_load"),"FireoutofAmmo")
+		EGHL ABCDEFGHI 1
+		TNT1 A 0 A_playsound("eghtload")
+		EGHL JKLMNOPQRSTUVWXYZ 1
+		TNT1 A 0 A_giveinventory("Eightball_load",1)
+		TNT1 A 0 A_JumpIfInventory ("Eightball_load", 6,"Fire6")
+		TNT1 A 0 A_refire("ContinueLoad")
+		TNT1 A 0 A_JumpIfInventory ("Eightball_load", 5,"Fire5")
+		TNT1 A 0 A_JumpIfInventory ("Eightball_load", 4,"Fire4")
+		TNT1 A 0 A_JumpIfInventory ("Eightball_load", 3,"Fire3")
+		TNT1 A 0 A_JumpIfInventory ("Eightball_load", 2,"Fire2")
+		TNT1 A 0 A_JumpIfInventory ("Eightball_load", 1,"Fire1")
+	FireOutofAmmo:
+		TNT1 A 0 A_JumpIfInventory ("Eightball_load", 5,"Fire5")
+		TNT1 A 0 A_JumpIfInventory ("Eightball_load", 4,"Fire4")
+		TNT1 A 0 A_JumpIfInventory ("Eightball_load", 3,"Fire3")
+		TNT1 A 0 A_JumpIfInventory ("Eightball_load", 2,"Fire2")
+		TNT1 A 0 A_JumpIfInventory ("Eightball_load", 1,"Fire1")
+	FireAfOutofAmmo:
+		TNT1 A 0 A_JumpIfInventory ("Eightball_load", 5,"AltFire5")
+		TNT1 A 0 A_JumpIfInventory ("Eightball_load", 4,"AltFire4")
+		TNT1 A 0 A_JumpIfInventory ("Eightball_load", 3,"AltFire3")
+		TNT1 A 0 A_JumpIfInventory ("Eightball_load", 2,"AltFire2")
+		TNT1 A 0 A_JumpIfInventory ("Eightball_load", 1,"AltFire1")
+	ContinueLoadAF:
+		TNT1 A 0 A_jumpif(CountInv("EightballAmmo") ==CountInv("Eightball_load"),"FireoutofAmmo")
+		EGHL ABCDEFGHI 1
+		TNT1 A 0 A_playsound("eghtload")
+		EGHL JKLMNOPQRSTUVWXYZ 1
+		TNT1 A 0 A_giveinventory("Eightball_load",1)
+		TNT1 A 0 A_JumpIfInventory ("Eightball_load", 6,"AltFire6")
+		TNT1 A 0 A_refire("ContinueLoadAF")
+		TNT1 A 0 A_JumpIfInventory ("Eightball_load", 5,"AltFire5")
+		TNT1 A 0 A_JumpIfInventory ("Eightball_load", 4,"AltFire4")
+		TNT1 A 0 A_JumpIfInventory ("Eightball_load", 3,"AltFire3")
+		TNT1 A 0 A_JumpIfInventory ("Eightball_load", 2,"AltFire2")
+		TNT1 A 0 A_JumpIfInventory ("Eightball_load", 1,"AltFire1")
+	Fire6:
+		TNT1 A 0 ACS_NamedExecute("add_statXP",0,1,12)
+		TNT1 A 0 A_takeinventory("EightballAmmo",5)
+		TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,5)
+		TNT1 A 0 A_playsound("eightfir",1)
+		TNT1 A 0 A_playsound("eightfir",2)
+		TNT1 A 0 A_playsound("eightfir",3)
+		TNT1 A 0 A_playsound("eightfir",4)
+		TNT1 A 0 A_playsound("eightfir",5)
+		TNT1 A 0 A_playsound("eightfir",6)
+		EGHF A 1
+		TNT1 A 0 A_FireCustomMissile("EightbRocket",0,0,-20,-10)
+		TNT1 A 0 A_FireCustomMissile("EightbRocket",0,0,-12,-10)
+		TNT1 A 0 A_FireCustomMissile("EightbRocket",0,0,-4,-10)
+		TNT1 A 0 A_FireCustomMissile("EightbRocket",0,0,4,-10)
+		TNT1 A 0 A_FireCustomMissile("EightbRocket",0,0,12,-10)
+		TNT1 A 0 A_FireCustomMissile("EightbRocket",0,0,20,-10)
+		EGHF BCDEFGH 1
+		TNT1 A 0 A_takeinventory("Eightball_load",6)
+		TNT1 A 0 A_jumpif(CountInv("EightballAmmo") ==0,"Cycleweapon")
+		EGHL ABCDEFGHI 1
+		TNT1 A 0 A_playsound("eghtload",7)
+		EGHL JKLMNOPQRSTUVWXYZ 1
+		Goto Realready
+	Fire5:
+		TNT1 A 0 ACS_NamedExecute("add_statXP",0,1,10)
+		TNT1 A 0 A_takeinventory("EightballAmmo",5)
+		TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,5)
+		TNT1 A 0 A_playsound("eightfir",1)
+		TNT1 A 0 A_playsound("eightfir",2)
+		TNT1 A 0 A_playsound("eightfir",3)
+		TNT1 A 0 A_playsound("eightfir",4)
+		TNT1 A 0 A_playsound("eightfir",5)
+		EGHF A 1
+		TNT1 A 0 A_FireCustomMissile("EightbRocket",0,0,-16,-10)
+		TNT1 A 0 A_FireCustomMissile("EightbRocket",0,0,-8,-10)
+		TNT1 A 0 A_FireCustomMissile("EightbRocket",0,0,0,-10)
+		TNT1 A 0 A_FireCustomMissile("EightbRocket",0,0,8,-10)
+		TNT1 A 0 A_FireCustomMissile("EightbRocket",0,0,16,-10)
+		EGHF BCDEFGH 1
+		TNT1 A 0 A_takeinventory("Eightball_load",6)
+		TNT1 A 0 A_jumpif(CountInv("EightballAmmo") ==0,"Cycleweapon")
+		EGHL ABCDEFGHI 1
+		TNT1 A 0 A_playsound("eghtload",7)
+		EGHL JKLMNOPQRSTUVWXYZ 1
+		Goto Realready
+	Fire4:
+		TNT1 A 0 ACS_NamedExecute("add_statXP",0,1,8)
+		TNT1 A 0 A_takeinventory("EightballAmmo",4)
+		TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,5)
+		TNT1 A 0 A_playsound("eightfir",1)
+		TNT1 A 0 A_playsound("eightfir",2)
+		TNT1 A 0 A_playsound("eightfir",3)
+		TNT1 A 0 A_playsound("eightfir",4)
+		EGHF A 1
+		TNT1 A 0 A_FireCustomMissile("EightbRocket",0,0,-12,-10)
+		TNT1 A 0 A_FireCustomMissile("EightbRocket",0,0,-4,-10)
+		TNT1 A 0 A_FireCustomMissile("EightbRocket",0,0,4,-10)
+		TNT1 A 0 A_FireCustomMissile("EightbRocket",0,0,12,-10)
+		EGHF BCDEFGH 1
+		TNT1 A 0 A_takeinventory("Eightball_load",6)
+		TNT1 A 0 A_jumpif(CountInv("EightballAmmo") ==0,"Cycleweapon")
+		EGHL ABCDEFGHI 1
+		TNT1 A 0 A_playsound("eghtload",7)
+		EGHL JKLMNOPQRSTUVWXYZ 1
+		Goto Realready
+	Fire3:
+		TNT1 A 0 ACS_NamedExecute("add_statXP",0,1,6)
+		TNT1 A 0 A_takeinventory("EightballAmmo",3)
+		TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,5)
+		TNT1 A 0 A_playsound("eightfir",1)
+		TNT1 A 0 A_playsound("eightfir",2)
+		TNT1 A 0 A_playsound("eightfir",3)
+		EGHF A 1
+		TNT1 A 0 A_FireCustomMissile("EightbRocket",0,0,-8,-10)
+		TNT1 A 0 A_FireCustomMissile("EightbRocket",0,0,0,-10)
+		TNT1 A 0 A_FireCustomMissile("EightbRocket",0,0,8,-10)
+		EGHF BCDEFGH 1
+		TNT1 A 0 A_takeinventory("Eightball_load",6)
+		TNT1 A 0 A_jumpif(CountInv("EightballAmmo") ==0,"Cycleweapon")
+		EGHL ABCDEFGHI 1
+		TNT1 A 0 A_playsound("eghtload",7)
+		EGHL JKLMNOPQRSTUVWXYZ 1
+		Goto Realready
+	Fire2:
+		TNT1 A 0 ACS_NamedExecute("add_statXP",0,1,4)
+		TNT1 A 0 A_takeinventory("EightballAmmo",2)
+		TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,5)
+		TNT1 A 0 A_playsound("eightfir",1)
+		TNT1 A 0 A_playsound("eightfir",2)
+		EGHF A 1
+		TNT1 A 0 A_FireCustomMissile("EightbRocket",0,0,-4,-10)
+		TNT1 A 0 A_FireCustomMissile("EightbRocket",0,0,4,-10)
+		EGHF BCDEFGH 1
+		TNT1 A 0 A_takeinventory("Eightball_load",6)
+		TNT1 A 0 A_jumpif(CountInv("EightballAmmo") ==0,"Cycleweapon")
+		EGHL ABCDEFGHI 1
+		TNT1 A 0 A_playsound("eghtload",7)
+		EGHL JKLMNOPQRSTUVWXYZ 1
+		Goto Realready
+	Fire1:
+		TNT1 A 0 ACS_NamedExecute("add_statXP",0,1,2)
+		TNT1 A 0 A_takeinventory("EightballAmmo",1)
+		TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,5)
+		TNT1 A 0 A_playsound("eightfir")
+		EGHF A 1
+		TNT1 A 0 A_FireCustomMissile("EightbRocket",0,0,0,-10)
+		EGHF BCDEFGH 1
+		TNT1 A 0 A_takeinventory("Eightball_load",6)
+		TNT1 A 0 A_jumpif(CountInv("EightballAmmo") ==0,"Cycleweapon")
+		EGHL ABCDEFGHI 1
+		TNT1 A 0 A_playsound("eghtload",7)
+		EGHL JKLMNOPQRSTUVWXYZ 1
+		Goto Realready
+	Altfire1:
+		TNT1 A 0 ACS_NamedExecute("add_statXP",0,1,2)
+		TNT1 A 0 A_playsound("eghtaf")
+		EGHF A 1
+		TNT1 A 0 A_FireCustomMissile("EightbGrenade",0,0,0,-10)
+		TNT1 A 0 A_takeinventory("EightballAmmo",1)
+		TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,5)
+		EGHF BCDEFGH 1
+		TNT1 A 0 A_takeinventory("Eightball_load",6)
+		TNT1 A 0 A_jumpif(CountInv("EightballAmmo") ==0,"Cycleweapon")
+		EGHL ABCDEFGHI 1
+		TNT1 A 0 A_playsound("eghtload",7)
+		EGHL JKLMNOPQRSTUVWXYZ 1
+		Goto Realready
+	Altfire2:
+		TNT1 A 0 ACS_NamedExecute("add_statXP",0,1,4)
+		TNT1 A 0 A_playsound("eghtaf",2)
+		TNT1 A 0 A_playsound("eghtaf",1)
+		EGHF A 1
+		TNT1 A 0 A_FireCustomMissile("EightbGrenade",0,0,random(-8,8),random(-8,-14))
+		TNT1 A 0 A_FireCustomMissile("EightbGrenade",0,0,random(-8,8),random(-8,-14))
+		TNT1 A 0 A_takeinventory("EightballAmmo",2)
+		TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,5)
+		EGHF BCDEFGH 1
+		TNT1 A 0 A_takeinventory("Eightball_load",6)
+		TNT1 A 0 A_jumpif(CountInv("EightballAmmo") ==0,"Cycleweapon")
+		EGHL ABCDEFGHI 1
+		TNT1 A 0 A_playsound("eghtload",7)
+		EGHL JKLMNOPQRSTUVWXYZ 1
+		Goto Realready
+	Altfire3:
+		TNT1 A 0 ACS_NamedExecute("add_statXP",0,1,6)
+		TNT1 A 0 A_playsound("eghtaf",3)
+		TNT1 A 0 A_playsound("eghtaf",2)
+		TNT1 A 0 A_playsound("eghtaf",1)
+		EGHF A 1
+		TNT1 A 0 A_FireCustomMissile("EightbGrenade",0,0,random(-8,8),random(-8,-14))
+		TNT1 A 0 A_FireCustomMissile("EightbGrenade",0,0,random(-8,8),random(-8,-14))
+		TNT1 A 0 A_FireCustomMissile("EightbGrenade",0,0,random(-8,8),random(-8,-14))
+		TNT1 A 0 A_takeinventory("EightballAmmo",3)
+		TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,5)
+		EGHF BCDEFGH 1
+		TNT1 A 0 A_takeinventory("Eightball_load",6)
+		TNT1 A 0 A_jumpif(CountInv("EightballAmmo") ==0,"Cycleweapon")
+		EGHL ABCDEFGHI 1
+		TNT1 A 0 A_playsound("eghtload",7)
+		EGHL JKLMNOPQRSTUVWXYZ 1
+		Goto Realready
+	Altfire4:
+		TNT1 A 0 ACS_NamedExecute("add_statXP",0,1,8)
+		TNT1 A 0 A_playsound("eghtaf",4)
+		TNT1 A 0 A_playsound("eghtaf",3)
+		TNT1 A 0 A_playsound("eghtaf",2)
+		TNT1 A 0 A_playsound("eghtaf",1)
+		EGHF A 1
+		TNT1 A 0 A_FireCustomMissile("EightbGrenade",0,0,random(-8,8),random(-8,-14))
+		TNT1 A 0 A_FireCustomMissile("EightbGrenade",0,0,random(-8,8),random(-8,-14))
+		TNT1 A 0 A_FireCustomMissile("EightbGrenade",0,0,random(-8,8),random(-8,-14))
+		TNT1 A 0 A_FireCustomMissile("EightbGrenade",0,0,random(-8,8),random(-8,-14))
+		TNT1 A 0 A_takeinventory("EightballAmmo",4)
+		TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,5)
+		EGHF BCDEFGH 1
+		TNT1 A 0 A_takeinventory("Eightball_load",6)
+		TNT1 A 0 A_jumpif(CountInv("EightballAmmo") ==0,"Cycleweapon")
+		EGHL ABCDEFGHI 1
+		TNT1 A 0 A_playsound("eghtload",7)
+		EGHL JKLMNOPQRSTUVWXYZ 1
+		Goto Realready
+	Altfire5:
+		TNT1 A 0 ACS_NamedExecute("add_statXP",0,1,10)
+		TNT1 A 0 A_playsound("eghtaf",5)
+		TNT1 A 0 A_playsound("eghtaf",4)
+		TNT1 A 0 A_playsound("eghtaf",3)
+		TNT1 A 0 A_playsound("eghtaf",2)
+		TNT1 A 0 A_playsound("eghtaf",1)
+		EGHF A 1
+		TNT1 A 0 A_FireCustomMissile("EightbGrenade",0,0,random(-8,8),random(-8,-14))
+		TNT1 A 0 A_FireCustomMissile("EightbGrenade",0,0,random(-8,8),random(-8,-14))
+		TNT1 A 0 A_FireCustomMissile("EightbGrenade",0,0,random(-8,8),random(-8,-14))
+		TNT1 A 0 A_FireCustomMissile("EightbGrenade",0,0,random(-8,8),random(-8,-14))
+		TNT1 A 0 A_FireCustomMissile("EightbGrenade",0,0,random(-8,8),random(-8,-14))
+		TNT1 A 0 A_takeinventory("EightballAmmo",5)
+		TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,5)
+		EGHF BCDEFGH 1
+		TNT1 A 0 A_takeinventory("Eightball_load",6)
+		TNT1 A 0 A_jumpif(CountInv("EightballAmmo") ==0,"Cycleweapon")
+		EGHL ABCDEFGHI 1
+		TNT1 A 0 A_playsound("eghtload",7)
+		EGHL JKLMNOPQRSTUVWXYZ 1
+		Goto Realready
+	Altfire6:
+		TNT1 A 0 ACS_NamedExecute("add_statXP",0,1,12)
+		TNT1 A 0 A_playsound("eghtaf",6)
+		TNT1 A 0 A_playsound("eghtaf",5)
+		TNT1 A 0 A_playsound("eghtaf",4)
+		TNT1 A 0 A_playsound("eghtaf",3)
+		TNT1 A 0 A_playsound("eghtaf",2)
+		TNT1 A 0 A_playsound("eghtaf",1)
+		EGHF A 1
+		TNT1 A 0 A_FireCustomMissile("EightbGrenade",0,0,random(-8,8),random(-8,-14))
+		TNT1 A 0 A_FireCustomMissile("EightbGrenade",0,0,random(-8,8),random(-8,-14))
+		TNT1 A 0 A_FireCustomMissile("EightbGrenade",0,0,random(-8,8),random(-8,-14))
+		TNT1 A 0 A_FireCustomMissile("EightbGrenade",0,0,random(-8,8),random(-8,-14))
+		TNT1 A 0 A_FireCustomMissile("EightbGrenade",0,0,random(-8,8),random(-8,-14))
+		TNT1 A 0 A_FireCustomMissile("EightbGrenade",0,0,random(-8,8),random(-8,-14))
+		TNT1 A 0 A_takeinventory("EightballAmmo",6)
+		TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,5)
+		EGHF BCDEFGH 1
+		TNT1 A 0 A_takeinventory("Eightball_load",6)
+		TNT1 A 0 A_jumpif(CountInv("EightballAmmo") ==0,"Cycleweapon")
+		EGHL ABCDEFGHI 1
+		TNT1 A 0 A_playsound("eghtload",7)
+		EGHL JKLMNOPQRSTUVWXYZ 1
+		Goto Realready
+   Spawn:
+   EGHH A -1
+   Stop
+	}
+}
+
+
+
+
+ACTOR ExplosionBlowoff : Inventory
+{
+  Inventory.Amount 1
+  Inventory.MaxAmount 1
+} 
+
+
+
+
+
+
+
+
+
+ACTOR Item60 : CustomInventory
+{
+Inventory.Amount 1
+Inventory.MaxAmount 5
+Inventory.Icon "item60i"
+
++INVENTORY.ALWAYSPICKUP
+States
+{
+	Use:
+
+	TNT1 A 3 ACS_NamedExecuteWithResult("Equip_weapon",60)
+	TNT1 A 0 //do not sync inv here cause we need result from the first script
+	Stop
+
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+actor Eightball_load : Inventory
+{
+	inventory.maxamount 6
+}
+
+
+
+
+
+ACTOR EightbRocket replaces rocket
+{
+  Radius 11
+  Scale 0.6
+  Height 8
+  +BRIGHT
+  Speed 20
+  Damage 20
+  Projectile
+  +RANDOMIZE
+
+  DeathSound "Expl1"
+  Obituary "$OB_MPROCKET" // "%o rode %k's rocket."
+  States
+  {
+  Spawn:
+    TNT1 A 0
+    TNT1 A 0 A_SpawnItemEx ("Eghtb_rocketfire",-23,1,4,velx,vely,velz,0,SXF_ABSOLUTEVELOCITY)
+   Goto Spawned
+  Spawned:
+    EGRC A 1 
+	{
+		A_SpawnItemEx ("Smoke3",random(-5,5),random(-5,5),4);
+		return A_CheckProximity ("Remoov", "GasbagMaura", 64);
+
+	}
+    Loop
+  Death:
+    TNT1 A 0 A_RadiusGive ("ExplosionBlowoff", 128.0, RGF_OBJECTS|RGF_PLAYERS|RGF_MONSTERS|RGF_MISSILES|RGF_ITEMS|RGF_NOSIGHT,1,"none", "none",0, 100)
+    TNT1 A 0 A_SpawnItemEx ("Explosion2",random(-1,1),random(-1,1),random(-1,1))
+    TNT1 A 0 A_SpawnItemEx ("Explosion3",random(-1,1),random(-1,1),random(-1,1))
+    TNT1 A 0 A_SpawnItemEx ("Explosion4",random(-1,1),random(-1,1),random(-1,1))
+    TNT1 A 0 A_SpawnItemEx ("Explosion5",random(-1,1),random(-1,1),random(-1,1))
+    TNT1 AAA 0 A_SpawnItemEx ("Smoke1",frandom(-2.0,2.0),frandom(-2.0,2.0),frandom(-2.0,2.0),frandom(-2.0,2.0),frandom(-2.0,2.0),frandom(-2.0,2.0))
+    TNT1 AAAAAAAAAAAAAA 0 A_SpawnItemEx ("Mist1",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0))
+    XPN1 ABCDEFG 1 A_SpawnItemEx ("Smoke1",frandom(-0.5,0.5),frandom(-0.5,0.5),frandom(-0.5,0.5),frandom(-0.5,0.5),frandom(-0.5,0.5),frandom(-0.5,0.5))
+    XPN1 G 1 Bright A_Explode(random(35,50),random(100,128))
+    XPN1 IJKLMNOPRSTUVWXYZ 1 
+    TNT1 AAA 0 A_SpawnItemEx ("Smoke1",frandom(-0.5,0.5),frandom(-0.5,0.5),frandom(-0.5,0.5),frandom(-1.5,1.5),frandom(-1.5,1.5),frandom(-1.5,1.5))
+    XPN2 ABCDEFG 1 
+    Stop
+  Remoov:
+ 	XPN1 A 0
+	{
+		A_RadiusGive ("EightbRocket_caught", 128.0, RGF_MONSTERS|RGF_NOSIGHT,1,"Gasbag", "none",0, 1);
+		A_Remove(AAPTR_DEFAULT);
+	} 
+	Stop
+  }
+}
+
+actor EightbRocket_caught : Inventory
+{
+	inventory.maxamount 1
+}
+
+
+
+
+
+ACTOR Eghtb_rocketfire
+{
+ RenderStyle add
+Alpha 1.0
+Scale 0.075
+Speed 20
++BRIGHT
+Health 15
+Projectile
+Damage 0
+States
+{
+Spawn:
+EBRF A 1 BRIGHT
+Loop
+}
+}
+
+
+
+ACTOR EightbGrenade
+{
+  Radius 11
+  Scale 0.6
+  Height 8
+  Speed 25
+Projectile
+ ReactionTime 75
+  Damage 20
+	BounceType "Doom"
+	bouncesound "flak/frag"
+	bouncefactor 1
+	bouncecount 4
+	WallBounceFactor 0.1
+	+BOUNCEONFLOORS
+
+
+  
+  +RANDOMIZE
+  +DEHEXPLOSION
+  -NOGRAVITY
+  Gravity 0.2
+
+  DeathSound "Expl1"
+  Obituary "$OB_MPROCKET" // "%o rode %k's rocket."
+  States
+  {
+  Spawn:
+   EGGR A 1 A_Countdown
+   TNT1 A 0 A_SpawnItemEX("8BRandomSmokeTrail",-10)
+    Loop
+  Death:
+    TNT1 A 0 A_SpawnItemEx ("Explosion2",random(-1,1),random(-1,1),random(-1,1))
+    TNT1 A 0 A_SpawnItemEx ("Explosion3",random(-1,1),random(-1,1),random(-1,1))
+    TNT1 A 0 A_SpawnItemEx ("Explosion4",random(-1,1),random(-1,1),random(-1,1))
+    TNT1 A 0 A_SpawnItemEx ("Explosion5",random(-1,1),random(-1,1),random(-1,1))
+    TNT1 AAA 0 A_SpawnItemEx ("Smoke1",frandom(-2.0,2.0),frandom(-2.0,2.0),frandom(-2.0,2.0),frandom(-2.0,2.0),frandom(-2.0,2.0),frandom(-2.0,2.0))
+    TNT1 AAAAAAAAAAAAAA 0 A_SpawnItemEx ("Mist1",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0))
+    XPN1 ABCDEFG 1 A_SpawnItemEx ("Smoke1",frandom(-0.5,0.5),frandom(-0.5,0.5),frandom(-0.5,0.5),frandom(-0.5,0.5),frandom(-0.5,0.5),frandom(-0.5,0.5))
+    XPN1 G 1 Bright A_Explode
+    XPN1 IJKLMNOPRSTUVWXYZ 1 
+    TNT1 AAA 0 A_SpawnItemEx ("Smoke1",frandom(-0.5,0.5),frandom(-0.5,0.5),frandom(-0.5,0.5),frandom(-1.5,1.5),frandom(-1.5,1.5),frandom(-1.5,1.5))
+    XPN2 ABCDEFG 1 
+    Stop
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ACTOR Eightball_Pickup : Custominventory 15007
+{
+//$Category "Inventory\Weapons"
+//$Color 19
+Inventory.PickupMessage " "
+radius 9
+height 12
+
+	States
+	{
+
+Spawn:
+	EGHH A -1
+	Stop
+Pickup:
+	TNT1 A 0 A_giveinventory("Item60")
+	TNT1 A 0 A_giveinventory("EightballAmmo",5)
+	TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,5)
+	TNT1 A 0 ACS_execute(700,0,19)
+	TNT1 A 0 ACS_NamedExecuteAlways("inv_sync")
+PickupandEquip:
+	TNT1 A 0 
+	{
+		if(ACS_NamedExecuteWithResult("Equip_weapon",60)==1)
+		{
+			A_takeInventory("Item60",1);
+		}
+	}
+	Stop
+	}
+
+
+
+
+
+}
+
+
+ACTOR Eightball_flat : Custominventory 15008
+{
+//$Category "Inventory\Weapons"
+//$Color 19
+Inventory.PickupMessage " "
+radius 9
+height 12
+
+	States
+	{
+
+Spawn:
+	EGHH B -1
+	Stop
+Pickup:
+	TNT1 A 0 A_giveinventory("Item60")
+	TNT1 A 0 A_giveinventory("EightballAmmo",5)
+	TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,5)
+	TNT1 A 0 ACS_execute(700,0,19)
+	TNT1 A 0 ACS_NamedExecuteAlways("inv_sync")
+PickupandEquip:
+	TNT1 A 0 
+	{
+		if(ACS_NamedExecuteWithResult("Equip_weapon",60)==1)
+		{
+			A_takeInventory("Item60",1);
+		}
+	}
+	Stop
+	}
+
+}
+
+
+actor EightballAmmo : Ammo
+{
+    inventory.amount 1
+    inventory.maxamount 60
+Inventory.Icon "amm5"
+}
+
+ACTOR Rocketcan : CustomInventory 15203
+{
+//$Category "Inventory\Ammo"
+//$Color 17
+radius 6
+height 5
+Inventory.PickupMessage " "
+Inventory.pickupsound "ammosnd"
+inventory.amount 1
+
+	States
+	{
+	Spawn: 
+	TNT1 A 0
+	EGAM ABCDEFGHI 15
+	EGAM I -1
+	Goto Spawnloop
+	Spawnloop:
+	EGAM I -1
+	Stop
+	Pickup:
+ 	TNT1 A 0 A_jumpif(A_giveInventory("RocketcanInv",8)==0,"Spawnloop")
+	TNT1 A 0 ACS_execute(700,0,20)
+	TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,5)
+	Stop
+	}
+}
+
+
+
+ACTOR RocketcanInv : EightballAmmo
+{
+inventory.amount 12
+
+	States
+	{
+	Spawn: 
+	TNT1 A 0
+	EGAM ABCDEFGHI 15
+	EGAM I -1
+	Stop
+	}
+}
+
+

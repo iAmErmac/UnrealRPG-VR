@@ -1,0 +1,212 @@
+//Eightball select
+MODEL Weapon60
+{
+	Path "models/weapons/eightball"
+	AngleOffset 90
+        Model 0 "eightball.md3"
+        Scale -1.0 1.0 1.0
+	Offset 0 -1 0
+	Rolloffset 0
+   	 FrameIndex EGHB A 0 0
+   	 FrameIndex EGHB B 0 1
+	FrameIndex EGHB C 0 2
+	FrameIndex EGHB D 0 3
+	FrameIndex EGHB E 0 4
+	FrameIndex EGHB F 0 5
+	FrameIndex EGHB G 0 6
+	FrameIndex EGHB H 0 7
+	FrameIndex EGHB I 0 8
+	FrameIndex EGHB J 0 9
+	FrameIndex EGHB K 0 10
+	FrameIndex EGHB L 0 11
+	FrameIndex EGHB M 0 12
+	FrameIndex EGHB N 0 13
+	FrameIndex EGHB O 0 14
+//deselect
+   	 FrameIndex EGHD A 0 15
+   	 FrameIndex EGHD B 0 16
+	FrameIndex EGHD C 0 17
+	FrameIndex EGHD D 0 18
+	FrameIndex EGHD E 0 19
+	FrameIndex EGHD F 0 20
+	FrameIndex EGHD G 0 21
+	FrameIndex EGHD H 0 22
+	FrameIndex EGHD I 0 23
+	FrameIndex EGHD J 0 24
+	FrameIndex EGHD K 0 25
+	FrameIndex EGHD L 0 26
+	//load 
+
+   	FrameIndex EGHL A 0 29
+   	FrameIndex EGHL B 0 30
+	FrameIndex EGHL C 0 31
+	FrameIndex EGHL D 0 32
+	FrameIndex EGHL E 0 33
+	FrameIndex EGHL F 0 34
+	FrameIndex EGHL G 0 35
+	FrameIndex EGHL H 0 36
+	FrameIndex EGHL I 0 37
+	FrameIndex EGHL J 0 38
+	FrameIndex EGHL K 0 39
+	FrameIndex EGHL L 0 40
+	FrameIndex EGHL M 0 41
+   	FrameIndex EGHL N 0 42
+	FrameIndex EGHL O 0 43
+	FrameIndex EGHL P 0 44
+	FrameIndex EGHL Q 0 45
+	FrameIndex EGHL R 0 46
+	FrameIndex EGHL S 0 47
+	FrameIndex EGHL T 0 48
+	FrameIndex EGHL U 0 49
+	FrameIndex EGHL V 0 50
+	FrameIndex EGHL W 0 51
+	FrameIndex EGHL X 0 52
+	FrameIndex EGHL Y 0 53
+	FrameIndex EGHL Z 0 54
+
+	//fire 
+   	FrameIndex EGHF A 0 56
+   	FrameIndex EGHF B 0 57
+	FrameIndex EGHF C 0 58
+	FrameIndex EGHF D 0 59
+	FrameIndex EGHF E 0 60
+	FrameIndex EGHF F 0 61
+	FrameIndex EGHF G 0 62
+	FrameIndex EGHF H 0 63
+
+
+}
+
+
+
+
+
+
+// pickup
+MODEL Eightball_flat
+{
+Path "models/weapons/eightball/pickup"
+    AngleOffset 265
+    Model 0 "eightpick.md3"
+Path "models/weapons/eightball"
+skin 0 "JEightB1.png"
+    Scale 0.7 0.7 0.7
+    Offset 0 0 8
+    Rolloffset 0
+    FrameIndex EGHH B 0 0
+
+
+}
+
+// pickup
+MODEL Eightball_Pickup
+{
+ROTATING
+Path "models/weapons/eightball/pickup"
+    AngleOffset 265
+    Model 0 "eightpick.md3"
+Path "models/weapons/eightball"
+skin 0 "JEightB1.png"
+    Scale 0.7 0.7 0.7
+    Offset 0 0 8
+    Rolloffset 0
+    FrameIndex EGHH A 0 0
+	
+}
+
+// pickup
+MODEL Weapon60_dec
+{
+ROTATING
+Path "models/weapons/eightball/pickup"
+    AngleOffset 265
+    Model 0 "eightpick.md3"
+    Scale 0.7 0.7 0.7
+   Offset 0 0 8
+
+    FrameIndex EGHH A 0 0
+	
+}
+
+
+
+// rocket
+MODEL EightbRocket
+{
+Path "models/weapons/eightball/projectiles"
+   // AngleOffset 265
+    Model 0 "egrocket.md3"
+	PITCHFROMMOMENTUM
+    Scale 0.7 0.7 0.7
+    Offset 0 0 8
+    Rolloffset 0
+    FrameIndex EGRC A 0 0
+
+
+}
+
+
+
+// rocket
+MODEL EightbGrenade
+{
+Path "models/weapons/eightball/projectiles"
+   // AngleOffset 265
+    Model 0 "eggrenade.md3"
+    Scale 0.7 0.7 0.7
+    Offset 0 0 8
+    Rolloffset 0
+    FrameIndex EGGR A 0 0
+
+
+}
+
+
+
+//Rocket can
+MODEL Rocketcan
+{
+Path "models/pickups/ammo/rocketcan"
+    Model 0 "rocketcan.md3"
+    Scale 0.9 0.9 0.9
+    Offset 0 0 8
+    Rolloffset 0
+    FrameIndex EGAM A 0 0
+    FrameIndex EGAM B 0 1
+    FrameIndex EGAM C 0 2
+    FrameIndex EGAM D 0 3
+    FrameIndex EGAM E 0 4
+    FrameIndex EGAM F 0 5
+    FrameIndex EGAM G 0 6
+    FrameIndex EGAM H 0 7
+    FrameIndex EGAM I 0 8
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

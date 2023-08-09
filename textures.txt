@@ -1,0 +1,70 @@
+
+Sprite "SLT1A0", 11, 27
+{
+	Patch "16UNR", 0, 0
+}
+
+Sprite "SLT2A0", 14, 27
+{
+	Patch "17UNR", 0, 0
+}
+
+Sprite "SLT3A0", 14, 27
+{
+	Patch "18UNR", 0, 0
+}
+Sprite "SLT4A0", 15, 27
+{
+	Patch "19UNR", 0, 0
+}
+
+Sprite "SLT5A0", 16, 27
+{
+	Patch "20UNR", 0, 0
+}
+
+Sprite "SLT6A0", 15, 27
+{
+	Patch "21UNR", 0, 0
+}
+
+Sprite "SLOT2", 14, 27
+{
+	Patch "17UNR", 0, 0
+	{
+		FlipX
+		FlipY
+	}
+}
+
+Sprite "SLOT3", 14, 27
+{
+	Patch "18UNR", 0, 0
+	{
+		FlipX
+	}
+}
+
+Sprite "SLOT4", 15, 27
+{
+	Patch "19UNR", 0, 0
+	{
+		FlipY
+	}
+}
+
+Sprite "SLOT5", 16, 27
+{
+	Patch "20UNR", 0, 0
+	{
+		FlipY
+	}
+}
+
+Sprite "SLOT6", 15, 27
+{
+	Patch "21UNR", 0, 0
+	{
+		FlipX
+	}
+}

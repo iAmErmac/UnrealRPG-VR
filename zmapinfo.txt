@@ -1,0 +1,4 @@
+GameInfo
+{
+	AddEventHandlers = "WeaponReplacer", "ProjectileReplacer", "DecorationReplacer", "EffectReplacer", "HapticHelper"
+}

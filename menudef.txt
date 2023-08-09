@@ -1,0 +1,60 @@
+
+AddOptionMenu "OptionsMenu"
+{
+	Submenu "UNREAL Test Menu", "utest_menu"
+}
+
+OptionValue "utest_opt_weap" {
+	"", "Disabled"
+	"82", "ChainSaw"
+	"65", "Dispersion pistol"
+	"91", "Dispersion Blaster"
+	"55", "Automag"
+	"69", "Power Automag"
+	"70", "Swift Automag"
+	"71", "Sovereign Automag"
+	"72", "Plasmatic Automag"
+	"57", "Shotgun"
+	"92", "Power Shotgun"
+	"93", "Sovereign Shotgun"
+	"94", "Plasmatic Shotgun"
+	"95", "Arcane Shotgun"
+	"99", "Volatile Shotgun"
+	"100", "Explosive Shotgun"
+	"56", "Super Shotgun"
+	"79", "Power Super Shotgun"
+	"80", "Sovereign Super Shotgun"
+	"81", "Plasmatic Super Shotgun"
+	"59", "Stinger"
+	"66", "Minigun"
+	"58", "ASMD"
+	"54", "ASMD Atomic"
+	"61", "Flak cannon"
+	"89", "Auto Flak cannon"
+	"67", "Razorjack"
+	"60", "Eightball"
+	"64", "GES Biorifle"
+	"109", "Shock Rifle"
+	"62", "Car Rifle"
+	"63", "Rifle"
+	"83", "Power Rifle"
+	"84", "Sovereign Rifle"
+	"85", "Plasmatic Rifle"
+	"86", "Explosive Rifle"
+	"105", "Grenade Launcher"
+}
+
+OptionMenu "utest_menu" {
+	Title "UNREAL Test Menu"
+	
+	StaticText " "
+	Option "Weapon 1", "weaponEq1", "utest_opt_weap"
+	Option "Weapon 2", "weaponEq2", "utest_opt_weap"
+	Option "Weapon 3", "weaponEq3", "utest_opt_weap"
+	Option "Weapon 4", "weaponEq4", "utest_opt_weap"
+	Option "Weapon 5", "weaponEq5", "utest_opt_weap"
+	Option "Weapon 6", "weaponEq6", "utest_opt_weap"
+	
+	StaticText " "
+	Slider "Credits", "credits", 0, 99999, 5000
+}
