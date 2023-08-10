@@ -298,6 +298,14 @@ Class WeaponAutoMagZ : DoomweaponZ
 		
 		Super.Tick();
 	}
+	
+	action void A_SpawnGunCasing(String SpawnerClass)
+	{
+		int hand = invoker.bOffhandWeapon ? 1 : 0;
+		double angle = invoker.owner.player.mo.angle;
+		if(!hand) angle -= 90.0;
+		SpawnPlayerMissile(SpawnerClass, angle, aimflags:hand ? ALF_ISOFFHAND : 0);
+	}
 }
 
 Class AutoMagTilted : Inventory

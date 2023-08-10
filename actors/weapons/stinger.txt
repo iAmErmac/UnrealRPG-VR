@@ -2,74 +2,80 @@
 //stinger
 ACTOR Weapon59 : Doomweapon 
 {
-Weapon.BobStyle InverseSmooth
-Weapon.BobSpeed 1.8
-Weapon.BobRangeY 0.9
-Weapon.BobRangeX 0.9
-+WEAPON.NOAUTOAIM
-
-Weapon.AmmoType "TarydiumShard"
-Weapon.AmmoType2 "TarydiumShard"
-Weapon.Ammouse 1
-Weapon.AmmoUse2 5
-+INVENTORY.UNTOSSABLE
-inventory.pickupsound "wpickup"
+	/*
+	Weapon.BobStyle InverseSmooth
+	Weapon.BobSpeed 1.8
+	Weapon.BobRangeY 0.9
+	Weapon.BobRangeX 0.9
+	*/
+	
+	+WEAPON.NOAUTOAIM
+	Weapon.AmmoType "TarydiumShard"
+	Weapon.AmmoType2 "TarydiumShard"
+	Weapon.Ammouse 1
+	Weapon.AmmoUse2 5
+	+INVENTORY.UNTOSSABLE
+	inventory.pickupsound "wpickup"
 
 	States
 	{
 	Ready:
 		TNT1 A 0
-  		TNT1 A 0 A_playsound("wchng",5)
+		TNT1 A 0 A_playsound("wchng",5)
 		TNT1 A 0 A_PlaySound("stgsel",6)
 		STNG ABCDEFGHIJKLMNOPQRSTUV 1
 	Realready:
-    		STNG V 1 A_WeaponReady
+		STNG V 1 A_WeaponReady
 		Loop
 	Deselect:
 		TNT1 A 0 A_stopsound(7)
 		STDS ABCDEFGHI 1
-  		TNT1 AAAAAAAAAAAAAAAAAAAA 0 A_Lower
+		TNT1 AAAAAAAAAAAAAAAAAAAA 0 A_Lower
 	Select:
-                TNT1 A 0 ACS_NamedExecute("UpdateWid",0,59)
+		TNT1 A 0 ACS_NamedExecute("UpdateWid",0,59)
 		TNT1 A 0 A_Raise
 		Loop
 	Fire:
 		TNT1 A 0 ACS_NamedExecute("add_statXP",0,1,1)
-		TNT1 A 0 A_PlaySound("stgfir",6)
-		TNT1 A 0 A_FireCustomMissile("TarProjectile",1,1,12,-8,0,2)
+		TNT1 A 0 A_StartSound("stgfir", CHAN_AUTO)
+		TNT1 A 0 A_FireProjectile("TarProjectile",1,0,12,-8,FPF_NOAUTOAIM,2)
 		TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,3)
+		TNT1 A 0 A_GunFlash
 		STFR BCD 2
 		STFR D 5
 		TNT1 A 0 A_refire("FireLoop")
 		Goto Realready
 	FireLoop:
-		TNT1 A 0 A_PlaySound("stgfirel",7,1.0,1)
-		TNT1 A 0 A_FireCustomMissile("TarProjectile",1,1,12,-8,0,2)
+		TNT1 A 0 A_StartSound("stgfirel",CHAN_AUTO,1.0,1)
+		TNT1 A 0 A_FireProjectile("TarProjectile",1,0,12,-8,FPF_NOAUTOAIM,2)
+		TNT1 A 0 A_GunFlash
 		STFR BCD 2
 		TNT1 A 0 A_refire("FireLoop")
 		TNT1 A 0 A_stopsound(7)
 		Goto Realready
 	Altfire:
 		TNT1 A 0 ACS_NamedExecute("add_statXP",0,1,5)
-		TNT1 A 0 A_PlaySound("stgaltf",6)
-		TNT1 A 0 A_FireCustomMissile("TarProjectile",1,1,random(8,30),random(-16,4),0,2)
-		TNT1 A 0 A_FireCustomMissile("TarProjectile",1,0,random(8,30),random(-16,4),0,2)
-		TNT1 A 0 A_FireCustomMissile("TarProjectile",1,0,random(8,30),random(-16,4),0,2)
-		TNT1 A 0 A_FireCustomMissile("TarProjectile",1,0,random(8,30),random(-16,4),0,2)
-		TNT1 A 0 A_FireCustomMissile("TarProjectile",1,0,random(8,30),random(-16,4),0,2)
-		TNT1 A 0 A_FireCustomMissile("TarProjectile",1,0,random(8,30),random(-16,4),0,2)
+		TNT1 A 0 A_StartSound("stgaltf", CHAN_AUTO)
+		TNT1 A 0 A_FireProjectile("TarProjectile",1,1,random(8,30),random(-16,4),FPF_NOAUTOAIM,2)
+		TNT1 A 0 A_FireProjectile("TarProjectile2",random(-4, 4),0,random(8,30),random(-16,4),FPF_NOAUTOAIM,2)
+		TNT1 A 0 A_FireProjectile("TarProjectile2",random(-4, 4),0,random(8,30),random(-16,4),FPF_NOAUTOAIM,2)
+		TNT1 A 0 A_FireProjectile("TarProjectile2",random(-4, 4),0,random(8,30),random(-16,4),FPF_NOAUTOAIM,2)
+		TNT1 A 0 A_FireProjectile("TarProjectile2",random(-4, 4),0,random(8,30),random(-16,4),FPF_NOAUTOAIM,2)
+		TNT1 A 0 A_FireProjectile("TarProjectile2",random(-4, 4),0,random(8,30),random(-16,4),FPF_NOAUTOAIM,2)
+		TNT1 A 0 A_GunFlash
 		STAF ABCDEFG 2
 		STNG V 2
 		STNG V 15
 		Goto Realready
-   Spawn:
-   STPK A -1
-   Stop
+	Flash:
+		STFF AB 2 BRIGHT A_Light2
+		TNT1 A 1 A_Light1
+		Goto Lightdone
+	Spawn:
+		STPK A -1
+		Stop
 	}
 }
-
-
-
 
 ACTOR TarProjectile
 {
@@ -85,6 +91,7 @@ ACTOR TarProjectile
 	+REFLECTIVE
 	Scale 1.0
 	Damagetype "Tarydium"
+	
 	States
 	{
 	Spawn:
@@ -92,7 +99,6 @@ ACTOR TarProjectile
 	Spawnloop:
 		TARP A 1
 		TNT1 A 0 A_SpawnItemEx ("LBlueMistSmall_Opaque",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),velx/3,vely/3,velz/3,0,SXF_ABSOLUTEVELOCITY)
-		
 		Loop
 	Death:
 		TNT1 A 0 A_playsound("trprjhit",7)
@@ -109,59 +115,60 @@ ACTOR TarProjectile
 		TNT1 A 0 A_SpawnItemEx ("LBlueMistSmall_Opaque",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0))
 		TNT1 A 0 A_SpawnItemEx ("LBlueMistSmall_Opaque",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0))
 		Stop
-		
 	}
 }
 
 //smaller and more transparent blue mist
 ACTOR LBlueMistSmall_Opaque
 {
- RenderStyle add
-Alpha 0.04
-Scale 0.4
-+BRIGHT
-Health 15
-  +NOBLOCKMAP
-  +NOCLIP
- +NOGRAVITY
-  +DONTSPLASH
-  +NOTELEPORT
-States
-{
-Spawn:
-PLST ABCDEFGHIJKLMNOPQRST 3 BRIGHT A_FadeOut(0.005)
-TNT1 A 0 A_SetScale (scaleX-0.002, scaley-0.002)
-Stop
-}
+	RenderStyle add
+	Alpha 0.04
+	Scale 0.4
+	+BRIGHT
+	Health 15
+	+NOBLOCKMAP
+	+NOCLIP
+	+NOGRAVITY
+	+DONTSPLASH
+	+NOTELEPORT
+	
+	States
+	{
+	Spawn:
+		PLST ABCDEFGHIJKLMNOPQRST 3 BRIGHT A_FadeOut(0.005)
+		TNT1 A 0 A_SetScale (scaleX-0.002, scaley-0.002)
+		Stop
+	}
 }
 
 //smaller and more transparent blue mist
 ACTOR LBlueMistSmall
 {
- RenderStyle add
-Alpha 0.2
-Scale 0.4
-+BRIGHT
-Health 15
-  +NOBLOCKMAP
-  +NOCLIP
- +NOGRAVITY
-  +DONTSPLASH
-  +NOTELEPORT
-States
-{
-Spawn:
-PLST ABCDEFGHIJKLMNOPQRST 3 BRIGHT A_FadeOut(0.005)
-TNT1 A 0 A_SetScale (scaleX-0.002, scaley-0.002)
-Stop
+	RenderStyle add
+	Alpha 0.2
+	Scale 0.4
+	+BRIGHT
+	Health 15
+	+NOBLOCKMAP
+	+NOCLIP
+	+NOGRAVITY
+	+DONTSPLASH
+	+NOTELEPORT
+	
+	States
+	{
+	Spawn:
+		PLST ABCDEFGHIJKLMNOPQRST 3 BRIGHT A_FadeOut(0.005)
+		TNT1 A 0 A_SetScale (scaleX-0.002, scaley-0.002)
+		Stop
+	}
 }
-}
-
 
 ACTOR LBluesparkspawner
 {
-renderstyle translucent
-alpha 1.0
+	renderstyle translucent
+	alpha 1.0
+	
 	States
 	{
 	Spawn:
@@ -173,27 +180,25 @@ alpha 1.0
 	}
 }
 
-
-
-
 ACTOR LBluespark
 {
 	bouncefactor 0.4
 	bouncecount 5
 	WallBounceFactor 0.45
 	BounceType "Doom"
-projectile
--NOGRAVITY
-Renderstyle add
-vspeed 3
-Alpha 1
-Radius 1
-Height 1
-gravity 0.5
-Scale	0.08
-+BRIGHT
-+FORCEXYBILLBOARD
--USEBOUNCESTATE 
+	projectile
+	-NOGRAVITY
+	Renderstyle add
+	vspeed 3
+	Alpha 1
+	Radius 1
+	Height 1
+	gravity 0.5
+	Scale	0.08
+	+BRIGHT
+	+FORCEXYBILLBOARD
+	-USEBOUNCESTATE
+	
 	States
 	{
 	Spawn:
@@ -221,24 +226,17 @@ Scale	0.08
 	}
 }
 
-
-
-
-
-
-
-
-
 ACTOR LBluesparktrail
 {
-+NOGRAVITY
-Renderstyle add
-vspeed 3
-Alpha 0.3
-Scale	0.12
-+NOBLOCKMAP
-+BRIGHT
-+FORCEXYBILLBOARD
+	+NOGRAVITY
+	Renderstyle add
+	vspeed 3
+	Alpha 0.3
+	Scale	0.12
+	+NOBLOCKMAP
+	+BRIGHT
+	+FORCEXYBILLBOARD
+	
 	States
 	{
 	Spawn:
@@ -254,126 +252,119 @@ Scale	0.12
 
 ACTOR Item59 : CustomInventory
 {
-Inventory.Amount 1
-Inventory.MaxAmount 5
-Inventory.Icon "item59i"
-
-+INVENTORY.ALWAYSPICKUP
-States
-{
+	Inventory.Amount 1
+	Inventory.MaxAmount 5
+	Inventory.Icon "item59i"
+	+INVENTORY.ALWAYSPICKUP
+	
+	States
+	{
 	Use:
-
-	TNT1 A 3 ACS_NamedExecuteWithResult("Equip_weapon",59)
-	TNT1 A 0 //do not sync inv here cause we need result from the first script
-	Stop
-
-
+		TNT1 A 3 ACS_NamedExecuteWithResult("Equip_weapon",59)
+		TNT1 A 0 //do not sync inv here cause we need result from the first script
+		Stop
+	}
 }
-}
-
-
 
 ACTOR Stinger_pickupflat : Custominventory 15020
 {
-+NOGRAVITY
-//$Category "Inventory\Weapons"
-//$Color 19
- Inventory.PickupMessage " "
-inventory.pickupsound "wpickup"
+	+NOGRAVITY
+	//$Category "Inventory\Weapons"
+	//$Color 19
+	Inventory.PickupMessage " "
+	inventory.pickupsound "wpickup"
+	
 	States
 	{
-Spawn:
-	STPF B -1
-	Stop
-Pickup:
-	TNT1 A 0 A_giveinventory("Item59")
-	TNT1 A 0 A_giveinventory("TarydiumShard",40)
-	TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,3)
-	TNT1 A 0 ACS_execute(700,0,17)
-	TNT1 A 0 ACS_NamedExecuteAlways("inv_sync")
-PickupandEquip:
-	TNT1 A 0 
-	{
-		if(ACS_NamedExecuteWithResult("Equip_weapon",59)==1)
+	Spawn:
+		STPF B -1
+		Stop
+	Pickup:
+		TNT1 A 0 A_giveinventory("Item59")
+		TNT1 A 0 A_giveinventory("TarydiumShard",40)
+		TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,3)
+		TNT1 A 0 ACS_execute(700,0,17)
+		TNT1 A 0 ACS_NamedExecuteAlways("inv_sync")
+	PickupandEquip:
+		TNT1 A 0 
 		{
-			A_takeInventory("Item59",1);
+			if(ACS_NamedExecuteWithResult("Equip_weapon",59)==1)
+			{
+				A_takeInventory("Item59",1);
+			}
 		}
-	}
-	Stop
+		Stop
 	}
 }
-
 
 ACTOR Stinger_pickup : Custominventory 15019
 {
-+NOGRAVITY
-//$Category "Inventory\Weapons"
-//$Color 19
- Inventory.PickupMessage " "
-inventory.pickupsound "wpickup"
+	+NOGRAVITY
+	//$Category "Inventory\Weapons"
+	//$Color 19
+	Inventory.PickupMessage " "
+	inventory.pickupsound "wpickup"
+	
 	States
 	{
-Spawn:
-	STPF A -1
-	Stop
-Pickup:
-	TNT1 A 0 A_giveinventory("Item59")
-	TNT1 A 0 A_giveinventory("TarydiumShard",40)
-	TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,3)
-	TNT1 A 0 ACS_execute(700,0,17)
-	TNT1 A 0 ACS_NamedExecuteAlways("inv_sync")
-PickupandEquip:
-	TNT1 A 0 
-	{
-		if(ACS_NamedExecuteWithResult("Equip_weapon",59)==1)
+	Spawn:
+		STPF A -1
+		Stop
+	Pickup:
+		TNT1 A 0 A_giveinventory("Item59")
+		TNT1 A 0 A_giveinventory("TarydiumShard",40)
+		TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,3)
+		TNT1 A 0 ACS_execute(700,0,17)
+		TNT1 A 0 ACS_NamedExecuteAlways("inv_sync")
+	PickupandEquip:
+		TNT1 A 0 
 		{
-			A_takeInventory("Item59",1);
+			if(ACS_NamedExecuteWithResult("Equip_weapon",59)==1)
+			{
+				A_takeInventory("Item59",1);
+			}
 		}
-	}
-	Stop
+		Stop
 	}
 }
-
-
 
 actor TarydiumShard : Ammo
 {
-Inventory.Icon "amm3"
-    inventory.amount 1
-    inventory.maxamount 250
-
+	Inventory.Icon "amm3"
+	inventory.amount 1
+	inventory.maxamount 250
 }
-
 
 actor TarydiumShardPickup : CustomInventory 15208
 {
-//$Category "Inventory\Ammo"
-//$Color 17
- Inventory.PickupMessage " "
-Inventory.pickupsound "ammosnd"
+	//$Category "Inventory\Ammo"
+	//$Color 17
+	Inventory.PickupMessage " "
+	Inventory.pickupsound "ammosnd"
+	
 	States
 	{
 	Spawn:
-	TSHP A -1
-	 Pickup:
-  	 TNT1 A 0 A_jumpif(A_giveInventory("TarydiumShardPickupInv",40)==0,"Spawn")
-  	 TNT1 A 0 ACS_Execute(700,0,18)	
-	TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,3)
-	Stop
+		TSHP A -1
+	Pickup:
+		TNT1 A 0 A_jumpif(A_giveInventory("TarydiumShardPickupInv",40)==0,"Spawn")
+		TNT1 A 0 ACS_Execute(700,0,18)	
+		TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,3)
+		Stop
 	}
 }
- 
 
 actor TarydiumShardPickupInv : TarydiumShard
 {
-//$Category "Inventory\Ammo"
-//$Color 17
- inventory.amount 40
+	//$Category "Inventory\Ammo"
+	//$Color 17
+	inventory.amount 40
+	
 	States
 	{
 	Spawn:
-	TSHP A -1
-	Stop
+		TSHP A -1
+		Stop
 	}
 }
 

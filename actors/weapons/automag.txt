@@ -59,7 +59,7 @@ ACTOR Weapon55 : WeaponAutoMagZ
 			A_FireProjectile ("BSmokeTrailSpawner",0,0,0,0,FPF_NOAUTOAIM);
 			A_Takeinventory("automagAmmo",1);
 			//A_SpawnItemEx ("BulletCasing",cos(pitch)*14,6,45-(sin(pitch)*14),cos(pitch)*frandom(3,5),frandom(-2,-5),-sin(pitch)*frandom(3,5),0,SXF_TRANSFERPITCH);
-			A_FireProjectile ("GunCasingSpawner",0,0,0,0,FPF_NOAUTOAIM);
+			A_SpawnGunCasing("GunCasingSpawner");
 			A_giveInventory("automagClip",1);
 			//real recoil
 			//A_SetPitch (pitch-1,SPF_INTERPOLATE);
@@ -91,7 +91,7 @@ ACTOR Weapon55 : WeaponAutoMagZ
 			A_FireProjectile ("BSmokeTrailSpawner",0,0,0,0,FPF_NOAUTOAIM);
 			A_Takeinventory("automagAmmo",1);
 			//A_SpawnItemEx ("BulletCasing",cos(pitch)*14,6,45-(sin(pitch)*14),cos(pitch)*frandom(3,5),frandom(-2,-5),-sin(pitch)*frandom(3,5),0,SXF_TRANSFERPITCH);
-			A_FireProjectile ("GunCasingSpawner",0,0,0,0,FPF_NOAUTOAIM);
+			A_SpawnGunCasing("GunCasingSpawner");
 			A_giveInventory("automagClip",1);
 			//real recoil
 			//A_SetPitch (pitch-1,SPF_INTERPOLATE);
@@ -123,7 +123,7 @@ ACTOR Weapon55 : WeaponAutoMagZ
 			A_FireProjectile ("BSmokeTrailSpawner",0,0,0,0,FPF_NOAUTOAIM);
 			A_Takeinventory("automagAmmo",1);
 			//A_SpawnItemEx ("BulletCasing",cos(pitch)*14,6,45-(sin(pitch)*14),cos(pitch)*frandom(3,5),frandom(-2,-5),-sin(pitch)*frandom(3,5),0,SXF_TRANSFERPITCH);
-			A_FireProjectile ("GunCasingSpawner",0,0,0,0,FPF_NOAUTOAIM);
+			A_SpawnGunCasing("GunCasingSpawner");
 			A_giveInventory("automagClip",1);
 			//real recoil
 			//A_SetPitch (pitch-1,SPF_INTERPOLATE);
@@ -157,7 +157,7 @@ ACTOR Weapon55 : WeaponAutoMagZ
 		TNT1 A 0 A_Takeinventory("automagAmmo",1)
 		TNT1 A 0 A_SpawnItemEx ("Gunflash", 0,0,0, 0,0,0, 0,SXF_NOCHECKPOSITION)
 		//TNT1 A 0 A_SpawnItemEx ("BulletCasing",cos(pitch)*14,6,45-(sin(pitch)*14),cos(pitch)*frandom(3,5),frandom(-2,-5),-sin(pitch)*frandom(3,5),0,SXF_TRANSFERPITCH)
-		TNT1 A 0 A_FireProjectile ("GunCasingSpawner",0,0,0,0,FPF_NOAUTOAIM)
+		TNT1 A 0 A_SpawnGunCasing("GunCasingSpawner")
 		//TNT1 A 0 A_SpawnItemEx ("8BRandomSmokeTrail",cos(pitch)*frandom(11,13),frandom(4,7),frandom(49,52)-(sin(pitch)*12),cos(pitch)*frandom(0.01,0.02),0,-sin(pitch)*frandom(0.02,0.05),0,SXF_TRANSFERPITCH)
 		TNT1 A 0 A_FireProjectile ("BSmokeTrailSpawner",0,0,0,0,FPF_NOAUTOAIM)
 		TNT1 A 0 A_giveInventory("automagClip",1)
@@ -191,7 +191,7 @@ ACTOR Weapon55 : WeaponAutoMagZ
 		TNT1 A 0 A_PlaySound("unrpis",1)
 		TNT1 A 0 A_Takeinventory("automagAmmo",1)
 		TNT1 A 0 A_SpawnItemEx ("Gunflash", 0,0,0, 0,0,0, 0,SXF_NOCHECKPOSITION)
-		TNT1 A 0 A_FireProjectile ("GunCasingSpawner",0,0,0,0,FPF_NOAUTOAIM)
+		TNT1 A 0 A_SpawnGunCasing("GunCasingSpawner")
 		TNT1 A 0 A_FireProjectile ("BSmokeTrailSpawner",0,0,0,0,FPF_NOAUTOAIM)
 		TNT1 A 0 A_giveInventory("automagClip",1)
 		TNT1 A 0 
@@ -301,7 +301,7 @@ ACTOR Weapon69 : WeaponAutoMagZ
 			A_FireProjectile ("BRedSmokeTrailSpawner",0,0,0,0,FPF_NOAUTOAIM);
 			A_Takeinventory("automagAmmo",1);
 			//A_SpawnItemEx ("BulletCasing",cos(pitch)*14,6,45-(sin(pitch)*14),cos(pitch)*frandom(3,5),frandom(-2,-5),-sin(pitch)*frandom(3,5),0,SXF_TRANSFERPITCH);
-			A_FireProjectile ("GunCasingSpawner",0,0,0,0,FPF_NOAUTOAIM);
+			A_SpawnGunCasing("GunCasingSpawner");
 			A_giveInventory("automagClip",1);
 			//real recoil
 			//A_SetPitch (pitch-1,SPF_INTERPOLATE);
@@ -343,7 +343,7 @@ ACTOR Weapon69 : WeaponAutoMagZ
 			A_FireProjectile ("BRedSmokeTrailSpawner",0,0,0,0,FPF_NOAUTOAIM);
 			A_Takeinventory("automagAmmo",1);
 			//A_SpawnItemEx ("BulletCasing",cos(pitch)*14,6,45-(sin(pitch)*14),cos(pitch)*frandom(3,5),frandom(-2,-5),-sin(pitch)*frandom(3,5),0,SXF_TRANSFERPITCH);
-			A_FireProjectile ("GunCasingSpawner",0,0,0,0,FPF_NOAUTOAIM);
+			A_SpawnGunCasing("GunCasingSpawner");
 			A_giveInventory("automagClip",1);
 			//real recoil
 			//A_SetPitch (pitch-1,SPF_INTERPOLATE);
@@ -385,7 +385,7 @@ ACTOR Weapon69 : WeaponAutoMagZ
 			A_FireProjectile ("BRedSmokeTrailSpawner",0,0,0,0,FPF_NOAUTOAIM);
 			A_Takeinventory("automagAmmo",1);
 			//A_SpawnItemEx ("BulletCasing",cos(pitch)*14,6,45-(sin(pitch)*14),cos(pitch)*frandom(3,5),frandom(-2,-5),-sin(pitch)*frandom(3,5),0,SXF_TRANSFERPITCH);
-			A_FireProjectile ("GunCasingSpawner",0,0,0,0,FPF_NOAUTOAIM);
+			A_SpawnGunCasing("GunCasingSpawner");
 			A_giveInventory("automagClip",1);
 			//real recoil
 			//A_SetPitch (pitch-1,SPF_INTERPOLATE);
@@ -429,7 +429,7 @@ ACTOR Weapon69 : WeaponAutoMagZ
 		TNT1 A 0 A_Takeinventory("automagAmmo",1)
 		TNT1 A 0 A_SpawnItemEx ("Gunflash", 0,0,0, 0,0,0, 0,SXF_NOCHECKPOSITION)
 		//TNT1 A 0 A_spawnitemEX("BulletCasing",18,4,36,frandom(-1,1),frandom(-1,1),frandom(-1,1))
-		TNT1 A 0 A_FireProjectile ("GunCasingSpawner",0,0,0,0,FPF_NOAUTOAIM)
+		TNT1 A 0 A_SpawnGunCasing("GunCasingSpawner")
 		//TNT1 A 0 A_SpawnItemEx ("8BRandomSmokeTrailRed",cos(pitch)*frandom(11,13),frandom(4,7),frandom(49,52)-(sin(pitch)*12),cos(pitch)*frandom(0.01,0.02),0,-sin(pitch)*frandom(0.02,0.05),0,SXF_TRANSFERPITCH)
 		TNT1 A 0 A_FireProjectile ("BRedSmokeTrailSpawner",0,0,0,0,FPF_NOAUTOAIM)
 		TNT1 A 0 A_giveInventory("automagClip",1)
@@ -475,7 +475,7 @@ ACTOR Weapon69 : WeaponAutoMagZ
 		TNT1 A 0 A_PlaySound("shotpwr",1)
 		TNT1 A 0 A_Takeinventory("automagAmmo",1)
 		TNT1 A 0 A_SpawnItemEx ("Gunflash", 0,0,0, 0,0,0, 0,SXF_NOCHECKPOSITION)
-		TNT1 A 0 A_FireProjectile ("GunCasingSpawner",0,0,0,0,FPF_NOAUTOAIM)
+		TNT1 A 0 A_SpawnGunCasing("GunCasingSpawner")
 		TNT1 A 0 A_FireProjectile ("BRedSmokeTrailSpawner",0,0,0,0,FPF_NOAUTOAIM)
 		TNT1 A 0 A_giveInventory("automagClip",1)
 		TNT1 A 0 
@@ -590,7 +590,7 @@ ACTOR Weapon70 : WeaponAutoMagZ
 			A_FireProjectile ("BSmokeTrailSpawner",0,0,0,0,FPF_NOAUTOAIM);
 			A_Takeinventory("automagAmmo",1);
 			//A_SpawnItemEx ("BulletCasing",cos(pitch)*14,6,45-(sin(pitch)*14),cos(pitch)*frandom(3,5),frandom(-2,-5),-sin(pitch)*frandom(3,5),0,SXF_TRANSFERPITCH);
-			A_FireProjectile ("GunCasingSpawner",0,0,0,0,FPF_NOAUTOAIM);
+			A_SpawnGunCasing("GunCasingSpawner");
 			A_giveInventory("automagClip",1);
 			//real recoil
 			//A_SetPitch (pitch-1,SPF_INTERPOLATE);
@@ -622,7 +622,7 @@ ACTOR Weapon70 : WeaponAutoMagZ
 			A_FireProjectile ("BSmokeTrailSpawner",0,0,0,0,FPF_NOAUTOAIM);
 			A_Takeinventory("automagAmmo",1);
 			//A_SpawnItemEx ("BulletCasing",cos(pitch)*14,6,45-(sin(pitch)*14),cos(pitch)*frandom(3,5),frandom(-2,-5),-sin(pitch)*frandom(3,5),0,SXF_TRANSFERPITCH);
-			A_FireProjectile ("GunCasingSpawner",0,0,0,0,FPF_NOAUTOAIM);
+			A_SpawnGunCasing("GunCasingSpawner");
 			A_giveInventory("automagClip",1);
 			//real recoil
 			//A_SetPitch (pitch-1,SPF_INTERPOLATE);
@@ -654,7 +654,7 @@ ACTOR Weapon70 : WeaponAutoMagZ
 			A_FireProjectile ("BSmokeTrailSpawner",0,0,0,0,FPF_NOAUTOAIM);
 			A_Takeinventory("automagAmmo",1);
 			//A_SpawnItemEx ("BulletCasing",cos(pitch)*14,6,45-(sin(pitch)*14),cos(pitch)*frandom(3,5),frandom(-2,-5),-sin(pitch)*frandom(3,5),0,SXF_TRANSFERPITCH);
-			A_FireProjectile ("GunCasingSpawner",0,0,0,0,FPF_NOAUTOAIM);
+			A_SpawnGunCasing("GunCasingSpawner");
 			A_giveInventory("automagClip",1);
 			//real recoil
 			//A_SetPitch (pitch-1,SPF_INTERPOLATE);
@@ -699,7 +699,7 @@ ACTOR Weapon70 : WeaponAutoMagZ
 		TNT1 A 0 A_Takeinventory("automagAmmo",1)
 		TNT1 A 0 A_SpawnItemEx ("Gunflash", 0,0,0, 0,0,0, 0,SXF_NOCHECKPOSITION)
 		//TNT1 A 0 A_SpawnItemEx ("BulletCasing",cos(pitch)*14,6,45-(sin(pitch)*14),cos(pitch)*frandom(3,5),frandom(-2,-5),-sin(pitch)*frandom(3,5),0,SXF_TRANSFERPITCH)
-		TNT1 A 0 A_FireProjectile ("GunCasingSpawner",0,0,0,0,FPF_NOAUTOAIM)
+		TNT1 A 0 A_SpawnGunCasing("GunCasingSpawner")
 		//TNT1 A 0 A_SpawnItemEx ("8BRandomSmokeTrail",cos(pitch)*frandom(11,13),frandom(4,7),frandom(49,52)-(sin(pitch)*12),cos(pitch)*frandom(0.01,0.02),0,-sin(pitch)*frandom(0.02,0.05),0,SXF_TRANSFERPITCH)
 		TNT1 A 0 A_FireProjectile ("BSmokeTrailSpawner",0,0,0,0,FPF_NOAUTOAIM)
 		//TNT1 A 0 A_SetPitch (pitch-1,SPF_INTERPOLATE)
@@ -732,7 +732,7 @@ ACTOR Weapon70 : WeaponAutoMagZ
 		TNT1 A 0 A_PlaySound("unrpis",1)
 		TNT1 A 0 A_Takeinventory("automagAmmo",1)
 		TNT1 A 0 A_SpawnItemEx ("Gunflash", 0,0,0, 0,0,0, 0,SXF_NOCHECKPOSITION)
-		TNT1 A 0 A_FireProjectile ("GunCasingSpawner",0,0,0,0,FPF_NOAUTOAIM)
+		TNT1 A 0 A_SpawnGunCasing("GunCasingSpawner")
 		TNT1 A 0 A_FireProjectile ("BSmokeTrailSpawner",0,0,0,0,FPF_NOAUTOAIM)
 		TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,2)
 		AMGF GH 1
@@ -835,7 +835,7 @@ ACTOR Weapon71 : WeaponAutoMagZ
 			A_FireProjectile ("BRedSmokeTrailSpawner",0,0,0,0,FPF_NOAUTOAIM);
 			A_Takeinventory("automagAmmo",1);
 			//A_SpawnItemEx ("BulletCasingRed",cos(pitch)*14,6,45-(sin(pitch)*14),cos(pitch)*frandom(3,5),frandom(-2,-5),-sin(pitch)*frandom(3,5),0,SXF_TRANSFERPITCH);
-			A_FireProjectile ("GunRedCasingSpawner",0,0,0,0,FPF_NOAUTOAIM);
+			A_SpawnGunCasing("GunRedCasingSpawner");
 			A_giveInventory("automagClip",1);
 			//real recoil
 			//A_SetPitch (pitch-1,SPF_INTERPOLATE);
@@ -885,7 +885,7 @@ ACTOR Weapon71 : WeaponAutoMagZ
 			A_FireProjectile ("BRedSmokeTrailSpawner",0,0,0,0,FPF_NOAUTOAIM);
 			A_Takeinventory("automagAmmo",1);
 			//A_SpawnItemEx ("BulletCasingRed",cos(pitch)*14,6,45-(sin(pitch)*14),cos(pitch)*frandom(3,5),frandom(-2,-5),-sin(pitch)*frandom(3,5),0,SXF_TRANSFERPITCH);
-			A_FireProjectile ("GunRedCasingSpawner",0,0,0,0,FPF_NOAUTOAIM);
+			A_SpawnGunCasing("GunRedCasingSpawner");
 			A_giveInventory("automagClip",1);
 			//real recoil
 			//A_SetPitch (pitch-1,SPF_INTERPOLATE);
@@ -935,7 +935,7 @@ ACTOR Weapon71 : WeaponAutoMagZ
 			A_FireProjectile ("BRedSmokeTrailSpawner",0,0,0,0,FPF_NOAUTOAIM);
 			A_Takeinventory("automagAmmo",1);
 			//A_SpawnItemEx ("BulletCasingRed",cos(pitch)*14,6,45-(sin(pitch)*14),cos(pitch)*frandom(3,5),frandom(-2,-5),-sin(pitch)*frandom(3,5),0,SXF_TRANSFERPITCH);
-			A_FireProjectile ("GunRedCasingSpawner",0,0,0,0,FPF_NOAUTOAIM);
+			A_SpawnGunCasing("GunRedCasingSpawner");
 			A_giveInventory("automagClip",1);
 			//real recoil
 			//A_SetPitch (pitch-1,SPF_INTERPOLATE);
@@ -1010,7 +1010,7 @@ ACTOR Weapon71 : WeaponAutoMagZ
 		TNT1 A 0 A_Takeinventory("automagAmmo",1)
 		TNT1 A 0 A_SpawnItemEx ("Gunflash", 0,0,0, 0,0,0, 0,SXF_NOCHECKPOSITION)
 		//TNT1 A 0 A_spawnitemEX("BulletCasingRed",18,4,36,frandom(-1,1),frandom(-1,1),frandom(-1,1))
-		TNT1 A 0 A_FireProjectile ("GunRedCasingSpawner",0,0,0,0,FPF_NOAUTOAIM)
+		TNT1 A 0 A_SpawnGunCasing("GunRedCasingSpawner")
 		//TNT1 A 0 A_SpawnItemEx ("8BRandomSmokeTrailRed",cos(pitch)*frandom(11,13),frandom(4,7),frandom(49,52)-(sin(pitch)*12),cos(pitch)*frandom(0.01,0.02),0,-sin(pitch)*frandom(0.02,0.05),0,SXF_TRANSFERPITCH)
 		TNT1 A 0 A_FireProjectile ("BRedSmokeTrailSpawner",0,0,0,0,FPF_NOAUTOAIM)
 		//TNT1 A 0 A_SetPitch (pitch-1,SPF_INTERPOLATE)
@@ -1051,7 +1051,7 @@ ACTOR Weapon71 : WeaponAutoMagZ
 		TNT1 A 0 A_PlaySound("shotsvr",1)
 		TNT1 A 0 A_Takeinventory("automagAmmo",1)
 		TNT1 A 0 A_SpawnItemEx ("Gunflash", 0,0,0, 0,0,0, 0,SXF_NOCHECKPOSITION)
-		TNT1 A 0 A_FireProjectile ("GunRedCasingSpawner",0,0,0,0,FPF_NOAUTOAIM)
+		TNT1 A 0 A_SpawnGunCasing("GunRedCasingSpawner")
 		TNT1 A 0 A_FireProjectile ("BRedSmokeTrailSpawner",0,0,0,0,FPF_NOAUTOAIM)
 		TNT1 A 0 A_giveInventory("automagClip",1)
 		TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,2)
@@ -1154,7 +1154,7 @@ ACTOR Weapon72 : WeaponAutoMagZ
 			A_SpawnItemEx ("GunflashPlasmatic", 0,0,0, 0,0,0, 0,SXF_NOCHECKPOSITION);
 			A_Takeinventory("automagAmmo",1);
 			//A_SpawnItemEx ("BulletCasing",cos(pitch)*14,6,45-(sin(pitch)*14),cos(pitch)*frandom(3,5),frandom(-2,-5),-sin(pitch)*frandom(3,5),0,SXF_TRANSFERPITCH);
-			A_FireProjectile ("GunCasingSpawner",0,0,0,0,FPF_NOAUTOAIM);
+			A_SpawnGunCasing("GunCasingSpawner");
 			A_giveInventory("automagClip",1);
 			//real recoil
 			//A_SetPitch (pitch-1,SPF_INTERPOLATE);
@@ -1212,7 +1212,7 @@ ACTOR Weapon72 : WeaponAutoMagZ
 			A_SpawnItemEx ("PowermagSpark2Spawner", 0,0,0, 0,0,0, 0,SXF_NOCHECKPOSITION);
 			A_Takeinventory("automagAmmo",1);
 			//A_SpawnItemEx ("BulletCasing",cos(pitch)*14,6,45-(sin(pitch)*14),cos(pitch)*frandom(3,5),frandom(-2,-5),-sin(pitch)*frandom(3,5),0,SXF_TRANSFERPITCH);
-			A_FireProjectile ("GunCasingSpawner",0,0,0,0,FPF_NOAUTOAIM);
+			A_SpawnGunCasing("GunCasingSpawner");
 			A_giveInventory("automagClip",1);
 			//real recoil
 			//A_SetPitch (pitch-1,SPF_INTERPOLATE);
@@ -1258,7 +1258,7 @@ ACTOR Weapon72 : WeaponAutoMagZ
 			A_SpawnItemEx ("PowermagAltSpark2Spawner", 0,0,0, 0,0,0, 0,SXF_NOCHECKPOSITION);
 			A_Takeinventory("automagAmmo",1);
 			//A_SpawnItemEx ("BulletCasing",cos(pitch)*14,6,45-(sin(pitch)*14),cos(pitch)*frandom(3,5),frandom(-2,-5),-sin(pitch)*frandom(3,5),0,SXF_TRANSFERPITCH);
-			A_FireProjectile ("GunCasingSpawner",0,0,0,0,FPF_NOAUTOAIM);
+			A_SpawnGunCasing("GunCasingSpawner");
 			A_giveInventory("automagClip",1);
 			//real recoil
 			//A_SetPitch (pitch-1,SPF_INTERPOLATE);
@@ -1318,7 +1318,7 @@ ACTOR Weapon72 : WeaponAutoMagZ
 		TNT1 A 0 A_Takeinventory("automagAmmo",1)
 		TNT1 A 0 A_SpawnItemEx ("GunflashPlasmatic", 0,0,0, 0,0,0, 0,SXF_NOCHECKPOSITION)
 		//TNT1 A 0 A_SpawnItemEx ("BulletCasing",cos(pitch)*14,6,45-(sin(pitch)*14),cos(pitch)*frandom(3,5),frandom(-2,-5),-sin(pitch)*frandom(3,5),0,SXF_TRANSFERPITCH)
-		TNT1 A 0 A_FireProjectile ("GunCasingSpawner",0,0,0,0,FPF_NOAUTOAIM)
+		TNT1 A 0 A_SpawnGunCasing("GunCasingSpawner")
 		TNT1 A 0 A_giveInventory("automagClip",1)
 		//TNT1 A 0 A_SetPitch (pitch-1,SPF_INTERPOLATE)
 		TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,2)
@@ -1360,7 +1360,7 @@ ACTOR Weapon72 : WeaponAutoMagZ
 		}
 		TNT1 A 0 A_Takeinventory("automagAmmo",1)
 		TNT1 A 0 A_SpawnItemEx ("GunflashPlasmatic", 0,0,0, 0,0,0, 0,SXF_NOCHECKPOSITION)
-		TNT1 A 0 A_FireProjectile ("GunCasingSpawner",0,0,0,0,FPF_NOAUTOAIM)
+		TNT1 A 0 A_SpawnGunCasing("GunCasingSpawner")
 		TNT1 A 0 A_giveInventory("automagClip",1)
 		TNT1 A 0 ACS_NamedExecute("update_wAmmo",0,2)
 		AMGF GH 2 

@@ -57,4 +57,7 @@ OptionMenu "utest_menu" {
 	
 	StaticText " "
 	Slider "Credits", "credits", 0, 99999, 5000
+	
+	StaticText " "
+	Command "Apply changes", apply_ucheats
 }

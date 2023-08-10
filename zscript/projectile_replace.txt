@@ -44,3 +44,53 @@ Class AutomagNewGuntracer: FastProjectile
 		Stop;
 	}
 }
+
+Class TarProjectile2 : Actor
+{
+	Default
+	{
+	DamageFunction (random(5,15));
+	Speed 25;
+	Radius 7;
+	Height 8;
+	PROJECTILE;
+	+BRIGHT;
+	-NOBLOCKMAP;
+	+REFLECTIVE;
+	Scale 1.0;
+	Damagetype "Tarydium";
+	}
+	
+	override void PostBeginPlay()
+	{
+		double startPitch = target.player.ReadyWeapon is "Weapon59" ? target.player.mo.AttackPitch : target.player.mo.OffhandPitch;
+		double newPitch = -startPitch + random (-4, 4);
+		A_SetPitch(newPitch);
+		A_ChangeVelocity(Cos(Pitch) * speed, 0, Sin(Pitch) * - speed, 3);
+	}
+	
+	States
+	{
+	Spawn:
+	    TNT1 A 2 NoDelay;
+	Spawnloop:
+		TARP A 1;
+		TNT1 A 0 A_SpawnItemEx ("LBlueMistSmall_Opaque",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0),velx/3,vely/3,velz/3,0,SXF_ABSOLUTEVELOCITY);
+		Loop;
+	Death:
+		TNT1 A 0 A_playsound("trprjhit",7);
+		TNT1 A 0 A_SpawnItemEx ("LBluesparkspawner",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+		TNT1 A 0 A_SpawnItemEx ("LBlueMistSmall_Opaque",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+		TNT1 A 0 A_SpawnItemEx ("LBlueMistSmall_Opaque",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+		TNT1 A 0 A_SpawnItemEx ("LBlueMistSmall_Opaque",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+		TNT1 A 0 A_SpawnItemEx ("LBlueMistSmall_Opaque",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+		TARP A 1;
+		Stop;
+	Crash:
+		TNT1 A 0 A_SpawnItemEx ("LBlueMistSmall_Opaque",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+		TNT1 A 0 A_SpawnItemEx ("LBlueMistSmall_Opaque",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+		TNT1 A 0 A_SpawnItemEx ("LBlueMistSmall_Opaque",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+		TNT1 A 0 A_SpawnItemEx ("LBlueMistSmall_Opaque",frandom(-1.0,1.0),frandom(-1.0,1.0),frandom(-1.0,1.0));
+		Stop;
+	}
+}

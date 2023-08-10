@@ -34,20 +34,8 @@ Class GunCasingSpawner : Actor
 	}
 }
 
-Class GunRedCasingSpawner : Actor
+Class GunRedCasingSpawner : GunCasingSpawner
 {
-	Default
-	{
-	Projectile;
-	+FORCEXYBILLBOARD;
-	radius 2;
-	height 2;
-	speed 0;
-	renderstyle "Add";
-	Alpha 0;
-	+NOCLIP;
-	}
-	
 	States
 	{
 	Spawn:
