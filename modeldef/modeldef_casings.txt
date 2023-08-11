@@ -14,6 +14,20 @@ MODEL BulletCasingFastFade
 	FrameIndex BLCS A 0 0
 }
 
+MODEL BulletCasingFasterFade
+{
+	Path "models/misc/bulletcasing"
+	Model 0 "Shell.md3"
+	SurfaceSkin 0 0 "Autom10.png"
+	Scale 1.0 1.0 1.0
+	Offset 0 0 1
+	
+	USEACTORPITCH
+	USEACTORROLL
+
+	FrameIndex BLCS A 0 0
+}
+
 //Bullet casing red hot 
 MODEL BulletCasingRedFastFade
 {

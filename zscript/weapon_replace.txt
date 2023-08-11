@@ -316,6 +316,20 @@ Class AutoMagTilted : Inventory
 	}
 }
 
+Class WeaponMinigunZ : DoomweaponZ
+{	
+	action void A_SpawnGunCasing(String SpawnerClass)
+	{
+		int hand = invoker.bOffhandWeapon ? 1 : 0;
+		double angle = invoker.owner.player.mo.angle;
+		if(hand)
+			angle -= frandom(20, 30);
+		else
+			angle -= frandom(100, 110);
+		SpawnPlayerMissile(SpawnerClass, angle, aimflags:hand ? ALF_ISOFFHAND : 0);
+	}
+}
+
 class urpgDummyPuff : Actor
 {
 

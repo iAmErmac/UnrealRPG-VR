@@ -1,52 +1,37 @@
+
 Model Weapon66
 { 
-  Path "Models/Weapons/USHOTGUN"
-   MODEL 0 "Shotgun_MF2.md3"
-
-    SKIN 0 "MF2.png"
-   Scale 6.0 2.0 2.0
-     Offset 20.0 -32.0 -15.0
-   
+	Path "Models/Weapons/minigun"
+	Model 0 "minigun.md3"
+	Scale -0.7 0.7 0.7
+	Offset 0.0 -20.0 -8.0
+	
 	INTERPOLATEDOUBLEDFRAMES
 
-   FrameIndex SHTF A 0 0 FrameIndex SHTF B 0 1
-}
-
-
-Model Weapon66
-{ 
-   Path "Models/Weapons/minigun"
-   Model 0 "minigun.md3"
-   Scale -1.0 1.0 1.0
-INTERPOLATEDOUBLEDFRAMES
-Angleoffset 0
-Offset 3 15 12
-
 	//select
-   FrameIndex MNSL A 0 0
-   FrameIndex MNSL B 0 1
-   FrameIndex MNSL C 0 2
-   FrameIndex MNSL D 0 3
-   FrameIndex MNSL E 0 4
-   FrameIndex MNSL F 0 5
-   FrameIndex MNSL G 0 6
-   FrameIndex MNSL H 0 7
-   FrameIndex MNSL I 0 8
-   FrameIndex MNSL J 0 9
-   FrameIndex MNSL K 0 10
-   FrameIndex MNSL L 0 11
-   FrameIndex MNSL M 0 12
-   FrameIndex MNSL N 0 13
-   FrameIndex MNSL O 0 14
-   FrameIndex MNSL P 0 15
-   FrameIndex MNSL Q 0 16
-   FrameIndex MNSL R 0 17
-   FrameIndex MNSL S 0 18
-   FrameIndex MNSL T 0 19
-   FrameIndex MNSL U 0 20
+	FrameIndex MNSL A 0 0
+	FrameIndex MNSL B 0 1
+	FrameIndex MNSL C 0 2
+	FrameIndex MNSL D 0 3
+	FrameIndex MNSL E 0 4
+	FrameIndex MNSL F 0 5
+	FrameIndex MNSL G 0 6
+	FrameIndex MNSL H 0 7
+	FrameIndex MNSL I 0 8
+	FrameIndex MNSL J 0 9
+	FrameIndex MNSL K 0 10
+	FrameIndex MNSL L 0 11
+	FrameIndex MNSL M 0 12
+	FrameIndex MNSL N 0 13
+	FrameIndex MNSL O 0 14
+	FrameIndex MNSL P 0 15
+	FrameIndex MNSL Q 0 16
+	FrameIndex MNSL R 0 17
+	FrameIndex MNSL S 0 18
+	FrameIndex MNSL T 0 19
+	FrameIndex MNSL U 0 20
 
-//Fire
-	
+	//Fire
 	FrameIndex MNSS A 0 59
 	FrameIndex MNSS B 0 60
 	FrameIndex MNSS C 0 61
@@ -67,8 +52,9 @@ Offset 3 15 12
 	FrameIndex MNSS R 0 76
 	FrameIndex MNSS S 0 77
 	FrameIndex MNSS T 0 78
-//fire stop
-FrameIndex MNSS U 0 79
+	
+	//fire stop
+	FrameIndex MNSS U 0 79
 	FrameIndex MNSS V 0 80
 	FrameIndex MNSS W 0 81
 	FrameIndex MNSS X 0 82
@@ -101,8 +87,7 @@ FrameIndex MNSS U 0 79
 	FrameIndex MNST Y 0 109
 	FrameIndex MNST Z 0 110
 
-//altfire spinup start
-
+	//altfire spinup start
 	FrameIndex MNAS A 0 32
 	FrameIndex MNAS B 0 33
 	FrameIndex MNAS C 0 34
@@ -129,70 +114,58 @@ FrameIndex MNSS U 0 79
 	FrameIndex MNAS X 0 55
 	FrameIndex MNAS Y 0 56
 	FrameIndex MNAS Z 0 57
-
-
-
 }
 
+Model Weapon66
+{ 
+	Path "Models/Weapons/minigun"
+	MODEL 0 "minigun_mf.md3"
+	SKIN 0 "minigun_mf.png"
+	Scale 1.0 1.0 1.0
+	Offset 0.0 25.0 -8.0
 
+	FrameIndex MNFF A 0 0
+	FrameIndex MNFF B 0 1
+	FrameIndex MNFF C 0 2
+	FrameIndex MNFF D 0 3
+	FrameIndex MNFF E 0 4
+	FrameIndex MNFF F 0 5
+}
 
 Model Minigun_pickup
 { 
-   Path "Models/Weapons/Minigun"
-   Model 0 "minipick.md3"
-    Scale 0.8 0.8 0.8
-INTERPOLATEDOUBLEDFRAMES
-ROTATING
-offset 0 0 8
-   FrameIndex MNPK A 0 0
-
+	Path "Models/Weapons/Minigun"
+	Model 0 "minipick.md3"
+	Scale 0.8 0.8 0.8
+	offset 0 0 8
+	
+	ROTATING
+	INTERPOLATEDOUBLEDFRAMES
+	
+	FrameIndex MNPK A 0 0
 }
-
 
 Model Weapon66_dec
 { 
-   Path "Models/Weapons/Minigun"
-   Model 0 "minipick.md3"
-    Scale 0.8 0.8 0.8
-INTERPOLATEDOUBLEDFRAMES
-ROTATING
-Offset 0 0 8
+	Path "Models/Weapons/Minigun"
+	Model 0 "minipick.md3"
+	Scale 0.8 0.8 0.8
+	Offset 0 0 8
+	
+	ROTATING
+	INTERPOLATEDOUBLEDFRAMES
 
-   FrameIndex MNPK A 0 0
-
+	FrameIndex MNPK A 0 0
 }
-
-
-
-
-
 
 Model Minigun_pickupflat
 { 
-   Path "Models/Weapons/Minigun"
-   Model 0 "minipick_flat.md3"
-    Scale 0.8 0.8 0.8
-INTERPOLATEDOUBLEDFRAMES
+	Path "Models/Weapons/Minigun"
+	Model 0 "minipick_flat.md3"
+	Scale 0.8 0.8 0.8
+	offset 0 0 1
+	
+	INTERPOLATEDOUBLEDFRAMES
 
-offset 0 0 1
-
-	//select
-   FrameIndex MNPK A 0 0
-
+	FrameIndex MNPK A 0 0
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
